@@ -1,0 +1,14 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body,
+html {
+	font-family: 'Big shoulders', sans-serif;
+}
+
+:root {
+	--dark: #14150e;
+	--light: #be7f4a;
+}

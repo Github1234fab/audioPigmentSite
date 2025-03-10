@@ -1,1 +1,1 @@
-<h1>FR/ABOUT</h1>
+<h1>fr/About</h1>
