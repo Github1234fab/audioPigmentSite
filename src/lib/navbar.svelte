@@ -43,12 +43,11 @@
 		justify-content: space-between;
 		align-items: center;
 		height: 60px;
-		background: linear-gradient(to left, #341c16 10%, #673427 70%, #673427 100%);
 		padding: 20px;
 	}
 
 	a {
-		color: white;
+		color: rgb(31, 30, 30);
 		text-decoration: none;
 	}
 

@@ -1,0 +1,69 @@
+<script>
+	export let title;
+	export let type;
+	export let technique;
+	export let image; // URL de l'image de fond
+</script>
+
+<div class="card" style="background-image: url({image})">
+	<div class="overlay">
+		<h3>{title}</h3>
+		<div class="tags">
+			<span class="tag">{type}</span>
+			<span class="tag">{technique}</span>
+		</div>
+	</div>
+</div>
+
+<style>
+	.card {
+		position: relative;
+		aspect-ratio: 1;
+		height: 300px;
+		background-size: cover;
+		background-position: center;
+		border-radius: 16px;
+		overflow: hidden;
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+		display: flex;
+		align-items: flex-end;
+		transition: transform 0.3s ease;
+	}
+
+	.card:hover {
+		transform: scale(1.02);
+	}
+
+	.overlay {
+		width: 100%;
+		background: linear-gradient(to top, rgba(0, 0, 0, 0.796), transparent 100%);
+		color: white;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+
+	h3 {
+		margin: 0 0 10px;
+		font-size: 1.4rem;
+		font-weight: 600;
+        font-family: var(--raleway);
+        font-weight: var(--extra-bold);
+	}
+
+	.tags {
+		display: flex;
+		gap: 5px;
+	}
+
+	.tag {
+        font-family: var(--raleway);
+        font-weight: var(--extra-bold);
+		background-color: rgb(156, 53, 53);
+		border-radius: 10px;
+		padding: 5px 12px;
+		font-size: 0.75rem;
+		font-weight: 500;
+		pointer-events: none; /* rend le bouton non cliquable */
+		user-select: none;
+	}
+</style>

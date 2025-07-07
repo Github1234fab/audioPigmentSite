@@ -21,6 +21,8 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
+		"@splidejs/svelte-splide": "^0.2.9",
+		"@sveltejs/adapter-static": "^3.0.8",
 		"gsap": "^3.12.7",
 		"three": "^0.173.0"
 	}

@@ -1,77 +1,103 @@
 <script>
 	import { onMount } from 'svelte';
-	import Cta from '../../../components/cta.svelte';
+	import Cta from '$lib/component/cta.svelte';
 	import { CSSPlugin } from 'gsap/CSSPlugin';
 	gsap.registerPlugin(CSSPlugin);
 	import { gsap } from 'gsap';
 
-	onMount(() => {
-		gsap.to('.title', {
-			letterSpacing: 0,
-			opacity: 1,
-			duration: 0.7,
-			ease: 'sine',
-			delay: 0.5
-		});
-	});
+	import CardDotWhite from '$lib/component/cards-dot-white.svelte';
+	import Btn from '$lib/component/btn-black.svelte';
+	import BtnGrey from '$lib/component/btn-grey.svelte';
+	import BtnWhite from '$lib/component/btn-white.svelte';
+	import CardsDotWhite from '$lib/component/cards-dot-white.svelte';
+	import Slider from '$lib/component/slider.svelte';
+	import CardRealisation from '$lib/component/card-realisation.svelte';
+	import Collapse from '$lib/component/Collapse.svelte';
+	import BtnArrow from '$lib/component/btn-arrow.svelte';
 </script>
 
-<section>
-	<h1 class="title">Le son, un ton au-dessus.</h1>
-	<h2 class="subtitle">
-		Agence de conseil, création, réalisation et production sonore depuis plus de 20 ans.
-	</h2>
+<h1 class="big-title">Home</h1>
+<h1 class="title thin">Home</h1>
+<h1 class="title light">Home</h1>
+<h1 class="title regular">Home</h1>
+<h1 class="title medium">Home</h1>
+<h1 class="title bold">Home</h1>
+<h1 class="title extra-bold">Home</h1>
+<h1 class="title black">Home</h1>
 
-	<Cta btnTxt="Vous avez un projet ?" />
-</section>
+<div class="wrapper__card">
+	<CardDotWhite
+		title="Post-production audio"
+		subtitle={`Sound Design
+Mixage 5.1
+ Mastering`}
+		txt="Découvrir"
+	/>
+	<CardDotWhite
+		title="Création originale"
+		subtitle={`Identité sonore
+	 Habillage sonore 
+	Composition musicale`}
+		txt="Explorer"
+	/>
+	<CardDotWhite
+		title="Voix"
+		subtitle={`Voix off
+Doublage/Dubbing/ADR
+Voice over`}
+		txt="En savoir +"
+	/>
+</div>
+
+<Btn txt="Salut" />
+<BtnGrey txt="Salut" />
+<BtnWhite txt="Salut" />
+<BtnArrow/>
+<Slider />
+<Collapse title="COMMUNICATION SONORE" p="vdfjnvljqdnfljv lkdfnv lqkdfjvlkq   lqkdfjvlkqdfjv qdflkvjqdf vqldfkjv qdflvk qdsfvkljq sdflvkq jdsfvlqks dfjlvkqsj fvlkqsjfv "/>
+
 
 <style>
-	section {
+	.wrapper__card {
 		display: flex;
-		flex-direction: column;
+		flex-wrap: wrap;
+		gap: 20px;
 		align-items: center;
 		justify-content: center;
-		height: 700px;
-		gap: 30px;
-		background-image: url('../../../assets/heroBanner-B.jpeg');
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
-		z-index: 0;
-		position: relative;
+		margin-top: 20px;
 	}
-	section::after {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 700px;
-		background: linear-gradient(rgba(0, 0, 0, 0.558) 10%, rgba(255, 255, 255, 0));
-		z-index: 1;
+	.big-title {
+		font-size: var(--xl);
+		text-align: center;
+		margin-top: 20px;
+		font-family: var(--bebas);
 	}
 	.title {
-		font-weight: 500;
-		align-self: center;
-		color: white;
-		font-size: 3rem;
-		opacity: 0;
-		letter-spacing: 20px;
-		z-index: 2;
-		margin-top: -300px;
-		font-family: 'Big Shoulders inline', sans-serif;
-		transform: translateY(0);
-		/* text-shadow: 0px 10px 5px rgba(0, 0, 0, 0.51); */
+		font-size: 2rem;
+		text-align: center;
+		margin-top: 20px;
+		font-family: raleway;
+		font-weight: 400;
 	}
-	.subtitle {
-		margin-top: -20px;
-		font-weight: 300;
-		align-self: center;
-		color: white;
-		font-size: 1rem;
-		letter-spacing: -0.01rem;
-		z-index: 2;
-		font-family: 'Big Shoulders', sans-serif;
-		/* text-shadow: 0px 10px 5px rgba(0, 0, 0, 0.51); */
+	.thin {
+		font-weight: var(--thin);
+	}
+	.light {
+		font-weight: var(--light);
+	}
+	.regular {
+		font-weight: var(--regular);
+	}
+	.medium {
+		font-weight: var(--medium);
+	}
+	.bold {
+		font-weight: var(--bold);
+	}
+	.extra-bold {
+		font-weight: var(--extra-bold);
+	}
+	.black {
+		font-weight: var(--black);
 	}
 </style>
