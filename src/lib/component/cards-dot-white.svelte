@@ -1,7 +1,7 @@
 <script>
 	export let title;
 	export let subtitle;
-	import Btn from '$lib/component/btn-black.svelte';
+	import Btn from '$lib/component/btn-black-shadow.svelte';
 	export let txt;
 </script>
 
@@ -21,20 +21,14 @@
 		border-radius: 0px;
 		padding: 1rem;
 		position: relative;
-		background-color: rgb(252, 252, 252);
+		background: linear-gradient(white, grey);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		color: black;
 		font-family: var(--raleway);
-		border: 1px solid black;
 		z-index: 0;
-	}
-	.card:hover .dot {
-		width: 10px;
-		aspect-ratio: 1;
-		animation: moveDot 12s linear infinite;
 	}
 	.wrapper__txt{
 		display: flex;
@@ -44,15 +38,20 @@
 		text-align: center;
 		gap: 10px;
 		background-color: rgb(255, 255, 255);
-		padding: 1rem;
-		height: 300px;
+		height: 320px;
 		aspect-ratio: 1.3;
 	}
+	.card:hover .dot {
+		width: 10px;
+		aspect-ratio: 1;
+		animation: moveDot 3s linear infinite;
+	}
+	
 
 	.dot {
-		width: 5px;
+		width: 0px;
 		aspect-ratio: 1;
-		background-color: var(--red);
+		background-color: rgba(255, 0, 0, 0.552);
 		border-radius: 50%;
 		position: absolute;
 		transform: translate(-50%, -50%);
@@ -62,17 +61,19 @@
 	}
 
 	.title {
-		font-size: 3rem;
-		font-weight: var(--extra-bold);
+		font-size: 2rem;
+		font-weight: var(--regular);
 		margin-bottom: 10px;
-		font-family: var(--bebas);
+		font-family: var(--raleway);
 		text-align: center;
 		color: var(--ardoise);
+		letter-spacing: -0.8px;
+		width: 100%;
 	}
 
 	.subtitle {
 		font-size: 1rem;
-		font-weight: var(--medium);
+		font-weight: var(--regular);
 		margin-bottom: 0px;
 		white-space: pre-line;
 		text-align: center;
@@ -101,11 +102,26 @@
 		}
 	}
 
-	@media screen and (max-width: 768px) {
-		.card {
-			aspect-ratio: 1;
+	@media screen and (max-width: 490px) {
+	
+	.card{
+	height: 300px;
+			width: 300px;
+			aspect-ratio: 0;
+		}
+		.wrapper__txt {
 			height: 300px;
+			width: 100%;
+			aspect-ratio: 0;
+		}
+		.title {
+			font-size: 1.5rem;
+		}
+		.subtitle {
+			font-size: 0.9rem;
 		}
 		
 	}
+		
+	
 </style>

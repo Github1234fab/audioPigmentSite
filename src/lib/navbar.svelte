@@ -27,7 +27,7 @@
 </script>
 
 <nav>
-	<a href="/"><img src={Logo} class="logo" alt="Logo Audio Pigment" width="100" height="100" /></a>
+	<a href="/"><img src={Logo} class="logo" alt="Logo Audio Pigment" width="100" height="100" />Audio Pigment</a>
 	<a href="/{lang}/about">{translations[lang]?.about}</a>
 	<a href="/{lang}/references">{translations[lang]?.references}</a>
 	<a href="/{lang}/contact">{translations[lang]?.contact}</a>
@@ -40,15 +40,25 @@
 <style>
 	nav {
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
 		align-items: center;
 		height: 60px;
 		padding: 20px;
+		background-color: transparent;
+		letter-spacing: -0.5px;
+		z-index: 2;
 	}
 
 	a {
-		color: rgb(31, 30, 30);
+		color: rgb(66, 65, 65);
 		text-decoration: none;
+		font-family: var(--raleway);
+		font-weight: var(--regular);
+		font-size: 1rem;
+		display: flex;
+		gap: 3px;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.buttons-switch {
@@ -67,7 +77,8 @@
 	}
 	.logo {
 		/* border-radius: 50%; */
-		height: 40px;
+		height: 30px;
 		width: 30px;
+		border-radius: 50%;
 	}
 </style>

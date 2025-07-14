@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	import Navbar from '$lib/Navbar.svelte';
@@ -24,6 +24,17 @@ onMount(() => {
 			window.location.href = `/${userLang}/home`;
 		}
 	});
+</script>
+
+<Navbar />
+<slot /> -->
+
+<script>
+	import Navbar from '$lib/Navbar.svelte';
+	import './style.css';
+
+
+
 </script>
 
 <Navbar />
