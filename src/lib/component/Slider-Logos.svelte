@@ -1,11 +1,11 @@
 <script>
-	import Splide from '@splidejs/splide';
-	import '@splidejs/splide/dist/css/splide.min.css';
+ import { Splide, SplideSlide } from '@splidejs/svelte-splide';
+//  import '@splidejs/svelte-splide/css';
 	import { onMount } from 'svelte';
 	import CardRealisation from '$lib/component/card-logo.svelte';
 	let splide;
 
-    import BP from '../../assets/logos/Banque_de_France_1.png';
+	import BP from '../../assets/logos/Banque_de_France_1.png';
 	import Barilla from '../../assets/logos/barilla-1.png';
 	import BioMerieux from '../../assets/logos/BioMerieux 1.png';
 	import BlablaCar from '../../assets/logos/BlaBlaCar.webp';
@@ -32,175 +32,126 @@
 	import TotalEnergie from '../../assets/logos/TotalEnergies.png';
 	import Vulcania from '../../assets/logos/Vulcania.png';
 
-  
-    
-
 	const cards = [
 		{
-			image:
-				BP
+			image: BP
 		},
-        {
-            image:
-                Barilla
-        },
-        {
-            image:
-                BioMerieux
-        },
-        {
-            image:
-                BlablaCar
-        },
-        {
-            image:
-                BMW
-        },
-        {
-            image:
-                burgerKing
-        },
-        {
-            image:
-                CiteEspace
-        },
-        {
-            image:
-                Costa
-        },
-        {
-            image:
-                Decathlon
-        },
-        {
-            image:
-                Delacre
-        },
-        {
-            image:
-                Disneyland
-        },
-        {
-            image:
-                Evian
-        },
-        {
-            image:
-                FDJ
-        },
-        {
-            image:
-                Fnac
-        },  
-        {
-            image:
-                LEGO
-        },
-        {
-            image:
-                loreal
-        },
-        {
-            image:
-                Peugeot
-        },
-        {
-            image:
-                PointS
-        }
-        ,
-        {
-            image:
-                PuyDuFou
-        },
-        {
-            image:
-                Region
-        },
-        {
-            image:
-                Renault
-        },
-        {
-            image:
-                SanPe
-        }
-        ,
-        {
-            image:
-                Saupiquet
-        },
-        {
-            image:
-                SNCF
-        },
-        {
-            image:
-                TotalEnergie
-        },  
-        {
-            image:
-                Vulcania
-        }
-    ]
+		{
+			image: Barilla
+		},
+		{
+			image: BioMerieux
+		},
+		{
+			image: BlablaCar
+		},
+		{
+			image: BMW
+		},
+		{
+			image: burgerKing
+		},
+		{
+			image: CiteEspace
+		},
+		{
+			image: Costa
+		},
+		{
+			image: Decathlon
+		},
+		{
+			image: Delacre
+		},
+		{
+			image: Disneyland
+		},
+		{
+			image: Evian
+		},
+		{
+			image: FDJ
+		},
+		{
+			image: Fnac
+		},
+		{
+			image: LEGO
+		},
+		{
+			image: loreal
+		},
+		{
+			image: Peugeot
+		},
+		{
+			image: PointS
+		},
+		{
+			image: PuyDuFou
+		},
+		{
+			image: Region
+		},
+		{
+			image: Renault
+		},
+		{
+			image: SanPe
+		},
+		{
+			image: Saupiquet
+		},
+		{
+			image: SNCF
+		},
+		{
+			image: TotalEnergie
+		},
+		{
+			image: Vulcania
+		}
+	];
 
-	onMount(() => {
-		splide = new Splide('.splide', {
-			type: 'loop',
-			perPage: 3,
-            gap: 5,
-			autoplay: true,
-			pauseOnHover: true,
-			speed: 2000,
-			arrows: true,
-			pagination: false,
-			breakpoints: {
-				1560: {
-					perPage: 3
-				},
-				1024: {
-					perPage: 3
-				},
-				938: {
-					perPage: 3
-				},
-				768: {
-					perPage: 2
-				},
-				480: {
-					perPage: 1
-				}
-			},
-			easing: 'ease-in-out'
-		});
-
-		splide.mount();
-		splide.play();
-	});
+	// Options Splide
+    const options = {
+    type: 'loop',
+    perPage: 9,
+    gap: 5,
+    autoplay: true,
+    pauseOnHover: true,
+    speed: 2000,
+    arrows: true,
+    pagination: false,
+    breakpoints: {
+      1560: { perPage: 4 },
+      1024: { perPage: 4 },
+      938: { perPage: 3 },
+      768: { perPage: 2 },
+      480: { perPage: 1 }
+    },
+    easing: 'ease-in-out'
+  };
 </script>
 
-<div class="splide">
-	<div class="splide__track">
-		<ul class="splide__list">
-			{#each cards as card}
-				<li class="splide__slide">
-					<CardRealisation image={card.image} />
-				</li>
-			{/each}
-		</ul>
-	</div>
-</div>
+<Splide options={options} aria-label="Logos">
+  {#each cards as card}
+    <SplideSlide>
+      <CardRealisation image={card.image} />
+    </SplideSlide>
+  {/each}
+</Splide>
 
 <style>
-    .splide{
-        margin: 50px;
-        width: 100%;
-    }
-    .splide__list {
-        max-width: 
-        300px;
-        height: 100px;
-     
-    }
+  :global(.splide) {
+    margin: 50px auto;
+    width: 100%;
+    background: rgba(0, 255, 0, 0.08);
+  }
+  :global(.splide__slide) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+  }
 </style>

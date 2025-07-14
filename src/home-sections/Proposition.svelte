@@ -49,7 +49,7 @@
 		color: var(--black);
 		margin-top: 50px;
 		letter-spacing: -1.4px;
-		padding: 20px;
+		padding: 20px 40px;
 		border: 1px solid grey;
 	}
 	.wrapper__card {

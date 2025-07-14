@@ -6,7 +6,7 @@
 
 <section>
 
-	<Vanta effect="RINGS" config={{color: 0xff3f81, spacing: 20}} />
+	<Vanta effect="WAVES" config={{color: 0x7E4C3C, spacing: 10}} />
 	<h2>Ensemble, créons des émotions, marquons les esprits</h2>
 
 	<div class="wrapper__h4">
@@ -48,7 +48,7 @@
 		text-align: center;
 		padding: 2rem;
 		background-color: var(--ardoise);
-		min-height: 100vh;
+        min-height: 100vh;
 		z-index: 0;
 		gap: 40px;
 		overflow: hidden;
@@ -60,7 +60,7 @@
 
 	section h2 {
 		font-family: var(--bebas);
-		font-size: 2.7rem;
+		font-size: 2.9rem;
 		margin-bottom: 0.5rem;
 		color: white;
 		margin-top: 50px;

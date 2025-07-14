@@ -9,15 +9,15 @@
 <style>
 	.card {
 		position: relative;
-		height: 100%;
-		width: 100%;
+		height: 200px;
+		aspect-ratio: 1;
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
 		border-radius: 5px;
 		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 		transition: transform 0.3s ease;
-		background-color: rgb(255, 255, 255);
+		background-color: vwhite;
 		padding: 0px;
 		display: flex;
 		align-items: center;
@@ -25,8 +25,8 @@
 	}
 	.img {
 		width: 100%;
-		height: 200px;
-		object-fit: contain;
+		height: 100%;
+		object-fit: cover;
 		border-radius: 5px;
 	}
 

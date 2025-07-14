@@ -51,7 +51,7 @@
 	.dot {
 		width: 0px;
 		aspect-ratio: 1;
-		background-color: rgba(255, 0, 0, 0.552);
+		background-color: rgba(255, 0, 0, 1);
 		border-radius: 50%;
 		position: absolute;
 		transform: translate(-50%, -50%);
@@ -62,7 +62,7 @@
 
 	.title {
 		font-size: 2rem;
-		font-weight: var(--regular);
+		font-weight: var(--bold);
 		margin-bottom: 10px;
 		font-family: var(--raleway);
 		text-align: center;

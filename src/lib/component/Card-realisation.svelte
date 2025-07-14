@@ -19,7 +19,7 @@
 	.card {
 		position: relative;
 		aspect-ratio: 1;
-		height: 300px;
+		height: 200px;
 		background-size: cover;
 		background-position: center;
 		border-radius: 16px;

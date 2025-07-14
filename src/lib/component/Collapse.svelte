@@ -56,7 +56,7 @@
 		z-index: 0;
 	}
 	.button:hover {
-		background-color: rgb(250, 229, 229);
+		background-color: rgb(233, 223, 223);
 		color: white;
 	}
 
@@ -95,7 +95,7 @@
 		font-family: var(--raleway);
 		font-size: 1.7em;
 		letter-spacing: -1px;
-		font-weight: var(--regular);
+		font-weight: var(--bold);
 		width: 50%;
 		color: var(--ardoise);
 		padding: 20px;

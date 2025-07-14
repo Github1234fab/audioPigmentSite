@@ -1,1 +1,43 @@
-<h2>Nos dernières réalisations</h2>
+<script>
+	import Slider from '$lib/component/Slider.svelte';
+</script>
+
+<section>
+
+    <h2>Nos dernières réalisations</h2>
+	<div class="wrapper__slider-logos"><Slider/></div>
+
+	
+</section>
+
+
+<style>
+	.wrapper__slider-logos {
+		width: 100%;
+        min-height: 200px;
+
+	}
+	section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 2rem;
+		background-color: var(--ardoise);
+        height: 50vh;
+		z-index: 0;
+		gap: 0px;
+	
+	}
+    section h2{
+        font-family: var(--bebas);
+        font-weight: var(--bold);
+        color: white;
+        font-size: 2.8rem;
+        margin-top: 0px;
+    
+    }
+
+	
+</style>

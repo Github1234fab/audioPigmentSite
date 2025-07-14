@@ -27,7 +27,7 @@
 					75,
 					container.clientWidth / container.clientHeight,
 					0.1,
-					1000
+					1300
 				);
 				const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 				renderer.setSize(container.clientWidth, container.clientHeight);

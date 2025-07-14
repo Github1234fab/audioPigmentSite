@@ -269,7 +269,7 @@
 	const defaultConfigs = {
 		WAVES: {
 			color: 0x3f5efc,
-			backgroundColor: 0x191919,
+			backgroundColor: 0x111111,
 			shininess: 30,
 			waveHeight: 15,
 			waveSpeed: 1,
@@ -307,10 +307,10 @@
 			backgroundAlpha: 0.0
 		},
 		CELLS: {
-			color1: 0x36d1dc,
-			color2: 0x5b86e5,
-			backgroundColor: 0x0a0a0a,
-			size: 1.5,
+			color1: 0x74C3C,
+			color2: 0x74C3C,
+			backgroundColor: 0x111111,
+			size: 1,
 			speed: 1.0,
 			scale: 1.0,
 			scaleMobile: 1.0
@@ -349,16 +349,16 @@
 			spacing: 15.0
 		},
 		HALO: {
-			color: 0x3f5efc,
+			color: 0xE74C3C,
 			backgroundColor: 0x191919,
 			size: 1.0,
-			amplitudeFactor: 1.0,
-			xOffset: 0.0,
+			amplitudeFactor: 5.0,
+			xOffset: 0.03,
 			yOffset: 0.0
 		},
 		NET: {
-			color: 0x3f5efc,
-			backgroundColor: 0x23153c,
+			color: 0x3f54576,
+			backgroundColor: 0x111111,
 			points: 10,
 			maxDistance: 20,
 			spacing: 15,
@@ -367,9 +367,9 @@
 		RINGS: {
 			color: 0x3f5efc,
 			backgroundColor: 0x191919,
-			quantity: 2,
-			speed: 1.0,
-			scale: 1.0,
+			quantity: 5,
+			speed: 3.0,
+			scale: 2.0,
 			scaleMobile: 1.0
 		},
 		RIPPLE: {
@@ -462,6 +462,6 @@
 		width: 100vw;
 		height: 100vh;
 		z-index: -1;
-		opacity: 0.1;
+		opacity: -0.9;
 	}
 </style>

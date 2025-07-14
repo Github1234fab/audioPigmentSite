@@ -26,7 +26,7 @@
 </script>
 
 <section>
-	<h2>Nos services</h2>
+	<h2>Nos services premium</h2>
     <div class="wrapper__collapses">
 	{#each datas as data}
 		<Collapse title={data.title} p={data.p} />

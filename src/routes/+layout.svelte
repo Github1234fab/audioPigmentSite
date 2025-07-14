@@ -32,9 +32,7 @@ onMount(() => {
 <script>
 	import Navbar from '$lib/Navbar.svelte';
 	import './style.css';
-
-
-
+	import '@splidejs/svelte-splide/css';
 </script>
 
 <Navbar />
