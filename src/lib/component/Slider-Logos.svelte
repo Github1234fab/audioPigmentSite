@@ -116,20 +116,20 @@
 	// Options Splide
     const options = {
     type: 'loop',
-    perPage: 9,
+    perPage: 6,
     gap: 5,
     autoplay: true,
     pauseOnHover: true,
     speed: 2000,
     arrows: true,
     pagination: false,
-    breakpoints: {
-      1560: { perPage: 4 },
-      1024: { perPage: 4 },
-      938: { perPage: 3 },
-      768: { perPage: 2 },
-      480: { perPage: 1 }
-    },
+    // breakpoints: {
+    //   1560: { perPage: 4 },
+    //   1024: { perPage: 4 },
+    //   938: { perPage: 3 },
+    //   768: { perPage: 2 },
+    //   480: { perPage: 1 }
+    // },
     easing: 'ease-in-out'
   };
 </script>

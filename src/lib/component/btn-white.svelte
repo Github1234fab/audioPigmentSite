@@ -12,7 +12,7 @@
 		font-family: var(--raleway);
 		font-weight: var(--medium);
 		color: var(--ardoise);
-		border: 1px solid rgb(51, 50, 50);
+		border: 1px solid black;
 		padding: 13px 40px;
 		font-size: 1rem;
 		cursor: pointer;

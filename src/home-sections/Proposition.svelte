@@ -1,9 +1,11 @@
 <script>
 	import CardDotWhite from '$lib/component/cards-dot-white.svelte';
+	import TitleDot from '$lib/component/title-dot.svelte';
 </script>
 
 <section>
-	<h2>Nos solutions audios sur mesure</h2>
+	<TitleDot
+		title="Nos solutions audio sur mesure"/>
 
 	<div class="wrapper__card">
 		<CardDotWhite
@@ -41,16 +43,6 @@
 		color: var(--black);
 		min-height: 70vh;
 
-	}
-	section h2 {
-		font-family: var(--raleway);
-		font-size: 2.7rem;
-		margin-bottom: 0.5rem;
-		color: var(--black);
-		margin-top: 50px;
-		letter-spacing: -1.4px;
-		padding: 20px 40px;
-		border: 1px solid grey;
 	}
 	.wrapper__card {
 		display: flex;

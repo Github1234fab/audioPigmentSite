@@ -277,7 +277,7 @@
 		},
 		TOPOLOGY: {
 			color: 0xff3f81,
-			backgroundColor: 0x23153c,
+			backgroundColor: 0x111111,
 			spacing: 16.0,
 			noise: 3.0,
 			chaos: 0.6,
@@ -383,71 +383,63 @@
 	};
 
 	onMount(() => {
-		if (!browser) return;
+  if (!browser) return;
 
-		const initVanta = async () => {
-			try {
-				// Attendre que THREE.js soit chargé
-				while (!window.THREE) {
-					await new Promise((resolve) => setTimeout(resolve, 100));
-				}
+  const initVanta = async () => {
+    try {
+      const p5Effects = ['TRUNK', 'TOPOLOGY'];
 
-				// Attendre que VANTA soit chargé
-				while (!window.VANTA) {
-					await new Promise((resolve) => setTimeout(resolve, 100));
-				}
+      // Attendre que la lib requise soit chargée
+      if (p5Effects.includes(effect)) {
+        while (!window.p5) {
+          await new Promise((resolve) => setTimeout(resolve, 50));
+        }
+      } else {
+        while (!window.THREE) {
+          await new Promise((resolve) => setTimeout(resolve, 50));
+        }
+      }
 
-				// Vérifier que l'effet spécifique existe
-				if (!window.VANTA[effect]) {
-					console.error(
-						`L'effet VANTA.${effect} n'est pas disponible. Vérifiez que le CDN correct est chargé.`
-					);
-					console.log('Effets disponibles:', Object.keys(window.VANTA));
-					return;
-				}
+      // Attendre que VANTA soit chargé
+      while (!window.VANTA) {
+        await new Promise((resolve) => setTimeout(resolve, 50));
+      }
 
-				// Attendre que l'élément soit prêt
-				while (!vantaRef) {
-					await new Promise((resolve) => setTimeout(resolve, 50));
-				}
+      // Attendre que l'élément ref soit prêt
+      while (!vantaRef) {
+        await new Promise((resolve) => setTimeout(resolve, 30));
+      }
 
-				// Vérifier qu'il n'y a pas déjà un effet
-				if (!vantaEffect) {
-					const finalConfig = {
-						el: vantaRef,
-						THREE: window.THREE,
-						mouseControls: true,
-						touchControls: true,
-						gyroControls: false,
-						minHeight: 200.0,
-						minWidth: 200.0,
-						scale: 1.0,
-						scaleMobile: 1.0,
-						...defaultConfigs[effect],
-						...config
-					};
+      if (!vantaEffect) {
+        const finalConfig = {
+          el: vantaRef,
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          ...defaultConfigs[effect],
+          ...config
+        };
 
-					vantaEffect = window.VANTA[effect](finalConfig);
-					console.log(`Vanta ${effect} initialisé avec succès`);
-				}
-			} catch (error) {
-				console.error(`Erreur lors de l'initialisation de Vanta ${effect}:`, error);
-			}
-		};
+        // Ajouter THREE uniquement si nécessaire
+        if (!p5Effects.includes(effect)) {
+          finalConfig.THREE = window.THREE;
+        }
 
-		initVanta();
-	});
+        vantaEffect = window.VANTA[effect](finalConfig);
+        console.log(`✅ Vanta "${effect}" initialisé avec succès`);
+      }
+    } catch (error) {
+      console.error(`❌ Erreur Vanta (${effect}) :`, error);
+    }
+  };
 
-	onDestroy(() => {
-		if (vantaEffect?.destroy) {
-			try {
-				vantaEffect.destroy();
-			} catch (error) {
-				console.error('Erreur lors de la destruction de Vanta:', error);
-			}
-			vantaEffect = null;
-		}
-	});
+  initVanta();
+});
+
 </script>
 
 {#if browser}
@@ -462,6 +454,6 @@
 		width: 100vw;
 		height: 100vh;
 		z-index: -1;
-		opacity: -0.9;
+		opacity: 1;
 	}
 </style>

@@ -28,6 +28,7 @@
         height: 50vh;
 		z-index: 0;
 		gap: 0px;
+		overflow: hidden;
 	
 	}
     section h2{

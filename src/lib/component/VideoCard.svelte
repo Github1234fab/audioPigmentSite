@@ -34,8 +34,8 @@
 <style>
 	.video-card {
 		display: flex;
-		width: 340px;
-		max-width: 100%;
+		height: 250px;
+		width: 350px;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 		border-radius: 10px;
 		background: var(-ardoise);
