@@ -115,14 +115,14 @@
 
 	// Options Splide
     const options = {
-    type: 'loop',
-    perPage: 8,
-    gap: 5,
-    autoplay: true,
-    pauseOnHover: true,
-    speed: 2000,
-    arrows: true,
-    pagination: false,
+		type: 'loop',
+		perPage: 8,
+		gap: 3,
+		autoplay: true,
+		pauseOnHover: true,
+		speed: 2000,
+		arrows: true,
+		pagination: false,
     // breakpoints: {
     //   1560: { perPage: 4 },
     //   1024: { perPage: 4 },

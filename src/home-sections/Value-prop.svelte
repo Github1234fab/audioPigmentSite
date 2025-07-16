@@ -1,12 +1,13 @@
 <script>
 	import Button from '$lib/component/btn-black-border.svelte';
 	import SliderLogos from '$lib/component/Slider-logos.svelte';
-	import VantaTopology from '../lib/component/Vanta-topology.svelte';
+	// import VantaTopology from '../lib/component/Vanta-topology.svelte';
 </script>
 
 <section>
-
-	<VantaTopology config={{ color: 0xE74C3C, backgroundColor: 0x21222c }} />
+	
+<!-- 
+	<VantaTopology config={{ color: 0xE74C3C, backgroundColor: 0x21222c }} /> -->
 	<div class="wrapper__section-txt">
 	<h2>Ensemble, créons des émotions, marquons les esprits</h2>
 

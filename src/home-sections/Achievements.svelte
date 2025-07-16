@@ -25,7 +25,7 @@
 		text-align: center;
 		padding: 2rem;
 		background-color: var(--ardoise);
-        height: 50vh;
+        height: 100%;
 		z-index: 0;
 		gap: 0px;
 		overflow: hidden;

@@ -18,8 +18,9 @@
 <Proposition />
 <ValueProp />
 <Services />
-<Advantages />
 <Achievements />
+<Advantages />
+
 <ValueProp2 />
 <Footer />
 

@@ -51,6 +51,7 @@
 
 <section>
 	<h2>Nos Atouts</h2>
+	<p class="section-intro">Ce qui fait la force d'Audio Pigment</p>
 	<div class="features-grid">
 		{#each features as feature}
 			<div class="feature-card">
@@ -83,6 +84,16 @@
 		color: white;
 		margin-top: 50px;
 	}
+	section p {
+		font-family: var(--raleway);
+		font-size: 1.2rem;
+		margin-bottom: 0.5rem;
+		color: white;
+		font-weight: var(--regular);
+		margin-top: 0px;
+	
+		padding: 20px 40px;
+	}
 	.features-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -90,6 +101,7 @@
 		padding: 2rem;
 		max-width: 1200px;
 		margin: 0 auto;
+		perspective: 800px;
 	}
 
 	.feature-card {
@@ -103,12 +115,18 @@
 		padding: 1.5rem;
 		transition: all 0.3s ease;
 		border: 1px solid rgb(203, 203, 203);
+		transform: rotateY(0deg);
 	}
 
 	.feature-card:hover {
 		background: rgba(255, 255, 255, 0.1);
 		border-color: rgba(255, 255, 255, 0.3);
-		transform: translateY(-2px);
+		transform: rotateY(-5deg); 
+	}
+
+	.feature-card:hover .icon {
+	transform: scale(1.1);
+		transition: transform 0.3s ease;
 	}
 	.icon {
 		display: flex;

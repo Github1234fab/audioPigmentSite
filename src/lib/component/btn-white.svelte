@@ -1,8 +1,12 @@
 <script>
 	export let txt;
+	export let href = ''; // destination du lien
 </script>
 
-<button class="btn"><span>{txt} </span></button>
+<!-- <button class="btn"><span>{txt} </span></button> -->
+<a href={href} class="btn">
+	<span>{txt}</span>
+  </a>
 
 <style>
 	.btn {
@@ -45,5 +49,8 @@
 
 	.btn:hover span {
 		color: white;
+	}
+	a{
+		text-decoration: none;
 	}
 </style>

@@ -16,8 +16,8 @@
 			musicale, mixage
 		</h2>
 		<div class="wrapper__buttons">
-			<Button txt="Conctactez-nous" />
-			<ButtonWhite txt="Écoutez-nous" />
+			<Button txt="Conctactez-nous" href="/fr/contact"/>
+			<ButtonWhite txt="Écoutez-nous" href="/fr/realisations" />
 		</div>
 	</div>
 </section>
@@ -60,7 +60,7 @@
 
 	h1 {
 		font-family: var(--bebas);
-		font-size: 5rem;
+		font-size: 4.5rem;
 		width: 90%;
 		margin: 0 auto;
 	}

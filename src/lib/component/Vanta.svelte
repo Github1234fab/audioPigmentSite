@@ -255,17 +255,16 @@
 <!-- ============================================= -->
 
 <script>
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 
-	// Props pour configurer l'effet
-	export let effect = 'WAVES'; // WAVES, TOPOLOGY, TRUNK, BIRDS, CELLS, CLOUDS, DOTS, FOG, GLOBE, HALO, NET, RINGS, RIPPLE
+	export let effect = 'WAVES'; // Le nom de l'effet Vanta désiré
 	export let config = {};
 
 	let vantaRef;
 	let vantaEffect;
 
-	// Configurations par défaut pour chaque effet qui fonctionne
+	// Configurations par défaut pour les effets principaux qui fonctionnent avec THREE.js
 	const defaultConfigs = {
 		WAVES: {
 			color: 0x3f5efc,
@@ -307,8 +306,8 @@
 			backgroundAlpha: 0.0
 		},
 		CELLS: {
-			color1: 0x74C3C,
-			color2: 0x74C3C,
+			color1: 0x74c3c,
+			color2: 0x74c3c,
 			backgroundColor: 0x111111,
 			size: 1,
 			speed: 1.0,
@@ -350,15 +349,15 @@
 		},
 		HALO: {
 			color: 0xE74C3C,
-			backgroundColor: 0x191919,
+			backgroundColor: 0xffffff,
 			size: 1.0,
 			amplitudeFactor: 5.0,
 			xOffset: 0.03,
 			yOffset: 0.0
 		},
 		NET: {
-			color: 0x3f54576,
-			backgroundColor: 0x111111,
+			color: 0xE74C3C,
+			backgroundColor: 0xffffff,
 			points: 10,
 			maxDistance: 20,
 			spacing: 15,
@@ -383,63 +382,44 @@
 	};
 
 	onMount(() => {
-  if (!browser) return;
+		if (!browser) return;
 
-  const initVanta = async () => {
-    try {
-      const p5Effects = ['TRUNK', 'TOPOLOGY'];
+		const initVanta = async () => {
+			try {
+				// Attendre que THREE soit chargé (proscrit la logique p5/TOPOLOGY/TRUNK)
+				while (!window.THREE) {
+					await new Promise((resolve) => setTimeout(resolve, 50));
+				}
+				while (!window.VANTA) {
+					await new Promise((resolve) => setTimeout(resolve, 50));
+				}
+				while (!vantaRef) {
+					await new Promise((resolve) => setTimeout(resolve, 30));
+				}
 
-      // Attendre que la lib requise soit chargée
-      if (p5Effects.includes(effect)) {
-        while (!window.p5) {
-          await new Promise((resolve) => setTimeout(resolve, 50));
-        }
-      } else {
-        while (!window.THREE) {
-          await new Promise((resolve) => setTimeout(resolve, 50));
-        }
-      }
-
-      // Attendre que VANTA soit chargé
-      while (!window.VANTA) {
-        await new Promise((resolve) => setTimeout(resolve, 50));
-      }
-
-      // Attendre que l'élément ref soit prêt
-      while (!vantaRef) {
-        await new Promise((resolve) => setTimeout(resolve, 30));
-      }
-
-      if (!vantaEffect) {
-        const finalConfig = {
-          el: vantaRef,
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.0,
-          minWidth: 200.0,
-          scale: 1.0,
-          scaleMobile: 1.0,
-          ...defaultConfigs[effect],
-          ...config
-        };
-
-        // Ajouter THREE uniquement si nécessaire
-        if (!p5Effects.includes(effect)) {
-          finalConfig.THREE = window.THREE;
-        }
-
-        vantaEffect = window.VANTA[effect](finalConfig);
-        console.log(`✅ Vanta "${effect}" initialisé avec succès`);
-      }
-    } catch (error) {
-      console.error(`❌ Erreur Vanta (${effect}) :`, error);
-    }
-  };
-
-  initVanta();
-});
-
+				if (!vantaEffect) {
+					const finalConfig = {
+						el: vantaRef,
+						mouseControls: true,
+						touchControls: true,
+						gyroControls: false,
+						minHeight: 200.0,
+						minWidth: 200.0,
+						scale: 1.0,
+						scaleMobile: 1.0,
+						...defaultConfigs[effect],
+						...config,
+						THREE: window.THREE
+					};
+					vantaEffect = window.VANTA[effect](finalConfig);
+					console.log(`✅ Vanta "${effect}" initialisé`);
+				}
+			} catch (error) {
+				console.error(`❌ Erreur Vanta (${effect}) :`, error);
+			}
+		};
+		initVanta();
+	});
 </script>
 
 {#if browser}

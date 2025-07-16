@@ -5,7 +5,7 @@
 
 <section>
 	<TitleDot
-		title="Nos solutions audio sur mesure"/>
+		title="Notre savoir faire"/>
 
 	<div class="wrapper__card">
 		<CardDotWhite
@@ -16,7 +16,7 @@
 			txt="Découvrir"
 		/>
 		<CardDotWhite
-			title="Création originale"
+			title="Post-production audio"
 			subtitle={`Identité sonore
 		 Habillage sonore 
 		Composition musicale`}

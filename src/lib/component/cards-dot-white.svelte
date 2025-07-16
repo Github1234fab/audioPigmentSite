@@ -44,7 +44,7 @@
 	.card:hover .dot {
 		width: 10px;
 		aspect-ratio: 1;
-		animation: moveDot 3s linear infinite;
+		animation: moveDot 10s linear infinite;
 	}
 	
 
