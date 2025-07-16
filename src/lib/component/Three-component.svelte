@@ -24,10 +24,10 @@
 				
 				const scene = new THREE.Scene();
 				const camera = new THREE.PerspectiveCamera(
-					65,
+					95,
 					container.clientWidth / container.clientHeight,
 					0.1,
-					1300
+					1000
 				);
 				const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 				renderer.setSize(container.clientWidth, container.clientHeight);
@@ -47,8 +47,8 @@
 				scene.add(directionalLight2);
 
 				const group = new THREE.Group();
-				const numberOfFilaments = 100;
-				const pointsPerFilament = 50;
+				const numberOfFilaments = 50;
+				const pointsPerFilament = 200;
 
 				for (let i = 0; i < numberOfFilaments; i++) {
 					const points = [];
@@ -60,13 +60,13 @@
 					}
 
 					const path = new THREE.CatmullRomCurve3(points);
-					const geometry = new THREE.TubeGeometry(path, 64, 0.5, 8, false);
+					const geometry = new THREE.TubeGeometry(path, 64, 1.5, 8, false);
 					const material = new THREE.MeshPhongMaterial({
 						color: 0xe74c3c,
 						shininess: 300,
 						specular: 0x6b717f,
 						transparent: true,
-						opacity: 0.4
+						opacity: 0.3
 					});
 
 					const filament = new THREE.Mesh(geometry, material);
@@ -89,7 +89,7 @@
 					} else if (width < 1024) {
 						group.scale.set(0.75, 0.75, 0.75);
 					} else {
-						group.scale.set(1, 0.7, 0.4);
+						group.scale.set(1, 1, 0.8);
 					}
 				}
 

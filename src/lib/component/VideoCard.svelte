@@ -57,10 +57,10 @@
 		border: 1px solid #c00;
 	}
 	iframe {
-		width: 320px;
-		height: 180px;
-		max-width: 100%;
+		aspect-ratio: 1;
+		height: 320px;
+		width: auto;
 		border-radius: 8px;
-		background: #5a0606;
+		background-color: var(--ardoise);
 	}
 </style>

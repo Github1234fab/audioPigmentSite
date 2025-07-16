@@ -33,6 +33,7 @@ onMount(() => {
 	import Navbar from '$lib/Navbar.svelte';
 	import './style.css';
 	import '@splidejs/svelte-splide/css';
+	import '$lib/component/slider-global.css';
 </script>
 
 <Navbar />

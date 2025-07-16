@@ -45,6 +45,7 @@
 		color: var(--black);
 		height: 100%;
 		margin-bottom: 2rem;
+		
 	}
     .wrapper__collapses {
         display: flex;
@@ -58,7 +59,7 @@
 
 	section h2 {
 		font-family: var(--bebas);
-		font-size: 2.7rem;
+		font-size: 4rem;
 		margin-bottom: 1rem;
         margin-top: 50px;
 	}

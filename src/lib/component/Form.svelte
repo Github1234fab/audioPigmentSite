@@ -1,85 +1,84 @@
 <form
-name="contact-form-AudioPigment"
-method="POST"
-netlify-honeypot="bot-field"
-data-netlify="true"
-class="form"
+	name="contact-form-AudioPigment"
+	method="POST"
+	netlify-honeypot="bot-field"
+	data-netlify="true"
+	class="form"
 >
-<input type="hidden" name="form-name" value="contact-form-AudioPigment" />
+	<input type="hidden" name="form-name" value="contact-form-AudioPigment" />
 
-<div class="wrapper-inputs">
-    <input name="nom" type="text" id="nom" required placeholder="Nom" />
+	<div class="wrapper-inputs">
+		<input name="nom" type="text" id="nom" required placeholder="Nom" />
 
-    <input name="prenom" type="text" id="prenom" required placeholder="Prénom" />
-</div>
+		<input name="prenom" type="text" id="prenom" required placeholder="Prénom" />
+	</div>
 
-<div class="wrapper-inputs">
-    <input name="email" type="email" id="email" required placeholder="Adresse mail" />
+	<div class="wrapper-inputs">
+		<input name="email" type="email" id="email" required placeholder="Adresse mail" />
 
-    <input name="telephone" type="tel" id="telephone" required placeholder="Téléphone" />
-</div>
+		<input name="telephone" type="tel" id="telephone" required placeholder="Téléphone" />
+	</div>
 
-<textarea name="demande" id="demande" class="demande" placeholder="Votre demande"></textarea>
+	<textarea name="demande" id="demande" class="demande" placeholder="Votre demande"></textarea>
 
-<button class="btn" type="submit"><span>Envoyez </span></button>
+	<button class="btn" type="submit"><span>Envoyez </span></button>
 </form>
 
-
 <style>
-    form{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 2rem;
-        background-color: var(--ardoise);
-        color: white;
-        gap: 0px;
+	form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 2rem;
+		background-color: var(--ardoise);
+		color: white;
+		gap: 0px;
+		font-family: var(--raleway);
+		height: 100%;
+	}
+	form input {
+		width: 100%;
+		max-width: 400px;
+		padding: 10px;
+		border-radius: 5px;
+		border: none;
+		background-color: var(--ardoise);
+		box-shadow: inset 0 0 5px 5px rgba(0, 0, 0);
+		color: #ffffff;
+		font-size: 1rem;
+		border: 1px solid grey;
+		margin-bottom: 5px;
+	}
+	.demande {
+		width: 100%;
+		max-width: 400px;
+		padding: 10px;
+		border-radius: 5px;
+		border: none;
+		background-color: var(--ardoise);
+		box-shadow: inset 0 0 5px 5px rgba(0, 0, 0);
+		color: #fdfdfd;
+		font-size: 1rem;
+		border: 1px solid grey;
+		margin-bottom: 5px;
+		height: 200px;
+		font-family: var(--raleway);
+	}
+	form input::placeholder {
+		color: #e6e4e4;
+		font-weight: var(--regular);
         font-family: var(--raleway);
-        height: 100%;
-    }
-    form input{
-        width: 100%;
-        max-width: 400px;
-        padding: 10px;
-        border-radius: 5px;
-        border: none;
-        background-color: var(--ardoise);
-        box-shadow: inset 0 0 5px 5px rgba(0, 0, 0);
-        color: #ffffff;
-        font-size: 1rem;
-        border: 1px solid grey;
-        margin-bottom: 5px;
+	}
+	.demande::placeholder {
+		font-family: var(--raleway);
+		color: #c9c8c8;
+	}
 
-    }
-    .demande{
-        width: 100%;
-        max-width: 400px;
-        padding: 10px;
-        border-radius: 5px;
-        border: none;
-        background-color: var(--ardoise);
-        box-shadow: inset 0 0 5px 5px rgba(0, 0, 0);
-        color: #fdfdfd;
-        font-size: 1rem;
-        border: 1px solid grey;
-        margin-bottom: 5px;
-        height: 200px;
-        font-family: var(--raleway);
-    }
-    form input::placeholder {
-        color: #c9c8c8;
-    }
-    .demande::placeholder {
-   font-family: var(--raleway);
-        color: #c9c8c8;
-    }
+	/* ============= */
 
-
-    /* ============= */
-
-    .btn {
+	.btn {
 		margin-top: 20px;
 		margin-left: 20px;
 		background-color: var(--grey);

@@ -53,13 +53,15 @@
 	.wrapper__footer-infos {
 		display: flex;
 		align-items: baseline;
-		justify-content: space-around;
+justify-content: space-around;
 		text-align: center;
         width: 100%;
-		padding: 2rem;
+		padding: 1rem;
 		background-color: var(--ardoise);
 		color: white;
 		gap: 20px;
+		border: 1px solid rgba(128, 128, 128, 0.292);
+		width: 70%;
 	}
 	.wrapper__footer-infos-localisation {
 		display: flex;

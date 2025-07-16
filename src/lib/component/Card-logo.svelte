@@ -2,15 +2,13 @@
 	export let image;
 </script>
 
-
 <div class="card"><img class="img" src={image} alt="" /></div>
-
 
 <style>
 	.card {
 		position: relative;
-		height: 200px;
-		aspect-ratio: 1;
+		height: 70px;
+		width: auto;
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;

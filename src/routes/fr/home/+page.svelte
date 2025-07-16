@@ -21,7 +21,7 @@
 <Advantages />
 <Achievements />
 <ValueProp2 />
-<Footer/>
+<Footer />
 
 <style>
 </style>

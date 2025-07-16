@@ -32,50 +32,36 @@
     { url: 'https://www.youtube.com/watch?v=WFxoUld3yrc', title: 'Vidéo 26' },
     { url: 'https://www.youtube.com/watch?v=BqgViQ-U7Jg', title: 'Vidéo 27' },
     { url: 'https://www.youtube.com/watch?v=63PRVdLEgZI', title: 'Vidéo 28' },
-    { url: 'https://www.youtube.com/@StudioAudioPigment/videos', title: 'Vidéo 29' },
+
     { url: 'https://www.youtube.com/watch?v=UqSREduT-Tw', title: 'Vidéo 30' },
-    { url: 'https://www.youtube.com/@StudioAudioPigment', title: 'Vidéo 31' }
+ 
 ];
 
 	const options = {
 		type: 'loop',
-		perPage: 7,
-		gap: 0,
+		perPage: 4,
+		gap: 3,
 		autoplay: true,
 		pauseOnHover: true,
 		speed: 2000,
 		arrows: true,
 		pagination: false,
-		breakpoints: {
-			1560: { perPage: 7 },
-			1024: { perPage: 7 },
-			938: { perPage: 4 },
-			768: { perPage: 1 },
-			480: { perPage: 1 }
-		},
+		// breakpoints: {
+		// 	1560: { perPage: 7 },
+		// 	1024: { perPage: 7 },
+		// 	938: { perPage: 4 },
+		// 	768: { perPage: 1 },
+		// 	480: { perPage: 1 }
+		// },
 		easing: 'ease-in-out'
 	};
 </script>
 
-<Splide {options} aria-label="Vidéos">
+<Splide {options} aria-label="Vidéos" >
 	{#each videos as video}
-		<SplideSlide>
+		<SplideSlide class="test">
 			<VideoCard url={video.url} title={video.title} />
 		</SplideSlide>
 	{/each}
 </Splide>
 
-<style>
-	:global(.splide) {
-		margin: 2rem auto;
-		min-width: 100vw;
-
-		background: transparent;
-	}
-	:global(.splide__slide) {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		min-height: 240px;
-	}
-</style>

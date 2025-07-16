@@ -1,0 +1,11 @@
+.splide {
+    margin: 50px auto;
+    width: 100%;
+    background: transparent;
+  }
+  .splide__slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }

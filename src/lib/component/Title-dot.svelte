@@ -21,6 +21,7 @@
 		font-family: var(--raleway);
 		z-index: 0;
 		border: 1px solid var(--ardoise);
+		margin-top: 100px;
 	}
 
 	.dot {
@@ -38,10 +39,10 @@
 	}
 
 	.title {
-		font-size: 2.7rem;
+		font-size: 4rem;
 		font-weight: var(--extra-bold);
 		margin-bottom: 10px;
-		font-family: var(--raleway);
+		font-family: var(--bebas);
 		text-align: center;
 		color: var(--ardoise);
 		letter-spacing: -0.8px;

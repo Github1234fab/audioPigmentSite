@@ -48,4 +48,20 @@
 		padding: 20px 40px;
 		max-width: 800px;
 	}
+
+	@media screen and (max-width: 768px) {
+
+	.wrapper__buttons {
+		display: flex;
+		flex-direction: column;
+		gap: 0px;
+		margin-top: 20px;
+	}
+	section p {
+		max-width: 100%;
+	}
+}
+	
+
+	
 </style>

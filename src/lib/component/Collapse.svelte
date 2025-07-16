@@ -39,6 +39,7 @@
 		justify-content: center;
 		align-items: center;
 		width: 90vw;
+	
 	}
 
 	.button {
@@ -52,7 +53,6 @@
 		margin-bottom: 10px;
 		width: 80%;
 		border: 1px solid var(--ardoise);
-		background-color: white;
 		z-index: 0;
 	}
 	.button:hover {

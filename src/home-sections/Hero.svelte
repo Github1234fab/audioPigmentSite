@@ -26,7 +26,7 @@
 	section {
 		position: relative;
 		z-index: 0;
-		min-height: 70vh;
+		height: 100vh;
 		background-color: black;
 	}
 
@@ -53,10 +53,14 @@
 		justify-content: center;
 		gap: 10px;
 	}
+	.wrapper__buttons {
+		display: flex;
+		margin-top: 50px;
+	}
 
 	h1 {
 		font-family: var(--bebas);
-		font-size: 3.5rem;
+		font-size: 5rem;
 		width: 90%;
 		margin: 0 auto;
 	}
@@ -69,12 +73,22 @@
 	}
 
 	@media screen and (max-width: 768px) {
+		section {
+			height: 100%;
+			padding: 0px;
+		}
 		.wrapper__txt {
 			position: absolute;
 			top: 45%;
 			left: 50%;
 			transform: translate(-50%, -50%);
 			gap: 30px;
+		}
+		.wrapper__buttons {
+			display: flex;
+			flex-direction: column;
+			margin-top: 10px;
+			gap: 0px;
 		}
 		section {
 			height: auto;

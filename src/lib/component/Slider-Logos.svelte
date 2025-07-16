@@ -116,7 +116,7 @@
 	// Options Splide
     const options = {
     type: 'loop',
-    perPage: 6,
+    perPage: 8,
     gap: 5,
     autoplay: true,
     pauseOnHover: true,
@@ -142,7 +142,7 @@
   {/each}
 </Splide>
 
-<style>
+<!-- <style>
   :global(.splide) {
     margin: 50px auto;
     width: 100%;
@@ -154,4 +154,4 @@
     justify-content: center;
 
   }
-</style>
+</style> -->

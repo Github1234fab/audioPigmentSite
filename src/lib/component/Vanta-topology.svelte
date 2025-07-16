@@ -9,11 +9,6 @@
 
 	const defaultConfig = {
 		el: null, // sera défini dynamiquement
-		// mouseControls: true,
-		// touchControls: true,
-		// gyroControls: false,
-		// minHeight: 200,
-		// minWidth: 200,
 		scale: 1.0,
 		scaleMobile: 1.0,
 		backgroundColor: 0x23153c,
@@ -32,7 +27,7 @@
 			el: vantaRef,
 		};
 
-		vantaEffect = window.VANTA.TOPOLOGY(finalConfig);
+		vantaEffect = window.VANTA.TRUNK(finalConfig);
 	}
 
 	onMount(() => {

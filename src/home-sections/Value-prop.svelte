@@ -1,12 +1,13 @@
 <script>
 	import Button from '$lib/component/btn-black-border.svelte';
 	import SliderLogos from '$lib/component/Slider-logos.svelte';
-	// import VantaTopology from '../lib/component/Vanta-topology.svelte';
+	import VantaTopology from '../lib/component/Vanta-topology.svelte';
 </script>
 
 <section>
 
-	<!-- <VantaTopology config={{ color: 0xE74C3C, backgroundColor: 0x21222c }} /> -->
+	<VantaTopology config={{ color: 0xE74C3C, backgroundColor: 0x21222c }} />
+	<div class="wrapper__section-txt">
 	<h2>Ensemble, créons des émotions, marquons les esprits</h2>
 
 	<div class="wrapper__h4">
@@ -33,6 +34,7 @@
 		fiers de la confiance qu’ils continuent de nous accorder aujourd’hui…
 	</p>
 	<Button txt="Contactez-nous" />
+</div>
 	<div class="wrapper__slider-logos">
 		<SliderLogos />
 	</div>
@@ -57,13 +59,19 @@
 	.wrapper__slider-logos {
 		width: 100%;
 	}
-
-	section h2 {
+	.wrapper__section-txt{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		max-width: 800px;
+		margin-bottom: 100px;
 		font-family: var(--bebas);
 		font-size: 2.9rem;
-		margin-bottom: 0.5rem;
 		color: white;
 		margin-top: 50px;
+		gap: 30px;
 	}
 
 	section h4 {
