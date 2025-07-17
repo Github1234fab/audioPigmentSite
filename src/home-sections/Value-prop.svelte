@@ -34,7 +34,7 @@
 		Fou, Point S, Orange, EDF, Région Auvergne-Rhône-Alpes, et beaucoup d’autres… Et nous sommes
 		fiers de la confiance qu’ils continuent de nous accorder aujourd’hui…
 	</p>
-	<Button txt="Contactez-nous" />
+	<Button txt="Contactez-nous" href="/fr/contact" />
 </div>
 	<div class="wrapper__slider-logos">
 		<SliderLogos />

@@ -1,15 +1,18 @@
 <script>
 	export let txt;
+	export let href = ''; // destination du lien
 </script>
 
-<button class="btn"><span>{txt} </span></button>
+<a href={href} class="btn">
+	<span>{txt}</span>
+  </a>
+
 
 <style>
 	.btn {
 		margin-top: 20px;
 		margin-left: 20px;
-		/* background-color: var(--ardoise); */
-        background-color: rgb(86, 82, 82);
+		background-color: var(--ardoise);
 		font-family: var(--raleway);
 		font-weight: var(--medium);
 		color: white;
@@ -20,7 +23,6 @@
 		position: relative;
 		overflow: hidden;
 		transition: color 0.6s ease;
-        box-shadow: 0px 20px 20px rgba(20, 20, 20, 0.306);
 	}
 
 	.btn::after {
@@ -47,5 +49,9 @@
 
 	.btn:hover span {
 		color: black;
+	}
+	a{
+		text-decoration: none;
+
 	}
 </style>

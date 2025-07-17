@@ -86,8 +86,8 @@
 <script>
 	import { page } from '$app/stores';
 	import Logo from '../assets/audio-pigment-logo.jpg';
-	import French from "../assets/Français.png";
-	import English from "../assets/Anglais.png";
+	import French from '../assets/Français.png';
+	import English from '../assets/Anglais.png';
 
 	// Récupérer la langue actuelle
 	$: lang = $page.url.pathname.split('/')[1];
@@ -96,9 +96,9 @@
 	const translations = {
 		fr: {
 			navItems: [
-				{ label: 'Nos réalisations', path: 'realisations' },
 				{ label: 'Notre expertise', path: 'expertise' },
-				{ label: 'Nos services', path: 'services' },
+				{ label: 'Nos réalisations', path: 'realisations' },
+				{ label: 'Nos prestations', path: 'services' },
 				{ label: 'Nos studios', path: 'studios' },
 				{ label: 'Notre actu', path: 'actu' },
 				{ label: 'À propos', path: 'À propos' },
@@ -107,8 +107,8 @@
 		},
 		en: {
 			navItems: [
-				{ label: 'Our Work', path: 'realisations' },
 				{ label: 'Expertise', path: 'expertise' },
+				{ label: 'Our Work', path: 'realisations' },
 				{ label: 'Our Services', path: 'services' },
 				{ label: 'Studios', path: 'studios' },
 				{ label: 'News', path: 'actu' },
@@ -137,10 +137,13 @@
 	{/if}
 
 	<div class="wrapper__buttons">
-		<button class="buttons-switch" on:click={() => switchLanguage('fr')}> <img class="flag" src= {French} alt="Drapeau Français"> </button>
-		<button class="buttons-switch" on:click={() => switchLanguage('en')}> <img class="flag"  src={English} alt="English Flag"> </button>
-		</div>
-	
+		<button class="buttons-switch" on:click={() => switchLanguage('fr')}>
+			<img class="flag" src={French} alt="Drapeau Français" />
+		</button>
+		<button class="buttons-switch" on:click={() => switchLanguage('en')}>
+			<img class="flag" src={English} alt="English Flag" />
+		</button>
+	</div>
 </nav>
 
 <style>
@@ -195,7 +198,7 @@
 	}
 
 	.buttons-switch:hover {
-	transform: scale(1.1);
+		transform: scale(1.1);
 	}
 
 	.wrapper__buttons {
@@ -209,10 +212,8 @@
 		border-radius: 50%;
 		margin-right: 6px;
 	}
-	.flag{
+	.flag {
 		height: 100%;
 		width: auto;
-		
 	}
 </style>
-

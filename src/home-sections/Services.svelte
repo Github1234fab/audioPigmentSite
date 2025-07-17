@@ -78,26 +78,26 @@
 		{
 			label: 'Production audio',
 			desc: 'Prise de son, enregistrement studio, montage & réalisation musiques et voix.',
-			link: '/fr/services/communication-sonore',
+			link: '/fr/services',
 
 			image: 'https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg'
 		},
 		{
 			label: 'Consultation en stratégie sonore',
 			desc: 'Accompagnement, audit branding sonore et direction artistique personnalisée.',
-			link: '/fr/services/communication-sonore',
+			link: '/fr/services',
 			image: 'https://images.pexels.com/photos/7586136/pexels-photo-7586136.jpeg'
 		},
 		{
 			label: 'Doublage multilingue / localisation',
 			desc: 'Voix off, casting international, adaptation multilingue tous supports.',
-			link: '/fr/services/communication-sonore',
+			link: '/fr/services',
 			image: 'https://images.pexels.com/photos/4476164/pexels-photo-4476164.jpeg'
 		},
 		{
 			label: 'Mixage & postproduction',
 			desc: 'Mixage multicanal, post-prod TV/VOD, mastering et livraison broadcast.',
-			link: '/fr/services/communication-sonore',
+			link: '/fr/services',
 			image: 'https://images.pexels.com/photos/4988131/pexels-photo-4988131.jpeg'
 		}
 	];
@@ -179,13 +179,14 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		border-radius: 12px;
-		box-shadow: 0 1px 6px rgba(50, 50, 50, 0.09);
+		box-shadow: 0 10px 20px rgba(50, 50, 50, 0.328);
 		padding: 2rem;
 		height: 600px;
 		width: 400px;
 		transition: transform 0.15s;
 		position: relative;
 		z-index: 0;
+	
 	}
 	.service-card::after {
 		content: '';

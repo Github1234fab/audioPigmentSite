@@ -295,8 +295,8 @@
 			scaleMobile: 1.0
 		},
 		BIRDS: {
-			color1: 0xff4081,
-			color2: 0x448aff,
+			color1: 0xE74C3C,
+			color2: 0xE74C3C,
 			backgroundColor: 0x1a1a2e,
 			quantity: 3,
 			speedLimit: 5,
@@ -349,7 +349,7 @@
 		},
 		HALO: {
 			color: 0xE74C3C,
-			backgroundColor: 0xffffff,
+			backgroundColor: 0x111111,
 			size: 1.0,
 			amplitudeFactor: 5.0,
 			xOffset: 0.03,
@@ -357,15 +357,15 @@
 		},
 		NET: {
 			color: 0xE74C3C,
-			backgroundColor: 0xffffff,
-			points: 10,
-			maxDistance: 20,
-			spacing: 15,
+			backgroundColor: 0x111111,
+			points: 5,
+			maxDistance: 10,
+			spacing: 5,
 			showDots: true
 		},
 		RINGS: {
 			color: 0x3f5efc,
-			backgroundColor: 0x191919,
+			backgroundColor: 0xffffff,
 			quantity: 5,
 			speed: 3.0,
 			scale: 2.0,

@@ -2,8 +2,7 @@
 	export let title;
 	export let subtitle;
 	import Btn from '$lib/component/btn-black-shadow.svelte';
-	export let txt;
-	export let href = ''; // destination du lien
+
 </script>
 
 <div class="card">
@@ -11,14 +10,13 @@
 	<div class="wrapper__txt">
 		<div class="title">{title}</div>
 		<div class="subtitle">{subtitle}</div>
-		<Btn {txt} {href} />
 	</div>
 </div>
 
 <style>
 	.card {
-		aspect-ratio: 1.3;
-		height: 350px;
+		aspect-ratio: 1;
+		height: 360px;
 		border-radius: 0px;
 		padding: 1rem;
 		position: relative;

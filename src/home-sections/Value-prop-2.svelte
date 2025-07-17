@@ -1,22 +1,18 @@
 <script>
 	import BtnBlack from '$lib/component/btn-black.svelte';
 	import BtnWhite from '$lib/component/Btn-White.svelte';
-	import Vanta from '$lib/component/Vanta.svelte';
+
 </script>
 
 <section>
-
-		<video autoplay muted loop playsinline class="background-video">
-		  <source src="https://videos.pexels.com/video-files/7087627/7087627-uhd_2732_1440_25fps.mp4" type="video/mp4" />
-		</video>
-		<!-- <div class="overlay-content">
-		  <h1>Bienvenue</h1>
-		  <p>Une ambiance sonore immersive.</p>
-		</div> -->
+	<video autoplay muted loop playsinline class="background-video">
+		<source
+			src="https://videos.pexels.com/video-files/7087627/7087627-uhd_2732_1440_25fps.mp4"
+			type="video/mp4"
+		/>
+	</video>
 
 
-
-	<Vanta effect="HALO" />
 	<h2>Notre engagement pour une qualité sonore exceptionnelle</h2>
 	<h3>
 		Chaque projet mérite son histoire sonore unique : chez Audio Pigment, l’évidence c’est
@@ -29,8 +25,8 @@
 		du sur-mesure. Comprendre, ressentir, transmettre : c’est notre métier. Faisons-nous confiance.
 	</p>
 	<div class="wrapper__buttons">
-		<BtnBlack txt="Contactez-nous" />
-		<BtnWhite txt="Découvrez nos services" />
+		<BtnBlack txt="Contactez-nous" href="/fr/contact" />
+		<BtnWhite txt="Découvrez nos services" href="/fr/services"  />
 	</div>
 </section>
 
@@ -90,7 +86,7 @@
 		object-fit: cover;
 		z-index: -1;
 	}
-	
+
 	/* .overlay-content {
 		position: relative;
 		z-index: 1;

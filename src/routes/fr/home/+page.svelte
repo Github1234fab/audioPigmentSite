@@ -10,8 +10,8 @@
 	import Advantages from '../../../home-sections/Advantage.svelte';
 	import Achievements from '../../../home-sections/Achievements.svelte';
 	import ValueProp2 from '../../../home-sections/Value-prop-2.svelte';
-	import Footer from '../../../home-sections/Footer.svelte';
-	import '@splidejs/splide/dist/css/splide.min.css';
+
+	// import '@splidejs/splide/dist/css/splide.min.css';
 </script>
 
 <Hero />
@@ -20,9 +20,6 @@
 <Services />
 <Achievements />
 <Advantages />
-
 <ValueProp2 />
-<Footer />
 
-<style>
-</style>
+

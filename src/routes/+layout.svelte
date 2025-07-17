@@ -34,7 +34,18 @@ onMount(() => {
 	import './style.css';
 	import '@splidejs/svelte-splide/css';
 	import '$lib/component/slider-global.css';
+	import Footer from '../home-sections/Footer.svelte';
+
+	import { afterNavigate } from '$app/navigation';
+
+afterNavigate(() => {
+  if(window.location.hash) {
+    const el = document.getElementById(window.location.hash.substring(1));
+    if(el) el.scrollIntoView({ behavior: "smooth" });
+  }
+});
 </script>
 
 <Navbar />
 <slot />
+<Footer/>
