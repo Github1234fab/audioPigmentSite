@@ -36,7 +36,7 @@
 		background-color: var(--ardoise);
 		color: white;
 		padding: 2rem;
-		height: 100vh;
+		min-height: 100vh;
         gap: 20px;
 	}
 	section h1 {

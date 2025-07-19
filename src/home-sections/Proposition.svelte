@@ -44,6 +44,7 @@
 		justify-content: center;
 		padding: 1rem;
 		background-color: rgb(232, 226, 226);
+
 		color: var(--black);
 		min-height: 70vh;
 	}

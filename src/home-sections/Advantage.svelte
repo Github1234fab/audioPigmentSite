@@ -91,7 +91,7 @@
 		color: white;
 		font-weight: var(--regular);
 		margin-top: 0px;
-	
+
 		padding: 20px 40px;
 	}
 	.features-grid {
@@ -121,11 +121,11 @@
 	.feature-card:hover {
 		background: rgba(255, 255, 255, 0.1);
 		border-color: rgba(255, 255, 255, 0.3);
-		transform: rotateY(-5deg); 
+		transform: rotateY(-5deg);
 	}
 
 	.feature-card:hover .icon {
-	transform: scale(1.1);
+		transform: scale(1.1);
 		transition: transform 0.3s ease;
 	}
 	.icon {
@@ -161,11 +161,32 @@
 		font-family: var(--raleway);
 		text-align: bottom;
 	}
+	@media (max-width: 1000px) {
+		.features-grid {
+			grid-template-columns: 1fr 1fr; /* 2 colonnes identiques */
+			padding: 1rem;
+			gap: 1rem;
+		}
+		.feature-card {
+			padding: 1rem;
+		}
+		section h2 {
+			font-size: 2rem;
+		}
+	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 600px) {
 		.features-grid {
 			grid-template-columns: 1fr;
-			padding: 1rem;
+			padding: 0.5rem;
+			gap: 0.75rem;
+		}
+		.feature-card {
+			padding: 0.5rem;
+			font-size: 0.95rem;
+		}
+		section h2 {
+			font-size: 1.4rem;
 		}
 	}
 </style>

@@ -79,6 +79,7 @@
 		align-items: center;
 		justify-content: center;
 		font-family: var(--raleway);
+
 	}
 	.wrapper__service-txt {
 		display: flex;
@@ -129,7 +130,7 @@
 		z-index: 1;
 		height: 100%;
 		width: 100%;
-		background: linear-gradient(to top, rgba(0, 0, 0, 0.832) , rgba(255, 255, 255, 0) 70%);
+		background: linear-gradient(to top, rgba(0, 0, 0, 0.832) , rgba(255, 255, 255, 0) 100%);
 	}
 	.service-card:hover {
 		transform: translateY(-5px) scale(1.04);
@@ -146,6 +147,7 @@
 		margin-bottom: 1rem;
 		color: white;
 		font-size: 1rem;
+		line-height: 1.6;
 	}
 	a {
 		text-decoration: none;

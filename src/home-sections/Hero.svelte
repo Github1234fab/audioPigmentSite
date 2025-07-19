@@ -76,6 +76,7 @@
 		section {
 			height: 100%;
 			padding: 0px;
+
 		}
 		.wrapper__txt {
 			position: absolute;

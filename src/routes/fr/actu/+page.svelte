@@ -25,7 +25,7 @@ import Slider from '$lib/component/Slider.svelte';
         background-color: var(--ardoise);
         color: white;
         padding: 2rem;
-        height: 100vh;
+        height: 100%;
         gap: 20px;
     }
     section h1 {

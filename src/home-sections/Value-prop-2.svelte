@@ -1,7 +1,6 @@
 <script>
 	import BtnBlack from '$lib/component/btn-black.svelte';
 	import BtnWhite from '$lib/component/Btn-White.svelte';
-
 </script>
 
 <section>
@@ -12,21 +11,23 @@
 		/>
 	</video>
 
+	<div class="wrapper__section-txt">
+		<h2>Notre engagement pour une qualité sonore exceptionnelle</h2>
+		<h3>
+			Chaque projet mérite son histoire sonore unique : chez Audio Pigment, l’évidence c’est
+			l’exception.
+		</h3>
 
-	<h2>Notre engagement pour une qualité sonore exceptionnelle</h2>
-	<h3>
-		Chaque projet mérite son histoire sonore unique : chez Audio Pigment, l’évidence c’est
-		l’exception.
-	</h3>
-
-	<p>
-		Chez AUDIO PIGMENT, chaque projet est pensé, écouté, façonné avec précision par l’expertise
-		humaine, pour créer un impact optimal. Une écoute exigeante, un savoir-faire affûté, et le goût
-		du sur-mesure. Comprendre, ressentir, transmettre : c’est notre métier. Faisons-nous confiance.
-	</p>
-	<div class="wrapper__buttons">
-		<BtnBlack txt="Contactez-nous" href="/fr/contact" />
-		<BtnWhite txt="Découvrez nos services" href="/fr/services"  />
+		<p>
+			Chez AUDIO PIGMENT, chaque projet est pensé, écouté, façonné avec précision par l’expertise
+			humaine, pour créer un impact optimal. Une écoute exigeante, un savoir-faire affûté, et le
+			goût du sur-mesure. Comprendre, ressentir, transmettre : c’est notre métier. Faisons-nous
+			confiance.
+		</p>
+		<div class="wrapper__buttons">
+			<BtnBlack txt="Contactez-nous" href="/fr/contact" />
+			<BtnWhite txt="Découvrez nos services" href="/fr/services" />
+		</div>
 	</div>
 </section>
 
@@ -57,6 +58,7 @@
 		font-family: var(--raleway);
 		font-size: 1rem;
 		margin-bottom: 0.5rem;
+		line-height: 1.8;
 		color: white;
 		font-weight: var(--regular);
 		margin-top: 0px;
@@ -76,6 +78,39 @@
 		display: flex;
 		/* flex-direction: column; */
 		margin-bottom: 50px;
+	}
+	.wrapper__section-txt {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
+		color: white;
+		z-index: 2;
+		position: relative;
+		padding: 2rem;
+	}
+	section::after {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(
+			to top,
+			rgba(0, 0, 0, 0) 0%,
+			rgb(0, 0, 0, 0.5) 	50%,
+		 rgba(0, 0, 0, 0) 100%
+		);
+		z-index: 1;
+		border-radius: 10px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 10px;
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+		-webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 	}
 	.background-video {
 		position: absolute;

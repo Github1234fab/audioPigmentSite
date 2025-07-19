@@ -10,8 +10,8 @@
 
 <style>
 	.btn {
-		margin-top: 20px;
-		margin-left: 20px;
+		margin: 20px auto;
+
 		background-color: var(--ardoise);
 		font-family: var(--raleway);
 		font-weight: var(--medium);
@@ -24,6 +24,7 @@
 		overflow: hidden;
 		transition: color 0.6s ease;
 		border: 1px solid white;
+
 	}
 
 	.btn::after {

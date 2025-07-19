@@ -85,9 +85,11 @@
 						group.position.y += 310;
 						group.scale.set(0.7, 0.6, 1);
 					} else if (width < 768) {
+						group.position.y += 260;
 						group.scale.set(0.5, 0.5, 0.5);
 					} else if (width < 1024) {
-						group.scale.set(0.75, 0.75, 0.75);
+						group.position.y += 260;
+						group.scale.set(1, 1, 0.8);
 					} else {
 						group.scale.set(1, 1, 0.8);
 					}

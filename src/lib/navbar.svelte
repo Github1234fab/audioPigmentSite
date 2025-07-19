@@ -89,10 +89,10 @@
 	import French from '../assets/Français.png';
 	import English from '../assets/Anglais.png';
 
-	// Récupérer la langue actuelle
+	let menuOpen = false;
+
 	$: lang = $page.url.pathname.split('/')[1];
 
-	// Dictionnaire de traductions
 	const translations = {
 		fr: {
 			navItems: [
@@ -122,98 +122,144 @@
 		let newPath = $page.url.pathname.replace(/^\/(fr|en)/, `/${newLang}`);
 		window.location.href = newPath;
 	}
+
+	function closeMenu() {
+		menuOpen = false;
+	}
 </script>
 
 <nav>
 	<a href="/" class="home-link">
-		<img src={Logo} class="logo" alt="Logo Audio Pigment" width="100" height="100" />
+		<img src={Logo} class="logo" alt="Logo Audio Pigment"/>
 		Audio Pigment
 	</a>
 
-	{#if translations[lang]}
-		{#each translations[lang].navItems as item}
-			<a href="/{lang}/{item.path}">{item.label}</a>
-		{/each}
-	{/if}
+	<!-- Burger (caché en desktop, visible sous 768px) -->
+	<button class="burger" aria-label="Ouvrir le menu" on:click={() => menuOpen = !menuOpen}>
+		<span class="bar"></span>
+		<span class="bar"></span>
+		<span class="bar"></span>
+	</button>
+	
+	<!-- Menu principal -->
+	<div class="main-menu {menuOpen ? 'open' : ''}">
+		{#if translations[lang]}
+			{#each translations[lang].navItems as item}
+				<a href="/{lang}/{item.path}" on:click={closeMenu}>{item.label}</a>
+			{/each}
+		{/if}
 
-	<div class="wrapper__buttons">
-		<button class="buttons-switch" on:click={() => switchLanguage('fr')}>
-			<img class="flag" src={French} alt="Drapeau Français" />
-		</button>
-		<button class="buttons-switch" on:click={() => switchLanguage('en')}>
-			<img class="flag" src={English} alt="English Flag" />
-		</button>
+		<div class="wrapper__buttons">
+			<button class="buttons-switch" on:click={() => { closeMenu(); switchLanguage('fr'); }}>
+				<img class="flag" src={French} alt="Drapeau Français" />
+			</button>
+			<button class="buttons-switch" on:click={() => { closeMenu(); switchLanguage('en'); }}>
+				<img class="flag" src={English} alt="English Flag" />
+			</button>
+		</div>
 	</div>
 </nav>
 
 <style>
-	nav {
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		height: 100px;
-		padding: 20px;
-		background-color: transparent;
-		letter-spacing: -0.5px;
-		z-index: 2;
-		flex-wrap: wrap;
-	}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 2em;
+  background: white;
+  position: relative;
+  z-index: 10;
+  font-family: var(--raleway)
+}
+.home-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  font-weight: var(--medium);
+  font-size: 0.8rem;
+  gap: 5px;
+}
+.logo {
+	height: 50px;
+	width: 50px;
+  object-fit: fill;
+  border-radius: 50%;
+}
+.main-menu {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.main-menu a {
+  text-decoration: none;
+  color: inherit;
+  padding: .5em .2em;
+}
 
-	a {
-		color: rgb(66, 65, 65);
-		text-decoration: none;
-		font-family: var(--raleway);
-		font-weight: var(--regular);
-		font-size: 1rem;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 0.4rem 0.8rem;
-		transition: color 0.2s ease;
-	}
+.wrapper__buttons {
+  display: flex;
+  gap: .5em;
+  margin-left: .6em;
+}
+.buttons-switch {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.flag {
+  width: 32px;
+  height: 24px;
+}
 
-	a:hover {
-		color: var(--primary-color, #ce2d2d);
-	}
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 200;
+  width: 35px;
+  height: 35px;
+  margin-left: 1em;
+}
+.bar {
+  width: 100%;
+  height: 4px;
+  background: #222;
+  border-radius: 2px;
+  transition: 0.3s;
+}
 
-	.home-link {
-		font-weight: bold;
-		font-size: 1.1rem;
-		border: 1px solid rgb(226, 226, 226);
-	}
-
-	.buttons-switch {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background: none;
-		border: none;
-		color: black;
-		font-size: 0.8rem;
-		cursor: pointer;
-		border-radius: 5px;
-		height: 30px;
-		width: 30px;
-		transition: 0.2s ease-in-out;
-	}
-
-	.buttons-switch:hover {
-		transform: scale(1.1);
-	}
-
-	.wrapper__buttons {
-		display: flex;
-		gap: 5px;
-	}
-
-	.logo {
-		height: 40px;
-		width: 40px;
-		border-radius: 50%;
-		margin-right: 6px;
-	}
-	.flag {
-		height: 100%;
-		width: auto;
-	}
+/* ----- Responsive ------ */
+@media (max-width: 1200px) {
+  .main-menu {
+    position: absolute;
+    left: 0; right: 0;
+    top: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2em;
+    padding: 2em 1.5em 1.5em;
+    display: none;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  }
+  .main-menu.open {
+    display: flex;
+  }
+  .burger {
+    display: flex;
+  }
+  .main-menu a {
+    padding: .7em 0;
+    width: 100%;
+  }
+  .wrapper__buttons {
+    margin-left: 0;
+  }
+}
 </style>

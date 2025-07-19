@@ -25,7 +25,7 @@
 		text-align: center;
 		padding: 2rem;
 		background-color: var(--ardoise);
-        height: 60vh;
+        height: 80vh;
 		z-index: 0;
 		gap: 0px;
 		overflow: hidden;
@@ -39,6 +39,23 @@
         margin-top: 0px;
     
     }
+
+	@media (max-width: 768px) {
+		section {
+		height: 100vh
+	
+	}
+		section h2 {
+			font-size: 2.5rem;
+		}
+	}
+	.wrapper__slider-logos {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
 	
 </style>
