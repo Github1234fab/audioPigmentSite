@@ -5,37 +5,36 @@
 </script>
 
 <section>
-	
-<!-- 
+	<!-- 
 	<VantaTopology config={{ color: 0xE74C3C, backgroundColor: 0x21222c }} /> -->
 	<div class="wrapper__section-txt">
-	<h2>Ensemble, créons des émotions, marquons les esprits</h2>
+		<h2>Ensemble, créons des émotions, marquons les esprits</h2>
 
-	<div class="wrapper__h4">
-		<h4>3 studios</h4>
-		<h4>+ 40 langues</h4>
-		<h4>Réseau International</h4>
+		<div class="wrapper__h4">
+			<h4>3 studios</h4>
+			<h4>+ 40 langues</h4>
+			<h4>Réseau International</h4>
+		</div>
+
+		<p>
+			Acteurs reconnus de la production sonore, en France comme à l’international, nous sommes
+			spécialisés dans la voix off, le doublage, le sound design, la création musicale, la
+			postproduction, et le mixage. <br />
+
+			Nous conjuguons exigence technique, sens du détail et approche artistique pour des productions
+			haut de gamme, conçues sur mesure. <br /><br />
+
+			Chez Audio Pigment, chaque projet est pensé comme une pièce unique, où notre savoir-faire,
+			notre expérience, et notre créativité sont mis au service de l’impact, de l’image, du récit et
+			de l’identité.
+
+			<br /><br />Depuis 1999, nous accompagnons de grandes marques et institutions telles que :
+			L’Oréal, Chanel, Air France, Disneyland Paris, Ferrero, bioMérieux, Caisse d’Epargne, Puy du
+			Fou, Point S, Orange, EDF, Région Auvergne-Rhône-Alpes, et beaucoup d’autres… Et nous sommes
+			fiers de la confiance qu’ils continuent de nous accorder aujourd’hui…
+		</p>
+		<Button txt="Contactez-nous" href="/fr/contact" />
 	</div>
-
-	<p>
-		Acteurs reconnus de la production sonore, en France comme à l’international, nous sommes
-		spécialisés dans la voix off, le doublage, le sound design, la création musicale, la
-		postproduction, et le mixage. <br />
-
-		Nous conjuguons exigence technique, sens du détail et approche artistique pour des productions
-		haut de gamme, conçues sur mesure. <br /><br />
-
-		Chez Audio Pigment, chaque projet est pensé comme une pièce unique, où notre savoir-faire, notre
-		expérience, et notre créativité sont mis au service de l’impact, de l’image, du récit et de
-		l’identité.
-
-		<br /><br />Depuis 1999, nous accompagnons de grandes marques et institutions telles que :
-		L’Oréal, Chanel, Air France, Disneyland Paris, Ferrero, bioMérieux, Caisse d’Epargne, Puy du
-		Fou, Point S, Orange, EDF, Région Auvergne-Rhône-Alpes, et beaucoup d’autres… Et nous sommes
-		fiers de la confiance qu’ils continuent de nous accorder aujourd’hui…
-	</p>
-	<Button txt="Contactez-nous" href="/fr/contact" />
-</div>
 	<div class="wrapper__slider-logos">
 		<SliderLogos />
 	</div>
@@ -51,7 +50,7 @@
 		text-align: center;
 		padding: 2rem;
 		background-color: var(--ardoise);
-        min-height: 100vh;
+		min-height: 100vh;
 		z-index: 0;
 		gap: 40px;
 		overflow: hidden;
@@ -60,7 +59,7 @@
 	.wrapper__slider-logos {
 		width: 100%;
 	}
-	.wrapper__section-txt{
+	.wrapper__section-txt {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -110,6 +109,9 @@
 		}
 		.wrapper__slider-logos {
 			width: 300px;
+		}
+		.wrapper__section-txt {
+			font-size: 2.5rem;
 		}
 	}
 </style>

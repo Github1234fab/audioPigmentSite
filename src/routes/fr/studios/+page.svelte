@@ -164,4 +164,14 @@
         margin: 0 auto;
         line-height: 1.6;
     }
+
+	@media (max-width: 768px) {
+		.wrapper__studios {
+			flex-direction: column;
+			gap: 20px;
+		}
+		.wrapper__studios-room {
+			width: 100%;
+		}
+	}
 </style>

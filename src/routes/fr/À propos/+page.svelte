@@ -1,5 +1,5 @@
 <section>
-	<h1>Audio Pigment – Studio de création sonore depuis 1999</h1>
+	<h1>Audio Pigment <br> – <br> Studio de création sonore depuis 1999</h1>
 
 	<h2>Créer des émotions… Marquer les esprits…</h2>
 
@@ -52,6 +52,7 @@
 		color: white;
 		font-size: 1.5rem;
 		margin-top: 50px;
+		letter-spacing: -1px;
 	}
 	section p {
 		font-family: var(--raleway);

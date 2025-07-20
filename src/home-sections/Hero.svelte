@@ -95,7 +95,7 @@
 			height: auto;
 		}
 		h1 {
-			font-size: 3rem;
+			font-size: 3.5rem;
 		}
 		h2 {
 			font-size: 1rem;

@@ -72,15 +72,29 @@
 		}
 	}
 
-	@media screen and (max-width: 490px) {
+
+	@media screen and (max-width: 768px) {
 		.card {
-			height: 300px;
-			width: 300px;
+			height: 150px;
+			width: 450px;
 			aspect-ratio: 0;
+			margin-bottom: 30px;
 		}
 
 		.title {
-			font-size: 1.5rem;
+			font-size: 3.5rem;
+		}
+	}
+	@media screen and (max-width: 490px) {
+		.card {
+			height: 150px;
+			width: 300px;
+			aspect-ratio: 0;
+			margin-bottom: 30px;
+		}
+
+		.title {
+			font-size: 2.5rem;
 		}
 	}
 </style>

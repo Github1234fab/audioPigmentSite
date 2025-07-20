@@ -1,6 +1,7 @@
 <script>
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 	import VideoCard from './VideoCard.svelte';
+    import { onMount } from 'svelte';
 
 	// Ton tableau de vidéos
     const videos = [
@@ -37,31 +38,64 @@
  
 ];
 
-	const options = {
-		type: 'loop',
-		perPage: 4,
-		gap: 3,
-		autoplay: true,
-		pauseOnHover: true,
-		speed: 2000,
-		arrows: true,
-		pagination: false,
-		// breakpoints: {
-		// 	1560: { perPage: 7 },
-		// 	1024: { perPage: 7 },
-		// 	938: { perPage: 4 },
-		// 	768: { perPage: 1 },
-		// 	480: { perPage: 1 }
-		// },
-		easing: 'ease-in-out'
-	};
+const options = {
+        type: 'loop',
+        perPage: 4,
+        gap: 3,
+        autoplay: true,
+        pauseOnHover: true,
+        speed: 2000,
+        arrows: true,
+        pagination: false,
+        breakpoints: {
+            1560: { perPage: 7 },
+            1024: { perPage: 7 },
+            938: { perPage: 5 },
+            768: { perPage: 1 },
+            480: { perPage: 1, gap: 10 }
+        },
+        easing: 'ease-in-out'
+    };
+
+    let currentSlide = 0;
+
+    // Fonction d'extraction de la vignette YouTube
+    function getYoutubeThumbnail(url) {
+        const idMatch = url.match(/[?&]v=([^&]+)/);
+        if (!idMatch) return '';
+        return `https://img.youtube.com/vi/${idMatch[1]}/hqdefault.jpg`;
+    }
+
+    let splideRef;
+
+    function handleMoved(e) {
+        currentSlide = e.index;
+    }
+
+    onMount(() => {
+        // Au cas où Splide serait déjà positionné ailleurs
+        if (splideRef && splideRef.splide) {
+            currentSlide = splideRef.splide.index;
+        }
+    });
+
 </script>
 
-<Splide {options} aria-label="Vidéos" >
-	{#each videos as video}
-		<SplideSlide class="test">
-			<VideoCard url={video.url} title={video.title} />
-		</SplideSlide>
-	{/each}
+<Splide bind:this={splideRef} {options} on:moved={handleMoved} aria-label="Vidéos">
+    {#each videos as video, i}
+        <SplideSlide>
+            {#if Math.abs(currentSlide - i) <= 2}
+                <!-- Vidéo chargée seulement si proche du slide courant -->
+                <VideoCard url={video.url} title={video.title}/>
+            {:else}
+                <!-- Affiche une vignette YouTube (lazy), pas d'iframe lourde -->
+                <img 
+                    src={getYoutubeThumbnail(video.url)}
+                    alt={video.title}
+                    style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px;"
+                />
+            {/if}
+        </SplideSlide>
+    {/each}
 </Splide>
 

@@ -123,13 +123,13 @@
 		speed: 2000,
 		arrows: true,
 		pagination: false,
-    // breakpoints: {
-    //   1560: { perPage: 4 },
-    //   1024: { perPage: 4 },
-    //   938: { perPage: 3 },
-    //   768: { perPage: 2 },
-    //   480: { perPage: 1 }
-    // },
+    breakpoints: {
+      1560: { perPage: 8 },
+      1024: { perPage: 7 },
+      938: { perPage: 1, gap: 20 },
+      768: { perPage: 3 , gap: 20},
+      480: { perPage: 1, gap: 20 }
+    },
     easing: 'ease-in-out'
   };
 </script>
@@ -145,13 +145,8 @@
 <!-- <style>
   :global(.splide) {
     margin: 50px auto;
-    width: 100%;
+    width: 100vw;
     background: rgba(0, 255, 0, 0.08);
   }
-  :global(.splide__slide) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-  }
 </style> -->

@@ -57,4 +57,14 @@
 		margin: 100px;
 		padding: 0px;
 	}
+
+	@media screen and (max-width: 768px) {
+		.wrapper__card {
+			flex-direction: column;
+			gap: 20px;
+			margin: 0px;
+			padding: 0px;
+		}
+		
+	}
 </style>

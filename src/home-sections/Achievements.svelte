@@ -25,7 +25,7 @@
 		text-align: center;
 		padding: 2rem;
 		background-color: var(--ardoise);
-        height: 80vh;
+        height: 70vh;
 		z-index: 0;
 		gap: 0px;
 		overflow: hidden;
@@ -42,7 +42,7 @@
 
 	@media (max-width: 768px) {
 		section {
-		height: 100vh
+		height: 60vh
 	
 	}
 		section h2 {

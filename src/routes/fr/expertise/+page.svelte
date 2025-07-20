@@ -3,7 +3,9 @@
 </script>
 
 <section id="post-production-audio">
-	<h1>Post-production audio</h1>
+
+	<h1>Notre expertise</h1>
+	<h2>Post-production audio</h2>
 	<p>
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et adipisci culpa obcaecati, excepturi
 		laborum ullam expedita accusantium assumenda atque, temporibus provident sed repudiandae beatae
@@ -13,7 +15,7 @@
 	</p>
 	<div class="wrapper__advantages">
 		<div class="advantage">
-			<h2>Avantage 1</h2>
+			<h3>Avantage 1</h3>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et adipisci culpa obcaecati,
 				excepturi laborum ullam expedita accusantium assumenda atque, temporibus provident sed
@@ -21,7 +23,7 @@
 			</p>
 		</div>
 		<div class="advantage">
-			<h2>Avantage 2</h2>
+			<h3>Avantage 2</h3>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et adipisci culpa obcaecati,
 				excepturi laborum ullam expedita accusantium assumenda atque, temporibus provident sed
@@ -29,7 +31,7 @@
 			</p>
 		</div>
 		<div class="advantage">
-			<h2>Avantage 3</h2>
+			<h3>Avantage 3</h3>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et adipisci culpa obcaecati,
 				excepturi laborum ullam expedita accusantium assumenda atque, temporibus provident sed
@@ -52,7 +54,7 @@
 	</iframe>
 </section>
 <section id="creation-originale">
-	<h1>Création originale</h1>
+	<h2>Création originale</h2>
 	<p>
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et adipisci culpa obcaecati, excepturi
 		laborum ullam expedita accusantium assumenda atque, temporibus provident sed repudiandae beatae
@@ -62,7 +64,7 @@
 	</p>
 	<div class="wrapper__advantages">
 		<div class="advantage">
-			<h2>Avantage 1</h2>
+			<h3>Avantage 1</h3>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et adipisci culpa obcaecati,
 				excepturi laborum ullam expedita accusantium assumenda atque, temporibus provident sed
@@ -70,7 +72,7 @@
 			</p>
 		</div>
 		<div class="advantage">
-			<h2>Avantage 2</h2>
+			<h3>Avantage 2</h3>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et adipisci culpa obcaecati,
 				excepturi laborum ullam expedita accusantium assumenda atque, temporibus provident sed
@@ -78,7 +80,7 @@
 			</p>
 		</div>
 		<div class="advantage">
-			<h2>Avantage 3</h2>
+			<h3>Avantage 3</h3>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et adipisci culpa obcaecati,
 				excepturi laborum ullam expedita accusantium assumenda atque, temporibus provident sed
@@ -101,7 +103,7 @@
 	</iframe>
 </section>
 <section id="Voix">
-	<h1>Voix</h1>
+	<h2>Voix</h2>
 	<p>
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et adipisci culpa obcaecati, excepturi
 		laborum ullam expedita accusantium assumenda atque, temporibus provident sed repudiandae beatae
@@ -111,7 +113,7 @@
 	</p>
 	<div class="wrapper__advantages">
 		<div class="advantage">
-			<h2>Avantage 1</h2>
+			<h3>Avantage 1</h3>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et adipisci culpa obcaecati,
 				excepturi laborum ullam expedita accusantium assumenda atque, temporibus provident sed
@@ -119,7 +121,7 @@
 			</p>
 		</div>
 		<div class="advantage">
-			<h2>Avantage 2</h2>
+			<h3>Avantage 2</h3>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et adipisci culpa obcaecati,
 				excepturi laborum ullam expedita accusantium assumenda atque, temporibus provident sed
@@ -127,7 +129,7 @@
 			</p>
 		</div>
 		<div class="advantage">
-			<h2>Avantage 3</h2>
+			<h3>Avantage 3</h3>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et adipisci culpa obcaecati,
 				excepturi laborum ullam expedita accusantium assumenda atque, temporibus provident sed
@@ -186,7 +188,7 @@
 		text-align: center;
 		padding: 2rem;
 		background-color: transparent;
-		height: 100vh;
+		min-height: 100vh;
 		z-index: 0;
 		gap: 40px;
 		position: relative;
@@ -216,7 +218,7 @@
 	}
 	section h2 {
 		font-family: var(--bebas);
-		font-size: 2.9rem;
+		font-size: 3.2rem;
 		margin-bottom: 0.5rem;
 		color: var(--ardoise);
 		margin-top: 50px;
@@ -253,11 +255,11 @@
 		color: var(--ardoise);
 		border: 1px solid var(--ardoise);
 	}
-	.advantage h2 {
+	/* .advantage h2 {
 		font-family: var(--bebas);
 		font-size: 1.5rem;
 		margin-bottom: 10px;
-	}
+	} */
 	.advantage p {
 		font-family: var(--raleway);
 		font-size: 1rem;
@@ -272,11 +274,7 @@
 		object-fit: cover;
 		z-index: -1;
 	}
-	/* .wrapper__buttons {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 50px;
-        } */
+
 	.bg-black {
 		background-color: var(--ardoise);
 	}
@@ -295,6 +293,41 @@
         z-index: 2;
         position: relative;
         padding: 2rem;
-       z-index 2;
+       z-index: 2;
     }
+
+	@media screen and (max-width: 768px) {
+		section h1 {
+			font-size: 4rem;
+		}
+		section h2 {
+			font-size: 2.6rem;
+		}
+		section h3 {
+			font-size: 1.2rem;
+		}
+		section p {
+			font-size: 1rem;
+			line-height: 1.4;
+			font-weight: var(--regular)
+		}
+		.wrapper__advantages {
+			flex-direction: column;
+			align-items: center;
+			gap: 20px;
+		}
+		.advantage {
+			width: 90%;
+			max-width: 600px;
+		}
+	}
+	.wrapper__advantages {
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+	}
+	.advantage {
+		width: 90%;
+		max-width: 600px;
+	}
 </style>

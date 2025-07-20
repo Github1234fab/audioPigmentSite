@@ -40,7 +40,7 @@
 		text-align: center;
 		padding: 2rem;
 		background-color: transparent;
-		height: 100vh;
+		min-height: 100vh;
 		z-index: 0;
 		gap: 40px;
 		position: relative;
@@ -63,7 +63,7 @@
 		font-weight: var(--regular);
 		margin-top: 0px;
 		padding: 20px 40px;
-		max-width: 800px;
+		width: 100%;
 	}
 	section h3 {
 		font-family: var(--raleway);
@@ -122,14 +122,6 @@
 		z-index: -1;
 	}
 
-	/* .overlay-content {
-		position: relative;
-		z-index: 1;
-		color: white;
-		text-align: center;
-		padding-top: 30vh;
-	} */
-
 	@media screen and (max-width: 768px) {
 		.wrapper__buttons {
 			display: flex;
@@ -137,7 +129,8 @@
 			margin-top: 20px;
 		}
 		section p {
-			max-width: 100%;
-		}
+			width: 100%;
+			padding: 20px 0px;
+				}
 	}
 </style>

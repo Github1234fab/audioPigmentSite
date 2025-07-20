@@ -10,7 +10,7 @@
 	<Form />
 
 	<div class="wrapper__footer-infos">
-		<Button txt="Contactez-nous" />
+		<Button txt="Contactez-nous" href="/fr/contact" />
 		<div class="wrapper__footer-infos-localisation">
 			<h3>Venir au studio <br> Audio Pigment</h3>
 			<p>Audio Pigment</p>
@@ -54,6 +54,7 @@
 		background-color: var(--ardoise);
 		color: white;
 		gap: 20px;
+	
 	}
 	section h2 {
 		font-family: var(--bebas);
@@ -65,26 +66,27 @@
 	.wrapper__footer-infos {
 		display: flex;
 		align-items: baseline;
-		justify-content: space-around;
-		text-align: center;
-		width: 100%;
+		justify-content: center;
+		width: 35%;
 		padding: 1rem;
+		margin: 0 auto;
 		background-color: var(--ardoise);
 		color: white;
-		gap: 20px;
 		width: 100%;
 		border-radius: 5px;
+		border-top: 1px solid rgb(47, 47, 47);
 	}
 	.wrapper__footer-infos-localisation {
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: center;
 		justify-content: space-around;
 		text-align: center;
 		background-color: var(--ardoise);
 		color: white;
 		gap: 5px;
 		font-family: var(--raleway);
+		width: 35%;
 	}
 	.wrapper__footer-infos-localisation a {
 		font-family: var(--raleway);
@@ -92,12 +94,14 @@
 		color: white;
 		font-size: 1rem;
 		text-decoration: none;
+		width: 100%;
 	}
 	.wrapper__footer-infos-following {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		gap: 10px;
+		width: 35%;
 	}
 	.mentions {
 		font-family: var(--raleway);
@@ -164,6 +168,7 @@
 		background-color: var(--ardoise);
 		color: white;
 		gap: 5px;
+		width: 100%;
 
 		}
 		
