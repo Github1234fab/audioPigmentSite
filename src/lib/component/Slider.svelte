@@ -48,10 +48,10 @@ const options = {
         arrows: true,
         pagination: false,
         breakpoints: {
-            1560: { perPage: 7 },
-            1024: { perPage: 7 },
-            938: { perPage: 5 },
-            768: { perPage: 1 },
+            1560: { perPage: 4, gap: 20 },
+            1024: { perPage: 3, gap:10 },
+            938: { perPage: 3, gap: 20 },
+            768: { perPage: 2 },
             480: { perPage: 1, gap: 10 }
         },
         easing: 'ease-in-out'

@@ -1,8 +1,7 @@
 <!-- <script>
-
+	
 	import Button from '$lib/component/btn-black-border.svelte';
 	import Form from '$lib/component/Form.svelte';
-	import { _ } from 'svelte-i18n';
 </script>
 
 <section>
@@ -176,6 +175,7 @@
 	
 </style> -->
 
+
 <script>
 	import Button from '$lib/component/btn-black-border.svelte';
 	import Form from '$lib/component/Form.svelte';
@@ -217,143 +217,10 @@
 				  aria-label="link"
 				  class="social-link"><i class="fa-brands fa-youtube fa-2xl"></i></a>
 		  </div>
-		
+		  <Button txt={$_('footer.contact_btn')} href={"/" + $locale + "/contact"} />
 	  </div>
 	  <div class="mentions">
 		  {$_('footer.mentions')}
 	  </div>
   </section>
   
-
-  <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		background-color: var(--ardoise);
-		color: white;
-		gap: 20px;
-	
-	}
-	section h2 {
-		font-family: var(--bebas);
-		font-weight: var(--bold);
-		color: white;
-		font-size: 2.8rem;
-		margin-top: 50px;
-	}
-	.wrapper__footer-infos {
-		display: flex;
-		align-items: baseline;
-		justify-content: center;
-		width: 35%;
-		padding: 1rem;
-		margin: 0 auto;
-		background-color: var(--ardoise);
-		color: white;
-		width: 100%;
-		border-radius: 5px;
-		border-top: 1px solid rgb(47, 47, 47);
-	}
-	.wrapper__footer-infos-localisation {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-around;
-		text-align: center;
-		background-color: var(--ardoise);
-		color: white;
-		gap: 5px;
-		font-family: var(--raleway);
-		width: 35%;
-	}
-	.wrapper__footer-infos-localisation a {
-		font-family: var(--raleway);
-		font-weight: var(--extra-bold);
-		color: white;
-		font-size: 1rem;
-		text-decoration: none;
-		width: 100%;
-	}
-	.wrapper__footer-infos-following {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 10px;
-		width: 35%;
-	}
-	.mentions {
-		font-family: var(--raleway);
-		font-size: 0.8rem;
-		color: white;
-		margin-top: 0px;
-		padding: 0px;
-		text-align: center;
-		margin-bottom: 20px;
-	}
-	.social-link {
-		color: white;
-		text-decoration: none;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 40px;
-		width: 40px;
-		border-radius: 50%;
-		background-color: var(--ardoise);
-		transition: 0.3s ease-in-out;
-	}
-	.social-link:hover {
-		background-color: var(--red);
-		height: 50px;
-		width: 50px;
-		border-radius: 50%;
-	}
-	.contact-link {
-		color: white;
-		text-decoration: none;
-		font-family: var(--raleway);
-		font-weight: var(--extra-bold);
-		font-size: 1rem;
-		width: auto;
-		transition: 0.6s ease-in-out
-	}
-	.contact-link:hover {
-		background-color: var(--red);
-		padding: 20px;
-	}
-
-	@media screen and (max-width: 768px) {
-		.wrapper__footer-infos {
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-		flex-direction: column;
-		text-align: center;
-		width: 100%;
-		padding: 1rem;
-		background-color: var(--ardoise);
-		color: white;
-		gap: 20px;
-		width: 100%;
-		border-radius: 5px;
-	}
-	.wrapper__footer-infos-localisation{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		background-color: var(--ardoise);
-		color: white;
-		gap: 5px;
-		width: 100%;
-
-		}
-		
-	}
-	
-</style> 
-

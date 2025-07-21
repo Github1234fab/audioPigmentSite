@@ -3,7 +3,7 @@
 </script>
 
 <section>
-	<h2>Nos dernières réalisations</h2>
+	<h2>Our Latest Projects</h2>
 	<div class="wrapper__slider-logos"><Slider /></div>
 </section>
 

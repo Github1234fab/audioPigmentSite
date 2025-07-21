@@ -34,8 +34,8 @@
 <style>
 	.video-card {
 		display: flex;
-		height: 250px;
-		width: 350px;
+		height: 100%;
+		width: auto;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 		border-radius: 10px;
 		background: var(-ardoise);
@@ -57,8 +57,8 @@
 		border: 1px solid #c00;
 	}
 	iframe {
-		aspect-ratio: 1;
-		height: 320px;
+	
+		height: 100%;
 		width: auto;
 		border-radius: 8px;
 		background-color: var(--ardoise);

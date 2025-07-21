@@ -8,32 +8,29 @@
 	<!-- 
 	<VantaTopology config={{ color: 0xE74C3C, backgroundColor: 0x21222c }} /> -->
 	<div class="wrapper__section-txt">
-		<h2>Ensemble, créons des émotions, marquons les esprits</h2>
+		<h2>Together, let’s shape emotion and make it memorable !</h2>
 
 		<div class="wrapper__h4">
+			<h4>Over 25 years of experience</h4>
 			<h4>3 studios</h4>
-			<h4>+ 40 langues</h4>
-			<h4>Réseau International</h4>
+			<h4>50+ languages</h4>
+			<h4>International network</h4>
 		</div>
 
 		<p>
-			Acteurs reconnus de la production sonore, en France comme à l’international, nous sommes
-			spécialisés dans la voix off, le doublage, le sound design, la création musicale, la
-			postproduction, et le mixage. <br />
+			<strong>Recognized players</strong> in high-end audio production, both in <strong>France </strong>and <strong>internationally</strong>,
+we specialize in voice-over, dubbing, sound design, original music, post-production, and mixing.
 
-			Nous conjuguons exigence technique, sens du détail et approche artistique pour des productions
-			haut de gamme, conçues sur mesure. <br /><br />
-
-			Chez Audio Pigment, chaque projet est pensé comme une pièce unique, où notre savoir-faire,
-			notre expérience, et notre créativité sont mis au service de l’impact, de l’image, du récit et
-			de l’identité.
-
-			<br /><br />Depuis 1999, nous accompagnons de grandes marques et institutions telles que :
-			L’Oréal, Chanel, Air France, Disneyland Paris, Ferrero, bioMérieux, Caisse d’Epargne, Puy du
-			Fou, Point S, Orange, EDF, Région Auvergne-Rhône-Alpes, et beaucoup d’autres… Et nous sommes
-			fiers de la confiance qu’ils continuent de nous accorder aujourd’hui…
+<br><br>We combine <strong>technical precision, creative intuition, and attention to detail to deliver premium, tailor-made
+	productions</strong> .
+<br><br> At<strong>Audio Pigment</strong>  , each project is <strong>crafted as a unique piece, where expertise, experience, and creativity
+	come together to serve impact, picture, storytelling, and identity</strong> .
+<br><br> <strong>Since 1999</strong>, we’ve been trusted by <strong>leading brands and institutions</strong>, including:
+L’Oréal, Chanel, Hermès, Air France, Accor, Ferrero, Burger King, Lego, Disneyland Paris, Procter &amp; Gamble,
+Total Energies, and many more…
+<br><br>And we’re proud to keep earning their trust today.
 		</p>
-		<Button txt="Contactez-nous" href="/fr/contact" />
+		<Button txt="Get in touch" href="/fr/contact" />
 	</div>
 	<div class="wrapper__slider-logos">
 		<SliderLogos />

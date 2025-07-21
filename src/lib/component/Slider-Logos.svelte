@@ -124,11 +124,11 @@
 		arrows: true,
 		pagination: false,
     breakpoints: {
-      1560: { perPage: 8 },
+      1560: { perPage: 9 },
       1024: { perPage: 7 },
-      938: { perPage: 1, gap: 20 },
-      768: { perPage: 3 , gap: 20},
-      480: { perPage: 1, gap: 20 }
+      938: { perPage: 6, gap: 20 },
+      768: { perPage: 5 , gap: 20},
+      480: { perPage: 3, gap: 10 }
     },
     easing: 'ease-in-out'
   };
