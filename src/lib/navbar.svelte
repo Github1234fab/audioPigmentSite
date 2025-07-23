@@ -382,7 +382,7 @@
 	.bar {
 		width: 100%;
 		height: 4px;
-		background: #222;
+		background: #1f1f1f;
 		border-radius: 2px;
 		transition: 0.3s;
 	}
