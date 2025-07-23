@@ -1,8 +1,9 @@
 <script>
 	export let image;
+	export let href = "";
 </script>
 
-<div class="card"><img class="img" src={image} alt="" /></div>
+<a href={href} target="_blank"><div class="card"><img class="img" src={image} alt="" /></div></a>
 
 <style>
 	.card {

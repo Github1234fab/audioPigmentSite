@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	import { onMount } from 'svelte';
 	import Cta from '../../../components/cta.svelte';
 	import { CSSPlugin } from 'gsap/CSSPlugin';
@@ -74,4 +74,4 @@
 		font-family: 'Big Shoulders', sans-serif;
 		/* text-shadow: 0px 10px 5px rgba(0, 0, 0, 0.51); */
 	}
-</style>
+</style> -->

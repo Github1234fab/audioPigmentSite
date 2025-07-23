@@ -113,7 +113,7 @@
 </script>
 
 <section>
-	<h2>Nos prestations</h2>
+	<h2>Our services</h2>
 	<div class="wrapper__services-cards">
 		{#each services as service}
 			{#if service.link}

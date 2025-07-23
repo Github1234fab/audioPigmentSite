@@ -1,6 +1,6 @@
 <script>
 	import Button from '$lib/component/btn-black-border.svelte';
-	import SliderLogos from '$lib/component/Slider-logos.svelte';
+	import SliderLogos from '$lib/component/Slider-logo-english.svelte';
 	// import VantaTopology from '../lib/component/Vanta-topology.svelte';
 </script>
 

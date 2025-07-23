@@ -1,4 +1,4 @@
-<form
+<!-- <form
 	name="contact-form-AudioPigment"
 	method="POST"
 	netlify-honeypot="bot-field"
@@ -11,6 +11,7 @@
 		<input name="nom" type="text" id="nom" required placeholder="Nom" />
 
 		<input name="prenom" type="text" id="prenom" required placeholder="Prénom" />
+		<input name="company" type="text" id="company" required placeholder="Société" />
 	</div>
 
 	<div class="wrapper-inputs">
@@ -22,7 +23,38 @@
 	<textarea name="demande" id="demande" class="demande" placeholder="Votre demande"></textarea>
 
 	<button class="btn" type="submit"><span>Envoyez </span></button>
+</form> -->
+
+<script>
+
+import { _ } from 'svelte-i18n';
+</script>
+
+<form
+    name="contact-form-AudioPigment"
+    method="POST"
+    netlify-honeypot="bot-field"
+    data-netlify="true"
+    class="form"
+>
+    <input type="hidden" name="form-name" value="contact-form-AudioPigment" />
+
+    <div class="wrapper-inputs">
+        <input name="nom" type="text" id="nom" required placeholder={$_('form.placeholder_nom')} />
+        <input name="prenom" type="text" id="prenom" required placeholder={$_('form.placeholder_prenom')} />
+        <input name="company" type="text" id="company" required placeholder={$_('form.placeholder_societe')} />
+    </div>
+
+    <div class="wrapper-inputs">
+        <input name="email" type="email" id="email" required placeholder={$_('form.placeholder_email')} />
+        <input name="telephone" type="tel" id="telephone" required placeholder={$_('form.placeholder_telephone')} />
+    </div>
+
+    <textarea name="demande" id="demande" class="demande" placeholder={$_('form.placeholder_demande')}></textarea>
+
+    <button class="btn" type="submit"><span>{$_('form.send')}</span></button>
 </form>
+
 
 <style>
 	form {
@@ -37,10 +69,11 @@
 		gap: 0px;
 		font-family: var(--raleway);
 		height: 100%;
+		width: 70%;
+		max-width: 800px;
 	}
 	form input {
 		width: 100%;
-		max-width: 400px;
 		padding: 10px;
 		border-radius: 5px;
 		border: none;
@@ -51,9 +84,18 @@
 		border: 1px solid grey;
 		margin-bottom: 5px;
 	}
+	.wrapper-inputs{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		width: 100%;
+	
+
+	}
 	.demande {
 		width: 100%;
-		max-width: 400px;
 		padding: 10px;
 		border-radius: 5px;
 		border: none;
@@ -118,5 +160,22 @@
 
 	.btn:hover span {
 		color: black;
+	}
+
+
+	@media screen and (max-width: 768px) {
+		form {
+			width: 100%;
+			padding: 1rem;
+		}
+		form input,
+		.demande {
+			width: 100%;
+			font-size: 0.9rem;
+		}
+		.btn {
+			padding: 10px 20px;
+			font-size: 0.9rem;
+		}
 	}
 </style>

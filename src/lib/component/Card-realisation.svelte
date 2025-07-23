@@ -3,6 +3,11 @@
 	export let type;
 	export let technique;
 	export let image; // URL de l'image de fond
+
+
+	function test() {
+		console.log('test');
+	}
 </script>
 
 <div class="card" style="background-image: url({image})">
@@ -28,6 +33,8 @@
 		display: flex;
 		align-items: flex-end;
 		transition: transform 0.3s ease;
+		z-index: 4;
+		cursor: pointer;
 	}
 
 	.card:hover {
@@ -46,8 +53,8 @@
 		margin: 0 0 10px;
 		font-size: 1.4rem;
 		font-weight: 600;
-        font-family: var(--raleway);
-        font-weight: var(--extra-bold);
+		font-family: var(--raleway);
+		font-weight: var(--extra-bold);
 	}
 
 	.tags {
@@ -56,8 +63,8 @@
 	}
 
 	.tag {
-        font-family: var(--raleway);
-        font-weight: var(--extra-bold);
+		font-family: var(--raleway);
+		font-weight: var(--extra-bold);
 		background-color: rgb(156, 53, 53);
 		border-radius: 10px;
 		padding: 5px 12px;

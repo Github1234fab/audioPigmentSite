@@ -11,6 +11,7 @@
 		<h2>Ensemble, créons des émotions, marquons les esprits</h2>
 
 		<div class="wrapper__h4">
+			<h4>+ 25 ans d'expérience</h4>
 			<h4>3 studios</h4>
 			<h4>+ 40 langues</h4>
 			<h4>Réseau International</h4>

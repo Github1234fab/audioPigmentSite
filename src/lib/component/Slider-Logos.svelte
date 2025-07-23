@@ -34,82 +34,109 @@
 
 	const cards = [
 		{
-			image: BP
+			image: BP,
+			href: 'https://www.banque-france.fr/'
 		},
 		{
-			image: Barilla
+			image: Barilla,
+			href: 'https://www.barilla.com/fr-fr'
+
 		},
 		{
-			image: BioMerieux
+			image: BioMerieux,
+			href: 'https://www.biomerieux.com/fr/'
 		},
 		{
-			image: BlablaCar
+			image: BlablaCar,
+			href: 'https://www.blablacar.fr/'
 		},
 		{
-			image: BMW
+			image: BMW,
+			href: 'https://www.bmw.fr/'
 		},
 		{
-			image: burgerKing
+			image: burgerKing,
+			href: 'https://www.burgerking.fr/'
 		},
 		{
-			image: CiteEspace
+			image: CiteEspace,
+			href: 'https://www.cite-espace.com/'
 		},
 		{
-			image: Costa
+			image: Costa,
+			href: 'https://www.costa.co.uk/'
 		},
 		{
-			image: Decathlon
+			image: Decathlon,
+			href: 'https://www.decathlon.fr/'
 		},
 		{
-			image: Delacre
+			image: Delacre,
+			href: 'https://www.delacre.com/fr-fr'
 		},
 		{
-			image: Disneyland
+			image: Disneyland,
+			href: 'https://www.disneylandparis.fr/'
 		},
 		{
-			image: Evian
+			image: Evian,
+			href: 'https://www.evian.com/fr-fr/'
 		},
 		{
-			image: FDJ
+			image: FDJ,
+			href: 'https://www.fdj.fr/'
 		},
 		{
-			image: Fnac
+			image: Fnac,
+			href: 'https://www.fnac.com/'
 		},
 		{
-			image: LEGO
+			image: LEGO,
+			href: 'https://www.lego.com/fr-fr'
 		},
 		{
-			image: loreal
+			image: loreal,
+			href: 'https://www.loreal.com/fr/'
 		},
 		{
-			image: Peugeot
+			image: Peugeot,
+			href: 'https://www.peugeot.fr/'
 		},
 		{
-			image: PointS
+			image: PointS,
+			href: 'https://www.points.fr/'
 		},
 		{
-			image: PuyDuFou
+			image: PuyDuFou,
+			href: 'https://www.puydufou.com/fr'
 		},
 		{
-			image: Region
+			image: Region,
+			href: 'https://www.laregion.fr/'
 		},
 		{
-			image: Renault
+			image: Renault,
+			href: 'https://www.renault.fr/'
 		},
 		{
-			image: SanPe
+			image: SanPe,
+			href: 'https://www.sanpellegrino.fr/'
 		},
 		{
-			image: Saupiquet
+			image: Saupiquet,
+			href: 'https://www.saupiquet.fr/'
 		},
 		{
-			image: SNCF
+			image: SNCF,
+			href: 'https://www.sncf.com/fr'
 		},
 		{
-			image: TotalEnergie
+			image: TotalEnergie,
+			href: 'https://totalenergies.com/fr'
 		},
 		{
-			image: Vulcania
+			image: Vulcania,
+			href: 'https://www.vulcania.fr/'
 		}
 	];
 
@@ -137,7 +164,7 @@
 <Splide options={options} aria-label="Logos">
   {#each cards as card}
     <SplideSlide>
-      <CardRealisation image={card.image} />
+      <CardRealisation image={card.image}  href={card.href}/>
     </SplideSlide>
   {/each}
 </Splide>

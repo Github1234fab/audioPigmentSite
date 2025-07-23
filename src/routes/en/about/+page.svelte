@@ -1,4 +1,4 @@
-<h1>EN/ABOUT</h1>
+
 
 <section>
 	<h1>Audio Pigment <br /> – <br /> Sound Creation Studio since 1999</h1>

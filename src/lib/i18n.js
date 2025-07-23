@@ -10,6 +10,15 @@ addMessages('fr', {
     phone: "04 72 73 47 21",
     email: "contact@audiopigment.com",
     mentions: "STUDIO AUDIO PIGMENT | MENTIONS LÉGALES | POLITIQUES DE CONFIDENTIALITÉ | SITE BY GRALYPHO"
+  },
+  form: {
+    placeholder_nom: "Nom",
+    placeholder_prenom: "Prénom",
+    placeholder_societe: "Société",
+    placeholder_email: "Adresse mail",
+    placeholder_telephone: "Téléphone",
+    placeholder_demande: "Votre demande",
+    send: "Envoyer"
   }
 });
 
@@ -23,6 +32,15 @@ addMessages('en', {
     phone: "04 72 73 47 21",
     email: "contact@audiopigment.com",
     mentions: "STUDIO AUDIO PIGMENT | LEGAL NOTICE | PRIVACY POLICY | SITE BY GRALYPHO"
+  },
+  form: {
+    placeholder_nom: "Last name",
+    placeholder_prenom: "First name",
+    placeholder_societe: "Company",
+    placeholder_email: "E-mail address",
+    placeholder_telephone: "Phone",
+    placeholder_demande: "Your request",
+    send: "Send"
   }
 });
 

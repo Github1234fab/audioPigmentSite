@@ -50,8 +50,8 @@
 </script>
 
 <section>
-	<h2>Nos Atouts</h2>
-	<p class="section-intro">Ce qui fait la force d'Audio Pigment</p>
+	<h2>Our assets</h2>
+	<p class="section-intro">The strength of Audio Pigment.</p>
 	<div class="features-grid">
 		{#each features as feature}
 			<div class="feature-card">
