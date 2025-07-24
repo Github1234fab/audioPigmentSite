@@ -4,7 +4,7 @@
 	// gsap.registerPlugin(CSSPlugin);
 	// import { gsap } from 'gsap';
 	import Proposition from '../../../home-sections/Proposition.svelte';
-	// import Hero from '../../../home-sections/Hero.svelte';
+	import Hero from '../../../home-sections/Hero.svelte';
 	import ValueProp from '../../../home-sections/Value-prop.svelte';
 	import Services from '../../../home-sections/Services.svelte';
 	import Advantages from '../../../home-sections/Advantage.svelte';
@@ -14,7 +14,7 @@
 	// import '@splidejs/splide/dist/css/splide.min.css';
 </script>
 
-<!-- <Hero /> -->
+<Hero />
 <Proposition />
 <ValueProp />
 <Services />
