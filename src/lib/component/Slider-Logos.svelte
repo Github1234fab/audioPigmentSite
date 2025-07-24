@@ -172,12 +172,10 @@
 
 
 
-
  <script>
 	import { onMount } from 'svelte';
 	import CardRealisation from '$lib/component/Card-logo.svelte';
   
-	// Import dynamique pour Splide et SplideSlide
 	let Splide = null;
 	let SplideSlide = null;
 	let splideReady = false;
@@ -208,115 +206,35 @@
 	import SNCF from '../../assets/logos/SNCF.png';
 	import TotalEnergie from '../../assets/logos/TotalEnergies.png';
 	import Vulcania from '../../assets/logos/Vulcania.png';
-
+  
 	const cards = [
-		{
-			image: BP,
-			href: 'https://www.banque-france.fr/'
-		},
-		{
-			image: Barilla,
-			href: 'https://www.barilla.com/fr-fr'
-
-		},
-		{
-			image: BioMerieux,
-			href: 'https://www.biomerieux.com/fr/'
-		},
-		{
-			image: BlablaCar,
-			href: 'https://www.blablacar.fr/'
-		},
-		{
-			image: BMW,
-			href: 'https://www.bmw.fr/'
-		},
-		{
-			image: burgerKing,
-			href: 'https://www.burgerking.fr/'
-		},
-		{
-			image: CiteEspace,
-			href: 'https://www.cite-espace.com/'
-		},
-		{
-			image: Costa,
-			href: 'https://www.costa.co.uk/'
-		},
-		{
-			image: Decathlon,
-			href: 'https://www.decathlon.fr/'
-		},
-		{
-			image: Delacre,
-			href: 'https://www.delacre.com/fr-fr'
-		},
-		{
-			image: Disneyland,
-			href: 'https://www.disneylandparis.fr/'
-		},
-		{
-			image: Evian,
-			href: 'https://www.evian.com/fr-fr/'
-		},
-		{
-			image: FDJ,
-			href: 'https://www.fdj.fr/'
-		},
-		{
-			image: Fnac,
-			href: 'https://www.fnac.com/'
-		},
-		{
-			image: LEGO,
-			href: 'https://www.lego.com/fr-fr'
-		},
-		{
-			image: loreal,
-			href: 'https://www.loreal.com/fr/'
-		},
-		{
-			image: Peugeot,
-			href: 'https://www.peugeot.fr/'
-		},
-		{
-			image: PointS,
-			href: 'https://www.points.fr/'
-		},
-		{
-			image: PuyDuFou,
-			href: 'https://www.puydufou.com/fr'
-		},
-		{
-			image: Region,
-			href: 'https://www.laregion.fr/'
-		},
-		{
-			image: Renault,
-			href: 'https://www.renault.fr/'
-		},
-		{
-			image: SanPe,
-			href: 'https://www.sanpellegrino.fr/'
-		},
-		{
-			image: Saupiquet,
-			href: 'https://www.saupiquet.fr/'
-		},
-		{
-			image: SNCF,
-			href: 'https://www.sncf.com/fr'
-		},
-		{
-			image: TotalEnergie,
-			href: 'https://totalenergies.com/fr'
-		},
-		{
-			image: Vulcania,
-			href: 'https://www.vulcania.fr/'
-		}
+		{ image: BP, href: 'https://www.banque-france.fr/' },
+		{ image: Barilla, href: 'https://www.barilla.com/fr-fr' },
+		{ image: BioMerieux, href: 'https://www.biomerieux.com/fr/' },
+		{ image: BlablaCar, href: 'https://www.blablacar.fr/' },
+		{ image: BMW, href: 'https://www.bmw.fr/' },
+		{ image: burgerKing, href: 'https://www.burgerking.fr/' },
+		{ image: CiteEspace, href: 'https://www.cite-espace.com/' },
+		{ image: Costa, href: 'https://www.costa.co.uk/' },
+		{ image: Decathlon, href: 'https://www.decathlon.fr/' },
+		{ image: Delacre, href: 'https://www.delacre.com/fr-fr' },
+		{ image: Disneyland, href: 'https://www.disneylandparis.fr/' },
+		{ image: Evian, href: 'https://www.evian.com/fr-fr/' },
+		{ image: FDJ, href: 'https://www.fdj.fr/' },
+		{ image: Fnac, href: 'https://www.fnac.com/' },
+		{ image: LEGO, href: 'https://www.lego.com/fr-fr' },
+		{ image: loreal, href: 'https://www.loreal.com/fr/' },
+		{ image: Peugeot, href: 'https://www.peugeot.fr/' },
+		{ image: PointS, href: 'https://www.points.fr/' },
+		{ image: PuyDuFou, href: 'https://www.puydufou.com/fr' },
+		{ image: Region, href: 'https://www.laregion.fr/' },
+		{ image: Renault, href: 'https://www.renault.fr/' },
+		{ image: SanPe, href: 'https://www.sanpellegrino.fr/' },
+		{ image: Saupiquet, href: 'https://www.saupiquet.fr/' },
+		{ image: SNCF, href: 'https://www.sncf.com/fr' },
+		{ image: TotalEnergie, href: 'https://totalenergies.com/fr' },
+		{ image: Vulcania, href: 'https://www.vulcania.fr/' }
 	];
-
   
 	const options = {
 	  type: 'loop',
@@ -337,9 +255,7 @@
 	  easing: 'ease-in-out',
 	};
   
-	// Initialisation côté client uniquement
 	onMount(async () => {
-	  // Import Splide dynamiquement, côté client uniquement
 	  const mod = await import('@splidejs/svelte-splide');
 	  Splide = mod.Splide;
 	  SplideSlide = mod.SplideSlide;
@@ -348,15 +264,14 @@
   </script>
   
   {#if splideReady && Splide && SplideSlide}
-	<Splide options={options} aria-label="Logos">
+	<svelte:component this={Splide} {options} aria-label="Logos">
 	  {#each cards as card}
-		<SplideSlide>
+		<svelte:component this={SplideSlide}>
 		  <CardRealisation image={card.image} href={card.href}/>
-		</SplideSlide>
+		</svelte:component>
 	  {/each}
-	</Splide>
+	</svelte:component>
   {:else}
-	<!-- Fallback ou loader pendant init côté client -->
 	<div>Chargement du carousel…</div>
   {/if}
   

@@ -358,15 +358,13 @@
   </script>
   
   {#if splideReady && Splide && SplideSlide}
-	<Splide options={options} aria-label="Logos">
-	  {#each cards as card}
-		<SplideSlide>
-		  <CardRealisation image={card.image} href={card.href}/>
-		</SplideSlide>
-	  {/each}
-	</Splide>
-  {:else}
-	<!-- Fallback ou loader pendant init côté client -->
-	<div>Chargement du carousel…</div>
-  {/if}
-  
+  <svelte:component this={Splide} {options} aria-label="Logos">
+    {#each cards as card}
+      <svelte:component this={SplideSlide}>
+        <CardRealisation image={card.image} href={card.href}/>
+      </svelte:component>
+    {/each}
+  </svelte:component>
+{:else}
+  <div>Chargement du carousel…</div>
+{/if}

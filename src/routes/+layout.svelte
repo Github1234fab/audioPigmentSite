@@ -62,12 +62,14 @@ afterNavigate(() => {
 
     import { afterNavigate } from '$app/navigation';
 
+    if (browser) {
     afterNavigate(() => {
-      if(window.location.hash) {
+      if (window.location.hash) {
         const el = document.getElementById(window.location.hash.substring(1));
-        if(el) el.scrollIntoView({ behavior: "smooth" });
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
       }
     });
+  }
 </script>
 
 <Navbar />
