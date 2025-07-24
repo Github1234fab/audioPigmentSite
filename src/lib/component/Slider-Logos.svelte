@@ -13,7 +13,7 @@
 	import burgerKing from '../../assets/logos/burger king.png';
 	import CiteEspace from '../../assets/logos/citeEspace.jpg';
 	import Costa from '../../assets/logos/Costa.png';
-	import Decathlon from '../../assets/logos/Decathlon.png';
+	import Decathlon from '../../assets/logos/decathlon.png';
 	import Delacre from '../../assets/logos/Delacre.png';
 	import Disneyland from '../../assets/logos/disneyland-paris-1995-logo-png_seeklogo-431918.png';
 	import Evian from '../../assets/logos/Evian.png';
