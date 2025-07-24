@@ -56,12 +56,12 @@ afterNavigate(() => {
   import './style.css';
   import '@splidejs/svelte-splide/css';
   import '$lib/component/slider-global.css';
-  import '$lib/i18n'; // <--- ceci initialise la traduction pour toute l'app
+  import '$lib/i18n';
   import { locale } from 'svelte-i18n';
   import Footer from '../home-sections/Footer.svelte';
 
   import { afterNavigate } from '$app/navigation';
-  import { browser } from '$app/environment'; // <-- Important, import de "browser"
+  import { browser } from '$app/environment'; 
 
   if (browser) {
     afterNavigate(() => {
