@@ -18,7 +18,7 @@
 	import Disneyland from '../../assets/logos/disneyland-paris-1995-logo-png_seeklogo-431918.png';
 	import Evian from '../../assets/logos/Evian.png';
 	import FDJ from '../../assets/logos/FDJ.png';
-	import Fnac from '../../assets/logos/Fnac-2-logo.png';
+	import Fnac from '../../assets/logos/fnac-2-logo.png';
 	import LEGO from '../../assets/logos/LEGO_1.png';
 	import loreal from '../../assets/logos/loreal-logo-3.png';
 	import Peugeot from '../../assets/logos/Peugeot 1.png';
