@@ -1,6 +1,6 @@
 <script>
 	import CardDotWhite from '$lib/component/cards-dot-white.svelte';
-	import TitleDot from '$lib/component/title-dot.svelte';
+	import TitleDot from '$lib/component/Title-dot.svelte';
 	import Btn from '$lib/component/btn-black-shadow.svelte';
 </script>
 
@@ -23,7 +23,7 @@ Localization`}
 Original Music
 Soundscaping &amp; Design`}
 			txt="Explore"
-				href="/fr/expertise/#creation-originale"
+			href="/fr/expertise/#creation-originale"
 		/>
 		<CardDotWhite
 			title="Voices"
@@ -32,7 +32,7 @@ Dubbing & ADR
 
 Voice Acting`}
 			txt="Listen"
-				href="/fr/expertise/#Voix"
+			href="/fr/expertise/#Voix"
 		/>
 	</div>
 </section>
@@ -66,6 +66,5 @@ Voice Acting`}
 			margin: 0px;
 			padding: 0px;
 		}
-		
 	}
 </style>
