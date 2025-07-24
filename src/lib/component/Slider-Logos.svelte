@@ -8,7 +8,7 @@
 	import BP from '../../assets/logos/Banque_de_France_1.png';
 	import Barilla from '../../assets/logos/barilla-1.png';
 	import BioMerieux from '../../assets/logos/BioMerieux 1.png';
-	import BlablaCar from '../../assets/logos/BlaBlaCar.webp';
+	import BlablaCar from '../../assets/logos/blablaCar.webp';
 	import BMW from '../../assets/logos/BMW.png';
 	import burgerKing from '../../assets/logos/burger king.png';
 	import CiteEspace from '../../assets/logos/citeEspace.jpg';
