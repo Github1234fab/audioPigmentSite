@@ -2,7 +2,7 @@
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 	//  import '@splidejs/svelte-splide/css';
 	import { onMount } from 'svelte';
-	import CardRealisation from '$lib/component/card-logo.svelte';
+	import CardRealisation from '$lib/component/Card-logo.svelte';
 	let splide;
 
 	//    import BP from '../../assets/logos/Banque_de_France_1.png';
