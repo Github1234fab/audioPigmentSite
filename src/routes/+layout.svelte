@@ -52,17 +52,18 @@ afterNavigate(() => {
 <Footer/> -->
 
 <script>
-    import Navbar from '$lib/Navbar.svelte';
-    import './style.css';
-    import '@splidejs/svelte-splide/css';
-    import '$lib/component/slider-global.css';
-    import '$lib/i18n'; // <--- ceci initialise la traduction pour toute l'app
-	import { locale } from 'svelte-i18n';
-    import Footer from '../home-sections/Footer.svelte';
+  import Navbar from '$lib/Navbar.svelte';
+  import './style.css';
+  import '@splidejs/svelte-splide/css';
+  import '$lib/component/slider-global.css';
+  import '$lib/i18n'; // <--- ceci initialise la traduction pour toute l'app
+  import { locale } from 'svelte-i18n';
+  import Footer from '../home-sections/Footer.svelte';
 
-    import { afterNavigate } from '$app/navigation';
+  import { afterNavigate } from '$app/navigation';
+  import { browser } from '$app/environment'; // <-- Important, import de "browser"
 
-    if (browser) {
+  if (browser) {
     afterNavigate(() => {
       if (window.location.hash) {
         const el = document.getElementById(window.location.hash.substring(1));
