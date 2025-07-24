@@ -1,6 +1,6 @@
 <script>
 	import BtnBlack from '$lib/component/btn-black.svelte';
-	import BtnWhite from '$lib/component/Btn-White.svelte';
+	import BtnWhite from '$lib/component/btn-White.svelte';
 </script>
 
 <section>
