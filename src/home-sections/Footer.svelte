@@ -180,14 +180,15 @@
 	import Button from '$lib/component/btn-black-border.svelte';
 	import Form from '$lib/component/Form.svelte';
 	import { locale, _ } from 'svelte-i18n';
-	
 
-	// Option : pour traduire des attributs dynamiquement (liens, etc), tu peux aussi
-	// t'inspirer de ce qu'on fait plus bas.
+	$: mentions = $_('footer.mentions', {}, { json: true });
 </script>
 
 <section>
 	<h2>{@html $_('footer.title')}</h2>
+
+
+	
 
 	<Form />
 
@@ -224,19 +225,19 @@
 		</div>
 	</div>
 	<div class="mentions">
-		{#each $_('footer.mentions') as mention, i (mention.label)}
-		  <a
-			href={mention.url}
-			target={mention.url.startsWith('http') ? "_blank" : "_self"}
-			rel={mention.url.startsWith('http') ? "noopener noreferrer" : undefined}
-		  >
-			{mention.label}
-		  </a>
-		  {#if i < $_('footer.mentions').length - 1}
-			<span> | </span>
-		  {/if}
+		{#each mentions as mention, i (mention.label)}
+			<a
+				href={mention.url}
+				target={mention.url.startsWith('http') ? '_blank' : '_self'}
+				rel={mention.url.startsWith('http') ? 'noopener noreferrer' : undefined}
+			>
+				{mention.label}
+			</a>
+			{#if i < mentions.length - 1}
+				<span> | </span>
+			{/if}
 		{/each}
-	  </div>
+	</div>
 </section>
 
 <style>
@@ -279,7 +280,6 @@
 		color: white;
 		gap: 5px;
 		font-family: var(--raleway);
-
 	}
 	.wrapper__footer-infos-localisation a {
 		font-family: var(--raleway);

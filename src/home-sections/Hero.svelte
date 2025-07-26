@@ -26,7 +26,7 @@
 	section {
 		position: relative;
 		z-index: 0;
-		height: 100vh;
+		min-height: 100vh;
 		background-color: black;
 	}
 
