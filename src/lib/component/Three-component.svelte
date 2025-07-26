@@ -201,7 +201,6 @@
 	.three-container {
 	  position: relative;
 	  width: 100%;
-	  min-height: 400px;
 	  height: 100vh;
 	  z-index: -1;
 	  overflow: hidden;

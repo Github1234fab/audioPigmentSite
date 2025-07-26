@@ -74,7 +74,7 @@
 
 	@media screen and (max-width: 768px) {
 		section {
-			height: 100%;
+			height: 100vh;
 			padding: 0px;
 
 		}
