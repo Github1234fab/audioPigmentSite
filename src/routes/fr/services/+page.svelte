@@ -4,12 +4,14 @@
 
 	const services = [
 		{
+			id: '1',
 			label: 'Communication sonore',
 			desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nihil architecto nobis numquam repellat, recusandae aut cumque. Illum, facilis laborum quo velit optio distinctio nisi? Et provident eaque fuga dolorumRepudiandae odit sequi deserunt esse deleniti tempora officia laboriosam saepe in ipsam, similique sunt repellat fuga dolore rem incidunt porro quisquam aliquid hic voluptatibus illum! Nobis eius dignissimos voluptatum facilis.Culpa facilis sapiente molestias nemo dolor recusandae ratione nam officiis consectetur nulla fugit, quasi sint iste, laboriosam et nobis ut sed deserunt tenetur non? Nam, harum. Tempora quas neque ad?',
 			link: '/fr/contact',
 			image: 'https://images.pexels.com/photos/7859937/pexels-photo-7859937.jpeg'
 		},
 		{
+			id: '2',
 			label: 'Production audio',
 			desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nihil architecto nobis numquam repellat, recusandae aut cumque. Illum, facilis laborum quo velit optio distinctio nisi? Et provident eaque fuga dolorumRepudiandae odit sequi deserunt esse deleniti tempora officia laboriosam saepe in ipsam, similique sunt repellat fuga dolore rem incidunt porro quisquam aliquid hic voluptatibus illum! Nobis eius dignissimos voluptatum facilis.Culpa facilis sapiente molestias nemo dolor recusandae ratione nam officiis consectetur nulla fugit, quasi sint iste, laboriosam et nobis ut sed deserunt tenetur non? Nam, harum. Tempora quas neque ad?',
 			link: '/fr/contact',
@@ -17,18 +19,21 @@
 			image: 'https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg'
 		},
 		{
+			id: '3',
 			label: 'Consultation en stratégie sonore',
 			desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nihil architecto nobis numquam repellat, recusandae aut cumque. Illum, facilis laborum quo velit optio distinctio nisi? Et provident eaque fuga dolorumRepudiandae odit sequi deserunt esse deleniti tempora officia laboriosam saepe in ipsam, similique sunt repellat fuga dolore rem incidunt porro quisquam aliquid hic voluptatibus illum! Nobis eius dignissimos voluptatum facilis.Culpa facilis sapiente molestias nemo dolor recusandae ratione nam officiis consectetur nulla fugit, quasi sint iste, laboriosam et nobis ut sed deserunt tenetur non? Nam, harum. Tempora quas neque ad?',
 			link: '/fr/contact',
 			image: 'https://images.pexels.com/photos/7586136/pexels-photo-7586136.jpeg'
 		},
 		{
+			id: '4',
 			label: 'Doublage multilingue / localisation',
 			desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nihil architecto nobis numquam repellat, recusandae aut cumque. Illum, facilis laborum quo velit optio distinctio nisi? Et provident eaque fuga dolorumRepudiandae odit sequi deserunt esse deleniti tempora officia laboriosam saepe in ipsam, similique sunt repellat fuga dolore rem incidunt porro quisquam aliquid hic voluptatibus illum! Nobis eius dignissimos voluptatum facilis.Culpa facilis sapiente molestias nemo dolor recusandae ratione nam officiis consectetur nulla fugit, quasi sint iste, laboriosam et nobis ut sed deserunt tenetur non? Nam, harum. Tempora quas neque ad?',
 			link: '/fr/contact',
 			image: 'https://images.pexels.com/photos/4476164/pexels-photo-4476164.jpeg'
 		},
 		{
+			id: '5',
 			label: 'Mixage & postproduction',
 			desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nihil architecto nobis numquam repellat, recusandae aut cumque. Illum, facilis laborum quo velit optio distinctio nisi? Et provident eaque fuga dolorumRepudiandae odit sequi deserunt esse deleniti tempora officia laboriosam saepe in ipsam, similique sunt repellat fuga dolore rem incidunt porro quisquam aliquid hic voluptatibus illum! Nobis eius dignissimos voluptatum facilis.Culpa facilis sapiente molestias nemo dolor recusandae ratione nam officiis consectetur nulla fugit, quasi sint iste, laboriosam et nobis ut sed deserunt tenetur non? Nam, harum. Tempora quas neque ad?',
 			link: '/fr/contact',
@@ -43,6 +48,7 @@
 		{#each services as service}
 			<div
 				class="service-card"
+				id={service.id}
 				style={service.image ? `background-image: url(${service.image});` : ''}
 			>
 				<div class="wrapper__service-txt">
@@ -65,7 +71,6 @@
 		color: var(--black);
 		min-height: 100vh;
 		margin-bottom: 2rem;
-
 	}
 	section h2 {
 		font-family: var(--bebas);
@@ -80,7 +85,6 @@
 		align-items: center;
 		justify-content: center;
 		font-family: var(--raleway);
-
 	}
 	.wrapper__service-txt {
 		display: flex;
@@ -117,7 +121,7 @@
 		box-shadow: 0 10px 20px rgba(50, 50, 50, 0.328);
 		padding: 2rem;
 		height: 600px;
-		width: 100%;
+		max-width: 1000px;
 		transition: transform 0.15s;
 		position: relative;
 		z-index: 0;
@@ -130,7 +134,7 @@
 		z-index: 1;
 		height: 100%;
 		width: 100%;
-		background: linear-gradient(to top, rgba(0, 0, 0, 0.832) , rgba(255, 255, 255, 0) 100%);
+		background: linear-gradient(to top, rgba(0, 0, 0, 0.832), rgba(255, 255, 255, 0) 100%);
 	}
 	.service-card:hover {
 		transform: translateY(-5px) scale(1.04);
@@ -151,6 +155,11 @@
 	}
 	a {
 		text-decoration: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 20px 30px;
+		max-width: 200px;
 	}
 
 	@media screen and (max-width: 768px) {
@@ -178,9 +187,6 @@
 	}
 	.wrapper__service-txt a:hover {
 		background-color: var(--red);
-		padding: 20px;
+	
 	}
-	
-	
-
 </style>

@@ -185,15 +185,16 @@
             left: 0;
             right: 0;
             top: 100%;
-            background: rgba(255, 255, 255, 0.8);
+            background: var(--red);
             flex-direction: column;
             align-items: flex-start;
             gap: 1.2em;
             padding: 2em 1.5em 1.5em;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(40px);
             border-radius: 0 0 10px 10px;
             transition: all 0.3s ease-in-out;
+            color: white;
             font-weight: bold;
             opacity: 0;
             pointer-events: none;

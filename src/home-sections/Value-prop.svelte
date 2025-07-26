@@ -67,7 +67,7 @@
 		justify-content: center;
 		text-align: center;
 		max-width: 800px;
-		margin-bottom: 100px;
+		margin-bottom: 0px;
 		font-family: var(--bebas);
 		font-size: 2.9rem;
 		color: white;

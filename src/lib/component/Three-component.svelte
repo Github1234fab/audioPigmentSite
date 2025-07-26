@@ -108,20 +108,20 @@
 			group.position.y = 0;
 			const width = window.innerWidth;
 			if (width < 400) {
-			  group.position.y += 240;
-			  group.scale.set(0.6, 0.4, 1);
+			  group.position.y += 320;
+			  group.scale.set(0.6, 0.8, 0.7);
 			} else if (width < 600) {
-			  group.position.y += 310;
-			  group.scale.set(0.5, 0.4, 1);
+			  group.position.y += 280;
+			  group.scale.set(0.7, 0.7, 1);
 			} else if (width < 768) {
 			  group.position.y += 260;
-			  group.scale.set(0.1, 0.2, 1);
+			  group.scale.set(0.9, 0.7, 1.1);
 			} else if (width < 1024) {
-			  group.position.y += 160;
-			  group.scale.set(1, 0.8, 0.8);
+			  group.position.y += 200;
+			  group.scale.set(1, 1, 1);
 			} else {
-			  group.position.y += 130;
-			  group.scale.set(1, 1, 0.8);
+			  group.position.y += 180;
+			  group.scale.set(1, 1, 1.2);
 			}
 		  }
   
@@ -201,6 +201,7 @@
 	.three-container {
 	  position: relative;
 	  width: 100%;
+	  min-height: 400px;
 	  height: 100vh;
 	  z-index: -1;
 	  overflow: hidden;

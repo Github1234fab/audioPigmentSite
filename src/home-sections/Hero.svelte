@@ -67,7 +67,7 @@
 
 	h2 {
 		font-size: 1.5rem;
-		font-weight: var(--regular);
+		font-weight: var(--medium);
 		width: 90%;
 		margin: 0 auto;
 	}

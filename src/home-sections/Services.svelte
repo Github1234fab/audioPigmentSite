@@ -72,32 +72,32 @@
 		{
 			label: 'Communication sonore',
 			desc: 'Conception et mise en œuvre de votre identité sonore sur tous les supports.',
-			link: '/fr/services',
+			link: '/fr/services/#1',
 			image: 'https://images.pexels.com/photos/7859937/pexels-photo-7859937.jpeg'
 		},
 		{
 			label: 'Production audio',
 			desc: 'Prise de son, enregistrement studio, montage & réalisation musiques et voix.',
-			link: '/fr/services',
+			link: '/fr/services/#2',
 
 			image: 'https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg'
 		},
 		{
 			label: 'Consultation en stratégie sonore',
 			desc: 'Accompagnement, audit branding sonore et direction artistique personnalisée.',
-			link: '/fr/services',
+			link: '/fr/services/#3',
 			image: 'https://images.pexels.com/photos/7586136/pexels-photo-7586136.jpeg'
 		},
 		{
 			label: 'Doublage multilingue / localisation',
 			desc: 'Voix off, casting international, adaptation multilingue tous supports.',
-			link: '/fr/services',
+			link: '/fr/services/#4',
 			image: 'https://images.pexels.com/photos/4476164/pexels-photo-4476164.jpeg'
 		},
 		{
 			label: 'Mixage & postproduction',
 			desc: 'Mixage multicanal, post-prod TV/VOD, mastering et livraison broadcast.',
-			link: '/fr/services',
+			link: '/fr/services/#5',
 			image: 'https://images.pexels.com/photos/4988131/pexels-photo-4988131.jpeg'
 		}
 	];

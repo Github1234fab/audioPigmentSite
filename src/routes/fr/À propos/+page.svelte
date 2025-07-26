@@ -1,3 +1,8 @@
+<script>
+	import Lolo from "../../../assets/Portrait-lolo.jpg";
+	import Rom from "../../../assets/Portrait-rom.jpg";
+</script>
+
 <section>
 	<h1>Audio Pigment <br> – <br> Studio de création sonore depuis 1999</h1>
 
@@ -21,8 +26,20 @@
 		technologie évolue, <strong>notre valeur ajoutée reste profondément humaine</strong>. 
 		<br>De la voix, à la composition musicale et au design audio stratégique, chaque projet est pensé comme une <strong>œuvre
 			singulière</strong> , où la créativité est au service de <strong>l’impact, de l’image, du récit et de l’identité </strong> .
-		<br><br>ILS NOUS FONT CONFIANCE :
-	</p>
+
+		</p>
+
+			<div class="wrapper__fondators">
+				<img src={Lolo} alt="Laurent Guillot - fondateur de Audio Pigemnt">
+				<img src={Rom} alt="Romain Noiret - fondateur de Audio Pigemnt">
+			</div>
+
+
+
+		<p><br><br>ILS NOUS FONT CONFIANCE :
+		</p>
+		
+
 </section>
 
 <style>
@@ -60,5 +77,45 @@
 		margin-top: 20px;
 		max-width: 800px;
         font-weight: var(--regular);
+	}
+	.wrapper__fondators {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 50px;
+		margin-top: 30px;
+	}
+	.wrapper__fondators img {
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		object-fit: cover;
+
+	}
+	.wrapper__fondators img:hover {
+		transform: scale(1.05);
+		transition: transform 0.3s ease;
+	}
+
+	@media (max-width: 768px) {
+		section h1 {
+			font-size: 2.2rem;
+		}
+		section h2 {
+			font-size: 1.3rem;
+		}
+		section p {
+			font-size: 1rem;
+			max-width: 90%;
+		}
+		.wrapper__fondators {
+			flex-direction: column;
+			gap: 20px;
+		}
+		.wrapper__fondators img {
+			width: 150px;
+			height: 150px;
+		}
 	}
 </style>

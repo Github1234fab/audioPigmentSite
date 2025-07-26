@@ -180,6 +180,7 @@
 	import Button from '$lib/component/btn-black-border.svelte';
 	import Form from '$lib/component/Form.svelte';
 	import { locale, _ } from 'svelte-i18n';
+	
 
 	// Option : pour traduire des attributs dynamiquement (liens, etc), tu peux aussi
 	// t'inspirer de ce qu'on fait plus bas.
@@ -223,8 +224,19 @@
 		</div>
 	</div>
 	<div class="mentions">
-		{$_('footer.mentions')}
-	</div>
+		{#each $_('footer.mentions') as mention, i (mention.label)}
+		  <a
+			href={mention.url}
+			target={mention.url.startsWith('http') ? "_blank" : "_self"}
+			rel={mention.url.startsWith('http') ? "noopener noreferrer" : undefined}
+		  >
+			{mention.label}
+		  </a>
+		  {#if i < $_('footer.mentions').length - 1}
+			<span> | </span>
+		  {/if}
+		{/each}
+	  </div>
 </section>
 
 <style>
@@ -291,6 +303,15 @@
 		padding: 0px;
 		text-align: center;
 		margin-bottom: 20px;
+	}
+	.mentions a {
+		color: white;
+		text-decoration: none;
+		margin: 0 5px;
+	}
+	.mentions a:hover {
+		font-weight: bold;
+		transition: 0.2s ease-in-out;
 	}
 	.social-link {
 		color: white;
