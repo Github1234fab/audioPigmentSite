@@ -58,32 +58,74 @@
 		background-color: var(--ardoise);
 	}
 </style> -->
+
+
+
 <script>
+	import { onMount } from 'svelte';
+  
 	export let url;
 	export let title;
+  
+	let container;
+	let visible = false;
+  
+	onMount(() => {
+	  const observer = new IntersectionObserver(
+		([entry]) => {
+		  visible = entry.isIntersecting;
+		},
+		{
+		  root: null,
+		  threshold: 0.5,
+		}
+	  );
+  
+	  if (container) observer.observe(container);
+  
+	  return () => observer.disconnect();
+	});
   
 	function getEmbedUrl(url) {
 	  const idMatch = url.match(/[?&]v=([^&]+)/);
 	  if (!idMatch) return '';
 	  return `https://www.youtube.com/embed/${idMatch[1]}?autoplay=0&rel=0&modestbranding=1&showinfo=0&controls=1`;
 	}
+  
+	function getThumbnailUrl(url) {
+	  const idMatch = url.match(/[?&]v=([^&]+)/);
+	  if (!idMatch) return '';
+	  return `https://img.youtube.com/vi/${idMatch[1]}/hqdefault.jpg`;
+	}
   </script>
   
-  <iframe
-	src={getEmbedUrl(url)}
-	title={title}
-	frameborder="0"
-	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-	allowfullscreen
-	loading="lazy"
-  ></iframe>
+  <div class="video-wrapper" bind:this={container}>
+	{#if visible}
+	  <iframe
+		src={getEmbedUrl(url)}
+		title={title}
+		frameborder="0"
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+		allowfullscreen
+	  ></iframe>
+	{:else}
+	  <img src={getThumbnailUrl(url)} alt={title} class="thumbnail" loading="lazy" />
+	{/if}
+  </div>
   
   <style>
-	iframe {
+	.video-wrapper {
 	  width: 100%;
 	  height: 100%;
-	  border: none;
+	}
+  
+	iframe,
+	.thumbnail {
+	  width: 100%;
+	  height: 100%;
 	  object-fit: cover;
+	  border: none;
+	  border-radius: 8px;
 	}
   </style>
   

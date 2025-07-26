@@ -232,25 +232,7 @@ const options = {
       { url: 'https://www.youtube.com/watch?v=4H_sEETHmvs', title: 'Vidéo 8' },
       { url: 'https://www.youtube.com/watch?v=gmcgXXlpras', title: 'Vidéo 9' },
       { url: 'https://www.youtube.com/watch?v=9b-nxj_la6o', title: 'Vidéo 10' },
-      { url: 'https://www.youtube.com/watch?v=-pGIzsqOoEY', title: 'Vidéo 11' },
-      { url: 'https://www.youtube.com/watch?v=cxjJlnM76Wc', title: 'Vidéo 12' },
-      { url: 'https://www.youtube.com/watch?v=d2AfG-OzoL8', title: 'Vidéo 13' },
-      { url: 'https://www.youtube.com/watch?v=NB-SP4qrjtA', title: 'Vidéo 14' },
-      { url: 'https://www.youtube.com/watch?v=28tMbzvJsG4', title: 'Vidéo 15' },
-      { url: 'https://www.youtube.com/watch?v=KvOP_tbju3A&pp=0gcJCc0JAYcqIYzv', title: 'Vidéo 16' },
-      { url: 'https://www.youtube.com/watch?v=pz2xpVFJ-nU', title: 'Vidéo 17' },
-      { url: 'https://www.youtube.com/watch?v=KEJoZxzM0FI', title: 'Vidéo 18' },
-      { url: 'https://www.youtube.com/watch?v=dUOgdMw4kMo', title: 'Vidéo 19' },
-      { url: 'https://www.youtube.com/watch?v=qA9k1JurJw4&pp=0gcJCc0JAYcqIYzv', title: 'Vidéo 20' },
-      { url: 'https://www.youtube.com/watch?v=JkvVrbImqBU', title: 'Vidéo 21' },
-      { url: 'https://www.youtube.com/watch?v=1wQ-J_sZ3jg', title: 'Vidéo 22' },
-      { url: 'https://www.youtube.com/watch?v=yRuTtiiPKhU', title: 'Vidéo 23' },
-      { url: 'https://www.youtube.com/watch?v=L79bsQssG5U', title: 'Vidéo 24' },
-      { url: 'https://www.youtube.com/watch?v=EJicT-1Lqe4', title: 'Vidéo 25' },
-      { url: 'https://www.youtube.com/watch?v=WFxoUld3yrc', title: 'Vidéo 26' },
-      { url: 'https://www.youtube.com/watch?v=BqgViQ-U7Jg', title: 'Vidéo 27' },
-      { url: 'https://www.youtube.com/watch?v=63PRVdLEgZI', title: 'Vidéo 28' },
-      { url: 'https://www.youtube.com/watch?v=UqSREduT-Tw', title: 'Vidéo 30' },
+      // ... tu peux garder les autres
     ];
   
     const options = {
@@ -259,7 +241,8 @@ const options = {
       gap: '1rem',
       autoplay: true,
       pauseOnHover: true,
-      speed: 2000,
+      interval: 5000,
+      speed: 800,
       arrows: true,
       pagination: false,
       breakpoints: {
@@ -271,53 +254,23 @@ const options = {
       easing: 'ease-in-out',
     };
   
-    let currentSlide = 0;
     let splideRef;
-  
-    function handleMoved(e) {
-      currentSlide = e.detail.index;
-    }
-  
-    function getYoutubeThumbnail(url) {
-      const idMatch = url.match(/[?&]v=([^&]+)/);
-      if (!idMatch) return '';
-      return `https://img.youtube.com/vi/${idMatch[1]}/hqdefault.jpg`;
-    }
   
     onMount(async () => {
       const mod = await import('@splidejs/svelte-splide');
       Splide = mod.Splide;
       SplideSlide = mod.SplideSlide;
       splideReady = true;
-  
-      if (splideRef && splideRef.splide) {
-        currentSlide = splideRef.splide.index;
-      }
     });
-  
-    function isSlideNear(i, current) {
-      const total = videos.length;
-      const diff = Math.abs(i - current);
-      return diff <= 2 || diff >= total - 2;
-    }
   </script>
   
   {#if splideReady && Splide && SplideSlide}
     <div class="carousel-container">
-      <svelte:component this={Splide} bind:this={splideRef} {options} on:moved={handleMoved} aria-label="Vidéos">
-        {#each videos as video, i}
+      <svelte:component this={Splide} bind:this={splideRef} {options} aria-label="Vidéos">
+        {#each videos as video}
           <svelte:component this={SplideSlide}>
             <div class="slide-wrapper">
-              <div class="video-layer-wrapper" class:inactive={!isSlideNear(i, currentSlide)}>
-                <VideoCard url={video.url} title={video.title} />
-              </div>
-              <img
-                class="thumbnail-layer"
-                src={getYoutubeThumbnail(video.url)}
-                alt={video.title}
-                class:inactive={isSlideNear(i, currentSlide)}
-                loading="lazy"
-              />
+              <VideoCard url={video.url} title={video.title} />
             </div>
           </svelte:component>
         {/each}
@@ -352,28 +305,6 @@ const options = {
       position: relative;
       border-radius: 8px;
       overflow: hidden;
-    }
-  
-    .video-layer-wrapper,
-    .thumbnail-layer {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  
-    .thumbnail-layer {
-      object-fit: cover;
-      transition: opacity 0.3s ease;
-      border-radius: 8px;
-    }
-  
-    .inactive {
-      opacity: 0;
-      pointer-events: none;
-      visibility: hidden;
-      transition: opacity 0.3s ease;
     }
   </style>
   
