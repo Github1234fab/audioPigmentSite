@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	export let url;
 	export let title = 'Vidéo YouTube';
 
@@ -14,13 +14,12 @@
 {#if videoId}
 	<div class="video-card" role="group" aria-label={title}>
 		<iframe
-			width="320"
-			height="180"
 			src={'https://www.youtube.com/embed/' + videoId}
 			{title}
 			frameborder="0"
 			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 			allowfullscreen
+			  style="width: 100%; height: 100%; position: absolute; top: 0; left: 0;"
 		></iframe>
 		<div class="video-title">{title}</div>
 	</div>
@@ -34,8 +33,6 @@
 <style>
 	.video-card {
 		display: flex;
-		height: 100%;
-		width: auto;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 		border-radius: 10px;
 		background: var(-ardoise);
@@ -57,10 +54,36 @@
 		border: 1px solid #c00;
 	}
 	iframe {
-	
-		height: 100%;
-		width: auto;
 		border-radius: 8px;
 		background-color: var(--ardoise);
 	}
-</style>
+</style> -->
+<script>
+	export let url;
+	export let title;
+  
+	function getEmbedUrl(url) {
+	  const idMatch = url.match(/[?&]v=([^&]+)/);
+	  if (!idMatch) return '';
+	  return `https://www.youtube.com/embed/${idMatch[1]}?autoplay=0&rel=0&modestbranding=1&showinfo=0&controls=1`;
+	}
+  </script>
+  
+  <iframe
+	src={getEmbedUrl(url)}
+	title={title}
+	frameborder="0"
+	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+	allowfullscreen
+	loading="lazy"
+  ></iframe>
+  
+  <style>
+	iframe {
+	  width: 100%;
+	  height: 100%;
+	  border: none;
+	  object-fit: cover;
+	}
+  </style>
+  
