@@ -35,7 +35,7 @@ import { _ } from 'svelte-i18n';
     method="POST"
     netlify-honeypot="bot-field"
     data-netlify="true"
-    class="form"
+    class="form" netlify
 >
     <input type="hidden" name="form-name" value="contact-form-AudioPigment" />
 
