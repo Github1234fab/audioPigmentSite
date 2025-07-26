@@ -3,9 +3,10 @@
 		<h4>Legal Notice</h4>
 		<p>
 			Site publisher: Audio Pigment 10 Rue Nicolaï, 69007 Lyon, France Phone: 04 72 73 47 21 Email:
-			contact@audiopigment.com Publication director: [Name of responsible person] Hosting provider:
+			contact@audiopigment.com 
+			<br>Publication director: [Name of responsible person] Hosting provider:
 			[Hosting company name] Address: [Hosting company address] Phone: [Hosting company phone]
-			Intellectual property: All content on this website (texts, images, logos, videos, etc.) is the
+			<br>Intellectual property: All content on this website (texts, images, logos, videos, etc.) is the
 			exclusive property of Audio Pigment unless otherwise indicated. Any reproduction,
 			distribution, modification, retransmission, or publication of these elements is strictly
 			prohibited without prior written consent from Audio Pigment. Personal data: For more
@@ -18,10 +19,12 @@
 		<p>
 			Audio Pigment is committed to protecting the personal data of its users. Data collection: We
 			only collect data necessary to process your requests (name, first name, email, phone, etc.)
-			through our contact form. Use of data: Collected data is used exclusively to respond to your
+			through our contact form. 
+			<br>Use of data: Collected data is used exclusively to respond to your
 			requests and will never be sold or shared with third parties. Data retention: Data is retained
 			only for as long as necessary to process your requests and then archived according to
-			applicable laws. User rights: In accordance with data protection laws, including GDPR, you
+			applicable laws. 
+			<br>User rights: In accordance with data protection laws, including GDPR, you
 			have the right to access, rectify, delete, and object to the processing of your personal data.
 			You can exercise these rights by contacting our Data Protection Officer at
 			contact@audiopigment.com. Cookies: Our website uses cookies to improve your experience. You
