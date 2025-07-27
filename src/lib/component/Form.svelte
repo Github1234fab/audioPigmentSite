@@ -26,43 +26,67 @@
 </form> -->
 
 <script>
-
-import { _ } from 'svelte-i18n';
+	import { _ } from 'svelte-i18n';
 </script>
 
 <form
-    name="contact-form-AudioPigment"
-    method="POST"
-    netlify-honeypot="bot-field"
-    data-netlify="true"
-    class="form" netlify
+	name="contact-form-AudioPigment"
+	method="POST"
+	netlify-honeypot="bot-field"
+	data-netlify="true"
+	class="form"
+	netlify
 >
-    <input type="hidden" name="bot-field" value="contact-form-AudioPigment" />
+	<input type="hidden" name="form-name" value="contact-form-AudioPigment" />
 	<p class="hidden">
 		<label>Ne pas remplir ce champ si vous êtes humain : <input name="bot-field" /></label>
 	</p>
 
-    <div class="wrapper-inputs">
-        <input name="nom" type="text" id="nom" required placeholder={$_('form.placeholder_nom')} />
-        <input name="prenom" type="text" id="prenom" required placeholder={$_('form.placeholder_prenom')} />
-        <input name="company" type="text" id="company" required placeholder={$_('form.placeholder_societe')} />
-    </div>
+	<div class="wrapper-inputs">
+		<input name="nom" type="text" id="nom" required placeholder={$_('form.placeholder_nom')} />
+		<input
+			name="prenom"
+			type="text"
+			id="prenom"
+			required
+			placeholder={$_('form.placeholder_prenom')}
+		/>
+		<input
+			name="company"
+			type="text"
+			id="company"
+			required
+			placeholder={$_('form.placeholder_societe')}
+		/>
+	</div>
 
-    <div class="wrapper-inputs">
-        <input name="email" type="email" id="email" required placeholder={$_('form.placeholder_email')} />
-        <input name="telephone" type="tel" id="telephone" required placeholder={$_('form.placeholder_telephone')} />
-    </div>
+	<div class="wrapper-inputs">
+		<input
+			name="email"
+			type="email"
+			id="email"
+			required
+			placeholder={$_('form.placeholder_email')}
+		/>
+		<input
+			name="telephone"
+			type="tel"
+			id="telephone"
+			required
+			placeholder={$_('form.placeholder_telephone')}
+		/>
+	</div>
 
-    <textarea name="demande" id="demande" class="demande" placeholder={$_('form.placeholder_demande')}></textarea>
+	<textarea name="demande" id="demande" class="demande" placeholder={$_('form.placeholder_demande')}
+	></textarea>
 
-    <button class="btn" type="submit"><span>{$_('form.send')}</span></button>
+	<button class="btn" type="submit"><span>{$_('form.send')}</span></button>
 </form>
-
 
 <style>
 	.hidden {
-	display: none;
-}
+		display: none;
+	}
 	form {
 		display: flex;
 		flex-direction: column;
@@ -90,15 +114,13 @@ import { _ } from 'svelte-i18n';
 		border: 1px solid grey;
 		margin-bottom: 5px;
 	}
-	.wrapper-inputs{
+	.wrapper-inputs {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		gap: 10px;
 		width: 100%;
-	
-
 	}
 	.demande {
 		width: 100%;
@@ -117,7 +139,7 @@ import { _ } from 'svelte-i18n';
 	form input::placeholder {
 		color: #e6e4e4;
 		font-weight: var(--regular);
-        font-family: var(--raleway);
+		font-family: var(--raleway);
 	}
 	.demande::placeholder {
 		font-family: var(--raleway);
@@ -167,7 +189,6 @@ import { _ } from 'svelte-i18n';
 	.btn:hover span {
 		color: black;
 	}
-
 
 	@media screen and (max-width: 768px) {
 		form {
