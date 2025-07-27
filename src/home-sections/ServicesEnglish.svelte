@@ -74,7 +74,7 @@
 			desc: 'Sonic branding &amp; audio identity',
 			infos: '(sonic logo, musical identity, brand voice, product sound design)',
 			link: '/en/services/#1',
-			image: 'https://images.pexels.com/photos/7859937/pexels-photo-7859937.jpeg'
+			image: 'https://images.pexels.com/photos/7859937/pexels-photo-7859937.jpeg?w=600&h=400&auto=compress&cs=tinysrgb'
 		},
 		{
 			label: 'Audio marketing',
@@ -83,7 +83,7 @@
 				'(radio commercials, podcasts, event soundscapes, spatial audio, IVR systems, on-hold messages)',
 			link: '/en/services/#2',
 
-			image: 'https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg'
+			image: 'https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg?w=600&h=400&auto=compress&cs=tinysrgb'
 		},
 		{
 			label: 'Audiovisual & Digital Media',
@@ -91,14 +91,14 @@
 			infos:
 				'(TV commercials, cinema ads, corporate films, institutional videos, motion design, VR, e-learning)',
 			link: '/en/services/#3',
-			image: 'https://images.pexels.com/photos/7586136/pexels-photo-7586136.jpeg'
+			image: 'https://images.pexels.com/photos/7586136/pexels-photo-7586136.jpeg?w=600&h=400&auto=compress&cs=tinysrgb'
 		},
 		{
 			label: 'Multilingual Dubbing & Localization',
 			desc: 'Dubbing, lip sync &amp; voice-over recording for international content',
 			infos: '(audioguides, e-learning, documentaries, translation &amp; adaptation)',
 			link: '/en/services/#4',
-			image: 'https://images.pexels.com/photos/4476164/pexels-photo-4476164.jpeg'
+			image: 'https://images.pexels.com/photos/4476164/pexels-photo-4476164.jpeg?w=600&h=400&auto=compress&cs=tinysrgb'
 		},
 		{
 			label: 'Mixing & Post-Production',
@@ -107,7 +107,7 @@
 				'((stereo, 5.1, 7.1, binaural/ambisonic VR, PAD-ready broadcast delivery))',
 
 			link: '/en/services/#5',
-			image: 'https://images.pexels.com/photos/4988131/pexels-photo-4988131.jpeg'
+			image: 'https://images.pexels.com/photos/4988131/pexels-photo-4988131.jpeg?w=600&h=400&auto=compress&cs=tinysrgb'
 		}
 	];
 </script>

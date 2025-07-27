@@ -4,7 +4,7 @@
 </script>
 
 <section>
-	<video autoplay muted loop playsinline class="background-video">
+	<video autoplay muted loop playsinline preload="none"  class="background-video">
 		<source
 			src="https://videos.pexels.com/video-files/7087627/7087627-uhd_2732_1440_25fps.mp4"
 			type="video/mp4"
