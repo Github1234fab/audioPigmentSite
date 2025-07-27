@@ -44,7 +44,6 @@
 		justify-content: center;
 		padding: 1rem;
 		background-color: rgb(232, 226, 226);
-
 		color: var(--black);
 		min-height: 70vh;
 	}
@@ -56,6 +55,7 @@
 		justify-content: center;
 		margin: 100px;
 		padding: 0px;
+	
 	}
 
 	@media screen and (max-width: 768px) {
@@ -64,6 +64,8 @@
 			gap: 20px;
 			margin: 0px;
 			padding: 0px;
+			margin-bottom: 100px;
+			margin-top: 50px;
 		}
 		
 	}

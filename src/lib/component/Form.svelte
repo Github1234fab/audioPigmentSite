@@ -37,7 +37,10 @@ import { _ } from 'svelte-i18n';
     data-netlify="true"
     class="form" netlify
 >
-    <input type="hidden" name="form-name" value="contact-form-AudioPigment" />
+    <input type="hidden" name="bot-field" value="contact-form-AudioPigment" />
+	<p class="hidden">
+		<label>Ne pas remplir ce champ si vous êtes humain : <input name="bot-field" /></label>
+	</p>
 
     <div class="wrapper-inputs">
         <input name="nom" type="text" id="nom" required placeholder={$_('form.placeholder_nom')} />
@@ -57,6 +60,9 @@ import { _ } from 'svelte-i18n';
 
 
 <style>
+	.hidden {
+	display: none;
+}
 	form {
 		display: flex;
 		flex-direction: column;

@@ -139,5 +139,14 @@
 			width: 100%;
 			padding: 20px 0px;
 		}
+		section {
+			background-image: url('https://images.pexels.com/photos/14828529/pexels-photo-14828529.jpeg?w=600&h=400&auto=compress&cs=tinysrgb');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		.background-video {
+			display: none;
+		}
 	}
 </style>

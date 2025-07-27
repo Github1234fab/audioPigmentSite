@@ -332,7 +332,7 @@
 			const width = window.innerWidth;
 			if (width < 400) {
 			  group.position.y += 320;
-			  group.scale.set(1, 1, 1.2);
+			  group.scale.set(1, 1.1, 1);
 			} else if (width < 600) {
 			  group.position.y += 280;
 			  group.scale.set(0.7, 0.7, 1);
