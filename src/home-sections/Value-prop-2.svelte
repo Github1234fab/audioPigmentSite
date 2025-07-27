@@ -4,7 +4,7 @@
 </script>
 
 <section>
-	<video autoplay muted loop playsinline preload="none"  class="background-video">
+	<video autoplay muted loop playsinline preload="none" class="background-video">
 		<source
 			src="https://videos.pexels.com/video-files/7087627/7087627-uhd_2732_1440_25fps.mp4"
 			type="video/mp4"
@@ -100,8 +100,8 @@
 		background: linear-gradient(
 			to top,
 			rgba(0, 0, 0, 0) 0%,
-			rgb(0, 0, 0, 0.5) 	50%,
-		 rgba(0, 0, 0, 0) 100%
+			rgb(0, 0, 0, 0.5) 50%,
+			rgba(0, 0, 0, 0) 100%
 		);
 		z-index: 1;
 		border-radius: 10px;
@@ -131,6 +131,15 @@
 		section p {
 			width: 100%;
 			padding: 20px 0px;
-				}
+		}
+		section {
+			background-image: url('https://images.pexels.com/photos/14828529/pexels-photo-14828529.jpeg?w=600&h=400&auto=compress&cs=tinysrgb');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		.background-video {
+			display: none;
+		}
 	}
 </style>
