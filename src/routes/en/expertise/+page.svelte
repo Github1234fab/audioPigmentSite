@@ -6,7 +6,7 @@
 
 <section id="post-production-audio">
 
-	<h1>Notre expertise</h1>
+	<h1>Our know-how</h1>
 	<h2>Post-production audio</h2>
 	<p>
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et adipisci culpa obcaecati, excepturi
@@ -162,18 +162,14 @@
 		/>
 	</video>
 	<div class="wrapper__section-txt">
-		<h2>Notre engagement pour une qualité sonore exceptionnelle</h2>
+		<h2>Our Commitment to Exceptional Sound Quality</h2>
 		<h3>
-			Chaque projet mérite son histoire sonore unique : chez Audio Pigment, l’évidence c’est
-			l’exception.
+		Every project deserves its unique sound story: at Audio Pigment, excellence is the standard.
 		</h3>
-
 		<p>
-			Chez AUDIO PIGMENT, chaque projet est pensé, écouté, façonné avec précision par l’expertise
-			humaine, pour créer un impact optimal. Une écoute exigeante, un savoir-faire affûté, et le
-			goût du sur-mesure. Comprendre, ressentir, transmettre : c’est notre métier. Faisons-nous
-			confiance.
+		At AUDIO PIGMENT, each project is thoughtfully considered, listened to, and crafted with precision by human expertise to create an optimal impact. Demanding listening, honed craftsmanship, and a taste for customization. Understanding, feeling, conveying: that is our profession. Let's trust each other.
 		</p>
+		
 		<!-- <div class="wrapper__buttons">
             <BtnBlack txt="Contactez-nous" />
             <BtnWhite txt="Découvrez nos services" />
@@ -217,6 +213,8 @@
 		font-size: 5rem;
 		margin-top: 50px;
 		color: var(--ardoise);
+		font-weight: 400;
+		letter-spacing: -1.5px;
 	}
 	section h2 {
 		font-family: var(--bebas);
@@ -224,6 +222,9 @@
 		margin-bottom: 0.5rem;
 		color: var(--ardoise);
 		margin-top: 50px;
+		font-weight: 400;
+		letter-spacing: -1.5px;
+	
 	}
 	section h3 {
 		font-family: var(--raleway);
@@ -297,6 +298,9 @@
         padding: 2rem;
        z-index: 2;
     }
+	.wrapper__section-txt p{
+		font-weight: var(--regular);
+	}
 
 	@media screen and (max-width: 768px) {
 		section h1 {

@@ -30,10 +30,11 @@ import Slider from '$lib/component/Slider.svelte';
     }
     section h1 {
         font-family: var(--bebas);
-        font-weight: var(--extra-bold);
-        color: white;
-        font-size: 3rem;
-        margin-top: 50px;
+		color: white;
+		font-size: 3rem;
+		margin-top: 50px;
+		font-weight: 400;
+		letter-spacing: -1.5px;
     }
     section p {
         font-family: var(--raleway);

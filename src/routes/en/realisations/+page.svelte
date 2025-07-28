@@ -85,7 +85,7 @@
   </script>
   
   <section>
-    <h2>Nos réalisations</h2>
+    <h2>Our achievements</h2>
     <div class="filters">
       <button
         class:selected={selectedType === "Tous"}
@@ -128,6 +128,9 @@
       font-size: 4rem;
       margin-bottom: 1rem;
       margin-top: 50px;
+      font-weight: 400;
+      letter-spacing: -1.5px;
+  
     }
     .filters {
       display: flex;

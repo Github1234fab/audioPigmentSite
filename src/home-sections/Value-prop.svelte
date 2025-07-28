@@ -68,11 +68,18 @@
 		text-align: center;
 		max-width: 800px;
 		margin-bottom: 0px;
-		font-family: var(--bebas);
-		font-size: 2.9rem;
 		color: white;
 		margin-top: 50px;
 		gap: 30px;
+	}
+	.wrapper__section-txt h2 {
+		font-family: var(--bebas);
+		font-size: 4.5rem;
+		color: white;
+		margin-bottom: 0px;
+		font-weight: 400;
+		letter-spacing: -1.5px;
+		width: 100%;
 	}
 
 	section h4 {
@@ -114,5 +121,11 @@
 		.wrapper__section-txt {
 			font-size: 2.5rem;
 		}
+		.wrapper__section-txt h2 {
+
+		font-size: 3.5rem;
+		
+	}
+
 	}
 </style>

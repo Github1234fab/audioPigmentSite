@@ -18,17 +18,27 @@
 		</div>
 
 		<p>
-			<strong>Recognized players</strong> in high-end audio production, both in <strong>France </strong>and <strong>internationally</strong>,
-we specialize in voice-over, dubbing, sound design, original music, post-production, and mixing.
+			<strong>Recognized players</strong> in high-end audio production, both in
+			<strong>France </strong>and <strong>internationally</strong>, we specialize in voice-over,
+			dubbing, sound design, original music, post-production, and mixing.
 
-<br><br>We combine <strong>technical precision, creative intuition, and attention to detail to deliver premium, tailor-made
-	productions</strong> .
-<br><br> At<strong>Audio Pigment</strong>  , each project is <strong>crafted as a unique piece, where expertise, experience, and creativity
-	come together to serve impact, picture, storytelling, and identity</strong> .
-<br><br> <strong>Since 1999</strong>, we’ve been trusted by <strong>leading brands and institutions</strong>, including:
-L’Oréal, Chanel, Hermès, Air France, Accor, Ferrero, Burger King, Lego, Disneyland Paris, Procter &amp; Gamble,
-Total Energies, and many more…
-<br><br>And we’re proud to keep earning their trust today.
+			<br /><br />We combine
+			<strong
+				>technical precision, creative intuition, and attention to detail to deliver premium,
+				tailor-made productions</strong
+			>
+			.
+			<br /><br /> At<strong>Audio Pigment</strong> , each project is
+			<strong
+				>crafted as a unique piece, where expertise, experience, and creativity come together to
+				serve impact, picture, storytelling, and identity</strong
+			>
+			.
+			<br /><br /> <strong>Since 1999</strong>, we’ve been trusted by
+			<strong>leading brands and institutions</strong>, including: L’Oréal, Chanel, Hermès, Air
+			France, Accor, Ferrero, Burger King, Lego, Disneyland Paris, Procter &amp; Gamble, Total
+			Energies, and many more…
+			<br /><br />And we’re proud to keep earning their trust today.
 		</p>
 		<Button txt="Get in touch" href="/fr/contact" />
 	</div>
@@ -64,11 +74,19 @@ Total Energies, and many more…
 		text-align: center;
 		max-width: 800px;
 		margin-bottom: 0px;
-		font-family: var(--bebas);
-		font-size: 2.9rem;
 		color: white;
 		margin-top: 50px;
 		gap: 30px;
+	}
+
+	.wrapper__section-txt h2 {
+		font-family: var(--bebas);
+		font-size: 4.5rem;
+		color: white;
+		margin-bottom: 0px;
+		font-weight: 400;
+		letter-spacing: -1.5px;
+		width: 100%;
 	}
 
 	section h4 {
@@ -96,7 +114,6 @@ Total Energies, and many more…
 		margin-top: 50px;
 		margin-bottom: 30px;
 	}
-
 	@media screen and (max-width: 768px) {
 		.wrapper__h4 {
 			gap: 5px;
@@ -109,6 +126,9 @@ Total Energies, and many more…
 		}
 		.wrapper__section-txt {
 			font-size: 2.5rem;
+		}
+		.wrapper__section-txt h2 {
+			font-size: 3.5rem;
 		}
 	}
 </style>

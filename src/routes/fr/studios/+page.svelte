@@ -97,6 +97,8 @@
 		font-family: var(--bebas);
 		font-size: 5rem;
 		color: var(--ardoise);
+		font-weight: 400;
+		letter-spacing: -1.5px;
 	}
 	section h2 {
 		font-family: var(--raleway);
@@ -123,6 +125,8 @@
 		font-family: var(--bebas);
 		font-size: 1.5rem;
 		margin-bottom: 10px;
+		font-weight: 400;
+		letter-spacing: 0px;
 	}
 	.wrapper__studios-room .img {
 		width: 100%;

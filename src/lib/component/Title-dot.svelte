@@ -40,12 +40,12 @@
 
 	.title {
 		font-size: 4rem;
-		font-weight: var(--extra-bold);
 		margin-bottom: 10px;
 		font-family: var(--bebas);
 		text-align: center;
 		color: var(--ardoise);
-		letter-spacing: -0.8px;
+		font-weight: 400;
+		letter-spacing: -1.5px;
 		width: 100%;
 	}
 

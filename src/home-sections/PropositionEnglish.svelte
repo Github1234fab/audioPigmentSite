@@ -65,6 +65,8 @@ Voice Acting`}
 			gap: 20px;
 			margin: 0px;
 			padding: 0px;
+			margin-bottom: 100px;
+			margin-top: 50px;
 		}
 	}
 </style>

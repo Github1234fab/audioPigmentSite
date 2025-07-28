@@ -5,7 +5,7 @@
 </script>
 
 <section>
-	<h1>NOS STUDIOS</h1>
+	<h1>OUR STUDIOS</h1>
 	<h2>Visite de nos studios</h2>
 	<div class="wrapper__studios">
 		<div class="wrapper__studios-room">
@@ -99,14 +99,16 @@
 		font-family: var(--bebas);
 		font-size: 5rem;
 		color: var(--ardoise);
+		font-weight: 400;
+		letter-spacing: -1.5px;
 	}
 	section h2 {
 		font-family: var(--raleway);
 		font-size: 1.5rem;
 		margin-bottom: 2rem;
 		color: var(--ardoise);
-	
 		letter-spacing: -1px;
+
 	}
 	.wrapper__studios {
 		display: flex;
@@ -125,6 +127,8 @@
 		font-family: var(--bebas);
 		font-size: 1.5rem;
 		margin-bottom: 10px;
+		font-weight: 400;
+		letter-spacing: 0px;
 	}
 	.wrapper__studios-room .img {
 		width: 100%;
@@ -157,6 +161,8 @@
         font-size: 3rem;
         color: white;
         margin-bottom: 1rem;
+		font-weight: 400;
+		letter-spacing: -1.5px;
     }
     .nous-ecouter p {
         font-family: var(--raleway);

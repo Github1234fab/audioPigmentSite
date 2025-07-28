@@ -27,18 +27,21 @@
 	}
 	section h2 {
 		font-family: var(--bebas);
-		font-weight: var(--bold);
+		font-size: 3.5rem;
+		margin-bottom: 0.5rem;
 		color: white;
-		font-size: 2.8rem;
-		margin-top: 0px;
+		margin-top: 50px;
+		font-weight: 400;
+		letter-spacing: -1.5px;
 	}
+
 
 	@media (max-width: 768px) {
 		section {
 			height: 70vh;
 		}
 		section h2 {
-			font-size: 2.5rem;
+			font-size: 3rem;
 		}
 	}
 	.wrapper__slider-logos {

@@ -63,6 +63,8 @@
 		font-size: 4.5rem;
 		width: 90%;
 		margin: 0 auto;
+		font-weight: 400;
+		letter-spacing: -2px;
 	}
 
 	h2 {
@@ -95,7 +97,7 @@
 			height: auto;
 		}
 		h1 {
-			font-size: 3.5rem;
+			font-size: 3.2rem;
 		}
 		h2 {
 			font-size: 1rem;

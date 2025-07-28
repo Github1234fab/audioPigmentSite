@@ -23,7 +23,7 @@
 		 Habillage sonore 
 		Composition musicale`}
 			txt="Explorer"
-				href="/fr/expertise/#creation-originale"
+			href="/fr/expertise/#creation-originale"
 		/>
 		<CardDotWhite
 			title="Voix"
@@ -31,7 +31,7 @@
 	Doublage/Dubbing/ADR
 	Voice over`}
 			txt="En savoir +"
-				href="/fr/expertise/#Voix"
+			href="/fr/expertise/#Voix"
 		/>
 	</div>
 </section>
@@ -55,7 +55,6 @@
 		justify-content: center;
 		margin: 100px;
 		padding: 0px;
-	
 	}
 
 	@media screen and (max-width: 768px) {
@@ -67,6 +66,5 @@
 			margin-bottom: 100px;
 			margin-top: 50px;
 		}
-		
 	}
 </style>

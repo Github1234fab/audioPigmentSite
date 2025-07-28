@@ -49,11 +49,14 @@
 	}
 	section h2 {
 		font-family: var(--bebas);
-		font-size: 2.9rem;
+		font-size: 3.5rem;
 		margin-bottom: 0.5rem;
 		color: white;
 		margin-top: 50px;
+		font-weight: 400;
+		letter-spacing: -1.5px;
 	}
+
 	section p {
 		font-family: var(--raleway);
 		font-size: 1rem;
@@ -141,5 +144,15 @@
 		.background-video {
 			display: none;
 		}
+		section h2 {
+		font-family: var(--bebas);
+		font-size: 3rem;
+		margin-bottom: 0.5rem;
+		color: white;
+		margin-top: 50px;
+		font-weight: 400;
+		letter-spacing: -1.5px;
+	}
+
 	}
 </style>

@@ -45,7 +45,7 @@
 </script>
 
 <section>
-	<h2>Nos prestations</h2>
+	<h2>Our services</h2>
 	<div class="wrapper__services-cards">
 		{#each services as service}
 			<div
@@ -80,6 +80,8 @@
 		font-size: 4rem;
 		margin-bottom: 3rem;
 		margin-top: 50px;
+		font-weight: 400;
+		letter-spacing: -1.5px;
 	}
 	.wrapper__services-cards {
 		display: flex;

@@ -126,6 +126,8 @@
       font-size: 4rem;
       margin-bottom: 1rem;
       margin-top: 50px;
+      font-weight: 400;
+      letter-spacing: -1.5px;
     }
     .filters {
       display: flex;

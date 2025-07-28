@@ -187,9 +187,6 @@
 <section>
 	<h2>{@html $_('footer.title')}</h2>
 
-
-	
-
 	<Form />
 
 	<div class="wrapper__footer-infos">
@@ -253,11 +250,14 @@
 	}
 	section h2 {
 		font-family: var(--bebas);
-		font-weight: var(--bold);
+		font-size: 3.5rem;
+		margin-bottom: 0.5rem;
 		color: white;
-		font-size: 2.8rem;
 		margin-top: 50px;
+		font-weight: 400;
+		letter-spacing: -1.5px;
 	}
+
 	.wrapper__footer-infos {
 		display: flex;
 		align-items: baseline;
@@ -371,5 +371,15 @@
 			gap: 5px;
 			width: 100%;
 		}
+		section h2 {
+		font-family: var(--bebas);
+		font-size: 3rem;
+		margin-bottom: 0.5rem;
+		color: white;
+		margin-top: 50px;
+		font-weight: 400;
+		letter-spacing: -1.5px;
+		
+	}
 	}
 </style>

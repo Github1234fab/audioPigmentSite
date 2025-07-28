@@ -215,6 +215,8 @@
 		font-size: 5rem;
 		margin-top: 50px;
 		color: var(--ardoise);
+		font-weight: 400;
+		letter-spacing: -1.5px;
 	}
 	section h2 {
 		font-family: var(--bebas);
@@ -222,6 +224,8 @@
 		margin-bottom: 0.5rem;
 		color: var(--ardoise);
 		margin-top: 50px;
+		font-weight: 400;
+		letter-spacing: -1.5px;
 	}
 	section h3 {
 		font-family: var(--raleway);
@@ -295,6 +299,10 @@
         padding: 2rem;
        z-index: 2;
     }
+	.wrapper__section-txt p{
+		font-weight: var(--regular);
+	}
+
 
 	@media screen and (max-width: 768px) {
 		section h1 {

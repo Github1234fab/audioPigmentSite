@@ -43,10 +43,11 @@
 	}
 	section h1 {
 		font-family: var(--bebas);
-		font-weight: var(--extra-bold);
 		color: white;
-		font-size: 2.8rem;
+		font-size: 3rem;
 		margin-top: 50px;
+		font-weight: 400;
+		letter-spacing: -2px;
 	}
 	section h2 {
 		font-family: var(--raleway);
