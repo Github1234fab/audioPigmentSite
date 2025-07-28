@@ -137,6 +137,12 @@
         color: inherit;
         padding: 0.5em 0.2em;
     }
+    .main-menu a:hover {
+        color: var(--red);
+        transition: 0.3s ease-in-out;
+     
+    }
+  
 
     .wrapper__buttons {
         display: flex;

@@ -16,7 +16,7 @@
 			musicale, mixage
 		</h2>
 		<div class="wrapper__buttons">
-			<Button txt="Conctactez-nous" href="/fr/contact"/>
+			<Button txt="Contactez-nous" href="/fr/contact"/>
 			<ButtonWhite txt="Écoutez-nous" href="/fr/realisations" />
 		</div>
 	</div>
