@@ -12,18 +12,29 @@
 	</video>
 
 	<div class="wrapper__section-txt">
-		<h2>Notre engagement pour une qualité sonore exceptionnelle</h2>
-		<h3>
+		<!-- <h2>Notre engagement pour une qualité sonore exceptionnelle</h2> -->
+		<!-- <h3>
 			Chaque projet mérite son histoire sonore unique : chez Audio Pigment, l’évidence c’est
 			l’exception.
-		</h3>
+		</h3> -->
 
-		<p>
+		<h2>Chez AUDIO PIGMENT, chaque projet est écouté, <br>pensé et façonné avec soin, <br>expertise et inventivité.
+			À vos côtés.</h2>
+			<h3>Une <strong>écoute attentive</strong>, un <strong>savoir-faire affûté </strong> et <strong>le goût du sur-mesure</strong> pour un impact optimal.</h3>
+
+			<h4><strong>Comprendre</strong>, <strong>ressentir</strong>, <strong>transmettre</strong> : c’est notre métier.
+				<br>Faites nous confiance </h4>
+
+				<p>Voix, sound design, identité sonore… <br>
+
+					<strong>Ensemble, créons des émotions, marquons les esprits</strong></p>
+
+		<!-- <p>
 			Chez AUDIO PIGMENT, chaque projet est pensé, écouté, façonné avec précision par l’expertise
 			humaine, pour créer un impact optimal. Une écoute exigeante, un savoir-faire affûté, et le
 			goût du sur-mesure. Comprendre, ressentir, transmettre : c’est notre métier. Faisons-nous
 			confiance.
-		</p>
+		</p> -->
 		<div class="wrapper__buttons">
 			<BtnBlack txt="Contactez-nous" href="/fr/contact" />
 			<BtnWhite txt="Découvrez nos services" href="/fr/services" />
@@ -47,19 +58,28 @@
 		overflow: hidden;
 		z-index: 0;
 	}
-	section h2 {
-		font-family: var(--bebas);
-		font-size: 3.5rem;
+	.wrapper__section-txt h2 {
+		font-family: var(--raleway);
+		font-size: 3rem;
 		margin-bottom: 0.5rem;
 		color: white;
 		margin-top: 50px;
-		font-weight: 400;
+		font-weight: 800;
 		letter-spacing: -1.5px;
 	}
-
-	section p {
+	.wrapper__section-txt h3 {
 		font-family: var(--raleway);
-		font-size: 1rem;
+		font-size: 2rem;
+		font-weight: var(--medium);
+		margin-bottom: 0.5rem;
+		color: white;
+		margin-top: 0px;
+		letter-spacing: -1px;
+	}
+
+	.wrapper__section-txt h4 {
+		font-family: var(--raleway);
+		font-size: 1.5rem;
 		margin-bottom: 0.5rem;
 		line-height: 1.8;
 		color: white;
@@ -68,15 +88,20 @@
 		padding: 20px 40px;
 		width: 100%;
 	}
-	section h3 {
+	.wrapper__section-txt p{
 		font-family: var(--raleway);
-		font-size: 1.5rem;
-		font-weight: var(--medium);
-		margin-bottom: 0.5rem;
+		font-size: 1.2rem;
+		line-height: 1.6;
+		margin-top: 20px;
+		max-width: 800px;
+		font-weight: var(--regular);
 		color: white;
-		margin-top: 0px;
-		letter-spacing: -1px;
-	}
+		padding: 0px 20px;
+		width: 100%;
+		text-align: center;
+		margin-bottom: 30px;
+	} 
+
 	.wrapper__buttons {
 		display: flex;
 		/* flex-direction: column; */

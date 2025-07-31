@@ -12,7 +12,8 @@ body {
 
 
 :root {
-	--ardoise: #111111;
+	/* --ardoise: #111111; */
+	--ardoise: #1f1c1c;
 	--grey: #D9D9D9;
 	--btn-sdw : rgba(0, 0, 0, 0.315);
 	--red: #E74C3C;

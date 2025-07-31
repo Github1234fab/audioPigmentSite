@@ -4,47 +4,47 @@
 		{
 			title: 'EXPERIENCE',
 			iconClass: 'fa-solid fa-user-tie fa-2xl',
-			p: "Plus de 25 ans d'expérience créative, technique, et artistique"
+			p: "Plus de 25 ans d’expérience créative et technique"
 		},
 		{
 			title: 'ARTISTIQUE',
 			iconClass: 'fa-solid fa-palette fa-2xl',
-			p: 'Direction artistique soignée et exigeante reconnue'
+			p: 'Direction artistique soignée, relecture, réécoute, vérification systématique'
 		},
 		{
 			title: 'STUDIOS',
 			iconClass: 'fa-solid fa-microphone-lines fa-2xl',
-			p: "3 studios d'enregistrement et post production son, haut de gamme"
+			p: "3 studios d’enregistrement et post production son, haut de gamme"
 		},
 		{
 			title: 'CASTING',
 			iconClass: 'fa-solid fa-users fa-2xl',
-			p: 'Casting de comédiens voix professionnels natifs, couvrant plus de 50 nationalités'
+			p: 'Comédiens voix professionnels natifs, couvrant plus de 50 nationalités'
 		},
 		{
 			title: 'VOIX PRO',
 			iconClass: 'fa-solid fa-comment-dots fa-2xl',
-			p: 'Casting voix sur mesure pour chaque projet'
+			p: 'Casting voix sur mesure'
 		},
 		{
 			title: 'INTERNATIONAL',
 			iconClass: 'fa-solid fa-globe fa-2xl',
-			p: 'Interconnexion avec des studios partenaires du monde entier pour des enregistrements à distance en temps réel'
+			p: 'Interconnexion avec des studios partenaires du monde entier pour des enregistrement en temps réel à distance'
 		},
 		{
 			title: 'SAV',
 			iconClass: 'fa-solid fa-headset fa-2xl',
-			p: 'Gestion des urgences'
+			p: 'Suivi clients en direct, au studio ou via connexion à distance'
 		},
 		{
 			title: 'SUIVI',
 			iconClass: 'fa-solid fa-history fa-2xl',
-			p: 'Suivi des projets sur la durée (mises à jour, séries...)'
+			p: 'Suivi des projets dans la durée (mises à jour, séries sur plusieurs années), gestion des urgences'
 		},
 		{
 			title: 'ACCOMPAGNEMENT',
 			iconClass: 'fa-solid fa-user-check fa-2xl',
-			p: 'Accompagnement rigoureux : relectures, ré-écoutes, vérifications…'
+			p: 'Mise à disposition de notre réseau de partenaires : artistique, technique, traduction/adaptation'
 		}
 	];
 </script>

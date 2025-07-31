@@ -70,37 +70,37 @@
 
 	const services = [
 		{
-			label: 'Communication sonore',
-			desc: 'Conception et mise en œuvre de votre identité sonore sur tous les supports.',
+			label: 'COMMUNICATION SONORE',
+			desc: 'Audio branding / Identité sonore (signature sonore, identité musicale, voix de marque, sound design produit…).',
 			link: '/fr/services/#1',
 			image:
 				'https://images.pexels.com/photos/7859937/pexels-photo-7859937.jpeg?w=600&h=400&auto=compress&cs=tinysrgb'
 		},
 		{
-			label: 'Production audio',
-			desc: 'Prise de son, enregistrement studio, montage & réalisation musiques et voix.',
+			label: 'MARKETING SONORE',
+			desc: 'Spot radio, podcast, création sonore événementiel, sonorisation d’espace, svi, message téléphonique…',
 			link: '/fr/services/#2',
 
 			image:
 				'https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg?w=600&h=400&auto=compress&cs=tinysrgb'
 		},
 		{
-			label: 'Consultation en stratégie sonore',
-			desc: 'Accompagnement, audit branding sonore et direction artistique personnalisée.',
+			label: 'AUDIOVISUEL & DIGITAL',
+			desc: 'Habillage sonore &amp; voix off (pub TV, pub cinéma, film corporate, institutionnel, motion design, e-learning…)',
 			link: '/fr/services/#3',
 			image:
 				'https://images.pexels.com/photos/7586136/pexels-photo-7586136.jpeg?w=600&h=400&auto=compress&cs=tinysrgb'
 		},
 		{
-			label: 'Doublage multilingue / localisation',
-			desc: 'Voix off, casting international, adaptation multilingue tous supports.',
+			label: 'DOUBLAGE MULTILINGUE / LOCALISATION',
+			desc: 'Dubbing, lip sync, enregistrement voix off en voice over, traduction + adaptation (audioguide, elearning, reportage…)',
 			link: '/fr/services/#4',
 			image:
 				'https://images.pexels.com/photos/4476164/pexels-photo-4476164.jpeg?w=600&h=400&auto=compress&cs=tinysrgb'
 		},
 		{
-			label: 'Mixage & postproduction',
-			desc: 'Mixage multicanal, post-prod TV/VOD, mastering et livraison broadcast.',
+			label: 'MIXAGE & POST PROD BROADCAST',
+			desc: 'Mix stéréo, multicanal 5.1 / 7.1, mix VR Binaural / Ambisonique, Normalisation broadcast PAD « Prêt A Diffuser »',
 			link: '/fr/services/#5',
 			image:
 				'https://images.pexels.com/photos/4988131/pexels-photo-4988131.jpeg?w=600&h=400&auto=compress&cs=tinysrgb'
@@ -220,6 +220,7 @@
 		margin-bottom: 1rem;
 		color: white;
 		font-size: 1rem;
+		font-weight: 600;
 	}
 	a {
 		text-decoration: none;

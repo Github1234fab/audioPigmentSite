@@ -123,9 +123,9 @@
     }
     .logo {
         height: 50px;
-        width: 50px;
+        width: auto;
         object-fit: fill;
-        border-radius: 50%;
+      
     }
     .main-menu {
         display: flex;
