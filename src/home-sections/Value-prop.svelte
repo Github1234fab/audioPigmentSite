@@ -14,7 +14,7 @@
 		<div class="wrapper__h4">
 			<h4>+ 25 ans d'expérience</h4>
 			<h4>3 studios</h4>
-			<h4>+ 40 langues</h4>
+			<h4>+ 50 langues</h4>
 			<h4>Réseau International</h4>
 		</div>
 
@@ -127,6 +127,9 @@
 	}
 
 	@media screen and (max-width: 768px) {
+		section{
+			height: 100%;
+		}
 		.wrapper__h4 {
 			gap: 5px;
 			margin-top: 30px;
@@ -141,6 +144,18 @@
 		}
 		.wrapper__section-txt h2 {
 			font-size: 3.5rem;
+		}
+		.wrapper__section-txt {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		max-width: 100%;
+		margin-bottom: 0px;
+		color: white;
+		margin-top: 50px;
+		gap: 20px;
 		}
 	}
 </style>

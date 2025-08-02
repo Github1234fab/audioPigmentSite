@@ -43,23 +43,25 @@
 
 	.overlay {
 		width: 100%;
-		background: linear-gradient(to top, rgba(0, 0, 0, 0.796), transparent 100%);
+		background: linear-gradient(to top, rgba(0, 0, 0, 0.858) 70%, transparent 100%);
 		color: white;
-		padding: 20px;
+		padding: 10px;
 		box-sizing: border-box;
 	}
 
 	h3 {
 		margin: 0 0 10px;
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 		font-weight: 600;
 		font-family: var(--raleway);
 		font-weight: var(--extra-bold);
+		text-transform: lowercase;
 	}
 
 	.tags {
 		display: flex;
 		gap: 5px;
+		text-transform: lowercase;
 	}
 
 	.tag {

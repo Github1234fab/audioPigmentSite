@@ -1,22 +1,23 @@
 <script>
-	import ThreeComponent from '$lib/component/Three-component.svelte';
+	// import ThreeComponent from '$lib/component/Three-component.svelte';
+	import ThreeComponent from '$lib/component/Vumetre-three.svelte';
+
 	import Button from '$lib/component/btn-black.svelte';
 	import ButtonWhite from '$lib/component/btn-white.svelte';
 </script>
 
 <section>
-	<div class="wrapper__component">
-		<ThreeComponent />
-	</div>
-
 	<div class="wrapper__txt">
 		<h1>Agence de communication sonore</h1>
 		<h2>
 			Studio post production son, voix off, doublage, identité sonore, sound design, composition
 			musicale, mixage
 		</h2>
+		<div class="wrapper__component">
+			<ThreeComponent />
+		</div>
 		<div class="wrapper__buttons">
-			<Button txt="Nous contacter" href="/fr/contact"/>
+			<Button txt="Nous contacter" href="/fr/contact" />
 			<ButtonWhite txt="Nous écouter" href="/fr/realisations" />
 		</div>
 	</div>
@@ -24,10 +25,9 @@
 
 <style>
 	section {
-		position: relative;
 		z-index: 0;
-		min-height: 100vh;
-		background-color: black;
+		height: 800px;
+		position: relative;
 	}
 
 	.wrapper__component {
@@ -35,6 +35,8 @@
 		justify-content: center;
 		align-items: center;
 		position: relative;
+		height: 100%;
+		width: 100%;
 	}
 
 	.wrapper__txt {
@@ -76,9 +78,7 @@
 
 	@media screen and (max-width: 768px) {
 		section {
-			height: 100vh;
-			padding: 0px;
-
+			height: 1000px;
 		}
 		.wrapper__txt {
 			position: absolute;
@@ -93,11 +93,11 @@
 			margin-top: 10px;
 			gap: 0px;
 		}
-		section {
-			height: auto;
-		}
+
 		h1 {
 			font-size: 3.2rem;
+			margin-top: 5rem;
+			line-height: 1.2;
 		}
 		h2 {
 			font-size: 1rem;

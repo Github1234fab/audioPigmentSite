@@ -18,16 +18,16 @@
 			l’exception.
 		</h3> -->
 
-		<h2>Chez AUDIO PIGMENT, chaque projet est écouté, <br>pensé et façonné avec soin, <br>expertise et inventivité.
-			À vos côtés.</h2>
-			<h3>Une <strong>écoute attentive</strong>, un <strong>savoir-faire affûté </strong> et <strong>le goût du sur-mesure</strong> pour un impact optimal.</h3>
+		<p>Chez AUDIO PIGMENT, chaque projet est écouté, <br>pensé et façonné avec soin, <br>expertise et inventivité.
+			À vos côtés.
+			Une <strong>écoute attentive</strong>, un <strong>savoir-faire affûté </strong> et <strong>le goût du sur-mesure</strong> pour un impact optimal.
 
-			<h4><strong>Comprendre</strong>, <strong>ressentir</strong>, <strong>transmettre</strong> : c’est notre métier.
-				<br>Faites nous confiance </h4>
+			<strong>Comprendre</strong>, <strong>ressentir</strong>, <strong>transmettre</strong> : c’est notre métier.
+				<br>Faites nous confiance </p>
 
-				<p>Voix, sound design, identité sonore… <br>
+				<h3>Voix, sound design, identité sonore… </h3> <br>
 
-					<strong>Ensemble, créons des émotions, marquons les esprits</strong></p>
+					<h4><strong>Ensemble, créons des émotions, marquons les esprits</strong></h4>
 
 		<!-- <p>
 			Chez AUDIO PIGMENT, chaque projet est pensé, écouté, façonné avec précision par l’expertise
@@ -58,7 +58,7 @@
 		overflow: hidden;
 		z-index: 0;
 	}
-	.wrapper__section-txt h2 {
+	/* .wrapper__section-txt h2 {
 		font-family: var(--raleway);
 		font-size: 3rem;
 		margin-bottom: 0.5rem;
@@ -66,7 +66,7 @@
 		margin-top: 50px;
 		font-weight: 800;
 		letter-spacing: -1.5px;
-	}
+	} */
 	.wrapper__section-txt h3 {
 		font-family: var(--raleway);
 		font-size: 2rem;
@@ -79,11 +79,11 @@
 
 	.wrapper__section-txt h4 {
 		font-family: var(--raleway);
-		font-size: 1.5rem;
+		font-size: 2.4rem;
 		margin-bottom: 0.5rem;
-		line-height: 1.8;
+		line-height: 1.4;
 		color: white;
-		font-weight: var(--regular);
+		font-weight: var(--bold);
 		margin-top: 0px;
 		padding: 20px 40px;
 		width: 100%;
@@ -169,7 +169,7 @@
 		.background-video {
 			display: none;
 		}
-		section h2 {
+		/* section h2 {
 		font-family: var(--bebas);
 		font-size: 3rem;
 		margin-bottom: 0.5rem;
@@ -177,7 +177,7 @@
 		margin-top: 50px;
 		font-weight: 400;
 		letter-spacing: -1.5px;
-	}
+	} */
 
 	}
 </style>
