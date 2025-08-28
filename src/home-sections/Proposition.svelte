@@ -16,7 +16,7 @@
 	 Mastering`}
 			txt="Découvrir"
 			href="/fr/expertise/#post-production-audio"
-				videoSrc="https://www.pexels.com/fr-fr/download/video/7087632/"
+				videoSrc="https://videos.pexels.com/video-files/7087632-uhd_4096_2160_25fps.mp4"
 
 		/>
 
