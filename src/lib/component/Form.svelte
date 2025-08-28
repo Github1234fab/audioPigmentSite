@@ -108,7 +108,7 @@
 		border-radius: 5px;
 		border: none;
 		background-color: var(--ardoise);
-		box-shadow: inset 0 0 5px 5px rgba(0, 0, 0);
+		/* box-shadow: inset 0 0 5px 5px rgba(0, 0, 0); */
 		color: #ffffff;
 		font-size: 1rem;
 		border: 1px solid grey;
@@ -128,7 +128,7 @@
 		border-radius: 5px;
 		border: none;
 		background-color: var(--ardoise);
-		box-shadow: inset 0 0 5px 5px rgba(0, 0, 0);
+		/* box-shadow: inset 0 0 5px 5px rgba(0, 0, 0); */
 		color: #fdfdfd;
 		font-size: 1rem;
 		border: 1px solid grey;

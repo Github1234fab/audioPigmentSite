@@ -123,7 +123,7 @@
     }
     .logo {
         height: 50px;
-        width: auto;
+        width: 40px;
         object-fit: fill;
       
     }

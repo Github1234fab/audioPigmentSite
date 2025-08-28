@@ -1,21 +1,35 @@
 <script>
 	// import ThreeComponent from '$lib/component/Three-component.svelte';
-	import ThreeComponent from '$lib/component/Vumetre-three.svelte';
-
+	// import ThreeComponent from '$lib/component/Vumetre-three.svelte';
 	import Button from '$lib/component/btn-black.svelte';
 	import ButtonWhite from '$lib/component/btn-white.svelte';
+	let videoSrc = 'https://www.pexels.com/fr-fr/download/video/19277040/';
 </script>
 
 <section>
 	<div class="wrapper__txt">
+		<!-- <video
+			class="video-background"
+			src={videoSrc}
+			controls
+			width="500"
+			autoplay
+			muted
+			loop
+			id="myVideo"
+		>
+			<track kind="captions" />
+			Votre navigateur ne supporte pas la vidéo HTML5.
+		</video> -->
+
 		<h1>Agence de communication sonore</h1>
 		<h2>
 			Studio post production son, voix off, doublage, identité sonore, sound design, composition
 			musicale, mixage
 		</h2>
-		<div class="wrapper__component">
+		<!-- <div class="wrapper__component">
 			<ThreeComponent />
-		</div>
+		</div> -->
 		<div class="wrapper__buttons">
 			<Button txt="Nous contacter" href="/fr/contact" />
 			<ButtonWhite txt="Nous écouter" href="/fr/realisations" />
@@ -24,20 +38,52 @@
 </section>
 
 <style>
+	
 	section {
 		z-index: 0;
-		height: 800px;
+		height: 50rem;
 		position: relative;
+		background-image: url('../assets/Hero-image/B.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
 	}
+	section::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(20, 20, 20, 0.552);
+		z-index: 1;
+		/* filter: brightness(0.4); */
+	}
+	/* .video-background {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: auto;
+		height: 100%;
+		z-index: -1;
+		object-fit: cover;
+		filter: brightness(0.);
+	} */
 
-	.wrapper__component {
+	/* =======================
+	ESSAI II
+	====================== */
+
+	/* .wrapper__component {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		position: relative;
 		height: 100%;
 		width: 100%;
-	}
+	} */
 
 	.wrapper__txt {
 		position: absolute;
@@ -62,7 +108,8 @@
 
 	h1 {
 		font-family: var(--bebas);
-		font-size: 4.5rem;
+		font-size: 5rem;
+		color: var(--white);
 		width: 90%;
 		margin: 0 auto;
 		font-weight: 400;
@@ -70,7 +117,8 @@
 	}
 
 	h2 {
-		font-size: 1.5rem;
+		color: white;
+		font-size: 1.3rem;
 		font-weight: var(--medium);
 		width: 90%;
 		margin: 0 auto;

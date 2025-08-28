@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	import { onMount, onDestroy } from 'svelte';
 	import * as THREE from 'three';
 	import { browser } from '$app/environment';
@@ -196,7 +196,7 @@
 	}
 </script>
 
-<div bind:this={container}></div>
+<div bind:this={container}></div> -->
 
 <!-- <script>
   import { onMount, onDestroy } from 'svelte';
@@ -406,13 +406,6 @@
   }
 </style>
 
-<div bind:this={container}></div> -->
+<div bind:this={container}></div> 
+ -->
 
-<style>
-	div {
-		width: 100%;
-		height: 320px;
-		border-radius: 8px;
-		overflow: hidden;
-	}
-</style>

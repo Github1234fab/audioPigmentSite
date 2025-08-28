@@ -1,9 +1,10 @@
 <script>
 	export let title;
 	export let subtitle;
-	import Btn from '$lib/component/btn-black-shadow.svelte';
+	import Btn from '$lib/component/btn-white.svelte';
 	export let txt;
 	export let href = ''; // destination du lien
+	export let videoSrc;
 </script>
 
 <div class="card">
@@ -12,17 +13,31 @@
 		<div class="title">{title}</div>
 		<div class="subtitle">{subtitle}</div>
 		<Btn {txt} {href} />
+			<video
+			class="video-background"
+			src={videoSrc}
+			
+			width="500"
+			autoplay
+			muted
+			loop
+			id="myVideo"
+		>
+			<track kind="captions" />
+			Votre navigateur ne supporte pas la vidéo HTML5.
+		</video> 
 	</div>
 </div>
 
 <style>
 	.card {
-		aspect-ratio: 1.3;
+		aspect-ratio: 1.6;
 		height: 350px;
 		border-radius: 0px;
 		padding: 1rem;
 		position: relative;
-		background: linear-gradient(white, grey);
+		/* background: linear-gradient(white, grey); */
+		background-color: var(--red);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -30,6 +45,18 @@
 		color: black;
 		font-family: var(--raleway);
 		z-index: 0;
+		box-shadow: 0px 0px 20px rgb(150, 150, 150);
+	}
+	.video-background{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		object-fit: cover;
+		filter: brightness(0.);
 	}
 	.wrapper__txt {
 		display: flex;
@@ -38,17 +65,17 @@
 		justify-content: center;
 		text-align: center;
 		gap: 10px;
-		background-color: rgb(255, 255, 255);
+		/* background-color: rgb(255, 255, 255); */
 		height: 320px;
 		aspect-ratio: 1.3;
 	}
-	.card:hover .dot {
+	/* .card:hover .dot {
 		width: 10px;
 		aspect-ratio: 1;
 		animation: moveDot 10s linear infinite;
-	}
+	} */
 
-	.dot {
+	/* .dot {
 		width: 0px;
 		aspect-ratio: 1;
 		background-color: rgba(255, 0, 0, 1);
@@ -57,7 +84,7 @@
 		transform: translate(-50%, -50%);
 		z-index: 2;
 		box-shadow: 0px 0px 5px rgb(20, 20, 20);
-	}
+	} */
 
 	.title {
 		font-size: 2rem;
@@ -65,17 +92,18 @@
 		margin-bottom: 10px;
 		font-family: var(--raleway);
 		text-align: center;
-		color: var(--ardoise);
+		color: white;
 		letter-spacing: -0.8px;
 		width: 100%;
 	}
 
 	.subtitle {
 		font-size: 1rem;
-		font-weight: var(--regular);
+		font-weight: var(--bold);
 		margin-bottom: 0px;
 		white-space: pre-line;
 		text-align: center;
+		color: white;
 	}
 
 	@keyframes moveDot {

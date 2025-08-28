@@ -12,17 +12,18 @@
 	.btn {
 		margin-top: 20px;
 		margin-left: 20px;
-		background-color: white;
+		background-color: var(--red);
 		font-family: var(--raleway);
-		font-weight: var(--medium);
-		color: var(--ardoise);
-		border: 1px solid black;
+		font-weight: var(--bold);
+		color: white;
 		padding: 13px 40px;
 		font-size: 1rem;
 		cursor: pointer;
 		position: relative;
 		overflow: hidden;
 		transition: color 0.6s ease;
+    
+	outline: none;  
 	}
 
 	.btn::after {
@@ -32,7 +33,7 @@
 		left: -100%;
 		width: 100%;
 		height: 100%;
-		background-color: var(--ardoise);
+		background-color: white;
 		z-index: 1;
 		transition: left 0.6s ease-in-out;
 	}
@@ -48,7 +49,8 @@
 	}
 
 	.btn:hover span {
-		color: white;
+		color: var(--ardoise);
+		font-weight: var(--bold);
 	}
 	a{
 		text-decoration: none;

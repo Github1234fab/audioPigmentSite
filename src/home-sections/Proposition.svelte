@@ -5,7 +5,8 @@
 </script>
 
 <section>
-	<TitleDot title="Notre savoir faire" />
+	<!-- <TitleDot title="Notre savoir faire" /> -->
+	 <h2>Notre Savoir faire</h2>
 
 	<div class="wrapper__card">
 		<CardDotWhite
@@ -15,6 +16,8 @@
 	 Mastering`}
 			txt="Découvrir"
 			href="/fr/expertise/#post-production-audio"
+				videoSrc="https://www.pexels.com/fr-fr/download/video/7087632/"
+
 		/>
 
 		<CardDotWhite
@@ -24,6 +27,7 @@
 		Composition musicale`}
 			txt="Explorer"
 			href="/fr/expertise/#creation-originale"
+				videoSrc="https://www.pexels.com/fr-fr/download/video/19277040/"
 		/>
 		<CardDotWhite
 			title="Voix"
@@ -32,6 +36,7 @@
 	Voice over`}
 			txt="En savoir +"
 			href="/fr/expertise/#Voix"
+			videoSrc="https://www.pexels.com/fr-fr/download/video/7586638/"
 		/>
 	</div>
 </section>
@@ -43,9 +48,18 @@
 		align-items: center;
 		justify-content: center;
 		padding: 1rem;
-		background-color: rgb(232, 226, 226);
+		/* background-color: rgb(232, 226, 226); */
 		color: var(--black);
 		min-height: 70vh;
+	}
+	section h2 {
+		font-family: var(--bebas);
+		font-weight: var(--bold);
+		font-size: 4.5rem;
+		font-weight: 400;
+		margin-top: 50px;
+		text-align: center;
+		letter-spacing: -1px;
 	}
 	.wrapper__card {
 		display: flex;
