@@ -3,7 +3,9 @@
 	import TitleDot from '$lib/component/Title-dot.svelte';
 	import Btn from '$lib/component/btn-black-shadow.svelte';
 
-	let urlOne = "https://www.pexels.com/fr-fr/download/video/7087632-uhd_4096_2160_25fps.mp4"
+	let urlOne = "https://videos.pexels.com/video-files/7087632/7087632-uhd_2732_1440_25fps.mp4"
+
+
 </script>
 
 <section>
@@ -60,7 +62,7 @@
 		font-weight: 400;
 		margin-top: 50px;
 		text-align: center;
-		letter-spacing: -1px;
+		letter-spacing: -2px;
 	}
 	section h2 span {
 		color: var(--red);
