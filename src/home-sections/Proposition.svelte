@@ -3,8 +3,6 @@
 	import TitleDot from '$lib/component/Title-dot.svelte';
 	import Btn from '$lib/component/btn-black-shadow.svelte';
 
-	let urlOne = "https://videos.pexels.com/video-files/7087632/7087632-uhd_2732_1440_25fps.mp4"
-
 
 </script>
 
@@ -20,7 +18,7 @@
 	 Mastering`}
 			txt="Découvrir"
 			href="/fr/expertise/#post-production-audio"
-			videoSrc={urlOne}
+			videoSrc="https://videos.pexels.com/video-files/7087632/7087632-uhd_2732_1440_25fps.mp4"
 		/>
 
 		<CardDotWhite
