@@ -108,12 +108,13 @@
 
 	h1 {
 		font-family: var(--bebas);
-		font-size: 5rem;
+		font-size: 3rem;
 		color: var(--white);
 		width: 90%;
 		margin: 0 auto;
-		font-weight: var(--medium);
-		letter-spacing: -3.5px;
+		font-weight: var(--bold);
+		letter-spacing: -2.5px;
+		text-transform: uppercase;
 	}
 
 	h2 {
