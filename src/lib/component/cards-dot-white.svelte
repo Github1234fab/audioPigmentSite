@@ -1,10 +1,11 @@
-<script>
+<!-- <script>
 	export let title;
 	export let subtitle;
 	import Btn from '$lib/component/btn-white.svelte';
 	export let txt;
 	export let href = ''; // destination du lien
 	export let videoSrc;
+	export let imgSrc;
 </script>
 
 <div class="card">
@@ -24,6 +25,7 @@
 			<track kind="captions" />
 			Votre navigateur ne supporte pas la vidéo HTML5.
 		</video> 
+		<img src={imgSrc} alt="blabla">
 	</div>
 </div>
 
@@ -34,7 +36,6 @@
 		border-radius: 0px;
 		padding: 1rem;
 		position: relative;
-		/* background: linear-gradient(white, grey); */
 		background-color: var(--red);
 		display: flex;
 		flex-direction: column;
@@ -103,6 +104,10 @@
 		text-align: center;
 		color: white;
 	}
+	img{
+		height: 300px;
+		width: 300px;
+	}
 
 	@keyframes moveDot {
 		0% {
@@ -145,4 +150,110 @@
 			font-size: 0.9rem;
 		}
 	}
-</style>
+</style> -->
+
+
+<script>
+	import { onMount } from 'svelte';
+	import Btn from '$lib/component/btn-white.svelte';
+  
+	export let title;
+	export let subtitle;
+	export let txt;
+	export let href = '';
+	export let videoSrc; // prop pour la vidéo externe
+	export let imgSrc;   // prop pour fallback image
+  
+	let videoEl;
+  
+	onMount(() => {
+	  if (videoEl && videoSrc) {
+		videoEl.src = videoSrc;
+		// tente de lancer la vidéo (ignore erreurs autoplay)
+		videoEl.play().catch(() => {});
+	  }
+	});
+  </script>
+  
+  <div class="card">
+	<div class="wrapper__txt">
+	  <div class="title">{title}</div>
+	  <div class="subtitle">{subtitle}</div>
+	  <Btn {txt} {href} />
+  
+	  {#if videoSrc}
+		<video
+		  bind:this={videoEl}
+		  class="video-background"
+		  autoplay
+		  muted
+		  loop
+		  playsinline
+		  preload="none"
+		>
+		  <track kind="captions" />
+		  Votre navigateur ne supporte pas la vidéo HTML5.
+		</video>
+	  {:else if imgSrc}
+		<img src={imgSrc} alt={title} class="video-background" />
+	  {/if}
+	</div>
+  </div>
+  
+  <style>
+	.card {
+	  aspect-ratio: 1.6;
+	  height: 350px;
+	  border-radius: 0px;
+	  padding: 1rem;
+	  position: relative;
+	  background-color: var(--red);
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  color: black;
+	  font-family: var(--raleway);
+	  box-shadow: 0px 0px 20px rgb(150, 150, 150);
+	  overflow: hidden;
+	}
+  
+	.video-background {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover;
+	  z-index: -1;
+	  filter: brightness(0.5);
+	}
+  
+	.wrapper__txt {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  justify-content: center;
+	  text-align: center;
+	  gap: 10px;
+	  z-index: 1;
+	}
+  
+	.title {
+	  font-size: 2rem;
+	  font-weight: var(--bold);
+	  margin-bottom: 10px;
+	  color: white;
+	  width: 100%;
+	  text-align: center;
+	}
+  
+	.subtitle {
+	  font-size: 1rem;
+	  font-weight: var(--bold);
+	  white-space: pre-line;
+	  text-align: center;
+	  color: white;
+	}
+  </style>
+  
