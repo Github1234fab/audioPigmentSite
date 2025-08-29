@@ -2,6 +2,8 @@
 	import CardDotWhite from '$lib/component/cards-dot-white.svelte';
 	import TitleDot from '$lib/component/Title-dot.svelte';
 	import Btn from '$lib/component/btn-black-shadow.svelte';
+
+	let urlOne = "https://www.pexels.com/fr-fr/download/video/7087632-uhd_4096_2160_25fps.mp4"
 </script>
 
 <section>
@@ -16,7 +18,7 @@
 	 Mastering`}
 			txt="Découvrir"
 			href="/fr/expertise/#post-production-audio"
-			videoSrc="https://www.pexels.com/fr-fr/download/video/7087632-uhd_4096_2160_25fps.mp4"
+			videoSrc={urlOne}
 		/>
 
 		<CardDotWhite
