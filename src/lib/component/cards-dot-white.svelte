@@ -226,7 +226,7 @@
 	  height: 100%;
 	  object-fit: cover;
 	  z-index: -1;
-	  filter: brightness(0.5);
+	  filter: brightness(0.8);
 	}
   
 	.wrapper__txt {

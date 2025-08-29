@@ -7,18 +7,6 @@
 <section>
 	<!-- <TitleDot title="Notre savoir faire" /> -->
 	<h2>Notre savoir <span>faire</span></h2>
-	<video
-		class="video-background"
-		src="https://videos.pexels.com/video-files/7087632/7087632-uhd_2732_1440_25fps.mp4"
-		width="500"
-		autoplay
-		muted
-		loop
-		id="myVideo"
-	>
-		<track kind="captions" />
-		Votre navigateur ne supporte pas la vidéo HTML5.
-	</video>
 
 	<div class="wrapper__card">
 		<CardDotWhite
