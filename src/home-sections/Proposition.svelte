@@ -6,7 +6,7 @@
 
 <section>
 	<!-- <TitleDot title="Notre savoir faire" /> -->
-	<h2>Notre savoir <span>faire</span></h2>
+	<!-- <h2>Notre savoir <span>faire</span></h2> -->
 
 	<div class="wrapper__card">
 		<CardDotWhite
@@ -47,30 +47,30 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		padding: 1rem;
+		/* padding: 1rem; */
 		/* background-color: rgb(232, 226, 226); */
 		color: var(--black);
 		min-height: 70vh;
 	}
-	section h2 {
+	/* section h2 {
 		font-family: var(--bebas);
 		font-weight: var(--bold);
 		font-size: 4.5rem;
 		font-weight: 400;
 		margin-top: 50px;
 		text-align: center;
-		letter-spacing: -2px;
+		letter-spacing: -4px;
 	}
 	section h2 span {
 		color: var(--red);
-	}
+	} */
 	.wrapper__card {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 20px;
+		gap: 5px;
 		align-items: center;
 		justify-content: center;
-		margin: 100px;
+		margin-top: 10px;
 		padding: 0px;
 	}
 
@@ -83,5 +83,14 @@
 			margin-bottom: 100px;
 			margin-top: 50px;
 		}
+		/* section h2 {
+		font-family: var(--bebas);
+		line-height: 60px;
+		font-size: 4.5rem;
+		font-weight: 400;
+		margin-top: 50px;
+		text-align: center;
+		letter-spacing: -2px;
+	} */
 	}
 </style>

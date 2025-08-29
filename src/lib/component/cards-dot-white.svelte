@@ -202,7 +202,8 @@
   
   <style>
 	.card {
-	  aspect-ratio: 1.6;
+	  /* aspect-ratio: 1.8; */
+	  width: 100vw;
 	  height: 350px;
 	  border-radius: 0px;
 	  padding: 1rem;
@@ -255,5 +256,51 @@
 	  text-align: center;
 	  color: white;
 	}
-  </style>
+
+
+
+/* ==== Optimisation mobile ==== */
+@media screen and (max-width: 768px) {
+	.card {
+	  aspect-ratio: none;
+	  width: 90%;
+	  height: 350px;
+	  border-radius: 0px;
+	  padding: 1rem;
+	  position: relative;
+	  background-color: var(--red);
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  color: black;
+	  font-family: var(--raleway);
+	  box-shadow: 0px 0px 20px rgb(150, 150, 150);
+	  overflow: hidden;
+	}
+  
+
+}
+
+@media screen and (max-width: 468px) {
+	.card {
+	  aspect-ratio: none;
+	  width: 300px;
+	  height: 350px;
+	  border-radius: 0px;
+	  padding: 1rem;
+	  position: relative;
+	  background-color: var(--red);
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  color: black;
+	  font-family: var(--raleway);
+	  box-shadow: 0px 0px 20px rgb(150, 150, 150);
+	  overflow: hidden;
+	}
+  
+
+}
+
+</style>
   

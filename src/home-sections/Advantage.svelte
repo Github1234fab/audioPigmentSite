@@ -85,6 +85,7 @@
 		margin-top: 50px;
 		font-weight: 400;
 		letter-spacing: -1.5px;
+
 	}
 	section p {
 		font-family: var(--raleway);

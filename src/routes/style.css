@@ -7,35 +7,34 @@
 body {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: geometricPrecision;
-  }
-
-
+}
 
 :root {
 	/* --ardoise: #111111; */
 	--ardoise: #1f1c1c;
-	--grey: #D9D9D9;
-	--btn-sdw : rgba(0, 0, 0, 0.315);
-	--red: #E74C3C;
+	--grey: #d9d9d9;
+	--btn-sdw: rgba(0, 0, 0, 0.315);
+	--red: #e74c3c;
 	--white: #ececec;
 
-/* ======================================== */
+	/* ======================================== */
 
 	/* --bebas: "Bebas Neue", sans-serif; */
-	--bebas: "Anton SC", sans-serif;
-	--raleway: "Raleway", sans-serif;
-	--raleway-dot:  "Raleway Dots", sans-serif;
-	--Quicksand
-	:  "Quicksand", sans-serif;
+	/* --bebas: "Anton SC", sans-serif; */
+	--bebas: 'Vend Sans', sans-serif;
+	/* --raleway: "Raleway", sans-serif; */
+	--raleway: 'Quicksand', sans-serif;
+	--raleway-dot: 'Raleway Dots', sans-serif;
+	--Quicksand: 'Quicksand', sans-serif;
 
-/* ======================================== */
+	/* ======================================== */
 
 	--xl: 6rem;
 	--lg: 3rem;
 	--md: 1.5rem;
 	--sm: 1rem;
 
-/* ======================================== */
+	/* ======================================== */
 	--thin: 50;
 	--light: 100;
 	--regular: 400;

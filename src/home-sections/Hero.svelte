@@ -56,7 +56,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(20, 20, 20, 0.552);
+		background-color: rgba(20, 20, 20, 0.056);
 		z-index: 1;
 		/* filter: brightness(0.4); */
 	}
@@ -112,8 +112,8 @@
 		color: var(--white);
 		width: 90%;
 		margin: 0 auto;
-		font-weight: 400;
-		letter-spacing: -2px;
+		font-weight: var(--medium);
+		letter-spacing: -3.5px;
 	}
 
 	h2 {

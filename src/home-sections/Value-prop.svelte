@@ -76,7 +76,7 @@
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		max-width: 800px;
+		/* max-width: 800px; */
 		margin-bottom: 0px;
 		color: white;
 		margin-top: 50px;
