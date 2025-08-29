@@ -16,12 +16,10 @@
 			<video
 			class="video-background"
 			src={videoSrc}
-			
 			width="500"
 			autoplay
 			muted
 			loop
-			id="myVideo"
 		>
 			<track kind="captions" />
 			Votre navigateur ne supporte pas la vidéo HTML5.

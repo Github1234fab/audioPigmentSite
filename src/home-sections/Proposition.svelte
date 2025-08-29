@@ -12,7 +12,6 @@
 	<video
 			class="video-background"
 			src="https://videos.pexels.com/video-files/7087632/7087632-uhd_2732_1440_25fps.mp4"
-			
 			width="500"
 			autoplay
 			muted
