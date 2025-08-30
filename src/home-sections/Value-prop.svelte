@@ -1,5 +1,5 @@
 <script>
-	import Button from '$lib/component/btn-black-border.svelte';
+	import Button from '$lib/component/btn-black.svelte';
 	import SliderLogos from '$lib/component/Slider-Logos.svelte';
 	// import VantaTopology from '../lib/component/Vanta-topology.svelte';
 </script>
@@ -60,10 +60,10 @@
 		justify-content: center;
 		text-align: center;
 		padding: 2rem;
-		background-color: var(--ardoise);
+		background: transparent;
 		min-height: 100vh;
 		z-index: 0;
-		gap: 40px;
+		gap: 30px;
 		overflow: hidden;
 		z-index: 0;
 	}
@@ -80,12 +80,12 @@
 		margin-bottom: 0px;
 		color: white;
 		margin-top: 50px;
-		gap: 30px;
+		gap: 10px;
 	}
 	.wrapper__section-txt h2 {
 		font-family: var(--bebas);
-		font-size: 4.5rem;
-		color: white;
+		font-size: 3.5rem;
+		color: var(--ardoise);
 		margin-bottom: 0px;
 		font-weight: 400;
 		letter-spacing: -1.5px;
@@ -94,7 +94,7 @@
 	.wrapper__section-txt h3 {
 		font-family: var(--raleway);
 		font-size: 2rem;
-		color: white;
+		color: var(--ardoise);
 		margin-top: 0px;
 		font-weight: var(--bold);
 		width: 100%;
@@ -104,7 +104,7 @@
 		font-family: var(--raleway);
 		font-size: 1.2rem;
 		margin-bottom: 0.5rem;
-		color: white;
+		color: var(--ardoise);
 		font-weight: var(--regular);
 		margin-top: 0px;
 		border: 1px solid grey;
@@ -118,7 +118,7 @@
 	p {
 		font-family: var(--raleway);
 		font-size: 1rem;
-		color: white;
+		color: var(--ardoise);
 		margin-top: 20px;
 		max-width: 800px;
 		line-height: 1.5;

@@ -4,9 +4,9 @@
 </script>
 
 <!-- <button class="btn"><span>{txt} </span></button> -->
-<a href={href} class="btn">
+<a {href} class="btn">
 	<span>{txt}</span>
-  </a>
+</a>
 
 <style>
 	.btn {
@@ -22,8 +22,8 @@
 		position: relative;
 		overflow: hidden;
 		transition: color 0.6s ease;
-    
-	outline: none;  
+		outline: none;
+		box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.431);
 	}
 
 	.btn::after {
@@ -52,7 +52,7 @@
 		color: var(--ardoise);
 		font-weight: var(--bold);
 	}
-	a{
+	a {
 		text-decoration: none;
 	}
 </style>

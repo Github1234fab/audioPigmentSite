@@ -47,10 +47,9 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		/* padding: 1rem; */
-		/* background-color: rgb(232, 226, 226); */
 		color: var(--black);
 		min-height: 70vh;
+
 	}
 	/* section h2 {
 		font-family: var(--bebas);
@@ -67,10 +66,10 @@
 	.wrapper__card {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 5px;
+		gap: 1px;
 		align-items: center;
 		justify-content: center;
-		margin-top: 10px;
+		margin-top: 0px;
 		padding: 0px;
 	}
 
@@ -81,7 +80,7 @@
 			margin: 0px;
 			padding: 0px;
 			margin-bottom: 100px;
-			margin-top: 50px;
+			margin-top: 0px;
 		}
 		/* section h2 {
 		font-family: var(--bebas);

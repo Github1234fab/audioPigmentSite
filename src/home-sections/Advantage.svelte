@@ -94,7 +94,6 @@
 		color: white;
 		font-weight: var(--regular);
 		margin-top: 0px;
-
 		padding: 20px 40px;
 	}
 	.features-grid {

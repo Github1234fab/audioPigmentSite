@@ -242,19 +242,22 @@
   
 	.title {
 	  font-size: 2rem;
-	  font-weight: var(--bold);
+	  font-weight: var(--black);
 	  margin-bottom: 10px;
 	  color: white;
 	  width: 100%;
 	  text-align: center;
+	  border: 1px solid rgba(255, 255, 255, 0.425);
+	  padding: 10px 20px;
+	  border-radius: 5px;
 	}
   
 	.subtitle {
 	  font-size: 1rem;
-	  font-weight: var(--bold);
+	  font-weight: var(--extra-bold);
 	  white-space: pre-line;
 	  text-align: center;
-	  color: white;
+	  color: rgb(255, 255, 255);
 	}
 
 

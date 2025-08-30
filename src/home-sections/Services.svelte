@@ -148,6 +148,7 @@
 		color: var(--black);
 		height: 100%;
 		margin-bottom: 2rem;
+		background-color: var(--ardoise);
 	}
 	section h2 {
 		font-family: var(--bebas);
@@ -156,6 +157,7 @@
 		margin-top: 50px;
 		font-weight: 400;
 		letter-spacing: -1.5px;
+		color: white;
 	}
 
 	

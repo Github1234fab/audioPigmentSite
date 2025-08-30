@@ -23,6 +23,7 @@
 		position: relative;
 		overflow: hidden;
 		transition: color 0.6s ease;
+		box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.431);
 	}
 
 	.btn::after {
