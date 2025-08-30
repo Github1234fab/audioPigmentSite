@@ -208,7 +208,7 @@
 	  border-radius: 0px;
 	  padding: 1rem;
 	  position: relative;
-	  background-color: var(--red);
+	  background-color: transparent;
 	  display: flex;
 	  align-items: center;
 	  justify-content: center;
