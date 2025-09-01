@@ -3,6 +3,7 @@
 	// import ThreeComponent from '$lib/component/Vumetre-three.svelte';
 	import Button from '$lib/component/btn-black.svelte';
 	import ButtonWhite from '$lib/component/btn-white.svelte';
+	import Test from '$lib/component/Test.svelte';
 	let videoEl;
 	import { onMount } from 'svelte';
 
@@ -14,12 +15,13 @@
 </script>
 
 <section>
-	<video  bind:this={videoEl} autoplay muted loop playsinline preload="none" class="background-video">
+	<Test/>
+	<!-- <video  bind:this={videoEl} autoplay muted loop playsinline preload="none" class="background-video">
 		<source
 			src="https://media.istockphoto.com/id/1454642601/fr/vid%C3%A9o/animation-danneaux-blancs-propres-contexte-abstrait-animation-en-boucle.mp4?s=mp4-640x640-is&k=20&c=hixbyptzm0VbyLkRg0rU8pJNWcptp3yJ7EHmGk-sJr4="
 			type="video/mp4"
 		/>
-	</video>
+	</video> -->
 
 	<div class="wrapper__txt">
 
@@ -39,7 +41,7 @@
 </section>
 
 <style>
-	.background-video {
+	/* .background-video {
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -50,7 +52,7 @@
 		object-fit: cover;
 		filter: brightness(1);
 	
-	}
+	} */
 	
 	section {
 		z-index: 0;
@@ -70,7 +72,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: linear-gradient(rgb(255, 255, 255) 0%, rgba(83, 4, 4, 0.552) 40%, rgba(83, 4, 4, 0.521) 70%,  rgba(255, 255, 255, 0.579) 100% );
+		/* background: linear-gradient(rgb(255, 255, 255) 0%, rgba(83, 4, 4, 0.552) 40%, rgba(83, 4, 4, 0.521) 70%,  rgba(255, 255, 255, 0.579) 100% ); */
 		z-index: 1;
 
 	}
@@ -114,16 +116,16 @@
 	h1 {
 		font-family: var(--bebas);
 		font-size: 4rem;
-		color: rgb(255, 255, 255);
+		color: rgb(80, 78, 78);
 		width: 90%;
 		margin: 0 auto;
 		font-weight: var(--black);
-		letter-spacing: -2.5px;
+		letter-spacing: -3.8px;
 		/* text-transform: uppercase; */
 	}
 
 	h2 {
-		color: white;
+		color: rgb(49, 47, 47);
 		font-size: 1.3rem;
 		font-weight: var(--medium);
 		width: 90%;
