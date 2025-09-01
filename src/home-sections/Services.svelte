@@ -85,20 +85,20 @@
 				'https://images.pexels.com/photos/1271380/pexels-photo-1271380.jpeg'
 		},
 		{
-			label: 'AUDIOVISUEL & DIGITAL',
+			label: 'Audiovisuel & digital',
 			desc: 'Habillage sonore &amp; voix off (pub TV, pub cinéma, film corporate, institutionnel, motion design, e-learning…)',
 			link: '/fr/services/#3',
 			image:
 				'https://images.pexels.com/photos/270288/pexels-photo-270288.jpeg'
 		},
 		{
-			label: 'DOUBLAGE MULTILINGUE / LOCALISATION',
+			label: 'Doublage multinlingue / Localisation',
 			desc: 'Dubbing, lip sync, enregistrement voix off en voice over, traduction + adaptation (audioguide, elearning, reportage…)',
 			link: '/fr/services/#4',
 			image: Bilingue
 		},
 		{
-			label: 'MIXAGE & POST PROD BROADCAST',
+			label: 'Mixage & Post pro broadcast',
 			desc: 'Mix stéréo, multicanal 5.1 / 7.1, mix VR Binaural / Ambisonique, Normalisation broadcast PAD « Prêt A Diffuser »',
 			link: '/fr/services/#5',
 			image:
@@ -146,7 +146,7 @@
 		padding: 2rem;
 		color: var(--black);
 		height: 100%;
-		margin-bottom: 2rem;
+
 		background-color: rgb(185, 182, 182);
 	}
 	section h2 {
@@ -162,7 +162,7 @@
 	.wrapper__services-cards {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 2rem;
+		gap: 5rem;
 		align-items: center;
 		justify-content: center;
 		font-family: var(--raleway);

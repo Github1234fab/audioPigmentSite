@@ -89,7 +89,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f5f5f5; /* fond clair pour l'effet neumorphism */
+    background: linear-gradient(white, #ebe9e9, white);
   }
   
   .container {
@@ -115,7 +115,7 @@
     12px 12px 24px #b8b8b8,
     -12px -12px 24px #ffffff;
   
-    animation: pulse 2s ease-in-out infinite;
+    animation: pulse 3s ease-in-out infinite;
     animation-delay: calc(var(--index) * 0.2s);
   }
   
@@ -128,7 +128,7 @@
     }
     50% {
       box-shadow:
-      2px 2px 4px #b8b8b8,
+      2px 2px 4px #5a5959,
       -2px -2px 4px #ffffff;
     }
   }
