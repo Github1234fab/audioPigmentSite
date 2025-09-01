@@ -49,6 +49,7 @@
 		justify-content: center;
 		color: var(--black);
 		min-height: 70vh;
+		
 
 	}
 	/* section h2 {

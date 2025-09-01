@@ -263,15 +263,24 @@
 	});
   </script>
   
-  {#if splideReady && Splide && SplideSlide}
-	<svelte:component this={Splide} {options} aria-label="Logos">
-	  {#each cards as card}
-		<svelte:component this={SplideSlide}>
-		  <CardRealisation image={card.image} href={card.href}/>
-		</svelte:component>
-	  {/each}
-	</svelte:component>
-  {:else}
-	<div>Chargement du carousel…</div>
-  {/if}
+  <svelte:component this={Splide} {options} aria-label="Logos" class="logos-splide">
+	{#each cards as card}
+	  <svelte:component this={SplideSlide} class="slide">
+		<div class="slide-inner">
+		  <CardRealisation image={card.image} href={card.href} />
+		</div>
+	  </svelte:component>
+	{/each}
+  </svelte:component>
+  
+  <style>
+  /* ajoute un padding “local” à CHAQUE item */
+  .slide-inner {
+	padding: 12px;              /* ← espace autour de la card */
+	height: 100%;
+	box-sizing: border-box;
+  }
+  
+  
+  </style>
   

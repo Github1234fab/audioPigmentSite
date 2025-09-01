@@ -204,7 +204,7 @@
 	.card {
 	  /* aspect-ratio: 1.8; */
 	  width: 100vw;
-	  height: 450px;
+	  height: 550px;
 	  border-radius: 0px;
 	  padding: 1rem;
 	  position: relative;
@@ -248,7 +248,7 @@
 	  width: 100%;
 	  text-align: center;
 	  border: 1px solid rgba(255, 255, 255, 0.425);
-	  padding: 10px 20px;
+	  padding: 40px 20px;
 	  border-radius: 5px;
 	}
   

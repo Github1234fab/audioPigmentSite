@@ -67,43 +67,42 @@
 
 <script>
 	import ButtonWhite from '$lib/component/btn-black.svelte';
+	import Bilingue from '../assets/bilingue.png';
 
 	const services = [
 		{
-			label: 'COMMUNICATION SONORE',
+			label: 'Communication sonore',
 			desc: 'Audio branding / Identité sonore (signature sonore, identité musicale, voix de marque, sound design produit…).',
 			link: '/fr/services/#1',
-			image:
-				'https://images.pexels.com/photos/7859937/pexels-photo-7859937.jpeg?w=600&h=400&auto=compress&cs=tinysrgb'
+			image: 'https://images.pexels.com/photos/3761509/pexels-photo-3761509.jpeg'
 		},
 		{
-			label: 'MARKETING SONORE',
+			label: 'Marketing Sonore',
 			desc: 'Spot radio, podcast, création sonore événementiel, sonorisation d’espace, svi, message téléphonique…',
 			link: '/fr/services/#2',
 
 			image:
-				'https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg?w=600&h=400&auto=compress&cs=tinysrgb'
+				'https://images.pexels.com/photos/1271380/pexels-photo-1271380.jpeg'
 		},
 		{
 			label: 'AUDIOVISUEL & DIGITAL',
 			desc: 'Habillage sonore &amp; voix off (pub TV, pub cinéma, film corporate, institutionnel, motion design, e-learning…)',
 			link: '/fr/services/#3',
 			image:
-				'https://images.pexels.com/photos/7586136/pexels-photo-7586136.jpeg?w=600&h=400&auto=compress&cs=tinysrgb'
+				'https://images.pexels.com/photos/270288/pexels-photo-270288.jpeg'
 		},
 		{
 			label: 'DOUBLAGE MULTILINGUE / LOCALISATION',
 			desc: 'Dubbing, lip sync, enregistrement voix off en voice over, traduction + adaptation (audioguide, elearning, reportage…)',
 			link: '/fr/services/#4',
-			image:
-				'https://images.pexels.com/photos/4476164/pexels-photo-4476164.jpeg?w=600&h=400&auto=compress&cs=tinysrgb'
+			image: Bilingue
 		},
 		{
 			label: 'MIXAGE & POST PROD BROADCAST',
 			desc: 'Mix stéréo, multicanal 5.1 / 7.1, mix VR Binaural / Ambisonique, Normalisation broadcast PAD « Prêt A Diffuser »',
 			link: '/fr/services/#5',
 			image:
-				'https://images.pexels.com/photos/4988131/pexels-photo-4988131.jpeg?w=600&h=400&auto=compress&cs=tinysrgb'
+				'https://images.pexels.com/photos/25396131/pexels-photo-25396131.jpeg'
 		}
 	];
 </script>
@@ -148,19 +147,18 @@
 		color: var(--black);
 		height: 100%;
 		margin-bottom: 2rem;
-		background-color: var(--ardoise);
+		background-color: rgb(185, 182, 182);
 	}
 	section h2 {
 		font-family: var(--bebas);
 		font-size: 4rem;
 		margin-bottom: 3rem;
 		margin-top: 50px;
-		font-weight: 400;
-		letter-spacing: -1.5px;
+		font-weight: 500;
+		letter-spacing: -2px;
 		color: white;
 	}
 
-	
 	.wrapper__services-cards {
 		display: flex;
 		flex-wrap: wrap;
@@ -243,12 +241,10 @@
 			padding: 1rem;
 			height: 400px;
 			width: 100%;
-		
 		}
 		.wrapper__service-txt h3 {
-	
-		font-size: 1.8rem;
-	}
+			font-size: 1.8rem;
+		}
 		section h2 {
 			font-size: 3rem;
 			margin-bottom: 1rem;

@@ -8,23 +8,16 @@
 	import { onMount } from 'svelte';
 
 	onMount(() => {
-    if (videoEl) {
-      videoEl.playbackRate = 0.7; // ralentit la vidéo à 0.5x
-    }
-  });
+		if (videoEl) {
+			videoEl.playbackRate = 0.7; // ralentit la vidéo à 0.5x
+		}
+	});
 </script>
 
 <section>
-	<Test/>
-	<!-- <video  bind:this={videoEl} autoplay muted loop playsinline preload="none" class="background-video">
-		<source
-			src="https://media.istockphoto.com/id/1454642601/fr/vid%C3%A9o/animation-danneaux-blancs-propres-contexte-abstrait-animation-en-boucle.mp4?s=mp4-640x640-is&k=20&c=hixbyptzm0VbyLkRg0rU8pJNWcptp3yJ7EHmGk-sJr4="
-			type="video/mp4"
-		/>
-	</video> -->
+	<Test />
 
 	<div class="wrapper__txt">
-
 		<h1>Agence de communication sonore</h1>
 		<h2>
 			Studio post production son, voix off, doublage, identité sonore, sound design, composition
@@ -41,29 +34,15 @@
 </section>
 
 <style>
-	/* .background-video {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 100%;
-		height: 100%;
-		z-index: 0;
-		object-fit: cover;
-		filter: brightness(1);
-	
-	} */
-	
 	section {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		/* flex-direction: column; */
 		z-index: 0;
 		height: 50rem;
 		position: relative;
-		background-color: transparent;
-		/* background-image: url('../assets/Hero-image/B.jpg');
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-attachment: fixed; */
+		background: linear-gradient(white, #ebe9e9, white);
 	}
 	section::after {
 		content: '';
@@ -74,9 +53,7 @@
 		height: 100%;
 		/* background: linear-gradient(rgb(255, 255, 255) 0%, rgba(83, 4, 4, 0.552) 40%, rgba(83, 4, 4, 0.521) 70%,  rgba(255, 255, 255, 0.579) 100% ); */
 		z-index: 1;
-
 	}
-
 
 	/* =======================
 	ESSAI II
@@ -92,10 +69,6 @@
 	} */
 
 	.wrapper__txt {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
 		text-align: center;
 		font-family: var(--raleway);
 		color: rgb(14, 14, 14);
@@ -106,7 +79,8 @@
 		align-items: center;
 		justify-content: center;
 		gap: 0px;
-		background-color: transparent;
+		background: linear-gradient(rgba(255, 255, 255, 0.006) 0%, #c0c0c057 40%, rgba(255, 255, 255, 0));
+
 	}
 	.wrapper__buttons {
 		display: flex;
@@ -116,7 +90,7 @@
 	h1 {
 		font-family: var(--bebas);
 		font-size: 4rem;
-		color: rgb(80, 78, 78);
+		color: var(--ardoise);
 		width: 90%;
 		margin: 0 auto;
 		font-weight: var(--black);
@@ -125,10 +99,11 @@
 	}
 
 	h2 {
-		color: rgb(49, 47, 47);
+		color: var(--ardoise);
 		font-size: 1.3rem;
 		font-weight: var(--medium);
 		width: 90%;
+		letter-spacing: -1px;
 		margin: 0 auto;
 	}
 

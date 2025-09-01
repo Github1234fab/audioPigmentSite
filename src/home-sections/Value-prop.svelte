@@ -1,12 +1,11 @@
 <script>
 	import Button from '$lib/component/btn-black.svelte';
 	import SliderLogos from '$lib/component/Slider-Logos.svelte';
-	// import VantaTopology from '../lib/component/Vanta-topology.svelte';
+
 </script>
 
 <section>
-	<!-- 
-	<VantaTopology config={{ color: 0xE74C3C, backgroundColor: 0x21222c }} /> -->
+
 	<div class="wrapper__section-txt">
 		<h2>Voix, sound design, identité sonore ...</h2>
 		<h3>Ensemble, créons des émotions, marquons les esprits</h3>
@@ -60,7 +59,9 @@
 		justify-content: center;
 		text-align: center;
 		padding: 2rem;
-		background: transparent;
+		background-image: radial-gradient(circle at top right, rgb(255,255,255) 0%, rgb(255,255,255) 48%,rgb(248,248,248) 48%, rgb(248,248,248) 53%,rgb(240,240,240) 53%, rgb(240,240,240) 56%,rgb(229,229,229) 56%, rgb(229,229,229) 69%,rgb(229,229,229) 69%, rgb(229,229,229) 100%);		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
 		min-height: 100vh;
 		z-index: 0;
 		gap: 30px;
@@ -87,7 +88,7 @@
 		font-size: 3.5rem;
 		color: var(--ardoise);
 		margin-bottom: 0px;
-		font-weight: 400;
+		font-weight: 500;
 		letter-spacing: -1.5px;
 		width: 100%;
 	}
