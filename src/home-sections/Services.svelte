@@ -147,7 +147,7 @@
 		color: var(--black);
 		height: 100%;
 
-		background-color: rgb(185, 182, 182);
+		background: linear-gradient(rgb(224, 219, 219), #858383, rgb(224, 219, 219)); 
 	}
 	section h2 {
 		font-family: var(--bebas);
@@ -156,13 +156,15 @@
 		margin-top: 50px;
 		font-weight: 500;
 		letter-spacing: -2px;
-		color: white;
+		color: rgb(26, 25, 25);
+		
+		
 	}
 
 	.wrapper__services-cards {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 5rem;
+		gap: 1rem;
 		align-items: center;
 		justify-content: center;
 		font-family: var(--raleway);

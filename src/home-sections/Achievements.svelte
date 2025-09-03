@@ -19,8 +19,8 @@
 		justify-content: center;
 		text-align: center;
 		padding: 2rem;
-		background-color: var(--ardoise);
-		height: 75vh;
+		background-image: radial-gradient(circle at 11% 63%, rgba(82, 82, 82,0.06) 0%, rgba(82, 82, 82,0.06) 25%,rgba(136, 136, 136,0.06) 25%, rgba(136, 136, 136,0.06) 50%,rgba(191, 191, 191,0.06) 50%, rgba(191, 191, 191,0.06) 75%,rgba(245, 245, 245,0.06) 75%, rgba(245, 245, 245,0.06) 100%),radial-gradient(circle at 16% 28%, rgba(80, 80, 80,0.06) 0%, rgba(80, 80, 80,0.06) 25%,rgba(68, 68, 68,0.06) 25%, rgba(68, 68, 68,0.06) 50%,rgba(56, 56, 56,0.06) 50%, rgba(56, 56, 56,0.06) 75%,rgba(44, 44, 44,0.06) 75%, rgba(44, 44, 44,0.06) 100%),radial-gradient(circle at 51% 54%, rgba(179, 179, 179,0.06) 0%, rgba(179, 179, 179,0.06) 25%,rgba(121, 121, 121,0.06) 25%, rgba(121, 121, 121,0.06) 50%,rgba(62, 62, 62,0.06) 50%, rgba(62, 62, 62,0.06) 75%,rgba(4, 4, 4,0.06) 75%, rgba(4, 4, 4,0.06) 100%),linear-gradient(303deg, rgb(255,255,255),rgb(255,255,255));
+		height: 100vh;
 		z-index: 0;
 		gap: 0px;
 		overflow: hidden;
@@ -29,9 +29,9 @@
 		font-family: var(--bebas);
 		font-size: 3.5rem;
 		margin-bottom: 0.5rem;
-		color: white;
+		color: rgb(48, 46, 46);
 		margin-top: 50px;
-		font-weight: 400;
+		font-weight: 500;
 		letter-spacing: -1.5px;
 	}
 

@@ -104,32 +104,30 @@
   .circle {
     position: absolute;
     border-radius: 50%;
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 300px;
     transform: scale(var(--scale));
-  
-    background: #e0e0e0;
-  
+    background: #c2b5e712;
     /* Ombres neumorphism de base */
     box-shadow:
-    12px 12px 24px #b8b8b8,
-    -12px -12px 24px #ffffff;
-  
+    12px 12px 0px #cecdcd,
+    -12px -12px 0px #eae9e9;
     animation: pulse 3s ease-in-out infinite;
     animation-delay: calc(var(--index) * 0.2s);
+     animation-fill-mode: both; 
   }
   
   /* Animation qui joue uniquement sur les ombres */
   @keyframes pulse {
     0%, 100% {
       box-shadow:
-      14px 14px 28px #b8b8b8,
-      -14px -14px 28px #ffffff;
+      14px 14px 20px #dfdede,
+      -14px -14px 20px #d2d0d0;
     }
     50% {
       box-shadow:
-      2px 2px 4px #5a5959,
-      -2px -2px 4px #ffffff;
+      2px 2px 4px  #df7373,
+      -2px -2px 4px  #8a4d4d83;
     }
   }
   </style>

@@ -46,7 +46,9 @@
 		<div class="wrapper__slider-logos">
 			<SliderLogos />
 		</div>
+		<div class="wrapper-button">
 		<Button txt="Contactez-nous" href="/fr/contact" />
+	</div>
 	</div>
 </section>
 
@@ -68,6 +70,12 @@
 		overflow: hidden;
 		z-index: 0;
 	}
+	.wrapper-button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 100px;
+	}
 	.wrapper__slider-logos {
 		width: 100%;
 	}
@@ -80,8 +88,8 @@
 		/* max-width: 800px; */
 		margin-bottom: 0px;
 		color: white;
-		margin-top: 50px;
-		gap: 10px;
+		margin-top: 100px;
+		gap: 20px;
 	}
 	.wrapper__section-txt h2 {
 		font-family: var(--bebas);
@@ -125,6 +133,7 @@
 		line-height: 1.5;
 		margin-top: 50px;
 		margin-bottom: 30px;
+		font-weight: 500;
 	}
 
 	@media screen and (max-width: 768px) {
