@@ -71,7 +71,7 @@
 		justify-content: center;
 		text-align: center;
 		padding: 2rem;
-		background-color: var(--red);
+		background-color: rgb(212, 48, 48);
 		height: 100%;
 		z-index: 0;
 		gap: 40px;

@@ -15,7 +15,7 @@
 </script>
 
 <section>
-	
+
 	<Test />
 
 	<div class="wrapper__txt">
@@ -81,6 +81,8 @@
 		justify-content: center;
 		gap: 0px;
 		background: linear-gradient(rgba(255, 255, 255, 0.006) 0%, #c0c0c057 40%, rgba(255, 255, 255, 0));
+		margin-top: -200px;
+	
 
 	}
 	.wrapper__buttons {

@@ -7,7 +7,7 @@
 <section>
 
 	<div class="wrapper__section-txt">
-		<h2>Voix, sound design, identité sonore ...</h2>
+		<h2>Voix, <br> sound design, <br> identité sonore ...</h2>
 		<h3>Ensemble, créons des émotions, marquons les esprits</h3>
 
 		<div class="wrapper__h4">
@@ -85,7 +85,6 @@
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		/* max-width: 800px; */
 		margin-bottom: 0px;
 		color: white;
 		margin-top: 100px;
@@ -96,9 +95,10 @@
 		font-size: 3.5rem;
 		color: var(--ardoise);
 		margin-bottom: 0px;
-		font-weight: 500;
+		font-weight: 600;
 		letter-spacing: -1.5px;
 		width: 100%;
+		line-height: 60px;
 	}
 	.wrapper__section-txt h3 {
 		font-family: var(--raleway);
@@ -107,6 +107,7 @@
 		margin-top: 0px;
 		font-weight: var(--bold);
 		width: 100%;
+		letter-spacing: -1.5px;
 	}
 
 	section h4 {
@@ -126,7 +127,7 @@
 	}
 	p {
 		font-family: var(--raleway);
-		font-size: 1rem;
+		font-size: 1.1rem;
 		color: var(--ardoise);
 		margin-top: 20px;
 		max-width: 800px;

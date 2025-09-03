@@ -117,7 +117,7 @@
         align-items: center;
         text-decoration: none;
         color: inherit;
-        font-weight: var(--medium);
+        font-weight: var(--bold);
         font-size: 0.8rem;
         gap: 5px;
     }

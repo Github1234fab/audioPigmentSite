@@ -1,73 +1,7 @@
-<!-- <script>
-	import Collapse from '$lib/component/Collapse.svelte';
-
-	let datas = [
-		{
-			title: 'Communication sonore',
-			p: 'Nous créons des expériences sonores immersives qui captivent et engagent votre public. \n Notre expertise en design sonore et en production audio garantit une communication efficace et mémorable.'
-		},
-		{
-			title: 'Production audio',
-			p: 'De la conception à la réalisation, nous produisons des contenus audio de haute qualité adaptés à vos besoins spécifiques. \n Que ce soit pour des podcasts, des publicités ou des projets audiovisuels, nous sommes là pour vous accompagner.'
-		},
-		{
-			title: 'Consultation en stratégie sonore',
-			p: "Nous vous aidons à développer une stratégie sonore cohérente qui renforce votre identité de marque et améliore l'expérience utilisateur. \n Notre approche personnalisée garantit que chaque projet résonne avec votre audience."
-		},
-        {
-			title: 'Doublage Multilingue/localisation',
-			p: "Dubbing, lip sync, enregistrement voix off en voice over, traduction + adaptation (audioguide, elearning, reportage…) "
-		},
-        {
-			title: 'Mixage & post prod boradcast',
-			p: "Mix stéréo, multicanal 5.1 / 7.1, mix VR Binaural / Ambisonique, Normalisation broadcast PAD « Prêt A Diffuser."
-		}
-	];
-</script>
-
-<section>
-	<h2>Nos prestations</h2>
-    <div class="wrapper__collapses">
-	{#each datas as data}
-		<Collapse title={data.title} p={data.p} />
-	{/each}
-</div>
-</section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		padding: 2rem;
-		background-color: white;
-		color: var(--black);
-		height: 100%;
-		margin-bottom: 2rem;
-		
-	}
-    .wrapper__collapses {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        max-width: 800px;
-        margin-top: 30px;
-    }
-
-	section h2 {
-		font-family: var(--bebas);
-		font-size: 4rem;
-		margin-bottom: 1rem;
-        margin-top: 50px;
-	}
-</style> -->
 
 <script>
-	import ButtonWhite from '$lib/component/btn-black.svelte';
 	import Bilingue from '../assets/bilingue.png';
+	import Button from '$lib/component/btn-white.svelte';
 
 	const services = [
 		{
@@ -81,15 +15,13 @@
 			desc: 'Spot radio, podcast, création sonore événementiel, sonorisation d’espace, svi, message téléphonique…',
 			link: '/fr/services/#2',
 
-			image:
-				'https://images.pexels.com/photos/1271380/pexels-photo-1271380.jpeg'
+			image: 'https://images.pexels.com/photos/1271380/pexels-photo-1271380.jpeg'
 		},
 		{
 			label: 'Audiovisuel & digital',
 			desc: 'Habillage sonore &amp; voix off (pub TV, pub cinéma, film corporate, institutionnel, motion design, e-learning…)',
 			link: '/fr/services/#3',
-			image:
-				'https://images.pexels.com/photos/270288/pexels-photo-270288.jpeg'
+			image: 'https://images.pexels.com/photos/270288/pexels-photo-270288.jpeg'
 		},
 		{
 			label: 'Doublage multinlingue / Localisation',
@@ -101,40 +33,33 @@
 			label: 'Mixage & Post pro broadcast',
 			desc: 'Mix stéréo, multicanal 5.1 / 7.1, mix VR Binaural / Ambisonique, Normalisation broadcast PAD « Prêt A Diffuser »',
 			link: '/fr/services/#5',
-			image:
-				'https://images.pexels.com/photos/25396131/pexels-photo-25396131.jpeg'
+			image: 'https://images.pexels.com/photos/25396131/pexels-photo-25396131.jpeg'
 		}
 	];
 </script>
 
 <section>
 	<h2>Nos prestations</h2>
-	<div class="wrapper__services-cards">
+	<!-- <div class="wrapper__services-cards"> -->
+
+	<div class="wrapper__cards">
 		{#each services as service}
-			{#if service.link}
-				<a
-					class="service-card"
-					href={service.link}
-					style={service.image ? `background-image: url(${service.image});` : ''}
-				>
-					<div class="wrapper__service-txt">
-						<h3>{service.label}</h3>
-						<p>{service.desc}</p>
-					</div>
-				</a>
-			{:else}
-				<div
-					class="service-card"
-					style={service.image ? `background-image: url(${service.image});` : ''}
-				>
-					<div class="wrapper__service-txt">
-						<h3>{service.label}</h3>
-						<p>{service.desc}</p>
-					</div>
+			<div class="card">
+				<!-- href={service.link} -->
+				<img src={service.image} alt="" />
+				<div class="wrapper__service-txt">
+					<h3>{service.label}</h3>
+					<p>{service.desc}</p>
+					<!-- <a class="button" href={service.link} aria-label="button">En savoir +</a> -->
+					 <div class="wrapper-button">
+					<Button txt="En Savoir +" href={service.link} />
 				</div>
-			{/if}
+				</div>
+			</div>
 		{/each}
 	</div>
+
+	<!-- </div> -->
 </section>
 
 <style>
@@ -146,8 +71,35 @@
 		padding: 2rem;
 		color: var(--black);
 		height: 100%;
-
-		background: linear-gradient(rgb(224, 219, 219), #858383, rgb(224, 219, 219)); 
+		background: linear-gradient(rgb(224, 219, 219), #eceaea, rgb(224, 219, 219));
+	}
+	.wrapper__cards {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		margin-top: 30px;
+	}
+	.card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: auto;
+		border-radius: 12px 10px 12px 12px;
+		box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.462);
+		width: 80vw;
+	}
+	.card img {
+		width: 100%;
+		height: 300px;
+		object-fit: cover;
+		border-radius: 12px 10px 0px 0px;
+	}
+	.wrapper-button{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		margin-bottom: 50px;
 	}
 	section h2 {
 		font-family: var(--bebas);
@@ -156,86 +108,45 @@
 		margin-top: 50px;
 		font-weight: 500;
 		letter-spacing: -2px;
-		color: rgb(26, 25, 25);
-		
-		
+		color: var(--ardoise);
 	}
 
-	.wrapper__services-cards {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 1rem;
-		align-items: center;
-		justify-content: center;
-		font-family: var(--raleway);
-	}
 	.wrapper__service-txt {
 		display: flex;
 		flex-direction: column;
 		align-items: left;
-		justify-content: flex-end;
+		justify-content: center;
 		padding: 0.5rem 1rem;
-		border-radius: 8px;
-		margin-bottom: 0.6rem;
 		z-index: 2;
-	}
-
-	.service-card {
-		display: flex;
-		flex-direction: column;
-		align-items: left;
-		justify-content: flex-end;
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-		border-radius: 12px;
-		box-shadow: 0 10px 20px rgba(50, 50, 50, 0.328);
-		padding: 2rem;
-		height: 600px;
-		width: 400px;
-		transition: transform 0.15s;
-		position: relative;
-		z-index: 0;
-	}
-	.service-card::after {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 1;
-		height: 100%;
+		border-radius: 0px 0px 12px 12px;
+		background-color: rgb(231, 226, 226);
 		width: 100%;
-		background: linear-gradient(to top, rgba(0, 0, 0, 0.832), rgba(255, 255, 255, 0));
-	}
-	.service-card:hover {
-		transform: translateY(-5px) scale(1.04);
-		box-shadow: 0 3px 16px rgba(50, 50, 50, 0.18);
-		transition: 0.4s ease-in-out;
+		margin-top: 20px;
 	}
 
 	.wrapper__service-txt h3 {
-		margin-bottom: 1rem;
-		color: rgb(255, 255, 255);
+		color: var(--ardoise);
 		font-size: 2rem;
+		font-family: var(--bebas);
 	}
 	.wrapper__service-txt p {
-		margin-bottom: 1rem;
-		color: white;
+		color: rgb(82, 80, 80);
 		font-size: 1rem;
-		font-weight: 600;
+		font-weight: 400;
+		font-family: var(--bebas);
 	}
-	a {
+	/* a {
 		text-decoration: none;
-	}
+	} */
 
 	@media screen and (max-width: 768px) {
-		.wrapper__services-cards {
+		/* .wrapper__services-cards {
 			flex-direction: column;
 			align-items: center;
 			gap: 1rem;
-		}
+		} */
 
-		.service-card {
+		/* .service-card {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -243,7 +154,7 @@
 			padding: 1rem;
 			height: 400px;
 			width: 100%;
-		}
+		} */
 		.wrapper__service-txt h3 {
 			font-size: 1.8rem;
 		}
