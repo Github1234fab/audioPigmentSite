@@ -212,99 +212,101 @@ const options = {
   {/if}
    -->
 
+<script>
+	import { onMount } from 'svelte';
+	import VideoCard from './VideoCard.svelte';
 
-   <script>
-    import { onMount } from 'svelte';
-    import VideoCard from './VideoCard.svelte';
-  
-    let Splide = null;
-    let SplideSlide = null;
-    let splideReady = false;
-  
-    const videos = [
-      { url: 'https://www.youtube.com/watch?v=Fu-aEj_Q8ig', title: 'Vidéo 1' },
-      { url: 'https://www.youtube.com/watch?v=FJhtKdsnsN0', title: 'Vidéo 2' },
-      { url: 'https://www.youtube.com/watch?v=uj19mlAZlUo', title: 'Vidéo 3' },
-      { url: 'https://www.youtube.com/watch?v=NtHwCg4i73c', title: 'Vidéo 4' },
-      { url: 'https://www.youtube.com/watch?v=Glq7QP-US-Y', title: 'Vidéo 5' },
-      { url: 'https://www.youtube.com/watch?v=l8vJAkablNk', title: 'Vidéo 6' },
-      { url: 'https://www.youtube.com/watch?v=LfNereR9MHI', title: 'Vidéo 7' },
-      { url: 'https://www.youtube.com/watch?v=4H_sEETHmvs', title: 'Vidéo 8' },
-      { url: 'https://www.youtube.com/watch?v=gmcgXXlpras', title: 'Vidéo 9' },
-      { url: 'https://www.youtube.com/watch?v=9b-nxj_la6o', title: 'Vidéo 10' },
-      // ... tu peux garder les autres
-    ];
-  
-    const options = {
-      type: 'loop',
-      perPage: 4,
-      gap: '1rem',
-      autoplay: true,
-      pauseOnHover: true,
-      interval: 5000,
-      speed: 800,
-      arrows: true,
-      pagination: false,
-      breakpoints: {
-        1560: { perPage: 4, gap: '1.25rem' },
-        1024: { perPage: 3, gap: '1rem' },
-        768: { perPage: 2, gap: '1rem' },
-        480: { perPage: 1, gap: '0.75rem' },
-      },
-      easing: 'ease-in-out',
-    };
-  
-    let splideRef;
-  
-    onMount(async () => {
-      const mod = await import('@splidejs/svelte-splide');
-      Splide = mod.Splide;
-      SplideSlide = mod.SplideSlide;
-      splideReady = true;
-    });
-  </script>
-  
-  {#if splideReady && Splide && SplideSlide}
-    <div class="carousel-container">
-      <svelte:component this={Splide} bind:this={splideRef} {options} aria-label="Vidéos">
-        {#each videos as video}
-          <svelte:component this={SplideSlide}>
-            <div class="slide-wrapper">
-              <VideoCard url={video.url} title={video.title} />
-            </div>
-          </svelte:component>
-        {/each}
-      </svelte:component>
-    </div>
-  {:else}
-    <div>Chargement du carousel de vidéos…</div>
-  {/if}
-  
-  <style>
-    .carousel-container {
-      width: 100vw;
-      max-width: 100vw;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
-  
-    :global(.splide) {
-      width: 100%;
-    }
-  
-    :global(.splide__track),
-    :global(.splide__list),
-    :global(.splide__slide) {
-      width: 100%;
-    }
-  
-    .slide-wrapper {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      position: relative;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-  </style>
-  
+	let Splide = null;
+	let SplideSlide = null;
+	let splideReady = false;
+
+	const videos = [
+		{ url: 'https://www.youtube.com/watch?v=Fu-aEj_Q8ig', title: 'Vidéo 1' },
+		{ url: 'https://www.youtube.com/watch?v=FJhtKdsnsN0', title: 'Vidéo 2' },
+		{ url: 'https://www.youtube.com/watch?v=uj19mlAZlUo', title: 'Vidéo 3' },
+		{ url: 'https://www.youtube.com/watch?v=NtHwCg4i73c', title: 'Vidéo 4' },
+		{ url: 'https://www.youtube.com/watch?v=Glq7QP-US-Y', title: 'Vidéo 5' },
+		{ url: 'https://www.youtube.com/watch?v=l8vJAkablNk', title: 'Vidéo 6' },
+		{ url: 'https://www.youtube.com/watch?v=LfNereR9MHI', title: 'Vidéo 7' },
+		{ url: 'https://www.youtube.com/watch?v=4H_sEETHmvs', title: 'Vidéo 8' },
+		{ url: 'https://www.youtube.com/watch?v=gmcgXXlpras', title: 'Vidéo 9' },
+		{ url: 'https://www.youtube.com/watch?v=9b-nxj_la6o', title: 'Vidéo 10' }
+		// ... tu peux garder les autres
+	];
+
+	const options = {
+		type: 'loop',
+		perPage: 4,
+		gap: '1rem',
+		autoplay: true,
+		pauseOnHover: true,
+		interval: 5000,
+		speed: 800,
+		arrows: true,
+		pagination: false,
+		breakpoints: {
+			1560: { perPage: 4, gap: '1.25rem' },
+			1024: { perPage: 3, gap: '1rem' },
+			768: { perPage: 2, gap: '1rem' },
+			480: { perPage: 1, gap: '0.75rem' }
+		},
+		easing: 'ease-in-out'
+	};
+
+	let splideRef;
+
+	onMount(async () => {
+		const mod = await import('@splidejs/svelte-splide');
+		Splide = mod.Splide;
+		SplideSlide = mod.SplideSlide;
+		splideReady = true;
+	});
+</script>
+
+{#if splideReady && Splide && SplideSlide}
+	<div class="carousel-container">
+		<svelte:component this={Splide} bind:this={splideRef} {options} aria-label="Vidéos">
+			{#each videos as video}
+				<svelte:component this={SplideSlide}>
+					<div class="slide-wrapper">
+						<VideoCard url={video.url} title={video.title} />
+					</div>
+				</svelte:component>
+			{/each}
+		</svelte:component>
+	</div>
+{:else}
+	<div>Chargement du carousel de vidéos…</div>
+{/if}
+
+<style>
+	.carousel-container {
+		width: 100vw;
+		max-width: 100vw;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+	
+	}
+
+	:global(.splide) {
+		width: 100%;
+   
+	}
+
+	:global(.splide__track),
+	:global(.splide__list),
+	:global(.splide__slide) {
+		width: 100%;
+ 
+	}
+
+	.slide-wrapper {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		position: relative;
+		border-radius: 8px;
+		overflow: hidden;
+    height: 500px;
+	}
+</style>

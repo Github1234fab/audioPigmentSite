@@ -7,7 +7,7 @@
 <section>
 
 	<div class="wrapper__section-txt">
-		<h2>Voix, <br> sound design, <br> identité sonore ...</h2>
+		<h2>Voix, <br> Sound design, <br> Identité sonore ...</h2>
 		<h3>Ensemble, créons des émotions, marquons les esprits</h3>
 
 		<div class="wrapper__h4">

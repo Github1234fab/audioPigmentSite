@@ -1,7 +1,7 @@
 
 <script>
 	import Bilingue from '../assets/bilingue.png';
-	import Button from '$lib/component/btn-white.svelte';
+	import Button from '$lib/component/btn-black.svelte';
 
 	const services = [
 		{
@@ -71,13 +71,15 @@
 		padding: 2rem;
 		color: var(--black);
 		height: 100%;
-		background: linear-gradient(rgb(224, 219, 219), #eceaea, rgb(224, 219, 219));
+		background: linear-gradient(rgb(255, 255, 255), #ebe8e8, rgb(242, 238, 238));
+		
 	}
 	.wrapper__cards {
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
-		margin-top: 30px;
+		margin-top: 0px;
+		margin-bottom: 10rem;
 	}
 	.card {
 		display: flex;
@@ -106,9 +108,11 @@
 		font-size: 4rem;
 		margin-bottom: 3rem;
 		margin-top: 50px;
-		font-weight: 500;
+		font-weight: 200;
 		letter-spacing: -2px;
 		color: var(--ardoise);
+		align-self: flex-start;
+		margin-left: 120px;
 	}
 
 	.wrapper__service-txt {
@@ -119,18 +123,19 @@
 		padding: 0.5rem 1rem;
 		z-index: 2;
 		border-radius: 0px 0px 12px 12px;
-		background-color: rgb(231, 226, 226);
+		background-color: var(--red);
 		width: 100%;
-		margin-top: 20px;
+		margin-top: 0px;
 	}
 
 	.wrapper__service-txt h3 {
-		color: var(--ardoise);
+		color: white;
 		font-size: 2rem;
 		font-family: var(--bebas);
+		margin-top: 20px;
 	}
 	.wrapper__service-txt p {
-		color: rgb(82, 80, 80);
+		color: white;
 		font-size: 1rem;
 		font-weight: 400;
 		font-family: var(--bebas);

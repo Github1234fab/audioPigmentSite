@@ -116,16 +116,18 @@
   <style>
 	.video-wrapper {
 	  width: 100%;
-	  height: 100%;
+	  height: 400px;
+	  padding: 0px;
 	}
   
 	iframe,
 	.thumbnail {
 	  width: 100%;
-	  height: 100%;
+	  height: 400px;
 	  object-fit: cover;
 	  border: none;
 	  border-radius: 8px;
+	  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.436);
 	}
   </style>
   

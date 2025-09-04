@@ -41,7 +41,7 @@
 		justify-content: center;
 		/* flex-direction: column; */
 		z-index: 0;
-		height: 50rem;
+		height: 45rem;
 		position: relative;
 		background: linear-gradient(white, #ebe9e9, white);
 	}

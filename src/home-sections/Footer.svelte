@@ -254,7 +254,7 @@
 		margin-bottom: 0.5rem;
 		color: white;
 		margin-top: 50px;
-		font-weight: 400;
+		font-weight: 100;
 		letter-spacing: -1.5px;
 	}
 

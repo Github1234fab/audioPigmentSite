@@ -29,7 +29,7 @@
 		background-position: center;
 		border-radius: 16px;
 		overflow: hidden;
-		/* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); */
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 		display: flex;
 		align-items: flex-end;
 		transition: transform 0.3s ease;

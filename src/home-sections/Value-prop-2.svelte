@@ -17,17 +17,21 @@
 			Chaque projet mérite son histoire sonore unique : chez Audio Pigment, l’évidence c’est
 			l’exception.
 		</h3> -->
+		<h3><span>Voix</span> <span>sound design</span> <span>identité sonore</span></h3>
+		<br />
+		<h4><strong>Ensemble, créons des émotions, marquons les esprits</strong></h4>
 
-		<p>Chez AUDIO PIGMENT, chaque projet est écouté, <br>pensé et façonné avec soin, <br>expertise et inventivité.
-			À vos côtés.
-			Une <strong>écoute attentive</strong>, un <strong>savoir-faire affûté </strong> et <strong>le goût du sur-mesure</strong> pour un impact optimal.
+		<p>
+			Chez AUDIO PIGMENT, chaque projet est écouté, pensé et façonné avec soin, expertise et
+			inventivité. À vos côtés. <br />
+			Une <strong>écoute attentive</strong>, un <strong>savoir-faire affûté </strong> et
+			<strong>le goût du sur-mesure</strong>
+			pour un impact optimal.
 
-			<strong>Comprendre</strong>, <strong>ressentir</strong>, <strong>transmettre</strong> : c’est notre métier.
-				<br>Faites nous confiance </p>
-
-				<h3>Voix, sound design, identité sonore… </h3> <br>
-
-					<h4><strong>Ensemble, créons des émotions, marquons les esprits</strong></h4>
+			<br /><strong>Comprendre</strong>, <strong>ressentir</strong>, <strong>transmettre</strong> :
+			c’est notre métier.
+			<br />Faites nous confiance
+		</p>
 
 		<!-- <p>
 			Chez AUDIO PIGMENT, chaque projet est pensé, écouté, façonné avec précision par l’expertise
@@ -51,7 +55,7 @@
 		text-align: center;
 		padding: 2rem;
 		background-color: transparent;
-		min-height: 100vh;
+		height: 70vh;
 		z-index: 0;
 		gap: 40px;
 		position: relative;
@@ -67,20 +71,9 @@
 		font-weight: 800;
 		letter-spacing: -1.5px;
 	} */
-	.wrapper__section-txt h3 {
-		font-family: var(--raleway);
-		font-size: 2rem;
-		font-weight: var(--medium);
-		margin-bottom: 0.5rem;
-		color: white;
-		margin-top: 0px;
-		letter-spacing: -1px;
-	}
-
 	.wrapper__section-txt h4 {
-		font-family: var(--raleway);
+		font-family: var(--bebas);
 		font-size: 2.4rem;
-		margin-bottom: 0.5rem;
 		line-height: 1.4;
 		color: white;
 		font-weight: var(--bold);
@@ -88,19 +81,30 @@
 		padding: 20px 40px;
 		width: 100%;
 	}
-	.wrapper__section-txt p{
+	.wrapper__section-txt h3 span {
+		border: 1px solid white;
+		padding: 15px 20px;
+		border-radius: 3px;
+	}
+
+	.wrapper__section-txt h3 {
+		font-family: var(--raleway);
+		font-size: 2rem;
+		font-weight: var(--medium);
+		margin-bottom: 0rem;
+		color: white;
+		letter-spacing: -1px;
+	}
+	.wrapper__section-txt p {
 		font-family: var(--raleway);
 		font-size: 1.2rem;
 		line-height: 1.6;
-		margin-top: 20px;
-		max-width: 800px;
+		margin-top: 0px;
 		font-weight: var(--regular);
 		color: white;
-		padding: 0px 20px;
-		width: 100%;
-		text-align: center;
-		margin-bottom: 30px;
-	} 
+		padding: 0px 0px;
+		margin-bottom: 3rem;
+	}
 
 	.wrapper__buttons {
 		display: flex;
@@ -178,6 +182,5 @@
 		font-weight: 400;
 		letter-spacing: -1.5px;
 	} */
-
 	}
 </style>

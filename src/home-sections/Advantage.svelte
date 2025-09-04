@@ -71,11 +71,26 @@
 		justify-content: center;
 		text-align: center;
 		padding: 2rem;
-		background-color: rgb(212, 48, 48);
+		background-image: url('https://images.pexels.com/photos/33729174/pexels-photo-33729174.jpeg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 		height: 100%;
 		z-index: 0;
 		gap: 40px;
 		color: white;
+		position: relative;
+
+	}
+	section::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.723); /* Couleur de superposition noire avec opacité */
+		z-index: 1; 
 	}
 	section h2 {
 		font-family: var(--bebas);
@@ -85,6 +100,7 @@
 		margin-top: 50px;
 		font-weight: 400;
 		letter-spacing: -1.5px;
+		z-index: 3; 
 
 	}
 	section p {
@@ -95,6 +111,7 @@
 		font-weight: var(--regular);
 		margin-top: 0px;
 		padding: 20px 40px;
+		z-index: 3; 
 	}
 	.features-grid {
 		display: grid;
@@ -104,6 +121,8 @@
 		max-width: 1200px;
 		margin: 0 auto;
 		perspective: 800px;
+		z-index: 3;
+		margin-bottom: 5rem;
 	}
 
 	.feature-card {
@@ -117,6 +136,8 @@
 		padding: 1.5rem;
 		transition: all 0.3s ease;
 		border: 1px solid rgb(203, 203, 203);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
 		transform: rotateY(0deg);
 	}
 
@@ -144,14 +165,14 @@
 	}
 
 	.title {
-		font-family: var(--raleway);
+		font-family: var(--bebas);
 		color: white;
 		display: flex;
 		align-items: center;
 		align-self: center;
 		justify-content: center;
 		font-size: 1rem;
-		font-weight: 600;
+		font-weight: Bold;
 		margin-top: 30px;
 	}
 
@@ -159,9 +180,10 @@
 		padding: 20px;
 		color: white;
 		line-height: 1.5;
-		font-size: 0.9rem;
+		font-size: 1rem;
 		font-family: var(--raleway);
 		text-align: bottom;
+		font-weight: 500;
 	}
 	@media (max-width: 1000px) {
 		.features-grid {
