@@ -108,13 +108,13 @@
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		gap: 20px;
+		gap: 10px;
 		margin-top: 30px;
 	}
 	.wrapper__fondators-img img {
-		width: 200px;
-		height: 200px;
-		border-radius: 20px;
+		width: 100%;
+		height: 300px;
+		border-radius: 10px;
 		object-fit: cover;
 	}
 	.wrapper__fondators img:hover {

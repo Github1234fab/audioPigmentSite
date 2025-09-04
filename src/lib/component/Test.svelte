@@ -90,7 +90,7 @@
 		justify-content: center;
 		align-items: center;
 		/* background: linear-gradient(white, #ebe9e9, white); */
-		margin-top: 150px;
+		margin-top: 170px;
 		margin-left: 30px;
 	}
 
@@ -111,14 +111,15 @@
 		border-radius: 50%;
 		transform-origin: center;
 		transform: scale(var(--scale));
-		background: #f2efef;
+		background: #cbc3c3;
+		
 
 		/* ✅ Neumorphism interne: pas d'ombre qui déborde à l'extérieur */
 		box-shadow:
-			inset 12px 12px 24px #e6e4e4,
-			inset -12px -12px 24px #bab9b9;
+			inset 12px 12px 24px #f3f2f2,
+			inset -12px -12px 24px #d4d2d2;
 		/* Animation uniquement via les ombres (imite “rentré/sorti”) */
-		animation: pulse 2.7s ease-in-out infinite;
+		animation: pulse 2.6s ease-in-out infinite;
 		animation-delay: calc(var(--index) * 0.2s);
 		animation-fill-mode: both;
 		/* petits plus perf / rendu */
@@ -131,13 +132,13 @@
 		0%,
 		100% {
 			box-shadow:
-				inset 14px 14px 28px #e1dede,
-				inset -14px -14px 28px #d7d6d6;
+				inset 14px 14px 28px #fffdfd,
+				inset -14px -14px 28px #4a4949;
 		}
 		50% {
 			box-shadow:
-				inset 3px 3px 6px #3b3b3b,
-				inset -3px -3px 6px #b5b2b2cc;
+				inset 3px 3px 6px #dddcdc,
+				inset -3px -3px 6px #b3b0b0cc;
 		}
 	}
 </style>

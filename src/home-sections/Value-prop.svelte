@@ -99,6 +99,7 @@
 		letter-spacing: -1.5px;
 		width: 100%;
 		line-height: 60px;
+	
 	}
 	.wrapper__section-txt h3 {
 		font-family: var(--raleway);
@@ -114,11 +115,12 @@
 		font-family: var(--raleway);
 		font-size: 1.2rem;
 		margin-bottom: 0.5rem;
-		color: var(--ardoise);
-		font-weight: var(--regular);
+		color: white;
+		font-weight: var(--medium);
 		margin-top: 0px;
-		border: 1px solid grey;
 		padding: 20px 40px;
+		background-color: var(--red);
+		border-radius: 5px;
 	}
 	.wrapper__h4 {
 		gap: 5px;

@@ -8,7 +8,7 @@
 			label: 'Communication sonore',
 			desc: 'Audio branding / Identité sonore (signature sonore, identité musicale, voix de marque, sound design produit…).',
 			link: '/fr/services/#1',
-			image: 'https://images.pexels.com/photos/3761509/pexels-photo-3761509.jpeg'
+			image: 'https://images.pexels.com/photos/776153/pexels-photo-776153.jpeg'
 		},
 		{
 			label: 'Marketing Sonore',
@@ -21,19 +21,19 @@
 			label: 'Audiovisuel & digital',
 			desc: 'Habillage sonore &amp; voix off (pub TV, pub cinéma, film corporate, institutionnel, motion design, e-learning…)',
 			link: '/fr/services/#3',
-			image: 'https://images.pexels.com/photos/270288/pexels-photo-270288.jpeg'
+			image: 'https://images.pexels.com/photos/66134/pexels-photo-66134.jpeg'
 		},
 		{
 			label: 'Doublage multinlingue / Localisation',
 			desc: 'Dubbing, lip sync, enregistrement voix off en voice over, traduction + adaptation (audioguide, elearning, reportage…)',
 			link: '/fr/services/#4',
-			image: Bilingue
+			image: 'https://images.pexels.com/photos/8828605/pexels-photo-8828605.jpeg'
 		},
 		{
 			label: 'Mixage & Post pro broadcast',
 			desc: 'Mix stéréo, multicanal 5.1 / 7.1, mix VR Binaural / Ambisonique, Normalisation broadcast PAD « Prêt A Diffuser »',
 			link: '/fr/services/#5',
-			image: 'https://images.pexels.com/photos/25396131/pexels-photo-25396131.jpeg'
+			image: 'https://images.pexels.com/photos/7899457/pexels-photo-7899457.png'
 		}
 	];
 </script>
@@ -123,7 +123,7 @@
 		padding: 0.5rem 1rem;
 		z-index: 2;
 		border-radius: 0px 0px 12px 12px;
-		background-color: var(--red);
+		background-color: rgb(95, 66, 66);
 		width: 100%;
 		margin-top: 0px;
 	}

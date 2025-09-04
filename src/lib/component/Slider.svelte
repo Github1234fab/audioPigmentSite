@@ -240,7 +240,7 @@ const options = {
 		gap: '1rem',
 		autoplay: true,
 		pauseOnHover: true,
-		interval: 5000,
+		interval: 3000,
 		speed: 800,
 		arrows: true,
 		pagination: false,
@@ -307,6 +307,6 @@ const options = {
 		position: relative;
 		border-radius: 8px;
 		overflow: hidden;
-    height: 500px;
+    height: 450px;
 	}
 </style>

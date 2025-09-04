@@ -136,8 +136,8 @@
 		padding: 1.5rem;
 		transition: all 0.3s ease;
 		border: 1px solid rgb(203, 203, 203);
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(20px);
 		transform: rotateY(0deg);
 	}
 
