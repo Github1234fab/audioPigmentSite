@@ -191,9 +191,9 @@
 
 	<div class="wrapper__footer-infos">
 		<!-- Remplacer directement ici le texte -->
-		<Button txt={$_('footer.contact_btn')} href="/fr/contact" />
+		<!-- <Button txt={$_('footer.contact_btn')} href="/fr/contact" /> -->
 		<div class="wrapper__footer-infos-localisation">
-			<h3>{@html $_('footer.localisation_title')}</h3>
+			<!-- <h3>{@html $_('footer.localisation_title')}</h3> -->
 			<p>{$_('footer.studio')}</p>
 			<p>{$_('footer.address')}</p>
 			<!-- Pour les liens téléphone/email on met la valeur comme attribut -->
@@ -260,7 +260,8 @@
 
 	.wrapper__footer-infos {
 		display: flex;
-		align-items: baseline;
+		align-items: center;
+		flex-direction: column;
 		justify-content: space-around;
 		padding: 1rem;
 		margin: 0 auto;
@@ -280,6 +281,8 @@
 		color: white;
 		gap: 5px;
 		font-family: var(--raleway);
+		
+		
 	}
 	.wrapper__footer-infos-localisation a {
 		font-family: var(--raleway);
@@ -288,6 +291,10 @@
 		font-size: 1rem;
 		text-decoration: none;
 		width: 100%;
+		background-color: var(--red);
+		padding: 10px 20px;
+		border-radius: 3px;
+		margin-top: 10px;
 	}
 	.wrapper__footer-infos-following {
 		display: flex;
@@ -298,7 +305,7 @@
 	.mentions {
 		font-family: var(--raleway);
 		font-size: 0.8rem;
-		color: white;
+		color: rgb(122, 80, 80);
 		margin-top: 0px;
 		padding: 0px;
 		text-align: center;

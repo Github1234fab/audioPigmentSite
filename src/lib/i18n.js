@@ -2,9 +2,9 @@ import { addMessages, init, getLocaleFromNavigator } from 'svelte-i18n';
 
 addMessages('fr', {
   footer: {
-    title: "Votre projet audio commence ici",
+    title: "Votre projet sonore commence ici",
     contact_btn: "Contactez-nous",
-    localisation_title: "Venir au studio <br> Audio Pigment",
+    // localisation_title: "Venir au studio <br> Audio Pigment",
     studio: "Audio Pigment",
     address: "10 Rue Nicolaï, 69007 Lyon",
     phone: "04 72 73 47 21",
@@ -31,7 +31,7 @@ addMessages('en', {
   footer: {
     title: "Your audio project starts here",
     contact_btn: "Contact us",
-    localisation_title: "Come to <br> Audio Pigment studio",
+    // localisation_title: "Come to <br> Audio Pigment studio",
     studio: "Audio Pigment",
     address: "10 Rue Nicolaï, 69007 Lyon",
     phone: "04 72 73 47 21",
