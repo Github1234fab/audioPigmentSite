@@ -17,9 +17,9 @@
 			Chaque projet mérite son histoire sonore unique : chez Audio Pigment, l’évidence c’est
 			l’exception.
 		</h3> -->
-		<h3><span>Voix</span> <span>sound design</span> <span>identité sonore</span></h3>
+		<!-- <h3><span>Voix</span> <span>sound design</span> <span>identité sonore</span></h3> -->
 		<br />
-		<h4><strong>Ensemble, créons des émotions, marquons les esprits</strong></h4>
+		<h4><strong>Ensemble, créons des émotions, marquons les esprits</strong></h4> <br>
 
 		<p>
 			Chez AUDIO PIGMENT, chaque projet est écouté, pensé et façonné avec soin, expertise et
@@ -28,9 +28,9 @@
 			<strong>le goût du sur-mesure</strong>
 			pour un impact optimal.
 
-			<br /><strong>Comprendre</strong>, <strong>ressentir</strong>, <strong>transmettre</strong> :
-			c’est notre métier.
-			<br />Faites nous confiance
+			<br> <br /><strong>Comprendre</strong>, <strong>ressentir</strong>, <strong>transmettre</strong> :
+			c’est notre métier. <br>
+			<br /> <span>Faites nous confiance</span>
 		</p>
 
 		<!-- <p>
@@ -81,7 +81,7 @@
 		padding: 20px 40px;
 		width: 100%;
 	}
-	.wrapper__section-txt h3 span {
+	/* .wrapper__section-txt h3 span {
 		border: 1px solid white;
 		padding: 15px 20px;
 		border-radius: 3px;
@@ -94,16 +94,20 @@
 		margin-bottom: 0rem;
 		color: white;
 		letter-spacing: -1px;
-	}
+	} */
 	.wrapper__section-txt p {
 		font-family: var(--raleway);
-		font-size: 1.2rem;
+		font-size: 1.5rem;
 		line-height: 1.6;
 		margin-top: 0px;
 		font-weight: var(--regular);
 		color: white;
 		padding: 0px 0px;
 		margin-bottom: 3rem;
+	}
+	.wrapper__section-txt p span {
+		font-weight: var(--bold);
+		
 	}
 
 	.wrapper__buttons {

@@ -67,7 +67,7 @@
 	.wrapper__card {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 1px;
+		gap: 4px;
 		align-items: center;
 		justify-content: center;
 		margin-top: 0px;

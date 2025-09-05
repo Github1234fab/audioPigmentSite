@@ -1,7 +1,7 @@
 <script>
 	export let title;
-	export let type;
-	export let technique;
+	// export let type;
+	// export let technique;
 	export let image; // URL de l'image de fond
 
 
@@ -13,10 +13,10 @@
 <div class="card" style="background-image: url({image})">
 	<div class="overlay">
 		<h3>{title}</h3>
-		<div class="tags">
+		<!-- <div class="tags">
 			<span class="tag">{type}</span>
 			<span class="tag">{technique}</span>
-		</div>
+		</div> -->
 	</div>
 </div>
 
@@ -59,21 +59,6 @@
 		text-transform: lowercase;
 	}
 
-	.tags {
-		display: flex;
-		gap: 5px;
-		text-transform: lowercase;
-	}
+	
 
-	.tag {
-		font-family: var(--raleway);
-		font-weight: var(--extra-bold);
-		background-color: rgb(156, 53, 53);
-		border-radius: 10px;
-		padding: 5px 12px;
-		font-size: 0.75rem;
-		font-weight: 500;
-		pointer-events: none; /* rend le bouton non cliquable */
-		user-select: none;
-	}
 </style>

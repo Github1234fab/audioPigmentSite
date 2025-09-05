@@ -119,7 +119,7 @@
 			inset 12px 12px 24px #f3f2f2,
 			inset -12px -12px 24px #d4d2d2;
 		/* Animation uniquement via les ombres (imite “rentré/sorti”) */
-		animation: pulse 2.6s ease-in-out infinite;
+		animation: pulse 2s ease-in-out infinite;
 		animation-delay: calc(var(--index) * 0.2s);
 		animation-fill-mode: both;
 		/* petits plus perf / rendu */

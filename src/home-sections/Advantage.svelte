@@ -144,7 +144,8 @@
 	.feature-card:hover {
 		background: rgba(255, 255, 255, 0.1);
 		border-color: rgba(255, 255, 255, 0.3);
-		transform: rotateY(-5deg);
+		/* transform: rotateY(5deg); */
+		scale: 1.05;
 	}
 
 	.feature-card:hover .icon {
@@ -171,8 +172,8 @@
 		align-items: center;
 		align-self: center;
 		justify-content: center;
-		font-size: 1rem;
-		font-weight: Bold;
+		font-size: 1.5rem;
+		font-weight: Bolder;
 		margin-top: 30px;
 	}
 
@@ -180,10 +181,10 @@
 		padding: 20px;
 		color: white;
 		line-height: 1.5;
-		font-size: 1rem;
+		font-size: 1.2rem;
 		font-family: var(--raleway);
 		text-align: bottom;
-		font-weight: 500;
+		font-weight: 600;
 	}
 	@media (max-width: 1000px) {
 		.features-grid {

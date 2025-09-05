@@ -241,19 +241,19 @@
 	}
   
 	.title {
-	  font-size: 2rem;
+	  font-size: 2.8rem;
 	  font-weight: var(--black);
 	  margin-bottom: 10px;
 	  color: white;
 	  width: 100%;
 	  text-align: center;
-	  border: 1px solid rgba(255, 255, 255, 0.425);
+	  border: 2.5px solid rgba(255, 255, 255, 0.425);
 	  padding: 40px 20px;
 	  border-radius: 5px;
 	}
   
 	.subtitle {
-	  font-size: 1rem;
+	  font-size: 1.3rem;
 	  font-weight: var(--extra-bold);
 	  white-space: pre-line;
 	  text-align: center;

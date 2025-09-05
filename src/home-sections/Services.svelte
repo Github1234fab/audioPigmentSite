@@ -77,7 +77,7 @@
 	.wrapper__cards {
 		display: flex;
 		flex-direction: column;
-		gap: 2rem;
+		gap: 4rem;
 		margin-top: 0px;
 		margin-bottom: 10rem;
 	}
@@ -123,7 +123,8 @@
 		padding: 0.5rem 1rem;
 		z-index: 2;
 		border-radius: 0px 0px 12px 12px;
-		background-color: rgb(95, 66, 66);
+		/* background-color: rgb(157, 154, 154); */
+		background-color: rgb(105, 99, 99);
 		width: 100%;
 		margin-top: 0px;
 	}
@@ -137,7 +138,7 @@
 	.wrapper__service-txt p {
 		color: white;
 		font-size: 1rem;
-		font-weight: 400;
+		font-weight: 600;
 		font-family: var(--bebas);
 	}
 	/* a {

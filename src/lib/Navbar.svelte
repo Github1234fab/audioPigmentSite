@@ -122,8 +122,8 @@
         gap: 5px;
     }
     .logo {
-        height: 50px;
-        width: 40px;
+        height: 70px;
+        width: 49px;
         object-fit: fill;
       
     }

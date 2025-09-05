@@ -1,12 +1,14 @@
 <script>
 	import Lolo from '../../../assets/Portrait-lolo.jpg';
 	import Rom from '../../../assets/Portrait-rom.jpg';
+	import Logo from '../../../assets/audio-pigment-logo.jpg';
 </script>
 
 <section>
 	<h1>Audio Pigment <br /> – <br /> Studio de création sonore depuis 1999</h1>
 
 	<h2>Créer des émotions… Marquer les esprits…</h2>
+	
 
 	<p>
 		Fondée en 1999, Audio Pigment est une agence de communication, spécialisée dans la conception et
@@ -36,6 +38,7 @@
 			<strong>l’identité</strong> .
 		</strong>
 	</p>
+
 	<div class="wrapper__fondators">
 		<h4>Les fondateurs</h4>
 		<div class="wrapper__fondators-img">
@@ -49,7 +52,9 @@
 			</div>
 		</div>
 	</div>
+
 </section>
+
 
 <style>
 	section {
@@ -58,12 +63,27 @@
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		background-color: var(--ardoise);
+		background-image: url('https://images.pexels.com/photos/13003485/pexels-photo-13003485.jpeg');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
 		color: white;
-		padding: 2rem;
-		min-height: 100vh;
+		height: 100%;
 		gap: 20px;
+		z-index: 0;
+		position: relative;
 	}
+	section::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(23, 23, 23, 0.644); /* Couleur de superposition avec opacité */
+		z-index: 1; /* Assure que le pseudo-élément est derrière le contenu */
+	}
+
 	section h1 {
 		font-family: var(--bebas);
 		color: white;
@@ -71,6 +91,7 @@
 		margin-top: 50px;
 		font-weight: 400;
 		letter-spacing: -2px;
+		z-index: 2;
 	}
 	section h2 {
 		font-family: var(--raleway);
@@ -79,14 +100,17 @@
 		font-size: 1.5rem;
 		margin-top: 50px;
 		letter-spacing: -1px;
+		z-index: 2;
 	}
 	section p {
 		font-family: var(--raleway);
 		font-size: 1.2rem;
 		line-height: 1.6;
 		margin-top: 20px;
+		margin-bottom: 100px;;
 		max-width: 800px;
-		font-weight: var(--regular);
+		font-weight: var(--medium);
+		z-index: 2;
 	}
 	.wrapper__fondators {
 		display: flex;
@@ -94,7 +118,7 @@
 		justify-content: center;
 		align-items: center;
 		gap: 20px;
-		margin-top: 100px;
+		z-index: 2;
 	}
 	.wrapper__fondators h4 {
 		font-family: var(--bebas);
@@ -108,7 +132,7 @@
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		gap: 10px;
+		gap: 15px;
 		margin-top: 30px;
 	}
 	.wrapper__fondators-img img {
@@ -119,7 +143,7 @@
 	}
 	.wrapper__fondators img:hover {
 		transform: scale(1.05);
-		transition: transform 0.3s ease;
+		transition: transform 0.3s ease-in-out;
 	}
 
 	@media (max-width: 768px) {

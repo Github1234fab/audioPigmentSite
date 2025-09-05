@@ -4,10 +4,10 @@
 
 <section>
 	<h1>NOS STUDIOS</h1>
-	<h2>Visite de nos studios</h2>
+	<h2>Visite de nos locaux</h2>
 	<div class="wrapper__studios">
 		<div class="wrapper__studios-room">
-			<h3>Studio I</h3>
+			<h3>Studio</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus facere obcaecati asperiores maxime, accusantium earum harum libero voluptatum. Provident corporis minus cum nostrum animi eveniet quasi, repellat voluptatum cumque earum.</p>
 			<img
 				class="img"
@@ -26,7 +26,7 @@
 			/>
 		</div>
 
-		<div class="wrapper__studios-room">
+		<!-- <div class="wrapper__studios-room">
 			<h3>Studio II</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus facere obcaecati asperiores maxime, accusantium earum harum libero voluptatum. Provident corporis minus cum nostrum animi eveniet quasi, repellat voluptatum cumque earum.</p>
 
@@ -45,8 +45,8 @@
 				src="https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg"
 				alt="Studio 1"
 			/>
-		</div>
-		<div class="wrapper__studios-room">
+		</div> -->
+		<!-- <div class="wrapper__studios-room">
 			<h3>Studio III</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus facere obcaecati asperiores maxime, accusantium earum harum libero voluptatum. Provident corporis minus cum nostrum animi eveniet quasi, repellat voluptatum cumque earum.</p>
 
@@ -65,7 +65,7 @@
 				src="https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg"
 				alt="Studio 1"
 			/>
-		</div>
+		</div> -->
 	</div>
 </section>
 
@@ -129,8 +129,8 @@
 		letter-spacing: 0px;
 	}
 	.wrapper__studios-room .img {
-		width: 100%;
-		height: 100%;
+		width: auto;
+		height: 500px;
 		object-fit: cover;
 		border-radius: 10px;
 		margin-bottom: 10px;
