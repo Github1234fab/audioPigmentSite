@@ -5,38 +5,39 @@
 </script>
 
 <section>
-	<h1>Audio Pigment <br /> – <br /> Studio de création sonore depuis 1999</h1>
-
-	<h2>Créer des émotions… Marquer les esprits…</h2>
-	
+	<h1>Audio Pigment <br /> – <br /></h1>
+	<h2>Studio de création sonore depuis 1999</h2>
 
 	<p>
-		Fondée en 1999, Audio Pigment est une agence de communication, spécialisée dans la conception et
-		la production sonore pour les secteurs de la communication, de la culture et des médias.
-		<br /> Nous conjuguons
-		<strong>exigence technique, sens du détail</strong> et <strong>approche artistique</strong>
-		pour offrir des productions haut de gamme, <strong>pensées sur mesure</strong>.
-		<br /><br /> Spécialistes de la voix off, du doublage, du sound design, de la création musicale,
-		de la post production et du mixage, nous accompagnons nos clients dans la réalisation de spots
-		radio et pubs TV, films corporate, films d’animation, création d’identités sonores, motion
-		design, podcasts, e-learnings, installations muséographiques et projets immersifs, etc...
+		Fondée en 1999, Audio Pigment est une agence de communication, spécialisée dans la <span
+			>conception et la production sonore</span
+		>
+		pour les secteurs de la communication, de la culture et des médias. <br /><br />
 
-		<br /><br />Issus du milieu de la musique et du marketing, nous allions
-		<strong>sens créatif et réflexion stratégique</strong>
-		, au service des
-		<strong>objectifs de communication, d’impact et de lisibilité.</strong><br />
-		<br /><strong>Chez Audio Pigment</strong>, l’authenticité et l’émotion restent au cœur de chaque
-		création – dans une époque où la technologie évolue,
-		<strong
-			>nos outils se diversifient, mais <strong
-				>notre valeur ajoutée reste profondément humaine.</strong
-			>.
-			<br /> <br />De la voix, à la composition musicale et au design audio stratégique, chaque
-			projet est pensé comme une <strong>œuvre singulière</strong> , où la créativité est au service
-			de
-			<strong>l’impact</strong> , de <strong>l’image</strong>, du <strong>récit</strong> et de
-			<strong>l’identité</strong> .
-		</strong>
+		Nous conjuguons <span>exigence technique, sens du détail</span> et
+		<span>approche artistique</span>
+		pour offrir des productions haut de gamme,<span> pensées sur mesure.</span> <br /><br />
+
+		Spécialistes de la voix off, du doublage, du sound design, de la création musicale, de la post
+		production et du mixage, nous accompagnons nos clients dans la réalisation de spots radio et
+		pubs TV, films corporate, films d’animation, création d’identités sonores, motion design,
+		podcasts, e-learnings, installations muséographiques et projets immersifs, etc...
+	</p>
+
+	<h2>Créer des émotions… Marquer les esprits…</h2>
+
+	<p>
+		Créer des émotions… Marquer les esprits… Chez Audio Pigment, l’<span>authenticité</span> et l’
+		<span>émotion </span> restent au cœur de chaque projet. <br /><br />
+		Issus du milieu de la musique et du marketing, nous allions  <span>sens créatif et réflexion stratégique</span>,
+		au service des <span>objectifs de communication, d’impact et de lisibilité.</span> <br /><br />
+
+		Dans une époque où la technologie évolue, nos outils se diversifient, mais notre valeur ajoutée
+		reste profondément humaine... <br /><br />
+
+		De la voix, à la composition musicale et au design audio, chaque projet est pensé comme
+		une <span>œuvre singulière</span>, où la créativité est au service de l’<span>impact stratégique </span>, de l’<span>image</span>,
+		du <span>récit</span> et de l’<span>identité</span> .
 	</p>
 
 	<div class="wrapper__fondators">
@@ -52,9 +53,7 @@
 			</div>
 		</div>
 	</div>
-
 </section>
-
 
 <style>
 	section {
@@ -89,7 +88,7 @@
 		color: white;
 		font-size: 3rem;
 		margin-top: 50px;
-		font-weight: 400;
+		font-weight: 200;
 		letter-spacing: -2px;
 		z-index: 2;
 	}
@@ -97,7 +96,7 @@
 		font-family: var(--raleway);
 		font-weight: var(--bold);
 		color: white;
-		font-size: 1.5rem;
+		font-size: 2.5rem;
 		margin-top: 50px;
 		letter-spacing: -1px;
 		z-index: 2;
@@ -107,10 +106,13 @@
 		font-size: 1.2rem;
 		line-height: 1.6;
 		margin-top: 20px;
-		margin-bottom: 100px;;
+		margin-bottom: 100px;
 		max-width: 800px;
 		font-weight: var(--medium);
 		z-index: 2;
+	}
+	section p span {
+		font-weight: var(--extra-bold);
 	}
 	.wrapper__fondators {
 		display: flex;

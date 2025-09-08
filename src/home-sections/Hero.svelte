@@ -1,6 +1,5 @@
 <script>
-	// import ThreeComponent from '$lib/component/Three-component.svelte';
-	// import ThreeComponent from '$lib/component/Vumetre-three.svelte';
+
 	import Button from '$lib/component/btn-black.svelte';
 	import ButtonWhite from '$lib/component/btn-white.svelte';
 	import Test from '$lib/component/Test.svelte';
@@ -56,18 +55,6 @@
 		z-index: 1;
 	}
 
-	/* =======================
-	ESSAI II
-	====================== */
-
-	/* .wrapper__component {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: relative;
-		height: 100%;
-		width: 100%;
-	} */
 
 	.wrapper__txt {
 		text-align: center;
