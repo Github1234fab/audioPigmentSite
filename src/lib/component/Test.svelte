@@ -66,8 +66,8 @@
 
 
 
-<!-- 
 
+<!-- 
    <script>
 	const numCircles = 16; // nombre de disques
 	const step = 0.08; // ↑ augmente pour rendre le disque central plus petit (0.06 → 0.08/0.1)
@@ -147,7 +147,13 @@
 				inset -3px -3px 6px #b3b0b0cc;
 		}
 	}
-</style> -->
+</style>  -->
+
+
+
+
+
+
 
 
 <script>
@@ -209,146 +215,282 @@
 	:root { color-scheme: light; }
   
 	/* ==== Palette neumorph claire ==== */
-	.wrapper{
-	  --c-bg: #f5f6f8; --c-hi:#ffffff; --c-md:#e9ebef; --c-dk:#cfd4dc; --c-ink:#a8b0bb;
-	  display:grid; place-items:center; min-height:min(80vh, 100vmin); padding:2rem;
+	.wrapper {
+	  --c-bg: #f5f6f8; 
+	  --c-hi: #ffffff; 
+	  --c-md: #e9ebef; 
+	  --c-dk: #cfd4dc; 
+	  --c-ink: #a8b0bb;
+	  display: grid; 
+	  place-items: center; 
+	  min-height: min(80vh, 100vmin); 
+	  padding: 2rem;
 	  background: transparent;
 	  position: absolute;
 	  margin-top: 250px;
 	}
   
-	.speaker{ width:var(--size); aspect-ratio:1; filter: drop-shadow(0 18px 30px rgba(170,180,195,.45)); }
-  
-	.frame{
-	  position:relative; width:100%; height:100%; border-radius:50%;
-	  background: radial-gradient(80% 80% at 50% 35%, #ffffff 0%, var(--c-bg) 55%, #edf0f5 100%);
-	  box-shadow: inset 20px 20px 40px #d6dbe2, inset -20px -20px 40px #ffffff;
-	  display:grid; place-items:center;
+	.speaker { 
+	  width: var(--size); 
+	  aspect-ratio: 1; 
+	  filter: drop-shadow(0 18px 30px rgba(216, 104, 18, 0.45)); 
 	}
   
-	.rim{
-	  position:absolute; inset:calc(var(--size)*.04); border-radius:50%;
+	.frame {
+	  position: relative; 
+	  width: 100%; 
+	  height: 100%; 
+	  border-radius: 50%;
+	  background: radial-gradient(80% 80% at 50% 35%, #efecec 0%, var(--c-bg) 55%, #edf0f5 100%);
+	  box-shadow: inset 20px 20px 40px #d6dbe2, inset -20px -20px 40px #ffffff;
+	  display: grid; 
+	  place-items: center;
+	}
+  
+	.rim {
+	  position: absolute; 
+	  inset: calc(var(--size)*.04); 
+	  border-radius: 50%;
 	  background: radial-gradient(60% 60% at 50% 40%, #e4e0e0 0%, #ecedee 45%, #e3e4e6 75%, #e8e9eb 100%);
 	  box-shadow: inset 0 6px 16px rgba(235, 234, 234, 0.9), inset 0 -14px 22px rgba(150,160,175,.25);
 	}
   
-	.screw{
+	.screw {
 	  --r: calc(var(--size) * .44);
-	  position:absolute; left:50%; top:50%;
-	  width:calc(var(--size)*.042); height:calc(var(--size)*.042);
+	  position: absolute; 
+	  left: 50%; 
+	  top: 50%;
+	  width: calc(var(--size)*.042); 
+	  height: calc(var(--size)*.042);
 	  transform: rotate(var(--rot)) translateY(calc(-1 * var(--r)));
-	  border-radius:50%;
+	  border-radius: 50%;
 	  background: radial-gradient(circle at 40% 35%, #d6d4d4 0%, #dfe4eb 60%, #c9d0d9 100%);
 	  box-shadow: 0 1px 0 rgba(255,255,255,.9), inset 0 3px 6px rgba(120,130,145,.25);
 	}
-	.screw::after{ content:""; position:absolute; inset:22% 16%; border-radius:2px; background: linear-gradient(#c8ced7,#9aa5b4,#c8ced7); opacity:.7; }
+	.screw::after { 
+	  content: ""; 
+	  position: absolute; 
+	  inset: 22% 16%; 
+	  border-radius: 2px; 
+	  background: linear-gradient(#c8ced7,#eceae9,#c8ced7); 
+	  opacity: .7; 
+	}
   
-	.surround{
-	  position:absolute; inset:calc(var(--size)*.12); border-radius:50%;
-	  background: radial-gradient(70% 70% at 50% 45%, #c0cde7 0%, #eef1f6 55%, #e3e7ee 100%);
-	  box-shadow: inset 0 22px 34px rgba(181, 47, 20, 0.45), inset 0 -22px 28px rgba(255,255,255,.95);
+	.surround {
+	  position: absolute; 
+	  inset: calc(var(--size)*.12); 
+	  border-radius: 50%;
+	  background: radial-gradient(70% 70% at 50% 45%, #dfdad8 0%, #eef1f6 55%, #e3e7ee 100%);
+	  box-shadow: inset 0 22px 34px rgba(210, 208, 208, 0.45), inset 0 -22px 28px rgba(255,255,255,.95);
 	  animation: surround 1s ease-in-out infinite;
 	}
   
-	.cone{
-	  position:absolute; inset:calc(var(--size)*.18); border-radius:50%; overflow:hidden;
-	  background: radial-gradient(65% 65% at 50% 35%, #1940a3 0%, #8f9bb3 55%, #d8dee8 85%, #e2e7ee 100%);
-	  box-shadow: inset 0 12px 18px rgba(170, 69, 69, 0.9), inset 0 -26px 36px rgba(170,180,195,.35);
-	}
+	/* ==== CONE : animation modernisée, technologique, subtile et futuriste ==== */
+/* Remplace UNIQUEMENT la partie animation de .cone ! */
+.cone {
+  position: absolute;
+  inset: calc(var(--size) * 0.18);
+  border-radius: 50%;
+  overflow: hidden;
+  background: radial-gradient(
+    ellipse at center,
+    #7c1b19 0%, #a21f1f 50%, #d44f2a 80%, #b12121 100%
+  );
+  box-shadow:
+    inset 0 12px 25px rgba(215, 212, 212, 0.7),
+    inset 0 -26px 40px rgba(120, 117, 117, 0.2);
+
+  /* Nouvelle animation RANDOM */
+  animation: cone-random-move 2.2s cubic-bezier(.45, .01, .69, 1.11) infinite;
+}
+
+@keyframes cone-random-move {
+  /* Mouvement irrégulier en scale, brightness et teinte */
+  0%   { transform: scale(1) rotate(-1deg); filter: brightness(.96) hue-rotate(-6deg);}
+  7%   { transform: scale(0.98) rotate(2deg); filter: brightness(1.14) hue-rotate(-2deg);}
+  33%  { transform: scale(1.03) rotate(-2.7deg); filter: brightness(.84) hue-rotate(7deg);}
+  49%  { transform: scale(0.92) rotate(1deg); filter: brightness(1.20) hue-rotate(-14deg);}
+  61%  { transform: scale(1.05) rotate(-2deg); filter: brightness(.99) hue-rotate(8deg);}
+  74%  { transform: scale(1.01) rotate(2deg); filter: brightness(1.25) hue-rotate(-9deg);}
+  82%  { transform: scale(.97) rotate(-3deg); filter: brightness(0.78) hue-rotate(2deg);}
+  100% { transform: scale(1) rotate(0deg); filter: brightness(.98) hue-rotate(0deg);}
+}
+
   
-	/* ==== Anneaux — base visuelle très lisible ==== */
-	.ring{
-	  position:absolute; inset:0; border-radius:50%;
+	/* Anneaux subtilement colorés avec lueur et pulsation */
+	.ring {
+	  position: absolute; 
+	  inset: 0;
+	  border-radius: 50%;
 	  transform: scale(var(--s));
-	  /* Bord clair + liseré ombre pour une lecture forte des cercles */
 	  background:
-		radial-gradient(closest-side, rgba(255,255,255,.95), rgba(255,255,255,0) 55%),
-		radial-gradient(farthest-side, rgba(160,170,185,.45), rgba(0,0,0,0) 70%);
-	  /* On ajoute un léger contour interne pour “dessiner” l’anneau */
+		radial-gradient(
+		  closest-side,
+		  rgba(185, 210, 255, 0.75),
+		  rgba(45, 75, 180, 0.15) 55%
+		),
+		radial-gradient(
+		  farthest-side,
+		  rgba(100, 140, 255, 0.3),
+		  transparent 70%
+		);
 	  box-shadow:
-		inset 0 0 0 1px rgba(20, 73, 151, 0.6),
-		inset 0 0 0 2px rgba(255,255,255,.35);
+		0 0 10px 2px rgba(90, 130, 255, 0.9),
+		inset 0 0 6px 1px rgba(145, 195, 255, 0.6);
 	  mix-blend-mode: screen;
+	  animation: ring-pulse 1.75s ease-in-out infinite, ring-hue 40s linear infinite;
 	  will-change: transform, filter;
 	}
   
-	.dustcap{
-	  position:absolute; inset:calc(var(--size)*.34); border-radius:50%;
+	@keyframes cone-light-shift {
+	  0% {
+		filter: hue-rotate(0deg) brightness(1);
+	  }
+	  100% {
+		filter: hue-rotate(30deg) brightness(1.1);
+	  }
+	}
+  
+	/* Pulse animation — plus fluide qu'avant */
+	@keyframes ring-pulse {
+	  0%, 100% {
+		transform: scale(var(--s)) translateZ(0);
+		filter: drop-shadow(0 0 8px rgba(177, 75, 11, 0.6));
+	  }
+	  50% {
+		transform: scale(calc(var(--s2) * 1.02)) translateZ(0);
+		filter: drop-shadow(0 0 12px rgba(213, 87, 14, 0.9));
+	  }
+	}
+  
+	/* Lente rotation de la teinte pour effet dynamique */
+	@keyframes ring-hue {
+	  0% {
+		filter: hue-rotate(0deg);
+	  }
+	  100% {
+		filter: hue-rotate(360deg);
+	  }
+	}
+  
+	/* Spectre d'ondes colorées : subtil, flou, mouvant */
+	.spectrum {
+	  position: absolute;
+	  inset: 0;
+	  border-radius: 50%;
+	  pointer-events: none;
+	  background:
+		radial-gradient(
+		  circle at center,
+		  rgba(100, 140, 255, 0.28),
+		  transparent 75%
+		),
+		repeating-radial-gradient(
+		  circle at center,
+		  hsla(210, 90%, 65%, 0.1) 0%,
+		  hsla(230, 85%, 55%, 0.15) 6%,
+		  hsla(255, 90%, 60%, 0.12) 12%
+		);
+	  mix-blend-mode: screen;
+	  filter: saturate(1.4) brightness(1.1) blur(3px);
+	  animation: spectrum-move 45s linear infinite, spectral-hue 90s linear infinite;
+	}
+  
+	/* Déplacement lent, oscillant pour le spectre */
+	@keyframes spectrum-move {
+	  0% {
+		background-position: 50% 50%;
+		opacity: 0.15;
+	  }
+	  50% {
+		background-position: 52% 48%;
+		opacity: 0.22;
+	  }
+	  100% {
+		background-position: 50% 50%;
+		opacity: 0.15;
+	  }
+	}
+  
+	/* Petit changement de teinte doux en continu */
+	@keyframes spectral-hue {
+	  0% {
+		filter: saturate(1.4) brightness(1.1) hue-rotate(0deg);
+	  }
+	  100% {
+		filter: saturate(1.4) brightness(1.1) hue-rotate(360deg);
+	  }
+	}
+  
+	/* ==== Autres styles inchangés ==== */
+	.dustcap {
+	  position: absolute; 
+	  inset: calc(var(--size)*.34); 
+	  border-radius: 50%;
 	  background: radial-gradient(60% 60% at 50% 35%, #950b0b 0%, #f2f5f9 60%, #e6ebf2 100%);
 	  box-shadow: inset 0 12px 20px rgba(255,255,255,.95), inset 0 -18px 26px rgba(165,175,190,.35);
 	  will-change: transform;
 	}
   
-	/* ==== MODE VIBRATE (mouvement clair) ==== */
-	.mode-vibrate .ring{
+	.mode-vibrate .ring {
 	  animation: ring-pulse 1s cubic-bezier(.3,.0,.2,1) infinite;
 	  animation-delay: 1s;
-	  /* contraste global boosté */
 	  filter: brightness(var(--contrast)) contrast(var(--contrast));
 	}
-	.mode-vibrate .dustcap{
+	.mode-vibrate .dustcap {
 	  animation: cap 1s ease-in-out infinite;
 	}
   
-	@keyframes ring-pulse{
-	  0%,100% { transform: scale(var(--s)); }
-	  50%     { transform: scale(var(--s2)); }
-	}
-	@keyframes cap{
+	@keyframes cap {
 	  0%,100% { transform: scale(1); }
 	  50%     { transform: scale(1.06); }
 	}
-	@keyframes surround{
+  
+	@keyframes surround {
 	  0%,100% { transform: scale(1); }
 	  50%     { transform: scale(0.992); }
 	}
   
 	/* ==== MODE SPECTRAL (ondes colorées lumineuses) ==== */
-	.spectrum{
-	  position:absolute; inset:0; border-radius:50%; pointer-events:none;
-	  /* Anneaux colorés répétés + halo central doux */
-	  background:
-		radial-gradient(circle at 50% 50%,
-		  rgba(145, 164, 61, 0.75) 0%,
-		  rgba(35, 56, 140, 0.883) 8%,
-		  rgba(200, 25, 25, 0.851) 22%) ,
-		repeating-radial-gradient(circle at 50% 50%,
-		  hsla(210,90%,60%,.0) 0%,
-		  hsla(210, 90%, 60%, 0.532) ,
-		  hsla(260, 85%, 62%, 0.592),
-		  hsla(300, 85%, 62%, 0.699) calc(14% * var(--spread)),
-		  hsla(340, 85%, 60%, 0.735) calc(19% * var(--spread)),
-		  hsla(20, 90%, 60%, 0.802)  calc(24% * var(--spread)),
-		  hsla(60, 90%, 55%, 0.629)  calc(29% * var(--spread))
-		);
-	  mix-blend-mode: screen;
-	  filter: saturate(1.35) brightness(1.15);
+	.mode-spectral .spectrum {
 	  animation: spectral-zoom var(--ss) linear infinite, spectral-hue calc(var(--ss) * 2) linear infinite;
 	}
   
-	/* Zoom radial pour créer une propagation visible */
-	@keyframes spectral-zoom{
+	@keyframes spectral-zoom {
 	  0%   { transform: scale(.65); opacity:.10; }
 	  30%  { transform: scale(.86); opacity:.28; }
 	  60%  { transform: scale(1.08); opacity:.16; }
 	  100% { transform: scale(1.22); opacity:.05; }
 	}
-	/* Variation douce des teintes pour donner de la vie */
-	@keyframes spectral-hue{
-	  0% { filter: saturate(1.35) brightness(1.15) hue-rotate(0deg); }
-	  100% { filter: saturate(1.35) brightness(1.15) hue-rotate(360deg); }
-	}
   
-	/* Interaction : accélérer légèrement au survol */
-	/* .speaker:hover .mode-vibrate .ring,
+	/* Interaction désactivées par défaut pour ne pas casser l'effet */
+	/*
+	.speaker:hover .mode-vibrate .ring,
 	.speaker:active .mode-vibrate .ring { animation-duration: calc(var(--speed) * .8); }
 	.speaker:hover .mode-vibrate .dustcap,
 	.speaker:active .mode-vibrate .dustcap { animation-duration: calc(var(--speed) * .8); }
 	.speaker:hover.mode-spectral .spectrum,
-	.speaker:active.mode-spectral .spectrum { animation-duration: calc(var(--ss) * .8); } */
+	.speaker:active.mode-spectral .spectrum { animation-duration: calc(var(--ss) * .8); }
+	*/
   
-	@media (prefers-reduced-motion: reduce){
-	  .ring,.dustcap,.surround,.spectrum{ animation:none; }
+	@media (prefers-reduced-motion: reduce) {
+	  .ring, .dustcap, .surround, .spectrum {
+		animation: none;
+	  }
 	}
   </style>
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+

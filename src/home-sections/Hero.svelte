@@ -11,11 +11,12 @@
 			videoEl.playbackRate = 0.7; // ralentit la vidéo à 0.5x
 		}
 	});
+
 </script>
 
 <section>
 
-	<Test />
+	<!-- <Test /> -->
 
 	<div class="wrapper__txt">
 		<h1>Agence de communication sonore</h1>

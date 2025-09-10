@@ -212,9 +212,10 @@ const options = {
   {/if}
    -->
 
-<script>
+<!-- <script>
 	import { onMount } from 'svelte';
 	import VideoCard from './VideoCard.svelte';
+  import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
 	let Splide = null;
 	let SplideSlide = null;
@@ -235,8 +236,10 @@ const options = {
 	];
 
 	const options = {
-		type: 'loop',
+		type: 'slide',
+    rewind: true,
 		perPage: 4,
+    direction: 'ltr', 
 		gap: '1rem',
 		autoplay: true,
 		pauseOnHover: true,
@@ -266,7 +269,7 @@ const options = {
 {#if splideReady && Splide && SplideSlide}
 	<div class="carousel-container">
 		<svelte:component this={Splide} bind:this={splideRef} {options} aria-label="Vidéos">
-			{#each videos as video}
+			{#each videos as video(video.url)}
 				<svelte:component this={SplideSlide}>
 					<div class="slide-wrapper">
 						<VideoCard url={video.url} title={video.title} />
@@ -309,4 +312,160 @@ const options = {
 		overflow: hidden;
     height: 450px;
 	}
+  .slide-wrapper { background:#000; }
+</style> -->
+
+
+
+
+<script>
+  import { onMount, onDestroy } from 'svelte';
+  import VideoCard from './VideoCard.svelte';
+  import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+
+  let Splide = null;
+  let SplideSlide = null;
+  let splideReady = false;
+  let splideRef;
+
+  const videos = [
+    { url: 'https://www.youtube.com/watch?v=Fu-aEj_Q8ig', title: 'Vidéo 1' },
+    { url: 'https://www.youtube.com/watch?v=FJhtKdsnsN0', title: 'Vidéo 2' },
+    { url: 'https://www.youtube.com/watch?v=uj19mlAZlUo', title: 'Vidéo 3' },
+    { url: 'https://www.youtube.com/watch?v=NtHwCg4i73c', title: 'Vidéo 4' },
+    { url: 'https://www.youtube.com/watch?v=Glq7QP-US-Y', title: 'Vidéo 5' },
+    { url: 'https://www.youtube.com/watch?v=l8vJAkablNk', title: 'Vidéo 6' },
+    { url: 'https://www.youtube.com/watch?v=LfNereR9MHI', title: 'Vidéo 7' },
+    { url: 'https://www.youtube.com/watch?v=4H_sEETHmvs', title: 'Vidéo 8' },
+    { url: 'https://www.youtube.com/watch?v=gmcgXXlpras', title: 'Vidéo 9' },
+    { url: 'https://www.youtube.com/watch?v=9b-nxj_la6o', title: 'Vidéo 10' },
+  ];
+
+  // Défilement continu + largeur contrôlée par CSS (autoWidth)
+  const options = {
+    type: 'loop',
+    drag: 'free',
+    direction: 'ltr',
+    arrows: false,
+    pagination: false,
+    gap: '1rem',
+    autoplay: false,   // AutoScroll gère le mouvement
+    speed: 800,
+    easing: 'linear',
+
+    autoWidth: true,   // ← clé : Splide calcule la track, toi tu fixes la largeur des slides en CSS
+
+    autoScroll: {
+      speed: 3.0,      // ajuste la vitesse à ton goût
+      pauseOnHover: false,
+      pauseOnFocus: false,
+    },
+  };
+
+  const cleanups = [];
+  const addCleanup = (fn) => cleanups.push(fn);
+
+  function onSplideMounted() {
+    const s = splideRef?.splide;
+    if (s && !s.Components.AutoScroll) {
+      // @ts-ignore
+      s.mount({ AutoScroll });
+    }
+    const root = s?.root;
+    if (root) {
+      const io = new IntersectionObserver(([entry]) => {
+        if (!s?.Components?.AutoScroll) return;
+        entry.isIntersecting ? s.Components.AutoScroll.play() : s.Components.AutoScroll.pause();
+      }, { threshold: 0.1 });
+      io.observe(root);
+      addCleanup(() => io.disconnect());
+    }
+  }
+
+  onMount(async () => {
+    const mod = await import('@splidejs/svelte-splide');
+    Splide = mod.Splide;
+    SplideSlide = mod.SplideSlide;
+    splideReady = true;
+
+    const onLoad = () => splideRef?.splide?.refresh();
+    window.addEventListener('load', onLoad);
+    addCleanup(() => window.removeEventListener('load', onLoad));
+  });
+
+  onDestroy(() => { while (cleanups.length) cleanups.pop()(); });
+</script>
+
+{#if splideReady && Splide && SplideSlide}
+  <div class="carousel-container">
+    <svelte:component
+      this={Splide}
+      bind:this={splideRef}
+      {options}
+      aria-label="Vidéos"
+      extensions={{ AutoScroll }}
+      on:mounted={onSplideMounted}
+    >
+      {#each videos as video (video.url)}
+        <svelte:component this={SplideSlide}>
+          <div class="slide-wrapper">
+            <VideoCard url={video.url} title={video.title} />
+          </div>
+        </svelte:component>
+      {/each}
+    </svelte:component>
+  </div>
+{:else}
+  <div>Chargement du carousel de vidéos…</div>
+{/if}
+
+<style>
+  .carousel-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  :global(.splide) { width: 100%; }
+  :global(.splide__track) { width: 100%; overflow: hidden; }
+
+  /* IMPORTANT : laisse Splide gérer la track; on fixe la largeur des slides ici (autoWidth) */
+  :global(.splide__slide) {
+    /* Desktop par défaut */
+    width: clamp(320px, 26vw, 520px);
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Tablet */
+  @media (max-width: 1024px) {
+    :global(.splide__slide) {
+      width: clamp(280px, 34vw, 460px);
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    :global(.splide__slide) {
+      width: clamp(220px, 72vw, 380px);
+    }
+  }
+
+  .slide-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* change si tu veux 4/5 en mobile, voir ci-dessous */
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+    will-change: transform;
+  }
+
+  /* Option : ratio différent en mobile (ex. 4/5 pour plus de hauteur)
+  @media (max-width: 768px) {
+    .slide-wrapper { aspect-ratio: 4 / 5; }
+  }
+  */
 </style>

@@ -61,7 +61,7 @@
 
 
 
-<script>
+ <script>
 	import { onMount } from 'svelte';
   
 	export let url;
@@ -102,10 +102,13 @@
   <div class="video-wrapper" bind:this={container}>
 	{#if visible}
 	  <iframe
+	  loading="lazy"
+
+	  style="width:100%;height:100%;display:block"
 		src={getEmbedUrl(url)}
 		title={title}
 		frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+		  allow="autoplay; encrypted-media; picture-in-picture"
 		allowfullscreen
 	  ></iframe>
 	{:else}
@@ -114,20 +117,25 @@
   </div>
   
   <style>
+
 	.video-wrapper {
+	  position: relative;
 	  width: 100%;
-	  height: 400px;
-	  padding: 0px;
+	  height: 100%;
 	}
   
-	iframe,
-	.thumbnail {
+	.video-wrapper > iframe,
+	.video-wrapper > .thumbnail {
+	  position: absolute;
+	  inset: 0;          
 	  width: 100%;
-	  height: 400px;
-	  object-fit: cover;
-	  border: none;
+	  height: 100%;
+	  display: block;
+	  border: 0;
 	  border-radius: 8px;
-	  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.436);
+	  object-fit: cover;  
+	  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.436);
+	  background: #000;   
 	}
   </style>
   

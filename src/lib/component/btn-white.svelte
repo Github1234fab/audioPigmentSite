@@ -1,6 +1,8 @@
 <script>
 	export let txt;
 	export let href = ''; // destination du lien
+
+
 </script>
 
 <!-- <button class="btn"><span>{txt} </span></button> -->

@@ -173,6 +173,13 @@
 		videoEl.play().catch(() => {});
 	  }
 	});
+
+
+
+
+
+
+
   </script>
   
   <div class="card">

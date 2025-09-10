@@ -36,6 +36,53 @@
 			image: 'https://images.pexels.com/photos/7899457/pexels-photo-7899457.png'
 		}
 	];
+
+	import { onMount, onDestroy } from "svelte";
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+//   import { afterNavigate } from "$app/navigation"; // si SvelteKit
+
+  gsap.registerPlugin(ScrollTrigger);
+  let triggers = [];
+
+  onMount(() => {
+    // Un tween + trigger par .card
+    gsap.utils.toArray(".cardo").forEach((el, i) => {
+      const tween = gsap.from(el, {
+        x: 50,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        // petit décalage seulement visuel, pas un stagger global
+        delay: i * 0.05,
+        scrollTrigger: {
+          trigger: el,
+          start: "top 80%",   // l’élément entre bien dans le viewport
+          end: "top 30%",     // nécessaire pour bien “sentir” le scrub
+          scrub: 1,           // lisser avec le scroll
+          // markers: true,   // décommente pour débug
+        }
+      });
+      triggers.push(tween.scrollTrigger);
+    });
+
+    // Recalcule après le chargement images / fonts
+    const onLoad = () => ScrollTrigger.refresh();
+    window.addEventListener("load", onLoad);
+
+    // Si SvelteKit : rafraîchir après navigation
+    // afterNavigate(() => ScrollTrigger.refresh());
+
+    return () => {
+      window.removeEventListener("load", onLoad);
+    };
+  });
+
+  onDestroy(() => {
+    triggers.forEach(t => t?.kill());
+    triggers = [];
+  });
+
 </script>
 
 <section>
@@ -44,7 +91,7 @@
 
 	<div class="wrapper__cards">
 		{#each services as service}
-			<div class="card">
+			<div class="cardo">
 				<!-- href={service.link} -->
 				<img src={service.image} alt="" />
 				<div class="wrapper__service-txt">
@@ -81,7 +128,7 @@
 		margin-top: 0px;
 		margin-bottom: 10rem;
 	}
-	.card {
+	.cardo {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -91,7 +138,7 @@
 		box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.462);
 		width: 80vw;
 	}
-	.card img {
+	.cardo img {
 		width: 100%;
 		height: 300px;
 		object-fit: cover;

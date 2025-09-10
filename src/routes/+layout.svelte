@@ -52,27 +52,33 @@ afterNavigate(() => {
 <Footer/> -->
 
 <script>
-  import Navbar from '$lib/Navbar.svelte';
-  import './style.css';
-  import '@splidejs/svelte-splide/css';
-  import '$lib/component/slider-global.css';
-  import '$lib/i18n';
-  import { locale } from 'svelte-i18n';
-  import Footer from '../home-sections/Footer.svelte';
+	import Navbar from '$lib/Navbar.svelte';
+	import './style.css';
+	import '@splidejs/svelte-splide/css';
+	import '$lib/component/slider-global.css';
+	import '$lib/i18n';
+	import { locale } from 'svelte-i18n';
+	import Footer from '../home-sections/Footer.svelte';
 
-  import { afterNavigate } from '$app/navigation';
-  import { browser } from '$app/environment'; 
+	import { afterNavigate } from '$app/navigation';
+	import { browser } from '$app/environment';
 
-  if (browser) {
-    afterNavigate(() => {
-      if (window.location.hash) {
-        const el = document.getElementById(window.location.hash.substring(1));
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  }
+
+
+
+
+
+
+	if (browser) {
+		afterNavigate(() => {
+			if (window.location.hash) {
+				const el = document.getElementById(window.location.hash.substring(1));
+				if (el) el.scrollIntoView({ behavior: 'smooth' });
+			}
+		});
+	}
 </script>
 
 <Navbar />
 <slot />
-<Footer/>
+<Footer />

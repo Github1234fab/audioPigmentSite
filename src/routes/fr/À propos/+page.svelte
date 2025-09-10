@@ -2,6 +2,12 @@
 	import Lolo from '../../../assets/Portrait-lolo.jpg';
 	import Rom from '../../../assets/Portrait-rom.jpg';
 	import Logo from '../../../assets/audio-pigment-logo.jpg';
+
+	import { onMount } from 'svelte';
+
+
+
+
 </script>
 
 <section>
@@ -29,15 +35,17 @@
 	<p>
 		Créer des émotions… Marquer les esprits… Chez Audio Pigment, l’<span>authenticité</span> et l’
 		<span>émotion </span> restent au cœur de chaque projet. <br /><br />
-		Issus du milieu de la musique et du marketing, nous allions  <span>sens créatif et réflexion stratégique</span>,
-		au service des <span>objectifs de communication, d’impact et de lisibilité.</span> <br /><br />
+		Issus du milieu de la musique et du marketing, nous allions
+		<span>sens créatif et réflexion stratégique</span>, au service des
+		<span>objectifs de communication, d’impact et de lisibilité.</span> <br /><br />
 
 		Dans une époque où la technologie évolue, nos outils se diversifient, mais notre valeur ajoutée
 		reste profondément humaine... <br /><br />
 
-		De la voix, à la composition musicale et au design audio, chaque projet est pensé comme
-		une <span>œuvre singulière</span>, où la créativité est au service de l’<span>impact stratégique </span>, de l’<span>image</span>,
-		du <span>récit</span> et de l’<span>identité</span> .
+		De la voix, à la composition musicale et au design audio, chaque projet est pensé comme une
+		<span>œuvre singulière</span>, où la créativité est au service de l’<span
+			>impact stratégique
+		</span>, de l’<span>image</span>, du <span>récit</span> et de l’<span>identité</span> .
 	</p>
 
 	<div class="wrapper__fondators">

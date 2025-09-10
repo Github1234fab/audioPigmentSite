@@ -2,6 +2,10 @@
 	import CardDotWhite from '$lib/component/cards-dot-white.svelte';
 	import TitleDot from '$lib/component/Title-dot.svelte';
 	import Btn from '$lib/component/btn-black-shadow.svelte';
+
+
+
+
 </script>
 
 <section>
