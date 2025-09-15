@@ -1,22 +1,14 @@
 <script>
-
 	import Button from '$lib/component/btn-black.svelte';
 	import ButtonWhite from '$lib/component/btn-white.svelte';
 	import Test from '$lib/component/Test.svelte';
-	let videoEl;
-	import { onMount } from 'svelte';
-
-	onMount(() => {
-		if (videoEl) {
-			videoEl.playbackRate = 0.7; // ralentit la vidéo à 0.5x
-		}
-	});
-
 </script>
 
 <section>
+	<video autoplay loop muted playsinline poster="/images/preview.jpg" class="hero-video">
 
-	<!-- <Test /> -->
+		<source src="/APBG.mov" type="video/mp4" />
+	</video>
 
 	<div class="wrapper__txt">
 		<h1>Agence de communication sonore</h1>
@@ -39,23 +31,22 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		/* flex-direction: column; */
 		z-index: 0;
-		height: 45rem;
+		height: 40rem;
 		position: relative;
-		background: linear-gradient(white, #ebe9e9, white);
+		background: transparent;
+		position: relative;
 	}
-	section::after {
-		content: '';
+
+	.hero-video {
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		/* background: linear-gradient(rgb(255, 255, 255) 0%, rgba(83, 4, 4, 0.552) 40%, rgba(83, 4, 4, 0.521) 70%,  rgba(255, 255, 255, 0.579) 100% ); */
-		z-index: 1;
+		object-fit: cover;
+		z-index: -1;
 	}
-
 
 	.wrapper__txt {
 		text-align: center;
@@ -68,10 +59,12 @@
 		align-items: center;
 		justify-content: center;
 		gap: 0px;
-		background: linear-gradient(rgba(255, 255, 255, 0.006) 0%, #c0c0c057 40%, rgba(255, 255, 255, 0));
-		margin-top: -200px;
-	
-
+		background: linear-gradient(
+			rgba(255, 255, 255, 0.006) 0%,
+			#c0c0c057 40%,
+			rgba(255, 255, 255, 0)
+		);
+		margin-top: -100px;
 	}
 	.wrapper__buttons {
 		display: flex;
