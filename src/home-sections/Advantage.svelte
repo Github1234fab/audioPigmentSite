@@ -94,11 +94,10 @@
 	}
 	section h2 {
 		font-family: var(--bebas);
-		font-size: 3.5rem;
-		margin-bottom: 0.5rem;
+		font-size: 3.7rem;
 		color: white;
 		margin-top: 50px;
-		font-weight: 400;
+		font-weight: var(--bold);
 		letter-spacing: -1.5px;
 		z-index: 3; 
 
@@ -110,7 +109,6 @@
 		color: white;
 		font-weight: var(--regular);
 		margin-top: 0px;
-		padding: 20px 40px;
 		z-index: 3; 
 	}
 	.features-grid {
@@ -166,7 +164,7 @@
 	}
 
 	.title {
-		font-family: var(--bebas);
+		font-family: var(--raleway);
 		color: white;
 		display: flex;
 		align-items: center;

@@ -44,7 +44,7 @@
 
 	.overlay {
 		width: 100%;
-		background: linear-gradient(to top, rgba(0, 0, 0, 0.858) 70%, transparent 100%);
+		background: linear-gradient(to top, rgba(0, 0, 0, 0.647) 80%, transparent 100%);
 		color: white;
 		padding: 10px;
 		box-sizing: border-box;
@@ -52,11 +52,11 @@
 
 	h3 {
 		margin: 0 0 10px;
-		font-size: 1.2rem;
+		font-size: 1.1rem;
 		font-weight: 600;
-		font-family: var(--raleway);
+		font-family: var(--bebas);
 		font-weight: var(--extra-bold);
-		text-transform: lowercase;
+		text-transform: lowercase
 	}
 
 	

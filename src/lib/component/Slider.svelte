@@ -319,14 +319,7 @@ const options = {
 
 
 <script>
-  import { onMount, onDestroy } from 'svelte';
   import VideoCard from './VideoCard.svelte';
-  import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
-
-  let Splide = null;
-  let SplideSlide = null;
-  let splideReady = false;
-  let splideRef;
 
   const videos = [
     { url: 'https://www.youtube.com/watch?v=Fu-aEj_Q8ig', title: 'Vidéo 1' },
@@ -341,131 +334,218 @@ const options = {
     { url: 'https://www.youtube.com/watch?v=9b-nxj_la6o', title: 'Vidéo 10' },
   ];
 
-  // Défilement continu + largeur contrôlée par CSS (autoWidth)
-  const options = {
-    type: 'loop',
-    drag: 'free',
-    direction: 'ltr',
-    arrows: false,
-    pagination: false,
-    gap: '1rem',
-    autoplay: false,   // AutoScroll gère le mouvement
-    speed: 800,
-    easing: 'linear',
-
-    autoWidth: true,   // ← clé : Splide calcule la track, toi tu fixes la largeur des slides en CSS
-
-    autoScroll: {
-      speed: 3.0,      // ajuste la vitesse à ton goût
-      pauseOnHover: false,
-      pauseOnFocus: false,
-    },
-  };
-
-  const cleanups = [];
-  const addCleanup = (fn) => cleanups.push(fn);
-
-  function onSplideMounted() {
-    const s = splideRef?.splide;
-    if (s && !s.Components.AutoScroll) {
-      // @ts-ignore
-      s.mount({ AutoScroll });
-    }
-    const root = s?.root;
-    if (root) {
-      const io = new IntersectionObserver(([entry]) => {
-        if (!s?.Components?.AutoScroll) return;
-        entry.isIntersecting ? s.Components.AutoScroll.play() : s.Components.AutoScroll.pause();
-      }, { threshold: 0.1 });
-      io.observe(root);
-      addCleanup(() => io.disconnect());
-    }
-  }
-
-  onMount(async () => {
-    const mod = await import('@splidejs/svelte-splide');
-    Splide = mod.Splide;
-    SplideSlide = mod.SplideSlide;
-    splideReady = true;
-
-    const onLoad = () => splideRef?.splide?.refresh();
-    window.addEventListener('load', onLoad);
-    addCleanup(() => window.removeEventListener('load', onLoad));
-  });
-
-  onDestroy(() => { while (cleanups.length) cleanups.pop()(); });
+  // On duplique pour un loop parfait (animation -50%)
+  const marquee = [...videos, ...videos,];
 </script>
 
-{#if splideReady && Splide && SplideSlide}
-  <div class="carousel-container">
-    <svelte:component
-      this={Splide}
-      bind:this={splideRef}
-      {options}
-      aria-label="Vidéos"
-      extensions={{ AutoScroll }}
-      on:mounted={onSplideMounted}
-    >
-      {#each videos as video (video.url)}
-        <svelte:component this={SplideSlide}>
-          <div class="slide-wrapper">
-            <VideoCard url={video.url} title={video.title} />
-          </div>
-        </svelte:component>
-      {/each}
-    </svelte:component>
+<div class="marquee">
+  <div class="marquee__track">
+    {#each marquee as video, i (video.url + '-' + i)}
+      <div class="marquee__item">
+        <div class="video-box">
+          <VideoCard title={video.title} url={video.url} />
+        </div>
+      </div>
+    {/each}
   </div>
-{:else}
-  <div>Chargement du carousel de vidéos…</div>
-{/if}
+</div>
 
 <style>
-  .carousel-container {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
+.marquee {
+  overflow: hidden;
+  width: 100%;
+}
 
-  :global(.splide) { width: 100%; }
-  :global(.splide__track) { width: 100%; overflow: hidden; }
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: scroll 35s linear infinite; /* ← vitesse (allonge pour ralentir) */
+  will-change: transform;
+}
 
-  /* IMPORTANT : laisse Splide gérer la track; on fixe la largeur des slides ici (autoWidth) */
-  :global(.splide__slide) {
-    /* Desktop par défaut */
-    width: clamp(320px, 26vw, 520px);
-    padding: 0;
-    margin: 0;
-  }
+/* largeur “slot” par carte + espacement contenu */
+.marquee__item {
+  flex: 0 0 auto;
+  width: 360px;          /* ajuste à la largeur visuelle de VideoCard */
+  height: 300px;
+  padding: 8px;          /* espace entre cartes */
+  box-sizing: border-box;
+}
 
-  /* Tablet */
-  @media (max-width: 1024px) {
-    :global(.splide__slide) {
-      width: clamp(280px, 34vw, 460px);
-    }
-  }
+.video-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; height: 100%;
+}
 
-  /* Mobile */
-  @media (max-width: 768px) {
-    :global(.splide__slide) {
-      width: clamp(220px, 72vw, 380px);
-    }
-  }
+/* si VideoCard rend un iframe, fixe une hauteur cohérente */
+.video-box :global(iframe),
+.video-box :global(video),
+.video-box :global(img) {
+  display: block;
+  width: 100%;
+  height: 200px;         /* ajuste selon ton design */
+  object-fit: cover;     /* ou contain selon rendu souhaité */
+  border: 0;
+  border-radius: 8px;
+}
 
-  .slide-wrapper {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9; /* change si tu veux 4/5 en mobile, voir ci-dessous */
-    height: auto;
-    border-radius: 8px;
-    overflow: hidden;
-    background: #000;
-    will-change: transform;
-  }
+/* défilement continu : une demi-longueur car liste dupliquée */
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-3600px); } /* 10*360, adapte si besoin */
+}
 
-  /* Option : ratio différent en mobile (ex. 4/5 pour plus de hauteur)
-  @media (max-width: 768px) {
-    .slide-wrapper { aspect-ratio: 4 / 5; }
-  }
-  */
+/* Accessibilité : désactive l’anim si l’utilisateur préfère moins de mouvement */
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track { animation: none; }
+}
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

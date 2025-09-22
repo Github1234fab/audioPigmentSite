@@ -8,19 +8,19 @@
 <style>
 	.card {
 		position: relative;
-		height: 70px;
+		height: 90px;
 		width: auto;
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
 		border-radius: 5px;
-		/* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); */
 		transition: transform 0.3s ease;
-		background-color: vwhite;
+		background-color: white;
 		padding: 0px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 	}
 	.img {
 		width: 100%;

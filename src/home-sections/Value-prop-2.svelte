@@ -106,7 +106,8 @@
 		margin-bottom: 3rem;
 	}
 	.wrapper__section-txt p span {
-		font-weight: var(--bold);
+		font-weight: var(--extra-bold);
+		font-family: var(--bebas);
 		
 	}
 

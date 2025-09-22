@@ -71,14 +71,15 @@
 		color: var(--black);
 		min-height: 100vh;
 		margin-bottom: 2rem;
+		
 	}
 	section h2 {
 		font-family: var(--bebas);
 		font-size: 4rem;
 		margin-bottom: 3rem;
 		margin-top: 50px;
-		font-weight: 400;
-		letter-spacing: -1.5px;
+		font-weight: var(--bold);
+		letter-spacing: -1.7px;
 	
 	}
 	.wrapper__services-cards {
@@ -149,12 +150,18 @@
 		margin-bottom: 1rem;
 		color: white;
 		font-size: 2rem;
+		font-family: var(--bebas);
 	}
 	.wrapper__service-txt p {
 		margin-bottom: 1rem;
 		color: white;
 		font-size: 1rem;
 		line-height: 1.6;
+		background-color: rgba(255, 255, 255, 0.182);
+		backdrop-filter: blur(25px);
+		-webkit-backdrop-filter: blur(25px);
+		padding: 1.5rem;
+		border-radius: 5px;
 	}
 	a {
 		text-decoration: none;

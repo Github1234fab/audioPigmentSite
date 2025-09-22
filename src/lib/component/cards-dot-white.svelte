@@ -248,6 +248,7 @@
 	}
   
 	.title {
+		font-family: var(--bebas);
 	  font-size: 2.8rem;
 	  font-weight: var(--black);
 	  margin-bottom: 10px;
@@ -255,11 +256,12 @@
 	  width: 100%;
 	  text-align: center;
 	  border: 2.5px solid rgba(255, 255, 255, 0.425);
-	  padding: 40px 20px;
+	  padding: 30px 20px;
 	  border-radius: 5px;
 	}
   
 	.subtitle {
+		font-family: var(--raleway);
 	  font-size: 1.3rem;
 	  font-weight: var(--extra-bold);
 	  white-space: pre-line;

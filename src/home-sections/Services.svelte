@@ -49,12 +49,12 @@
     // Un tween + trigger par .card
     gsap.utils.toArray(".cardo").forEach((el, i) => {
       const tween = gsap.from(el, {
-        x: 50,
+        x: 80,
         opacity: 0,
-        duration: 1,
+        duration: 2,
         ease: "power3.out",
         // petit décalage seulement visuel, pas un stagger global
-        delay: i * 0.05,
+        delay: i * 0.10,
         scrollTrigger: {
           trigger: el,
           start: "top 80%",   // l’élément entre bien dans le viewport
@@ -160,6 +160,7 @@
 		color: var(--ardoise);
 		align-self: flex-start;
 		margin-left: 120px;
+		font-weight: var(--bold);
 	}
 
 	.wrapper__service-txt {
