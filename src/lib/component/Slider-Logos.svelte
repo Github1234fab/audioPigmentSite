@@ -1,4 +1,3 @@
-
 <script>
 	import CardRealisation from '$lib/component/Card-logo.svelte';
 	import BP from '../../assets/logos/Banque_de_France_1.png';
@@ -35,7 +34,7 @@
 		{ image: BlablaCar, href: 'https://www.blablacar.fr/' },
 		{ image: BMW, href: 'https://www.bmw.fr/' },
 		{ image: burgerKing, href: 'https://www.burgerking.fr/' },
-		{ image: CiteEspace, href: 'https://www.cite-espace.com/' },
+		{ image: CiteEspace, href: 'https://cite-espace.com/' },
 		{ image: Costa, href: 'https://www.costa.co.uk/' },
 		{ image: Decathlon, href: 'https://www.decathlon.fr/' },
 		{ image: Delacre, href: 'https://www.delacre.com/fr-fr' },
@@ -56,63 +55,111 @@
 		{ image: TotalEnergie, href: 'https://totalenergies.com/fr' },
 		{ image: Vulcania, href: 'https://www.vulcania.fr/' }
 	];
-	const marquee = [...cards, ...cards]; // duplication pour la boucle parfaite
-  </script>
-  
-  <div class="marquee">
-	<div class="marquee__track">
-	  {#each marquee as card, i}
-		<div class="marquee__item">
-		  <div class="logo-box">
-			<CardRealisation image={card.image} href={card.href} />
-		  </div>
+</script>
+
+<div class="marquee-wrapper">
+	<div class="marquee">
+		<div class="marquee__group">
+			{#each cards as card}
+				<div class="marquee__item">
+					<div class="logo-box">
+						<CardRealisation image={card.image} href={card.href} />
+					</div>
+				</div>
+			{/each}
 		</div>
-	  {/each}
+		<!-- Duplication exacte pour la boucle infinie -->
+		<div class="marquee__group" aria-hidden="true">
+			{#each cards as card}
+				<div class="marquee__item">
+					<div class="logo-box">
+						<CardRealisation image={card.image} href={card.href} />
+					</div>
+				</div>
+			{/each}
+		</div>
 	</div>
-  </div>
-  
-  <style>
-  .marquee {
+</div>
+
+<style>
+.marquee-wrapper {
 	overflow: hidden;
 	width: 100%;
-	padding: 20px;
-  }
-  .marquee__track {
+	padding: 20px 0;
+}
+
+.marquee {
 	display: flex;
-	width: max-content;           /* s’adapte à la largeur des items */
-	animation: scroll 40s linear infinite; /* vitesse continue */
-	will-change: transform;
-  }
-  .marquee__item {
+	overflow: hidden;
+	user-select: none;
+	gap: 0;
+}
+
+.marquee__group {
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	gap: 0;
+	min-width: 100%;
+	animation: scroll-x 40s linear infinite;
+}
+
+.marquee__item {
 	flex: 0 0 auto;
-	width: 190px;                 /* ≈ ton fixedWidth desktop */
-	padding: 4px;                 /* moins d’espace */
+	width: 150px;
+	padding: 4px;
 	box-sizing: border-box;
-  }
-  .logo-box {
-	display: flex; align-items: center; justify-content: center;
-	width: 100%; height: 100%;
-  }
-  .logo-box :global(img),
-  .logo-box :global(svg),
-  .logo-box :global(picture) {
-	max-height: 88px; width: auto; max-width: 100%; object-fit: contain; display: block;
-  }
-  
-  /* Responsive tailles logos + “slot” */
-  @media (max-width:1024px){
-	.marquee__item{ width:160px }
-	.logo-box :global(img), .logo-box :global(svg), .logo-box :global(picture){ max-height:76px }
-  }
-  @media (max-width:768px){
-	.marquee__item{ width:130px }
-	.logo-box :global(img), .logo-box :global(svg), .logo-box :global(picture){ max-height:62px }
-  }
-  
-  /* Mouvement d’une demi-longueur: comme on a dupliqué la liste, -50% recolle parfaitement */
-  @keyframes scroll {
-	from { transform: translateX(0); }
-	to   { transform: translateX(-50%); }
-  }
-  </style>
-  
+}
+
+.logo-box {
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	width: 100%; 
+	height: 100%;
+}
+
+.logo-box :global(img),
+.logo-box :global(svg),
+.logo-box :global(picture) {
+	max-height: 88px; 
+	width: auto; 
+	max-width: 100%; 
+	object-fit: contain; 
+	display: block;
+}
+
+/* L'animation déplace de 100% = la largeur d'un groupe complet */
+@keyframes scroll-x {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+	.marquee__item { 
+		width: 130px;
+	}
+	.logo-box :global(img), 
+	.logo-box :global(svg), 
+	.logo-box :global(picture) { 
+		max-height: 76px;
+	}
+}
+
+@media (max-width: 768px) {
+	.marquee__item { 
+		width: 100px;
+	}
+	.logo-box :global(img), 
+	.logo-box :global(svg), 
+	.logo-box :global(picture) { 
+		max-height: 62px;
+	}
+}
+</style>

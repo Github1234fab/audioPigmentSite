@@ -1,325 +1,6 @@
-<!-- <script>
-	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
-	import VideoCard from './VideoCard.svelte';
-    import { onMount } from 'svelte';
-
-
-    const videos = [
-    { url: 'https://www.youtube.com/watch?v=Fu-aEj_Q8ig', title: 'Vidéo 1' },
-    { url: 'https://www.youtube.com/watch?v=FJhtKdsnsN0', title: 'Vidéo 2' },
-    { url: 'https://www.youtube.com/watch?v=uj19mlAZlUo', title: 'Vidéo 3' },
-    { url: 'https://www.youtube.com/watch?v=NtHwCg4i73c', title: 'Vidéo 4' },
-    { url: 'https://www.youtube.com/watch?v=Glq7QP-US-Y', title: 'Vidéo 5' },
-    { url: 'https://www.youtube.com/watch?v=l8vJAkablNk', title: 'Vidéo 6' },
-    { url: 'https://www.youtube.com/watch?v=LfNereR9MHI', title: 'Vidéo 7' },
-    { url: 'https://www.youtube.com/watch?v=4H_sEETHmvs', title: 'Vidéo 8' },
-    { url: 'https://www.youtube.com/watch?v=gmcgXXlpras', title: 'Vidéo 9' },
-    { url: 'https://www.youtube.com/watch?v=9b-nxj_la6o', title: 'Vidéo 10' },
-    { url: 'https://www.youtube.com/watch?v=-pGIzsqOoEY', title: 'Vidéo 11' },
-    { url: 'https://www.youtube.com/watch?v=cxjJlnM76Wc', title: 'Vidéo 12' },
-    { url: 'https://www.youtube.com/watch?v=d2AfG-OzoL8', title: 'Vidéo 13' },
-    { url: 'https://www.youtube.com/watch?v=NB-SP4qrjtA', title: 'Vidéo 14' },
-    { url: 'https://www.youtube.com/watch?v=28tMbzvJsG4', title: 'Vidéo 15' },
-    { url: 'https://www.youtube.com/watch?v=KvOP_tbju3A&pp=0gcJCc0JAYcqIYzv', title: 'Vidéo 16' },
-    { url: 'https://www.youtube.com/watch?v=pz2xpVFJ-nU', title: 'Vidéo 17' },
-    { url: 'https://www.youtube.com/watch?v=KEJoZxzM0FI', title: 'Vidéo 18' },
-    { url: 'https://www.youtube.com/watch?v=dUOgdMw4kMo', title: 'Vidéo 19' },
-    { url: 'https://www.youtube.com/watch?v=qA9k1JurJw4&pp=0gcJCc0JAYcqIYzv', title: 'Vidéo 20' },
-    { url: 'https://www.youtube.com/watch?v=JkvVrbImqBU', title: 'Vidéo 21' },
-    { url: 'https://www.youtube.com/watch?v=1wQ-J_sZ3jg', title: 'Vidéo 22' },
-    { url: 'https://www.youtube.com/watch?v=yRuTtiiPKhU', title: 'Vidéo 23' },
-    { url: 'https://www.youtube.com/watch?v=L79bsQssG5U', title: 'Vidéo 24' },
-    { url: 'https://www.youtube.com/watch?v=EJicT-1Lqe4', title: 'Vidéo 25' },
-    { url: 'https://www.youtube.com/watch?v=WFxoUld3yrc', title: 'Vidéo 26' },
-    { url: 'https://www.youtube.com/watch?v=BqgViQ-U7Jg', title: 'Vidéo 27' },
-    { url: 'https://www.youtube.com/watch?v=63PRVdLEgZI', title: 'Vidéo 28' },
-
-    { url: 'https://www.youtube.com/watch?v=UqSREduT-Tw', title: 'Vidéo 30' },
- 
-];
-
-const options = {
-        type: 'loop',
-        perPage: 4,
-        gap: 3,
-        autoplay: true,
-        pauseOnHover: true,
-        speed: 2000,
-        arrows: true,
-        pagination: false,
-        breakpoints: {
-            1560: { perPage: 4, gap: 20 },
-            1024: { perPage: 3, gap:10 },
-            938: { perPage: 3, gap: 20 },
-            768: { perPage: 2 },
-            480: { perPage: 1, gap: 10 }
-        },
-        easing: 'ease-in-out'
-    };
-
-    let currentSlide = 0;
-
-   
-    function getYoutubeThumbnail(url) {
-        const idMatch = url.match(/[?&]v=([^&]+)/);
-        if (!idMatch) return '';
-        return `https://img.youtube.com/vi/${idMatch[1]}/hqdefault.jpg`;
-    }
-
-    let splideRef;
-
-    function handleMoved(e) {
-        currentSlide = e.index;
-    }
-
-    onMount(() => {
-        
-        if (splideRef && splideRef.splide) {
-            currentSlide = splideRef.splide.index;
-        }
-    });
-
-</script>
-
-<Splide bind:this={splideRef} {options} on:moved={handleMoved} aria-label="Vidéos">
-    {#each videos as video, i}
-        <SplideSlide>
-            {#if Math.abs(currentSlide - i) <= 2}
-         
-            
-                <VideoCard url={video.url} title={video.title}/>
-            {:else}
-
-            
-                <img 
-                    src={getYoutubeThumbnail(video.url)}
-                    alt={video.title}
-                    style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px;"
-                />
-            {/if}
-        </SplideSlide>
-    {/each}
-</Splide>
- -->
-
-<!-- 
- <script>
-    import { onMount } from 'svelte';
-    import VideoCard from './VideoCard.svelte';
-  
-    let Splide = null;
-    let SplideSlide = null;
-    let splideReady = false;
-  
-    const videos = [
-      { url: 'https://www.youtube.com/watch?v=Fu-aEj_Q8ig', title: 'Vidéo 1' },
-      { url: 'https://www.youtube.com/watch?v=FJhtKdsnsN0', title: 'Vidéo 2' },
-      { url: 'https://www.youtube.com/watch?v=uj19mlAZlUo', title: 'Vidéo 3' },
-      { url: 'https://www.youtube.com/watch?v=NtHwCg4i73c', title: 'Vidéo 4' },
-      { url: 'https://www.youtube.com/watch?v=Glq7QP-US-Y', title: 'Vidéo 5' },
-      { url: 'https://www.youtube.com/watch?v=l8vJAkablNk', title: 'Vidéo 6' },
-      { url: 'https://www.youtube.com/watch?v=LfNereR9MHI', title: 'Vidéo 7' },
-      { url: 'https://www.youtube.com/watch?v=4H_sEETHmvs', title: 'Vidéo 8' },
-      { url: 'https://www.youtube.com/watch?v=gmcgXXlpras', title: 'Vidéo 9' },
-      { url: 'https://www.youtube.com/watch?v=9b-nxj_la6o', title: 'Vidéo 10' },
-      { url: 'https://www.youtube.com/watch?v=-pGIzsqOoEY', title: 'Vidéo 11' },
-      { url: 'https://www.youtube.com/watch?v=cxjJlnM76Wc', title: 'Vidéo 12' },
-      { url: 'https://www.youtube.com/watch?v=d2AfG-OzoL8', title: 'Vidéo 13' },
-      { url: 'https://www.youtube.com/watch?v=NB-SP4qrjtA', title: 'Vidéo 14' },
-      { url: 'https://www.youtube.com/watch?v=28tMbzvJsG4', title: 'Vidéo 15' },
-      { url: 'https://www.youtube.com/watch?v=KvOP_tbju3A&pp=0gcJCc0JAYcqIYzv', title: 'Vidéo 16' },
-      { url: 'https://www.youtube.com/watch?v=pz2xpVFJ-nU', title: 'Vidéo 17' },
-      { url: 'https://www.youtube.com/watch?v=KEJoZxzM0FI', title: 'Vidéo 18' },
-      { url: 'https://www.youtube.com/watch?v=dUOgdMw4kMo', title: 'Vidéo 19' },
-      { url: 'https://www.youtube.com/watch?v=qA9k1JurJw4&pp=0gcJCc0JAYcqIYzv', title: 'Vidéo 20' },
-      { url: 'https://www.youtube.com/watch?v=JkvVrbImqBU', title: 'Vidéo 21' },
-      { url: 'https://www.youtube.com/watch?v=1wQ-J_sZ3jg', title: 'Vidéo 22' },
-      { url: 'https://www.youtube.com/watch?v=yRuTtiiPKhU', title: 'Vidéo 23' },
-      { url: 'https://www.youtube.com/watch?v=L79bsQssG5U', title: 'Vidéo 24' },
-      { url: 'https://www.youtube.com/watch?v=EJicT-1Lqe4', title: 'Vidéo 25' },
-      { url: 'https://www.youtube.com/watch?v=WFxoUld3yrc', title: 'Vidéo 26' },
-      { url: 'https://www.youtube.com/watch?v=BqgViQ-U7Jg', title: 'Vidéo 27' },
-      { url: 'https://www.youtube.com/watch?v=63PRVdLEgZI', title: 'Vidéo 28' },
-      { url: 'https://www.youtube.com/watch?v=UqSREduT-Tw', title: 'Vidéo 30' },
-    ];
-  
-    const options = {
-      type: 'loop',
-      perPage: 4,
-      gap: 3,
-      autoplay: true,
-      pauseOnHover: true,
-      speed: 2000,
-      arrows: true,
-      pagination: false,
-      breakpoints: {
-        1560: { perPage: 4, gap: 20 },
-        1024: { perPage: 3, gap: 10 },
-        938: { perPage: 3, gap: 20 },
-        768: { perPage: 2 },
-        480: { perPage: 1, gap: 10 },
-      },
-      easing: 'ease-in-out',
-    };
-  
-    let currentSlide = 0;
-    let splideRef;
-  
-    function handleMoved(e) {
-      currentSlide = e.detail.index;
-    }
-  
- 
-    function getYoutubeThumbnail(url) {
-      const idMatch = url.match(/[?&]v=([^&]+)/);
-      if (!idMatch) return '';
-      return `https://img.youtube.com/vi/${idMatch[1]}/hqdefault.jpg`;
-    }
-  
-    onMount(async () => {
-      const mod = await import('@splidejs/svelte-splide');
-      Splide = mod.Splide;
-      SplideSlide = mod.SplideSlide;
-      splideReady = true;
-  
-
-      if (splideRef && splideRef.splide) {
-        currentSlide = splideRef.splide.index;
-      }
-    });
-  </script>
-  
-  {#if splideReady && Splide && SplideSlide}
-    <svelte:component this={Splide} bind:this={splideRef} {options} on:moved={handleMoved} aria-label="Vidéos">
-      {#each videos as video, i}
-        <svelte:component this={SplideSlide}>
-          {#if Math.abs(currentSlide - i) <= 2}
-         
-            <VideoCard url={video.url} title={video.title} />
-          {:else}
-          
-            <img 
-              src={getYoutubeThumbnail(video.url)} 
-              alt={video.title} 
-              style="width:100%; height: 100%; border-radius:8px; position: absolute; top: 0; left: 0;" 
-            />
-          {/if}
-        </svelte:component>
-      {/each}
-    </svelte:component>
-  {:else}
-    <div>Chargement du carousel de vidéos…</div>
-  {/if}
-   -->
-
-<!-- <script>
-	import { onMount } from 'svelte';
-	import VideoCard from './VideoCard.svelte';
-  import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
-
-	let Splide = null;
-	let SplideSlide = null;
-	let splideReady = false;
-
-	const videos = [
-		{ url: 'https://www.youtube.com/watch?v=Fu-aEj_Q8ig', title: 'Vidéo 1' },
-		{ url: 'https://www.youtube.com/watch?v=FJhtKdsnsN0', title: 'Vidéo 2' },
-		{ url: 'https://www.youtube.com/watch?v=uj19mlAZlUo', title: 'Vidéo 3' },
-		{ url: 'https://www.youtube.com/watch?v=NtHwCg4i73c', title: 'Vidéo 4' },
-		{ url: 'https://www.youtube.com/watch?v=Glq7QP-US-Y', title: 'Vidéo 5' },
-		{ url: 'https://www.youtube.com/watch?v=l8vJAkablNk', title: 'Vidéo 6' },
-		{ url: 'https://www.youtube.com/watch?v=LfNereR9MHI', title: 'Vidéo 7' },
-		{ url: 'https://www.youtube.com/watch?v=4H_sEETHmvs', title: 'Vidéo 8' },
-		{ url: 'https://www.youtube.com/watch?v=gmcgXXlpras', title: 'Vidéo 9' },
-		{ url: 'https://www.youtube.com/watch?v=9b-nxj_la6o', title: 'Vidéo 10' }
-		// ... tu peux garder les autres
-	];
-
-	const options = {
-		type: 'slide',
-    rewind: true,
-		perPage: 4,
-    direction: 'ltr', 
-		gap: '1rem',
-		autoplay: true,
-		pauseOnHover: true,
-		interval: 3000,
-		speed: 800,
-		arrows: true,
-		pagination: false,
-		breakpoints: {
-			1560: { perPage: 4, gap: '1.25rem' },
-			1024: { perPage: 3, gap: '1rem' },
-			768: { perPage: 2, gap: '1rem' },
-			480: { perPage: 1, gap: '0.75rem' }
-		},
-		easing: 'ease-in-out'
-	};
-
-	let splideRef;
-
-	onMount(async () => {
-		const mod = await import('@splidejs/svelte-splide');
-		Splide = mod.Splide;
-		SplideSlide = mod.SplideSlide;
-		splideReady = true;
-	});
-</script>
-
-{#if splideReady && Splide && SplideSlide}
-	<div class="carousel-container">
-		<svelte:component this={Splide} bind:this={splideRef} {options} aria-label="Vidéos">
-			{#each videos as video(video.url)}
-				<svelte:component this={SplideSlide}>
-					<div class="slide-wrapper">
-						<VideoCard url={video.url} title={video.title} />
-					</div>
-				</svelte:component>
-			{/each}
-		</svelte:component>
-	</div>
-{:else}
-	<div>Chargement du carousel de vidéos…</div>
-{/if}
-
-<style>
-	.carousel-container {
-		width: 100vw;
-		max-width: 100vw;
-		margin: 0;
-		padding: 0;
-		overflow: hidden;
-	
-	}
-
-	:global(.splide) {
-		width: 100%;
-   
-	}
-
-	:global(.splide__track),
-	:global(.splide__list),
-	:global(.splide__slide) {
-		width: 100%;
- 
-	}
-
-	.slide-wrapper {
-		width: 100%;
-		aspect-ratio: 16 / 9;
-		position: relative;
-		border-radius: 8px;
-		overflow: hidden;
-    height: 450px;
-	}
-  .slide-wrapper { background:#000; }
-</style> -->
-
-
-
-
 <script>
   import VideoCard from './VideoCard.svelte';
+  import { onMount } from 'svelte';
 
   const videos = [
     { url: 'https://www.youtube.com/watch?v=Fu-aEj_Q8ig', title: 'Vidéo 1' },
@@ -334,41 +15,71 @@ const options = {
     { url: 'https://www.youtube.com/watch?v=9b-nxj_la6o', title: 'Vidéo 10' },
   ];
 
-  // On duplique pour un loop parfait (animation -50%)
-  const marquee = [...videos, ...videos,];
+  // Précharger les images pour éviter le clignotement
+  onMount(() => {
+    videos.forEach(video => {
+      const img = new Image();
+      const videoId = video.url.match(/[?&]v=([^&]+)/)?.[1];
+      if (videoId) {
+        img.src = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+      }
+    });
+  });
 </script>
 
-<div class="marquee">
-  <div class="marquee__track">
-    {#each marquee as video, i (video.url + '-' + i)}
-      <div class="marquee__item">
-        <div class="video-box">
-          <VideoCard title={video.title} url={video.url} />
+<div class="marquee-wrapper">
+  <div class="marquee">
+    <div class="marquee__group">
+      {#each videos as video}
+        <div class="marquee__item">
+          <div class="video-box">
+            <VideoCard title={video.title} url={video.url} />
+          </div>
         </div>
-      </div>
-    {/each}
+      {/each}
+    </div>
+    <!-- Duplication pour la boucle infinie -->
+    <div class="marquee__group" aria-hidden="true">
+      {#each videos as video}
+        <div class="marquee__item">
+          <div class="video-box">
+            <VideoCard title={video.title} url={video.url} />
+          </div>
+        </div>
+      {/each}
+    </div>
   </div>
 </div>
 
 <style>
-.marquee {
+.marquee-wrapper {
   overflow: hidden;
   width: 100%;
+  padding: 20px 0;
 }
 
-.marquee__track {
+.marquee {
   display: flex;
-  width: max-content;
-  animation: scroll 35s linear infinite; /* ← vitesse (allonge pour ralentir) */
-  will-change: transform;
+  overflow: hidden;
+  user-select: none;
+  gap: 0;
 }
 
-/* largeur “slot” par carte + espacement contenu */
+.marquee__group {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0;
+  min-width: 100%;
+  animation: scroll-video 35s linear infinite;
+}
+
 .marquee__item {
   flex: 0 0 auto;
-  width: 360px;          /* ajuste à la largeur visuelle de VideoCard */
+  width: 360px;
   height: 300px;
-  padding: 8px;          /* espace entre cartes */
+  padding: 8px;
   box-sizing: border-box;
 }
 
@@ -376,42 +87,55 @@ const options = {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
-/* si VideoCard rend un iframe, fixe une hauteur cohérente */
 .video-box :global(iframe),
 .video-box :global(video),
 .video-box :global(img) {
   display: block;
   width: 100%;
-  height: 200px;         /* ajuste selon ton design */
-  object-fit: cover;     /* ou contain selon rendu souhaité */
+  height: 100%;
+  object-fit: cover;
   border: 0;
   border-radius: 8px;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
-/* défilement continu : une demi-longueur car liste dupliquée */
-@keyframes scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-3600px); } /* 10*360, adapte si besoin */
+/* Animation de défilement : -100% pour une boucle parfaite */
+@keyframes scroll-video {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
-/* Accessibilité : désactive l’anim si l’utilisateur préfère moins de mouvement */
+/* Responsive */
+@media (max-width: 1024px) {
+  .marquee__item {
+    width: 300px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee__item {
+    width: 250px;
+    height: 200px;
+  }
+}
+
+/* Accessibilité : désactive l'animation si l'utilisateur préfère moins de mouvement */
 @media (prefers-reduced-motion: reduce) {
-  .marquee__track { animation: none; }
+  .marquee__group {
+    animation: none;
+  }
 }
 </style>
-
-
-
-
-
-
-
-
-
-
 
 
 

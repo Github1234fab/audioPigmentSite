@@ -1,11 +1,11 @@
 <script>
 	import Btn from '$lib/component/btn-white.svelte';
-	import StudioA from '/2017-11-07_17-13-40-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
-	import StudioB from '/2017-11-07_18-03-38-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
-	import StudioC from '/2017-11-07_18-17-49-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
-	import StudioD from '/2017-11-07_18-29-09-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
-	import StudioE from '/2017-11-07_18-42-11-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
-	import StudioF from '/2017-11-07_19-08-06-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
+const StudioA = '/2017-11-07_17-13-40-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
+	const StudioB = '/2017-11-07_18-03-38-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
+	const StudioC = '/2017-11-07_18-17-49-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
+	const StudioD = '/2017-11-07_18-29-09-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
+	const StudioE = '/2017-11-07_18-42-11-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
+	const StudioF = '/2017-11-07_19-08-06-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
 	import SC from '../../../assets/studios/SCS.png';
 
 	const slides = [
@@ -140,7 +140,7 @@
 		color: var(--ardoise);
 		margin-bottom: 10px;
 		padding: 1rem;
-		/* background-color: rgb(240, 239, 239); */
+		background-color: rgb(240, 239, 239);
 		border-radius: 5px;
 		max-width: 960px;
 	}

@@ -19,15 +19,16 @@
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		height: 100%;
+		height: 70vh;
 		z-index: 0;
 		gap: 0px;
 		overflow: hidden;
+		background-color: var(--ardoise);
 	}
 	section h2 {
 		font-family: var(--bebas);
 		font-size: 3.7rem;
-		color: rgb(48, 46, 46);
+		color: rgb(193, 192, 192);
 		margin-top: 50px;
 		font-weight: var(--bold);
 		letter-spacing: -1.5px;
