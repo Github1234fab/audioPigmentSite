@@ -50,6 +50,13 @@
 </script>
 
 <section>
+
+	<video autoplay muted loop playsinline class="background-video">
+		<source
+			src="https://www.pexels.com/fr-fr/download/video/27660115/"
+			type="video/mp4"
+		/>
+	</video>
 	<h2>Nos Atouts</h2>
 	<p class="section-intro">Ce qui fait la force d'Audio Pigment</p>
 	<div class="features-grid">
@@ -64,6 +71,15 @@
 </section>
 
 <style>
+	.background-video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
+	}
 	section {
 		display: flex;
 		flex-direction: column;
@@ -71,10 +87,10 @@
 		justify-content: center;
 		text-align: center;
 		padding: 2rem;
-		background-image: url('https://images.pexels.com/photos/33729174/pexels-photo-33729174.jpeg');
+		/* background-image: url('https://images.pexels.com/photos/33729174/pexels-photo-33729174.jpeg');
 		background-size: cover;
 		background-position: center;
-		background-repeat: no-repeat;
+		background-repeat: no-repeat; */
 		height: 100%;
 		z-index: 0;
 		gap: 40px;
@@ -133,7 +149,7 @@
 		border-radius: 8px;
 		padding: 1.5rem;
 		transition: all 0.3s ease;
-		border: 1px solid rgb(203, 203, 203);
+		/* border: 1px solid rgb(203, 203, 203); */
 		backdrop-filter: blur(20px);
 		-webkit-backdrop-filter: blur(20px);
 		transform: rotateY(0deg);
@@ -157,14 +173,14 @@
 		color: rgb(255, 254, 254);
 		margin: 10px;
 		background-color: var(--red);
-		border: 1px solid rgb(203, 203, 203);
+		/* border: 1px solid rgb(203, 203, 203); */
 		height: 60px;
 		aspect-ratio: 1;
 		border-radius: 50%;
 	}
 
 	.title {
-		font-family: var(--raleway);
+		font-family: var(--bebas);
 		color: white;
 		display: flex;
 		align-items: center;
