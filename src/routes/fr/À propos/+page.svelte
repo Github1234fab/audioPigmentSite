@@ -11,6 +11,8 @@
 </script>
 
 <section>
+	<img src="/bg-apropos.webp" alt="Table de mixage numérique en gros plan" aria-hidden="true" class="bg" fetchpriority="high" />
+
 	<h1>Audio Pigment <br /> – <br /></h1>
 	<h2>Studio de création sonore depuis 1999</h2>
 
@@ -64,16 +66,21 @@
 </section>
 
 <style>
+	.bg{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
+	}
 	section {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		background-image: url('https://images.pexels.com/photos/13003485/pexels-photo-13003485.jpeg');
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
 		color: white;
 		height: 100%;
 		gap: 20px;
@@ -101,7 +108,7 @@
 		z-index: 2;
 	}
 	section h2 {
-		font-family: var(--raleway);
+		font-family: var(--bebas);
 		font-weight: var(--bold);
 		color: white;
 		font-size: 2.5rem;
