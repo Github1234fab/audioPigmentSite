@@ -31,10 +31,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		background-image: url('/BG-hero.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 		z-index: 0;
 		height: 50rem;
-		position: relative;
-		background: transparent;
 		position: relative;
 	}
 	.section::after{
