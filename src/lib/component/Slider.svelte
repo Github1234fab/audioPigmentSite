@@ -15,14 +15,20 @@
     { url: 'https://www.youtube.com/watch?v=9b-nxj_la6o', title: 'Vidéo 10' },
   ];
 
-  // Précharger les images pour éviter le clignotement
+  function getYoutubeId(url) {
+    return url.match(/[?&]v=([^&]+)/)?.[1] || '';
+  }
+
+  function getThumbnail(url) {
+    const id = getYoutubeId(url);
+    return `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
+  }
+
+  // Précharger les images
   onMount(() => {
     videos.forEach(video => {
       const img = new Image();
-      const videoId = video.url.match(/[?&]v=([^&]+)/)?.[1];
-      if (videoId) {
-        img.src = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
-      }
+      img.src = getThumbnail(video.url);
     });
   });
 </script>
@@ -30,20 +36,20 @@
 <div class="marquee-wrapper">
   <div class="marquee">
     <div class="marquee__group">
-      {#each videos as video}
+      {#each videos as video, index (video.url + '-group1-' + index)}
         <div class="marquee__item">
           <div class="video-box">
-            <VideoCard title={video.title} url={video.url} />
+            <VideoCard title={video.title} url={video.url} forceThumbnail={true}  />
           </div>
         </div>
       {/each}
     </div>
     <!-- Duplication pour la boucle infinie -->
     <div class="marquee__group" aria-hidden="true">
-      {#each videos as video}
+      {#each videos as video, index (video.url + '-group2-' + index)}
         <div class="marquee__item">
           <div class="video-box">
-            <VideoCard title={video.title} url={video.url} />
+            <VideoCard title={video.title} url={video.url} forceThumbnail={true}  />
           </div>
         </div>
       {/each}
@@ -136,140 +142,3 @@
   }
 }
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

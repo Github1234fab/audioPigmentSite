@@ -1,76 +1,18 @@
-<!-- <script>
-	export let url;
-	export let title = 'Vidéo YouTube';
-
-	function extractYouTubeId(url) {
-		const regExp = /(?:youtu\.be\/|youtube\.com\/(?:watch\?(?:.*&)?v=|embed\/))([a-zA-Z0-9_-]{11})/;
-		const match = url.match(regExp);
-		return match ? match[1] : null;
-	}
-
-	$: videoId = extractYouTubeId(url);
-</script>
-
-{#if videoId}
-	<div class="video-card" role="group" aria-label={title}>
-		<iframe
-			src={'https://www.youtube.com/embed/' + videoId}
-			{title}
-			frameborder="0"
-			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-			allowfullscreen
-			  style="width: 100%; height: 100%; position: absolute; top: 0; left: 0;"
-		></iframe>
-		<div class="video-title">{title}</div>
-	</div>
-{:else}
-	<div class="video-card video-card--invalid">
-		<div>URL YouTube invalide</div>
-		<div class="video-title">{title}</div>
-	</div>
-{/if}
-
-<style>
-	.video-card {
-		display: flex;
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-		border-radius: 10px;
-		background: var(-ardoise);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding: 0.5rem;
-	}
-	.video-title {
-		margin-top: 0.5rem;
-		font-size: 1rem;
-		font-weight: 600;
-		text-align: center;
-		color: #222;
-	}
-	.video-card--invalid {
-		background: #ffeaea;
-		color: #c00;
-		border: 1px solid #c00;
-	}
-	iframe {
-		border-radius: 8px;
-		background-color: var(--ardoise);
-	}
-</style> -->
-
-
-
- <script>
+<script>
 	import { onMount } from 'svelte';
   
 	export let url;
 	export let title;
+	export let forceThumbnail = false;
   
 	let container;
 	let visible = false;
   
 	onMount(() => {
+	  if (forceThumbnail) {
+		return;
+	  }
+
 	  const observer = new IntersectionObserver(
 		([entry]) => {
 		  visible = entry.isIntersecting;
@@ -95,29 +37,32 @@
 	function getThumbnailUrl(url) {
 	  const idMatch = url.match(/[?&]v=([^&]+)/);
 	  if (!idMatch) return '';
-	  return `https://img.youtube.com/vi/${idMatch[1]}/hqdefault.jpg`;
+	  return `https://img.youtube.com/vi/${idMatch[1]}/maxresdefault.jpg`;
 	}
-  </script>
+</script>
   
-  <div class="video-wrapper" bind:this={container}>
-	{#if visible}
+<div class="video-wrapper" bind:this={container}>
+	{#if visible && !forceThumbnail}
 	  <iframe
-	  loading="lazy"
-
-	  style="width:100%;height:100%;display:block"
+		loading="lazy"
+		style="width:100%;height:100%;display:block"
 		src={getEmbedUrl(url)}
 		title={title}
 		frameborder="0"
-		  allow="autoplay; encrypted-media; picture-in-picture"
+		allow="autoplay; encrypted-media; picture-in-picture"
 		allowfullscreen
 	  ></iframe>
 	{:else}
-	  <img src={getThumbnailUrl(url)} alt={title} class="thumbnail" loading="lazy" />
+	  <img src={getThumbnailUrl(url)} alt={title} class="thumbnail" loading="eager" />
+	  <div class="play-overlay">
+		<svg class="play-icon" viewBox="0 0 24 24" fill="white">
+		  <path d="M8 5v14l11-7z"/>
+		</svg>
+	  </div>
 	{/if}
-  </div>
+</div>
   
-  <style>
-
+<style>
 	.video-wrapper {
 	  position: relative;
 	  width: 100%;
@@ -137,5 +82,21 @@
 	  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.436);
 	  background: #000;   
 	}
-  </style>
-  
+
+	.play-overlay {
+	  position: absolute;
+	  inset: 0;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  background: rgba(0, 0, 0, 0.3);
+	  pointer-events: none;
+	}
+
+	.play-icon {
+	  width: 64px;
+	  height: 64px;
+	  opacity: 0.9;
+	  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+	}
+</style>

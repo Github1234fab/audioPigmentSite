@@ -40,7 +40,7 @@ const StudioA = '/2017-11-07_17-13-40-Architecture-Audio-Pigment-www.studiolecar
 
 <section>
 	<h1>Nos Studios</h1>
-	<img class="label" src={SC} alt="Certified source-connect studio" />
+
 
 
 	<div class="wrapper__studios">
@@ -49,8 +49,8 @@ const StudioA = '/2017-11-07_17-13-40-Architecture-Audio-Pigment-www.studiolecar
 			maxime, accusantium earum harum libero voluptatum. Provident corporis minus cum nostrum animi
 			eveniet quasi, repellat voluptatum cumque earum.
 		</p>
-		<h2>Visite de nos locaux</h2>
-
+		<!-- <h2>Visite de nos locaux</h2> -->
+		<img class="label" src={SC} alt="Certified source-connect studio" />
 		<div class="slider" role="region" aria-roledescription="carousel" aria-label="Studios">
 			<div class="viewport" on:touchstart={onTouchStart} on:touchend={onTouchEnd}>
 				<div class="track" style="transform: translateX(-{index * 100}%);" aria-live="polite">
@@ -131,7 +131,7 @@ const StudioA = '/2017-11-07_17-13-40-Architecture-Audio-Pigment-www.studiolecar
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		gap: 50px;
+		gap: 40px;
 	}
 
 	.wrapper__studios p {
@@ -140,9 +140,10 @@ const StudioA = '/2017-11-07_17-13-40-Architecture-Audio-Pigment-www.studiolecar
 		color: var(--ardoise);
 		margin-bottom: 10px;
 		padding: 1rem;
-		background-color: rgb(240, 239, 239);
+		/* background-color: rgb(240, 239, 239); */
 		border-radius: 5px;
 		max-width: 960px;
+	
 	}
 	.nous-ecouter {
 		display: flex;
