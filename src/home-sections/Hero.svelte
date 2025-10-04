@@ -4,8 +4,8 @@
 	import Test from '$lib/component/Test.svelte';
 </script>
 
-<section>
-	<video autoplay loop muted playsinline poster="/images/preview.jpg" class="hero-video">
+<section class="section">
+	<video autoplay loop muted playsinline  preload="metadata" poster="/BG-hero" class="hero-video" aria-hidden="true">
 
 		<source src="/APBG.mov" type="video/mp4" />
 	</video>
@@ -32,10 +32,20 @@
 		align-items: center;
 		justify-content: center;
 		z-index: 0;
-		height: 40rem;
+		height: 50rem;
 		position: relative;
 		background: transparent;
 		position: relative;
+	}
+	.section::after{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(255, 255, 255, 0.337);
+		z-index: 1;
 	}
 
 	.hero-video {
