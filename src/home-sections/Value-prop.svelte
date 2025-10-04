@@ -226,7 +226,8 @@
 		font-weight: var(--medium);
 		margin-top: 0px;
 		padding: 10px 30px;
-		background-color: var(--red);
+		/* background-color: var(--red); */
+		background: linear-gradient(90deg, #ff8a00, #e52e71);
 		border-radius: 5px;
 	}
 	.wrapper__h4 {
