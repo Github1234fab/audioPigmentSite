@@ -118,7 +118,6 @@
 		padding: 2rem;
 		color: var(--black);
 		height: 100%;
-		background: linear-gradient(rgb(255, 255, 255), #ebe8e8, rgb(242, 238, 238));
 		
 	}
 	.wrapper__cards {

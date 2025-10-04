@@ -1,11 +1,11 @@
 <script>
 	import Btn from '$lib/component/btn-white.svelte';
-	import StudioA from '../../../assets/studios/2017-11-07_17-13-40-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
-	import StudioB from '../../../assets/studios/2017-11-07_18-03-38-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
-	import StudioC from '../../../assets/studios/2017-11-07_18-17-49-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
-	import StudioD from '../../../assets/studios/2017-11-07_18-29-09-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
-	import StudioE from '../../../assets/studios/2017-11-07_18-42-11-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
-	import StudioF from '../../../assets/studios/2017-11-07_19-08-06-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
+	import StudioA from '/2017-11-07_17-13-40-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
+	import StudioB from '/2017-11-07_18-03-38-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
+	import StudioC from '/2017-11-07_18-17-49-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
+	import StudioD from '/2017-11-07_18-29-09-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
+	import StudioE from '/2017-11-07_18-42-11-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
+	import StudioF from '/2017-11-07_19-08-06-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
 	import SC from '../../../assets/studios/SCS.png';
 
 	const slides = [
@@ -103,16 +103,8 @@
 		justify-content: center;
 		text-align: center;
 		padding: 2rem;
-		background-image:
-			repeating-linear-gradient(
-				135deg,
-				rgba(213, 28, 28, 0.05) 0px,
-				rgba(213, 28, 28, 0.05) 2px,
-				transparent 2px,
-				transparent 4px
-			),
-			linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
-		min-height: 100%;
+		background-image: linear-gradient(22.5deg, rgba(67, 67, 67, 0.02) 0%, rgba(67, 67, 67, 0.02) 29%,rgb(255,255,255) 29%, rgb(255,255,255) 37%,rgba(23, 23, 23, 0.02) 37%, rgba(23, 23, 23, 0.02) 55%,rgba(182, 182, 182, 0.02) 55%, rgba(182, 182, 182, 0.02) 69%,rgba(27, 27, 27, 0.02) 69%, rgba(27, 27, 27, 0.02) 71%,rgba(250, 250, 250, 0.02) 71%, rgba(250, 250, 250, 0.02) 100%),linear-gradient(67.5deg, rgba(117, 117, 117, 0.02) 0%, rgba(117, 117, 117, 0.02) 14%,rgba(199, 199, 199, 0.02) 14%, rgba(199, 199, 199, 0.02) 40%,rgba(33, 33, 33, 0.02) 40%, rgba(33, 33, 33, 0.02) 48%,rgba(135, 135, 135, 0.02) 48%, rgba(135, 135, 135, 0.02) 60%,rgba(148, 148, 148, 0.02) 60%, rgba(148, 148, 148, 0.02) 95%,rgba(53, 53, 53, 0.02) 95%, rgba(53, 53, 53, 0.02) 100%),linear-gradient(135deg, rgba(190, 190, 190, 0.02) 0%, rgba(190, 190, 190, 0.02) 6%,rgba(251, 251, 251, 0.02) 6%, rgba(251, 251, 251, 0.02) 18%,rgba(2, 2, 2, 0.02) 18%, rgba(2, 2, 2, 0.02) 27%,rgba(253, 253, 253, 0.02) 27%, rgba(253, 253, 253, 0.02) 49%,rgba(128, 128, 128, 0.02) 49%, rgba(128, 128, 128, 0.02) 76%,rgba(150, 150, 150, 0.02) 76%, rgba(150, 150, 150, 0.02) 100%),linear-gradient(90deg, #ffffff,#ffffff);
+		height: 100vh;
 		z-index: 0;
 		gap: 10px;
 	}
@@ -139,7 +131,7 @@
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		gap: 0px;
+		gap: 50px;
 	}
 
 	.wrapper__studios p {
@@ -148,7 +140,7 @@
 		color: var(--ardoise);
 		margin-bottom: 10px;
 		padding: 1rem;
-		background-color: rgb(240, 239, 239);
+		/* background-color: rgb(240, 239, 239); */
 		border-radius: 5px;
 		max-width: 960px;
 	}
