@@ -55,7 +55,7 @@
 		text-align: center;
 		padding: 2rem;
 		background-color: transparent;
-		height: 80vh;
+		height: 100%;
 		z-index: 0;
 		gap: 40px;
 		position: relative;
