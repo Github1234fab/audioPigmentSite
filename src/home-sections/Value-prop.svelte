@@ -97,53 +97,6 @@
 	</div>
 </section>
 
-<!-- 
-	<div class="wrapper__section-txt">
-		<h2> Identité sonore, Sound design, Voix ... </h2>
-		<h3>Ensemble, créons des émotions, marquons les esprits</h3>
-
-		<div class="wrapper__h4">
-			<h4>+ 25 ans d'expérience</h4>
-			<h4>3 studios</h4>
-			<h4>+ 50 langues</h4>
-			<h4>Réseau International</h4>
-		</div>
-
-		<p>
-			<strong>Acteurs reconnus</strong> de la production sonore, <strong>en France</strong> comme
-			<strong>à l’international</strong>, nous sommes spécialisés dans la voix off, le doublage, le
-			sound design, la création musicale, la postproduction, et le mixage. <br />
-
-			Nous conjuguons <strong>exigence technique</strong>, <strong>sens du détail </strong> et
-			<strong>approche artistique</strong>
-			pour des productions
-			<strong>haut de gamme</strong>, conçues <strong>sur mesure</strong>. <br /><br />
-
-			Chez <strong>Audio Pigment</strong>, chaque projet est pensé comme une
-			<strong>pièce unique</strong>, où notre <strong>savoir-faire</strong>, notre
-			<strong>expérience</strong>
-			, et notre <strong>créativité</strong> sont mis au service de <strong>l’impact</strong>, de
-			<strong>l’image</strong>
-			, du <strong>récit</strong> et de <strong>l’identité</strong>.
-
-			<br /><br /> <strong>Depuis 1999</strong> , nous accompagnons de
-			<strong>grandes marques</strong>
-			et <strong>institutions</strong> telles que : L’Oréal, Chanel, Air France, Disneyland Paris,
-			Ferrero, bioMérieux, Caisse d’Epargne, Puy du Fou, Point S, Orange, EDF, Région
-			Auvergne-Rhône-Alpes et beaucoup d’autres…
-
-			<br /><br />Et nous sommes fiers de la confiance qu’ils continuent de nous accorder
-			aujourd’hui…
-		</p>
-		<div class="wrapper__slider-logos">
-			<SliderLogos />
-		</div>
-		<div class="wrapper-button">
-		<Button txt="Contactez-nous" href="/fr/contact" />
-	</div>
-	</div>
-</section> -->
-
 <style>
 	section {
 		position: relative;
@@ -227,7 +180,7 @@
 		margin-top: 0px;
 		padding: 10px 30px;
 		/* background-color: var(--red); */
-		background: linear-gradient(90deg, #E74C3B, #e52e71);
+		background: linear-gradient(90deg, #e74c3b, #e52e71);
 		border-radius: 5px;
 	}
 	.wrapper__h4 {
@@ -264,7 +217,8 @@
 			font-size: 2.5rem;
 		}
 		.wrapper__section-txt h2 {
-			font-size: 3.5rem;
+			font-size: 1.5rem;
+			line-height: 30px;
 		}
 		.wrapper__section-txt {
 			display: flex;
@@ -278,5 +232,30 @@
 			margin-top: 50px;
 			gap: 20px;
 		}
+		.wrapper__section-txt h3 {
+		font-family: var(--bebas);
+		font-size: 3rem;
+		color: var(--ardoise);
+		margin-top: 0px;
+		font-weight: var(--bold);
+		width: 100%;
+		letter-spacing: -2.2px;
+	}
+	section h4{
+		font-size: 1rem;
+		padding: 8px 20px;
+	}
+	p {
+		font-family: var(--raleway);
+		font-size: 1.2rem;
+		color: var(--ardoise);
+		margin-top: 20px;
+		max-width: 800px;
+		line-height: 1.5;
+		margin-top: 50px;
+		margin-bottom: 30px;
+		font-weight: 500;
+		text-align: left;
+	}
 	}
 </style>

@@ -17,8 +17,8 @@
 <Hero />
 <Proposition />
 <ValueProp />
-<Services />
-<Achievements />
+<!-- <Services /> -->
+<!-- <Achievements /> -->
 <Advantages />
 <ValueProp2 />
 

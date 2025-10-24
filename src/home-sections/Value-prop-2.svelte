@@ -148,15 +148,38 @@
 			width: 100%;
 			padding: 20px 0px;
 		}
+		.wrapper__section-txt p {
+		font-family: var(--raleway);
+		font-size: 1rem;
+		line-height: 1.6;
+		margin-top: 0px;
+		font-weight: var(--regular);
+		color: white;
+		padding: 0px 0px;
+		margin-bottom: 3rem;
+	}
 		section {
 			background-image: url('https://images.pexels.com/photos/14828529/pexels-photo-14828529.jpeg?w=600&h=400&auto=compress&cs=tinysrgb');
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
+			height :100%;
+			padding: 0.5rem;
 		}
 		.background-video {
 			display: none;
 		}
+		.wrapper__section-txt h4 {
+		font-family: var(--bebas);
+		font-size: 2rem;
+		line-height: 1.4;
+		color: white;
+		font-weight: var(--bold);
+		margin-top: 0px;
+		padding: 20px 0px;
+		width: 100%;
+	}
+
 		
 	
 	}

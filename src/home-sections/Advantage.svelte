@@ -4,7 +4,7 @@
 		{
 			title: 'EXPERIENCE',
 			iconClass: 'fa-solid fa-user-tie fa-2xl',
-			p: "Plus de 25 ans d’expérience créative et technique"
+			p: 'Plus de 25 ans d’expérience créative et technique'
 		},
 		{
 			title: 'ARTISTIQUE',
@@ -14,7 +14,7 @@
 		{
 			title: 'STUDIOS',
 			iconClass: 'fa-solid fa-microphone-lines fa-2xl',
-			p: "3 studios d’enregistrement et post production son, haut de gamme"
+			p: '3 studios d’enregistrement et post production son, haut de gamme'
 		},
 		{
 			title: 'CASTING',
@@ -50,12 +50,8 @@
 </script>
 
 <section>
-
 	<video autoplay muted loop playsinline class="background-video">
-		<source
-			src="https://www.pexels.com/fr-fr/download/video/27660115/"
-			type="video/mp4"
-		/>
+		<source src="https://www.pexels.com/fr-fr/download/video/27660115/" type="video/mp4" />
 	</video>
 	<h2>Nos Atouts</h2>
 	<p class="section-intro">Ce qui fait la force d'Audio Pigment</p>
@@ -87,16 +83,11 @@
 		justify-content: center;
 		text-align: center;
 		padding: 2rem;
-		/* background-image: url('https://images.pexels.com/photos/33729174/pexels-photo-33729174.jpeg');
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat; */
 		height: 100%;
 		z-index: 0;
 		gap: 40px;
 		color: white;
 		position: relative;
-
 	}
 	section::after {
 		content: '';
@@ -106,7 +97,7 @@
 		width: 100%;
 		height: 100%;
 		background: rgba(0, 0, 0, 0.723); /* Couleur de superposition noire avec opacité */
-		z-index: 1; 
+		z-index: 1;
 	}
 	section h2 {
 		font-family: var(--bebas);
@@ -115,8 +106,7 @@
 		margin-top: 50px;
 		font-weight: var(--bold);
 		letter-spacing: -1.5px;
-		z-index: 3; 
-
+		z-index: 3;
 	}
 	section p {
 		font-family: var(--raleway);
@@ -125,7 +115,7 @@
 		color: white;
 		font-weight: var(--regular);
 		margin-top: 0px;
-		z-index: 3; 
+		z-index: 3;
 	}
 	.features-grid {
 		display: grid;
@@ -149,7 +139,6 @@
 		border-radius: 8px;
 		padding: 1.5rem;
 		transition: all 0.3s ease;
-		/* border: 1px solid rgb(203, 203, 203); */
 		backdrop-filter: blur(20px);
 		-webkit-backdrop-filter: blur(20px);
 		transform: rotateY(0deg);
@@ -158,7 +147,7 @@
 	.feature-card:hover {
 		background: rgba(255, 255, 255, 0.1);
 		border-color: rgba(255, 255, 255, 0.3);
-		/* transform: rotateY(5deg); */
+
 		scale: 1.05;
 	}
 
@@ -173,7 +162,7 @@
 		color: rgb(255, 254, 254);
 		margin: 10px;
 		background-color: var(--red);
-		/* border: 1px solid rgb(203, 203, 203); */
+
 		height: 60px;
 		aspect-ratio: 1;
 		border-radius: 50%;
@@ -202,30 +191,64 @@
 	}
 	@media (max-width: 1000px) {
 		.features-grid {
-			grid-template-columns: 1fr 1fr; /* 2 colonnes identiques */
-			padding: 1rem;
-			gap: 1rem;
+			display: grid;
+			grid-template-columns: 1fr, 1fr;
+			gap: 1.5rem;
+			padding: 2rem;
+			max-width: 100%;
+			width: 100%;
+			margin: 0 auto;
+			z-index: 3;
 		}
+	}
+	@media (max-width: 769px) {
+		.features-grid {
+			display: grid;
+			grid-template-columns: auto;
+			gap: 1.5rem;
+			max-width: 100%;
+			width: 100%;
+			margin: 0 auto;
+			z-index: 3;
+		}
+
 		.feature-card {
-			padding: 1rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			background: rgba(21, 21, 21, 0.231);
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			border-radius: 8px;
+			transition: all 0.3s ease;
+			backdrop-filter: blur(20px);
+			-webkit-backdrop-filter: blur(20px);
+			transform: rotateY(0deg);
+			margin: 0 auto;
+			min-width: 100%;
 		}
 		section h2 {
 			font-size: 2rem;
 		}
-	}
+		.title {
+			font-size: 1.2rem;
+		}
 
-	@media (max-width: 600px) {
-		.features-grid {
-			grid-template-columns: 1fr;
-			padding: 0.5rem;
-			gap: 0.75rem;
+		.feature-card p {
+			font-size: 0.8rem;
 		}
-		.feature-card {
-			padding: 0.5rem;
-			font-size: 0.95rem;
-		}
-		section h2 {
-			font-size: 3rem;
-		}
+		section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 0.5rem;
+		height: 100%;
+		z-index: 0;
+		gap: 40px;
+		color: white;
+		position: relative;
+	}
 	}
 </style>

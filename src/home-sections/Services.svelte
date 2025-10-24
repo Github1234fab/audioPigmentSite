@@ -193,21 +193,7 @@
 	} */
 
 	@media screen and (max-width: 768px) {
-		/* .wrapper__services-cards {
-			flex-direction: column;
-			align-items: center;
-			gap: 1rem;
-		} */
-
-		/* .service-card {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: flex-end;
-			padding: 1rem;
-			height: 400px;
-			width: 100%;
-		} */
+	
 		.wrapper__service-txt h3 {
 			font-size: 1.8rem;
 		}

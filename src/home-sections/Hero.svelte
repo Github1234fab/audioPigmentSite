@@ -5,8 +5,16 @@
 </script>
 
 <section class="section">
-	<video autoplay loop muted playsinline  preload="metadata" poster="/BG-hero" class="hero-video" aria-hidden="true">
-
+	<video
+		autoplay
+		loop
+		muted
+		playsinline
+		preload="metadata"
+		poster="/BG-hero"
+		class="hero-video"
+		aria-hidden="true"
+	>
 		<source src="/APBG.mov" type="video/mp4" />
 	</video>
 
@@ -36,17 +44,17 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		z-index: 0;
-		height: 50rem;
+		height: 60rem;
 		position: relative;
 	}
-	.section::after{
-		content: "";
+	.section::after {
+		content: '';
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: rgba(255, 255, 255, 0.337);
+		background: rgba(255, 255, 255, 0.202);
 		z-index: 1;
 	}
 
@@ -105,7 +113,17 @@
 
 	@media screen and (max-width: 768px) {
 		section {
-			height: 1000px;
+			height: 55rem;
+		}
+		.section::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(255, 255, 255, 0);
+			z-index: 1;
 		}
 		.wrapper__txt {
 			position: absolute;
@@ -113,21 +131,29 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 			gap: 30px;
+			margin-top: 20px;
 		}
 		.wrapper__buttons {
 			display: flex;
 			flex-direction: column;
-			margin-top: 10px;
+			margin: 10px auto;
 			gap: 0px;
 		}
 
 		h1 {
-			font-size: 3.2rem;
-			margin-top: 5rem;
+			font-size: 3.6rem;
 			line-height: 1.2;
+			letter-spacing: -2.6px;
+			padding: 20px;
+			width: 100%;
+			margin: 0 auto;
+			hyphens: auto;
+			-webkit-hyphens: auto;
+
+			overflow-wrap: normal;
 		}
 		h2 {
-			font-size: 1rem;
+			font-size: 1.2rem;
 		}
 	}
 </style>

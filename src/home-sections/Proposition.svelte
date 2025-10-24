@@ -79,22 +79,17 @@
 	}
 
 	@media screen and (max-width: 768px) {
+		section{
+			min-height: 100%;
+			padding: 0;
+
+		}
 		.wrapper__card {
 			flex-direction: column;
-			gap: 20px;
+			gap: 2px;
 			margin: 0px;
 			padding: 0px;
-			margin-bottom: 100px;
-			margin-top: 0px;
 		}
-		/* section h2 {
-		font-family: var(--bebas);
-		line-height: 60px;
-		font-size: 4.5rem;
-		font-weight: 400;
-		margin-top: 50px;
-		text-align: center;
-		letter-spacing: -2px;
-	} */
+	
 	}
 </style>
