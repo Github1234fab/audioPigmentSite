@@ -11,7 +11,7 @@
 <style>
 	.btn {
 		margin-top: 20px;
-		margin-left: 20px;
+		/* margin-left: 20px; */
 		background-color: var(--ardoise);
 		font-family: var(--raleway);
 		font-weight: var(--medium);
@@ -24,6 +24,7 @@
 		overflow: hidden;
 		transition: color 0.6s ease;
 		box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.431);
+		border-radius: 5px;
 	}
 
 	.btn::after {

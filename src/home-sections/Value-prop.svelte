@@ -148,6 +148,7 @@
 		color: white;
 		margin-top: 100px;
 		gap: 20px;
+		width: 100%;
 	}
 	.wrapper__section-txt h2 {
 		font-family: var(--raleway);
@@ -162,14 +163,14 @@
 	}
 	.wrapper__section-txt h3 {
 		font-family: var(--bebas);
-		/* font-size: 2rem; */
 		font-size: 3.5rem;
 		color: var(--ardoise);
 		margin-top: 0px;
 		font-weight: var(--bold);
 		width: 100%;
-		letter-spacing: -3px;
+		letter-spacing: -2.5px;
 	}
+	
 
 	section h4 {
 		font-family: var(--raleway);
@@ -179,7 +180,6 @@
 		font-weight: var(--medium);
 		margin-top: 0px;
 		padding: 10px 30px;
-		/* background-color: var(--red); */
 		background: linear-gradient(90deg, #e74c3b, #e52e71);
 		border-radius: 5px;
 	}
@@ -247,7 +247,7 @@
 	}
 	p {
 		font-family: var(--raleway);
-		font-size: 1.2rem;
+		font-size: 1rem;
 		color: var(--ardoise);
 		margin-top: 20px;
 		max-width: 800px;

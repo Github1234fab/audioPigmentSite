@@ -12,14 +12,7 @@
 	</video>
 
 	<div class="wrapper__section-txt">
-		<!-- <h2>Notre engagement pour une qualité sonore exceptionnelle</h2> -->
-		<!-- <h3>
-			Chaque projet mérite son histoire sonore unique : chez Audio Pigment, l’évidence c’est
-			l’exception.
-		</h3> -->
-		<!-- <h3><span>Voix</span> <span>sound design</span> <span>identité sonore</span></h3> -->
-		<br />
-		<h4><strong>Ensemble, créons des émotions, marquons les esprits</strong></h4> <br>
+		<h2><strong>Ensemble, créons des émotions, marquons les esprits</strong></h2>
 
 		<p>
 			Chez AUDIO PIGMENT, chaque projet est écouté, pensé et façonné avec soin, expertise et
@@ -28,8 +21,9 @@
 			<strong>le goût du sur-mesure</strong>
 			pour un impact optimal.
 
-			<br> <br /><strong>Comprendre</strong>, <strong>ressentir</strong>, <strong>transmettre</strong> :
-			c’est notre métier. <br>
+			<br /> <br /><strong>Comprendre</strong>, <strong>ressentir</strong>,
+			<strong>transmettre</strong>
+			: c’est notre métier. <br />
 			<br /> <span>Faites nous confiance</span>
 		</p>
 
@@ -53,24 +47,21 @@
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		padding: 2rem;
 		background-color: transparent;
-		height: 100%;
+		min-height: 100vh;
 		z-index: 0;
-		gap: 40px;
 		position: relative;
 		overflow: hidden;
 		z-index: 0;
+		padding: 5rem;
 	}
-	
-	.wrapper__section-txt h4 {
+
+	.wrapper__section-txt h2 {
 		font-family: var(--bebas);
-		font-size: 2.4rem;
+		font-size: 3rem;
 		line-height: 1.4;
 		color: white;
 		font-weight: var(--bold);
-		margin-top: 0px;
-		padding: 20px 40px;
 		width: 100%;
 	}
 
@@ -78,16 +69,13 @@
 		font-family: var(--raleway);
 		font-size: 1.5rem;
 		line-height: 1.6;
-		margin-top: 0px;
 		font-weight: var(--regular);
 		color: white;
-		padding: 0px 0px;
-		margin-bottom: 3rem;
+		margin-bottom: 20px;
 	}
 	.wrapper__section-txt p span {
 		font-weight: var(--extra-bold);
 		font-family: var(--bebas);
-		
 	}
 
 	.wrapper__buttons {
@@ -100,11 +88,11 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		gap: 20px;
+		gap: 50px;
 		color: white;
 		z-index: 2;
 		position: relative;
-		padding: 2rem;
+		padding: 50px;
 	}
 	section::after {
 		position: absolute;
@@ -149,38 +137,35 @@
 			padding: 20px 0px;
 		}
 		.wrapper__section-txt p {
-		font-family: var(--raleway);
-		font-size: 1rem;
-		line-height: 1.6;
-		margin-top: 0px;
-		font-weight: var(--regular);
-		color: white;
-		padding: 0px 0px;
-		margin-bottom: 3rem;
-	}
+			font-family: var(--raleway);
+			font-size: 1rem;
+			line-height: 1.6;
+			margin-top: 0px;
+			font-weight: var(--regular);
+			color: white;
+			padding: 0px 0px;
+			margin-bottom: 3rem;
+		}
 		section {
 			background-image: url('https://images.pexels.com/photos/14828529/pexels-photo-14828529.jpeg?w=600&h=400&auto=compress&cs=tinysrgb');
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
-			height :100%;
+			height: 100%;
 			padding: 0.5rem;
 		}
 		.background-video {
 			display: none;
 		}
-		.wrapper__section-txt h4 {
-		font-family: var(--bebas);
-		font-size: 2rem;
-		line-height: 1.4;
-		color: white;
-		font-weight: var(--bold);
-		margin-top: 0px;
-		padding: 20px 0px;
-		width: 100%;
-	}
-
-		
-	
+		.wrapper__section-txt h2 {
+			font-family: var(--bebas);
+			font-size: 2rem;
+			line-height: 1.4;
+			color: white;
+			font-weight: var(--bold);
+			margin-top: 0px;
+			padding: 20px 0px;
+			width: 100%;
+		}
 	}
 </style>

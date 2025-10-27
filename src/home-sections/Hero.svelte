@@ -89,6 +89,7 @@
 	.wrapper__buttons {
 		display: flex;
 		margin-top: 50px;
+		gap: 20px;
 	}
 
 	h1 {
@@ -136,12 +137,15 @@
 		.wrapper__buttons {
 			display: flex;
 			flex-direction: column;
+			align-items: center;
+			justify-content: center;
 			margin: 10px auto;
 			gap: 0px;
+			/* width: 100%; */
 		}
 
 		h1 {
-			font-size: 3.6rem;
+			font-size: 3rem;
 			line-height: 1.2;
 			letter-spacing: -2.6px;
 			padding: 20px;

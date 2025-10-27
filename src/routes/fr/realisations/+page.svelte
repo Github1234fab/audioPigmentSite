@@ -282,7 +282,7 @@
       font-size: 4rem;
       margin-bottom: 1rem;
       margin-top: 50px;
-      font-weight: 400;
+      font-weight: 500;
       letter-spacing: -1.5px;
     }
     .filters {
@@ -290,6 +290,7 @@
       gap: 1rem;
       flex-wrap: wrap;
       margin-bottom: 2rem;
+      margin-top: 20px;
     }
     .filters button {
       background-color: transparent;
@@ -326,11 +327,30 @@
   margin-top: 50px;
 }
 
-/* .cards-grid > * {
-  flex: 0 1 320px;         
-  min-width: 220px;
-  max-width: 100%;
-  margin-bottom: 2rem;
-} */
+@media (max-width: 768px) {
+
+  section h2 {
+    font-size: 3rem;
+    letter-spacing: -1px;
+    line-height: 60px;
+
+  }
+  .filters {
+      margin-top: 40px;
+    }
+    .cards-grid {
+  display: flex;
+  flex-wrap: wrap;         /* Retour à la ligne si besoin */
+  gap: 1rem;               /* Espace entre les cartes */
+  justify-content: center; /* Centrage horizontal */
+  margin-top: 0px;
+}
+section {
+     
+      padding: 2rem;
+      
+    }
+
+}
   </style>
   

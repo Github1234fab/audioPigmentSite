@@ -111,6 +111,7 @@
       position: relative;
       z-index: 10;
       font-family: var(--raleway);
+      border-bottom: 1px solid var(--grey);
   }
   .home-link {
       display: flex;

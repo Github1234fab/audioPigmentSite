@@ -76,7 +76,7 @@
 		margin-bottom: 0.5rem;
 		color: white;
 		margin-top: 50px;
-		font-weight: 100;
+		font-weight: 500;
 		letter-spacing: -1.5px;
 	}
 

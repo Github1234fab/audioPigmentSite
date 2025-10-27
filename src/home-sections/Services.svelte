@@ -118,7 +118,7 @@
 		padding: 2rem;
 		color: var(--black);
 		height: 100%;
-		
+		overflow: hidden;
 	}
 	.wrapper__cards {
 		display: flex;
@@ -157,8 +157,6 @@
 		font-weight: 200;
 		letter-spacing: -2px;
 		color: var(--ardoise);
-		align-self: flex-start;
-		margin-left: 120px;
 		font-weight: var(--bold);
 	}
 
@@ -200,6 +198,15 @@
 		section h2 {
 			font-size: 3rem;
 			margin-bottom: 1rem;
+			line-height: 50px;
+			margin-bottom: 50px;
+		}
+		.wrapper__cards{
+			gap: 2rem;
+			margin-bottom: 5rem;
+		}
+		.cardo{
+			width: 90vw;
 		}
 	}
 </style>

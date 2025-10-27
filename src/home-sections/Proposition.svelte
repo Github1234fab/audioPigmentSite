@@ -2,10 +2,6 @@
 	import CardDotWhite from '$lib/component/cards-dot-white.svelte';
 	import TitleDot from '$lib/component/Title-dot.svelte';
 	import Btn from '$lib/component/btn-black-shadow.svelte';
-
-
-
-
 </script>
 
 <section>
@@ -53,21 +49,8 @@
 		justify-content: center;
 		color: var(--black);
 		min-height: 70vh;
-		
+	}
 
-	}
-	/* section h2 {
-		font-family: var(--bebas);
-		font-weight: var(--bold);
-		font-size: 4.5rem;
-		font-weight: 400;
-		margin-top: 50px;
-		text-align: center;
-		letter-spacing: -4px;
-	}
-	section h2 span {
-		color: var(--red);
-	} */
 	.wrapper__card {
 		display: flex;
 		flex-wrap: wrap;
@@ -79,10 +62,9 @@
 	}
 
 	@media screen and (max-width: 768px) {
-		section{
+		section {
 			min-height: 100%;
 			padding: 0;
-
 		}
 		.wrapper__card {
 			flex-direction: column;
@@ -90,6 +72,5 @@
 			margin: 0px;
 			padding: 0px;
 		}
-	
 	}
 </style>

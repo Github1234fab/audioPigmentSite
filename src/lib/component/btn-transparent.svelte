@@ -7,7 +7,7 @@
 <style>
 	.btn {
 		margin-top: 20px;
-		margin-left: 20px;
+		/* margin-left: 20px; */
 		background-color: transparent;
 		font-family: var(--raleway);
 		font-weight: var(--medium);
@@ -19,6 +19,7 @@
 		position: relative;
 		overflow: hidden;
 		transition: color 0.6s ease;
+		border-radius: 5px;
 	}
 
 	.btn::after {

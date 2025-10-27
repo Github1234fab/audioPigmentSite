@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	import BtnBlack from '$lib/component/btn-black.svelte';
 	import BtnWhite from '$lib/component/btn-white.svelte';
 </script>
@@ -160,4 +160,4 @@
 		letter-spacing: -1.5px;
 	}
 	}
-</style>
+</style> -->

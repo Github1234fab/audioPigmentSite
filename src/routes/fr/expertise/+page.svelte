@@ -307,6 +307,7 @@
 	@media screen and (max-width: 768px) {
 		section h1 {
 			font-size: 4rem;
+			line-height: 60px;
 		}
 		section h2 {
 			font-size: 2.6rem;

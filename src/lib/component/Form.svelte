@@ -162,6 +162,7 @@
 		position: relative;
 		overflow: hidden;
 		transition: color 0.6s ease;
+		border-radius: 5px;
 	}
 
 	.btn::after {

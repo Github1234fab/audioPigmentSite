@@ -56,13 +56,12 @@
 				<div class="wrapper__service-txt">
 					<h3>{service.label}</h3>
 					<p>{service.desc}</p>
-					<a href={service.link}>Contact</a>
+					<a href={service.link}>Get in touch</a>
 				</div>
 			</div>
 		{/each}
 	</div>
 </section>
-
 <style>
 	section {
 		display: flex;
@@ -73,15 +72,16 @@
 		color: var(--black);
 		min-height: 100vh;
 		margin-bottom: 2rem;
-
+		
 	}
 	section h2 {
 		font-family: var(--bebas);
 		font-size: 4rem;
 		margin-bottom: 3rem;
 		margin-top: 50px;
-		font-weight: 400;
-		letter-spacing: -1.5px;
+		font-weight: var(--bold);
+		letter-spacing: -1.7px;
+	
 	}
 	.wrapper__services-cards {
 		display: flex;
@@ -90,7 +90,7 @@
 		align-items: center;
 		justify-content: center;
 		font-family: var(--raleway);
-
+		height: 100%;
 	}
 	.wrapper__service-txt {
 		display: flex;
@@ -110,7 +110,6 @@
 		margin-top: 1rem;
 		padding: 0.5rem 1rem;
 		background-color: var(--ardoise);
-		width: 10%;
 		border: 1px solid white;
 		text-align: center;
 	}
@@ -125,8 +124,8 @@
 		background-repeat: no-repeat;
 		border-radius: 12px;
 		box-shadow: 0 10px 20px rgba(50, 50, 50, 0.328);
-		padding: 2rem;
-		height: 600px;
+		padding: 1rem;
+		height: auto;
 		max-width: 1000px;
 		transition: transform 0.15s;
 		position: relative;
@@ -140,7 +139,7 @@
 		z-index: 1;
 		height: 100%;
 		width: 100%;
-		background: linear-gradient(to top, rgba(0, 0, 0, 0.832) , rgba(255, 255, 255, 0) 100%);
+		background: linear-gradient(to top, rgba(0, 0, 0, 0.832), rgba(255, 255, 255, 0) 100%);
 	}
 	.service-card:hover {
 		transform: translateY(-5px) scale(1.04);
@@ -152,12 +151,18 @@
 		margin-bottom: 1rem;
 		color: white;
 		font-size: 2rem;
+		font-family: var(--bebas);
 	}
 	.wrapper__service-txt p {
 		margin-bottom: 1rem;
 		color: white;
 		font-size: 1rem;
 		line-height: 1.6;
+		background-color: rgba(255, 255, 255, 0.182);
+		backdrop-filter: blur(25px);
+		-webkit-backdrop-filter: blur(25px);
+		padding: 1.5rem;
+		border-radius: 5px;
 	}
 	a {
 		text-decoration: none;
@@ -169,33 +174,17 @@
 	}
 
 	@media screen and (max-width: 768px) {
-		.service-card {
-			height: 100%;
-			width: 100%;
-		}
-		.wrapper__services-cards {
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-		}
-		.wrapper__service-txt {
-			background-color: rgba(0, 0, 0, 0.472);
-			padding: 2rem;
-		}
-		.wrapper__service-txt h3 {
-			font-size: 1.5rem;
-			background-color: var(--red);
-			padding: 1rem;
-		}
-	}
-	.wrapper__service-txt a {
-		width: 100%;
-	}
-	.wrapper__service-txt a:hover {
-		background-color: var(--red);
-
-	}
+		section h2 {
+		font-family: var(--bebas);
+		font-size: 3rem;
+		margin-bottom: 3rem;
+		margin-top: 50px;
+		font-weight: var(--bold);
+		letter-spacing: -1.7px;
+		line-height: 50px;
 	
-	
+	}
+	}
+	</style>
 
-</style>
+

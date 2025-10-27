@@ -160,10 +160,12 @@
 
 	@media (max-width: 768px) {
 		section h1 {
-			font-size: 2.2rem;
+			font-size: 3.2rem;
+			font-weight: 500;
 		}
 		section h2 {
 			font-size: 1.3rem;
+			letter-spacing: -0.5px;
 		}
 		section p {
 			font-size: 1rem;

@@ -59,6 +59,16 @@
 		text-transform: lowercase
 	}
 
+	@media (max-width: 768px) {
+		.card {
+			height: 280px;
+		}
+
+		h3 {
+			font-size: 1.4rem;
+		}
+	}
+
 	
 
 </style>

@@ -171,12 +171,31 @@
   justify-content: center; /* Centrage horizontal */
   margin-top: 50px;
 }
+@media (max-width: 768px) {
 
-/* .cards-grid > * {
-  flex: 0 1 320px;         
-  min-width: 220px;
-  max-width: 100%;
-  margin-bottom: 2rem;
-} */
+section h2 {
+  font-size: 3rem;
+  letter-spacing: -1px;
+  line-height: 60px;
+
+}
+.filters {
+    margin-top: 40px;
+  }
+  .cards-grid {
+display: flex;
+flex-wrap: wrap;         /* Retour à la ligne si besoin */
+gap: 1rem;               /* Espace entre les cartes */
+justify-content: center; /* Centrage horizontal */
+margin-top: 0px;
+}
+section {
+   
+    padding: 2rem;
+    
+  }
+
+}
+
   </style>
   
