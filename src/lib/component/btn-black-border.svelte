@@ -11,7 +11,6 @@
 <style>
 	.btn {
 		margin: 20px auto;
-
 		background-color: var(--ardoise);
 		font-family: var(--raleway);
 		font-weight: var(--medium);
