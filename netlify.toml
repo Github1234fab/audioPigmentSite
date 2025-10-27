@@ -1,14 +1,3 @@
 [build]
   command = "npm run build"
   publish = "build"
-
-[[redirects]]
-  from = "/"
-  to = "/fr/home"
-  status = 307
-  force = false
-
-[[redirects]]
-  from = "/*"
-  to = "/*"
-  status = 200
