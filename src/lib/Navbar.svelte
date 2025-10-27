@@ -5,6 +5,7 @@
   import English from '../assets/pimsEnglishFlag.png';
   import { fade } from 'svelte/transition';
   import { locale } from 'svelte-i18n';
+  import { goto } from '$app/navigation';
 
   let menuOpen = false;
   // Initialise lang avec une valeur sûre
@@ -45,14 +46,37 @@
       }
   };
 
-  function switchLanguage(newLang) {
-      let newPath = $page.url.pathname.replace(/^\/(fr|en)/, `/${newLang}`);
-      // Si on est à la racine "/", il faut ajouter le préfixe
-      if (newPath === '/' || newPath === '') {
-          newPath = `/${newLang}`;
-      }
-      window.location.href = newPath;
-  }
+//   function switchLanguage(newLang) {
+//       let newPath = $page.url.pathname.replace(/^\/(fr|en)/, `/${newLang}`);
+//       // Si on est à la racine "/", il faut ajouter le préfixe
+//       if (newPath === '/' || newPath === '') {
+//           newPath = `/${newLang}`;
+//       }
+//       window.location.href = newPath;
+//   }
+
+
+
+function switchLanguage(newLang) {
+    const currentPath = $page.url.pathname;
+    const segments = currentPath.split('/').filter(Boolean);
+    
+    // Remplacer la langue
+    if (segments.length > 0) {
+        segments[0] = newLang;
+    } else {
+        // Si on est à la racine, aller vers /newLang/home
+        goto(`/${newLang}/home`);
+        return;
+    }
+    
+    // S'assurer d'avoir au moins /lang/page
+    if (segments.length === 1) {
+        segments.push('home');
+    }
+    
+    goto(`/${segments.join('/')}`);
+}
 
   function closeMenu() {
       menuOpen = false;
@@ -60,10 +84,15 @@
 </script>
 
 <nav>
-  <a href="/" class="home-link">
+  <!-- <a href="/" class="home-link">
       <img src={Logo} class="logo" alt="Logo Audio Pigment" />
       Audio Pigment
-  </a>
+  </a> -->
+
+  <a href="/{lang}/home" class="home-link">
+    <img src={Logo} class="logo" alt="Logo Audio Pigment" />
+    Audio Pigment
+</a>
 
   <button class="burger" aria-label="Ouvrir le menu" on:click={() => (menuOpen = !menuOpen)}>
       <span class="bar"></span>
