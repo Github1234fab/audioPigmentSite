@@ -1,4 +1,4 @@
-<h1>EN/expertise</h1>
+
 
 <script>
 	// import Vanta from '$lib/component/Vanta.svelte'

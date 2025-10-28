@@ -3,7 +3,7 @@
 	import Slider from '$lib/component/Slider.svelte';
 </script>
 
-<h1>EN/actu</h1>
+
 
 <section>
 	<h1>Our news</h1>

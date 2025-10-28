@@ -185,6 +185,12 @@ function switchLanguage(newLang) {
       border: none;
       cursor: pointer;
       padding: 0;
+      transition: 0.3s ease-in-out;
+    
+  }
+  .buttons-switch:hover {
+        transform: scale(1.3);
+     
   }
   .flag {
       width: 22px;
