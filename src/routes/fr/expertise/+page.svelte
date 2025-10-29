@@ -75,21 +75,20 @@
 			<h2>Création originale</h2>
 			<p>
 				Chez Audio Pigment, nous imaginons et produisons des univers sonores sur mesure : signature
-				sonore, habillage sonore, composition musicale, sound design ou événementiel…<br><br>
-				 Notre rôle :
-				transformer une idée ou une intention, en matière sonore et en émotion. 
-				<br><br>Qu’il s’agisse de
-				donner une identité sonore à une marque, d’accompagner un film, une publicité, un podcast,
-				ou de concevoir une expérience immersive, nous nous approprions les enjeux, nous adaptons
-				notre approche au contexte et aux contraintes de diffusion, et nous cherchons la justesse
-				émotionnelle, celle qui permet au son de porter la narration, l’image ou le message auprès
-				du public. <br><br>Pour les compositions musicales, nous proposons également des licences à partir
-				de notre catalogue, et accompagnons nos clients dans leur sélection. Ces musiques sont
-				personnalisables, mais lorsqu’un projet exige une identité unique, la création originale
-				reste la plus adaptée : elle assure une adéquation complète entre musique, intention et
-				émotion, ainsi qu’une exclusivité totale de diffusion.
-				<br><br> Notre objectif : donner à chaque
-				projet sa propre identité, son rythme et sa signature émotionnelle.
+				sonore, habillage sonore, composition musicale, sound design ou événementiel…<br /><br />
+				Notre rôle : transformer une idée ou une intention, en matière sonore et en émotion.
+				<br /><br />Qu’il s’agisse de donner une identité sonore à une marque, d’accompagner un
+				film, une publicité, un podcast, ou de concevoir une expérience immersive, nous nous
+				approprions les enjeux, nous adaptons notre approche au contexte et aux contraintes de
+				diffusion, et nous cherchons la justesse émotionnelle, celle qui permet au son de porter la
+				narration, l’image ou le message auprès du public. <br /><br />Pour les compositions
+				musicales, nous proposons également des licences à partir de notre catalogue, et
+				accompagnons nos clients dans leur sélection. Ces musiques sont personnalisables, mais
+				lorsqu’un projet exige une identité unique, la création originale reste la plus adaptée :
+				elle assure une adéquation complète entre musique, intention et émotion, ainsi qu’une
+				exclusivité totale de diffusion.
+				<br /><br /> Notre objectif : donner à chaque projet sa propre identité, son rythme et sa signature
+				émotionnelle.
 			</p>
 			<div class="wrapper__advantages">
 				<div class="advantage">
@@ -137,18 +136,19 @@
 			<h2>Voix</h2>
 			<p>
 				La voix capte naturellement l’attention : elle parle à l’inconscient, crée des émotions,
-				donne du sens et relie le message à la mémoire. <br><br>Qu’il s’agisse de supports sonores (radio,
-				podcasts, audioguides) ou de productions audiovisuelles (films, publicités, e-learning, jeux
-				vidéo, installations), la voix incarne un message, un récit, elle explique, personnifie,
-				renforce la portée émotionnelle. <br><br>Mais face à la profusion de contenus auxquels nous sommes
-				exposés, se faire entendre ne suffit plus : il faut se démarquer et retenir l’attention.
-				Cela passe par le choix d’une voix juste, une direction d'acteur impliquée, et une
-				qualité d'enregistrement irréprochable. <br><br>Voix off, doublage / dubbing / ADR, voice-over,
-				adaptation multilingue : nous ne nous contentons pas d&#39;enregistrer. Chaque projet
-				bénéficie d’un accompagnement complet, du choix du comédien à la finalisation audio. Nous
-				assurons le casting, la direction artistique, l’enregistrement, ajustons
-				l&#39;interprétation en temps réel avec nos clients, et veillons attentivement à ce que la
-				voix serve le sens, l’intention, et l&#39;impact émotionnel recherchés.
+				donne du sens et relie le message à la mémoire. <br /><br />Qu’il s’agisse de supports
+				sonores (radio, podcasts, audioguides) ou de productions audiovisuelles (films, publicités,
+				e-learning, jeux vidéo, installations), la voix incarne un message, un récit, elle explique,
+				personnifie, renforce la portée émotionnelle. <br /><br />Mais face à la profusion de
+				contenus auxquels nous sommes exposés, se faire entendre ne suffit plus : il faut se
+				démarquer et retenir l’attention. Cela passe par le choix d’une voix juste, une direction
+				d'acteur impliquée, et une qualité d'enregistrement irréprochable. <br /><br />Voix off,
+				doublage / dubbing / ADR, voice-over, adaptation multilingue : nous ne nous contentons pas
+				d&#39;enregistrer. Chaque projet bénéficie d’un accompagnement complet, du choix du comédien
+				à la finalisation audio. Nous assurons le casting, la direction artistique,
+				l’enregistrement, ajustons l&#39;interprétation en temps réel avec nos clients, et veillons
+				attentivement à ce que la voix serve le sens, l’intention, et l&#39;impact émotionnel
+				recherchés.
 			</p>
 			<div class="wrapper__advantages">
 				<div class="advantage">
@@ -201,9 +201,7 @@
 		</video>
 		<div class="wrapper__section-txt">
 			<h2>Notre engagement pour une qualité sonore exceptionnelle</h2>
-			<h3>
-				Chaque projet mérite son histoire sonore unique 
-			</h3>
+			<h3>Chaque projet mérite son histoire sonore unique</h3>
 
 			<p>
 				Chez AUDIO PIGMENT, chaque projet est pensé, écouté, façonné avec précision par l’expertise
@@ -329,7 +327,7 @@
 		margin-top: 30px;
 	}
 	.advantage {
-		background-color: rgba(189, 28, 28, 0.813);
+		background: linear-gradient(to left, rgba(189, 28, 28, 0.813), rgba(189, 28, 28, 0.604));
 		padding: 40px;
 		border-radius: 10px;
 		width: 30%;
