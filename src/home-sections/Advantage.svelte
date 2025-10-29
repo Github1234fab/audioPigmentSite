@@ -4,47 +4,47 @@
 		{
 			title: 'EXPERIENCE',
 			iconClass: 'fa-solid fa-user-tie fa-2xl',
-			p: 'Plus de 25 ans d’expérience créative et technique'
+			p: 'Plus de <strong>25 ans d’expérience</strong> créative et technique'
 		},
 		{
 			title: 'ARTISTIQUE',
 			iconClass: 'fa-solid fa-palette fa-2xl',
-			p: 'Direction artistique soignée, relecture, réécoute, vérification systématique'
+			p: '<strong>Direction artistique soignée</strong> , relecture, réécoute, vérification systématique'
 		},
 		{
 			title: 'STUDIOS',
 			iconClass: 'fa-solid fa-microphone-lines fa-2xl',
-			p: '3 studios d’enregistrement et post production son, haut de gamme'
+			p: '<strong>3 studios</strong>  d’enregistrement et post production son, <strong>haut de gamme</strong> '
 		},
 		{
-			title: 'CASTING',
-			iconClass: 'fa-solid fa-users fa-2xl',
-			p: 'Comédiens voix professionnels natifs, couvrant plus de 50 nationalités'
+		title: 'SUIVI LIVE',
+			iconClass: 'fa-solid fa-headset fa-2xl',
+			p: '<strong>Suivi clients</strong>  en direct, <strong>au studio ou à distance</strong> via connexion internet sécurisée '
 		},
 		{
 			title: 'VOIX PRO',
-			iconClass: 'fa-solid fa-comment-dots fa-2xl',
-			p: 'Casting voix sur mesure'
+			iconClass: 'fa-solid fa-users fa-2xl',
+			p: '<strong>Comédiens voix professionnels natifs</strong> , couvrant plus de <strong>50 nationalités</strong> '
 		},
 		{
 			title: 'INTERNATIONAL',
 			iconClass: 'fa-solid fa-globe fa-2xl',
-			p: 'Interconnexion avec des studios partenaires du monde entier pour des enregistrement en temps réel à distance'
+			p: 'Interconnexion avec des <strong>studios partenaires du monde entier</strong>  pour des enregistrement <strong>en temps réel</strong>  à distance'
 		},
 		{
-			title: 'SAV',
-			iconClass: 'fa-solid fa-headset fa-2xl',
-			p: 'Suivi clients en direct, au studio ou via connexion à distance'
-		},
-		{
-			title: 'SUIVI',
-			iconClass: 'fa-solid fa-history fa-2xl',
-			p: 'Suivi des projets dans la durée (mises à jour, séries sur plusieurs années), gestion des urgences'
+			title: 'CASTING',
+			iconClass: 'fa-solid fa-comment-dots fa-2xl',
+			p: '<strong>Casting</strong> voix sur mesure'
 		},
 		{
 			title: 'ACCOMPAGNEMENT',
+			iconClass: 'fa-solid fa-history fa-2xl',
+			p: '<strong>Suivi des projets</strong> dans la durée (mises à jour, séries sur plusieurs années), <strong>gestion des urgences</strong>'
+		},
+		{
+			title: 'RESEAU PRO',
 			iconClass: 'fa-solid fa-user-check fa-2xl',
-			p: 'Mise à disposition de notre réseau de partenaires : artistique, technique, traduction/adaptation'
+			p: 'Mise à disposition de notre <strong>réseau de partenaires </strong>: artistique, technique, traduction/adaptation'
 		}
 	];
 </script>
@@ -58,9 +58,10 @@
 	<div class="features-grid">
 		{#each features as feature}
 			<div class="feature-card">
-				<i class="{feature.iconClass} icon"></i>
+			
 				<div class="title">{feature.title}</div>
-				<p>{feature.p}</p>
+				<i class="{feature.iconClass} icon"></i>
+				<p>{@html feature.p}</p>
 			</div>
 		{/each}
 	</div>
@@ -127,13 +128,20 @@
 		perspective: 800px;
 		z-index: 3;
 		margin-bottom: 5rem;
+		align-items: stretch;  
 	}
 
 	.feature-card {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
+		display: grid;
+		grid-template-rows: auto auto 1fr;
+		grid-template-rows: auto auto 1fr;
+		justify-items: center;   
+		 /* display: flex; */
+		 height: 100%;                      /* important pour égaliser la hauteur */
+		 align-content: center;
+		/* align-items: center;
+		justify-content: center; 
+		 flex-direction: column;  */
 		background: rgba(255, 255, 255, 0.05);
 		border: 1px solid rgba(255, 255, 255, 0.1);
 		border-radius: 8px;
@@ -187,7 +195,7 @@
 		font-size: 1.2rem;
 		font-family: var(--raleway);
 		text-align: bottom;
-		font-weight: 600;
+		font-weight: 500;
 	}
 	@media (max-width: 1000px) {
 		.features-grid {

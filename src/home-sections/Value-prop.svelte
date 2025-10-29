@@ -1,5 +1,5 @@
 <script>
-	import Button from '$lib/component/btn-black.svelte';
+	import Button from '$lib/component/btn-white.svelte';
 	import SliderLogos from '$lib/component/Slider-Logos.svelte';
 
 	import { onMount, onDestroy } from 'svelte';
@@ -8,14 +8,14 @@
 
 	gsap.registerPlugin(ScrollTrigger);
 
-	let wrapperH4; // ref sur le conteneur des h4
+	let wrapperh4; // ref sur le conteneur des h4
 	let tl; // timeline pour cleanup
 
 	onMount(() => {
 		// 1) Timeline unique avec stagger = comportement cohérent desktop & mobile
 		tl = gsap.timeline({
 			scrollTrigger: {
-				trigger: wrapperH4,
+				trigger: wrapperh4,
 				start: 'top 70%',
 				end: 'top 20%',
 				scrub: 1,
@@ -26,7 +26,7 @@
 			}
 		});
 
-		tl.from(wrapperH4.querySelectorAll('h4'), {
+		tl.from(wrapperh4.querySelectorAll('div'), {
 			x: 100,
 			opacity: 0,
 			duration: 0.8,
@@ -51,14 +51,35 @@
 <section>
 	<div class="wrapper__section-txt">
 		<h2>Identité sonore, Sound design, Voix ...</h2>
-		<h3>Ensemble, créons des émotions, marquons les esprits</h3>
+		<h3>Ensemble, créons des émotions, marquons les esprits !</h3>
 
 		<!-- On bind le conteneur des h4 -->
-		<div class="wrapper__h4" bind:this={wrapperH4}>
+		<!-- <div class="wrapper__h4" bind:this={wrapperH4}>
 			<h4>+ 25 ans d'expérience</h4>
 			<h4>3 studios</h4>
 			<h4>+ 50 langues</h4>
 			<h4>Réseau International</h4>
+		</div> -->
+
+		<div class="wrapper__h4" bind:this={wrapperh4}>
+			<div class="wrapper__title-icon">
+				<i class="fa-solid fa-thumbs-up icon"></i>
+				<h4>+ 25 ans d'expérience</h4>
+			</div>
+			<div class="wrapper__title-icon">
+				<i class="fa-solid fa-microphone-lines icon"></i>
+				<h4>3 studios</h4>
+			</div>
+
+			<div class="wrapper__title-icon">
+				<i class="fa-solid fa-flag icon"></i>
+				<h4>+ 50 langues</h4>
+			</div>
+
+			<div class="wrapper__title-icon">
+				<i class="fa-solid fa-earth-americas icon"></i>
+				<h4>Réseau International</h4>
+			</div>
 		</div>
 
 		<p>
@@ -170,17 +191,31 @@
 		width: 100%;
 		letter-spacing: -2.5px;
 	}
-	
-
+	.wrapper__title-icon {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 5px;
+		background: linear-gradient(to top, rgba(23, 23, 23, 0.469), rgba(119, 115, 115, 0.469));
+		padding: 10px 10px;
+		border-radius: 8px;
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+	}
+	.icon {
+		font-size: 2rem;
+		color: white;
+	}
 	section h4 {
 		font-family: var(--raleway);
 		font-size: 1.2rem;
 		margin-bottom: 0.5rem;
 		color: white;
-		font-weight: var(--medium);
+		font-weight: var(--bold);
 		margin-top: 0px;
-		padding: 10px 30px;
-		background: linear-gradient(90deg, #e74c3b, #e52e71);
+		padding: 0px 10px;
+		/* background: linear-gradient(90deg, #e74c3b, #e52e71); */
 		border-radius: 5px;
 	}
 	.wrapper__h4 {
@@ -233,29 +268,29 @@
 			gap: 20px;
 		}
 		.wrapper__section-txt h3 {
-		font-family: var(--bebas);
-		font-size: 3rem;
-		color: var(--ardoise);
-		margin-top: 0px;
-		font-weight: var(--bold);
-		width: 100%;
-		letter-spacing: -2.2px;
-	}
-	section h4{
-		font-size: 1rem;
-		padding: 8px 20px;
-	}
-	p {
-		font-family: var(--raleway);
-		font-size: 1rem;
-		color: var(--ardoise);
-		margin-top: 20px;
-		max-width: 800px;
-		line-height: 1.5;
-		margin-top: 50px;
-		margin-bottom: 30px;
-		font-weight: 500;
-		text-align: left;
-	}
+			font-family: var(--bebas);
+			font-size: 3rem;
+			color: var(--ardoise);
+			margin-top: 0px;
+			font-weight: var(--bold);
+			width: 100%;
+			letter-spacing: -2.2px;
+		}
+		section h4 {
+			font-size: 1rem;
+			padding: 8px 20px;
+		}
+		p {
+			font-family: var(--raleway);
+			font-size: 1rem;
+			color: var(--ardoise);
+			margin-top: 20px;
+			max-width: 800px;
+			line-height: 1.5;
+			margin-top: 50px;
+			margin-bottom: 30px;
+			font-weight: 500;
+			text-align: left;
+		}
 	}
 </style>

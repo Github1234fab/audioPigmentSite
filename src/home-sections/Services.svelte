@@ -1,4 +1,3 @@
-
 <script>
 	import Bilingue from '../assets/bilingue.png';
 	import Button from '$lib/component/btn-black.svelte';
@@ -6,83 +5,82 @@
 	const services = [
 		{
 			label: 'Communication sonore',
-			desc: 'Audio branding / Identité sonore (signature sonore, identité musicale, voix de marque, sound design produit…).',
+			desc: 'Audio branding / Identité sonore (signature sonore, identité musicale, voix de marque, sound design produit…)',
 			link: '/fr/services/#1',
 			image: 'https://images.pexels.com/photos/776153/pexels-photo-776153.jpeg'
 		},
 		{
-			label: 'Marketing Sonore',
+			label: 'Marketing sonore',
 			desc: 'Spot radio, podcast, création sonore événementiel, sonorisation d’espace, svi, message téléphonique…',
 			link: '/fr/services/#2',
 
 			image: 'https://images.pexels.com/photos/1271380/pexels-photo-1271380.jpeg'
 		},
 		{
-			label: 'Audiovisuel & digital',
+			label: 'Audiovisuel & Digital',
 			desc: 'Habillage sonore &amp; voix off (pub TV, pub cinéma, film corporate, institutionnel, motion design, e-learning…)',
 			link: '/fr/services/#3',
 			image: 'https://images.pexels.com/photos/66134/pexels-photo-66134.jpeg'
 		},
 		{
-			label: 'Doublage multinlingue / Localisation',
+			label: 'Doublage multilingue / Localisation',
 			desc: 'Dubbing, lip sync, enregistrement voix off en voice over, traduction + adaptation (audioguide, elearning, reportage…)',
 			link: '/fr/services/#4',
 			image: 'https://images.pexels.com/photos/8828605/pexels-photo-8828605.jpeg'
 		},
 		{
-			label: 'Mixage & Post pro broadcast',
+			label: 'Mixage & Post-prod broadcast',
 			desc: 'Mix stéréo, multicanal 5.1 / 7.1, mix VR Binaural / Ambisonique, Normalisation broadcast PAD « Prêt A Diffuser »',
 			link: '/fr/services/#5',
 			image: 'https://images.pexels.com/photos/7899457/pexels-photo-7899457.png'
 		}
 	];
 
-	import { onMount, onDestroy } from "svelte";
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
-//   import { afterNavigate } from "$app/navigation"; // si SvelteKit
+	import { onMount, onDestroy } from 'svelte';
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	//   import { afterNavigate } from "$app/navigation"; // si SvelteKit
 
-  gsap.registerPlugin(ScrollTrigger);
-  let triggers = [];
+	gsap.registerPlugin(ScrollTrigger);
+	let triggers = [];
 
-  onMount(() => {
-    // Un tween + trigger par .card
-    gsap.utils.toArray(".cardo").forEach((el, i) => {
-      const tween = gsap.from(el, {
-        x: 80,
-        opacity: 0,
-        duration: 2,
-        ease: "power3.out",
-        // petit décalage seulement visuel, pas un stagger global
-        delay: i * 0.10,
-        scrollTrigger: {
-          trigger: el,
-          start: "top 80%",   // l’élément entre bien dans le viewport
-          end: "top 30%",     // nécessaire pour bien “sentir” le scrub
-          scrub: 1,           // lisser avec le scroll
-          // markers: true,   // décommente pour débug
-        }
-      });
-      triggers.push(tween.scrollTrigger);
-    });
+	onMount(() => {
+		// Un tween + trigger par .card
+		gsap.utils.toArray('.cardo').forEach((el, i) => {
+			const tween = gsap.from(el, {
+				x: 80,
+				opacity: 0,
+				duration: 2,
+				ease: 'power3.out',
+				// petit décalage seulement visuel, pas un stagger global
+				delay: i * 0.1,
+				scrollTrigger: {
+					trigger: el,
+					start: 'top 80%', // l’élément entre bien dans le viewport
+					end: 'top 30%', // nécessaire pour bien “sentir” le scrub
+					scrub: 1 // lisser avec le scroll
+					// markers: true,   // décommente pour débug
+				}
+			});
+			triggers.push(tween.scrollTrigger);
+		});
 
-    // Recalcule après le chargement images / fonts
-    const onLoad = () => ScrollTrigger.refresh();
-    window.addEventListener("load", onLoad);
+		// Recalcule après le chargement images / fonts
+		const onLoad = () => ScrollTrigger.refresh();
+		window.addEventListener('load', onLoad);
 
-    // Si SvelteKit : rafraîchir après navigation
-    // afterNavigate(() => ScrollTrigger.refresh());
+		// Si SvelteKit : rafraîchir après navigation
+		// afterNavigate(() => ScrollTrigger.refresh());
 
-    return () => {
-      window.removeEventListener("load", onLoad);
-    };
-  });
+		return () => {
+			window.removeEventListener('load', onLoad);
+		};
+	});
 
-  onDestroy(() => {
-    triggers.forEach(t => t?.kill());
-    triggers = [];
-  });
-
+	onDestroy(() => {
+		triggers.forEach((t) => t?.kill());
+		triggers = [];
+	});
 </script>
 
 <section>
@@ -98,9 +96,9 @@
 					<h3>{service.label}</h3>
 					<p>{service.desc}</p>
 					<!-- <a class="button" href={service.link} aria-label="button">En savoir +</a> -->
-					 <div class="wrapper-button">
-					<Button txt="En Savoir +" href={service.link} />
-				</div>
+					<div class="wrapper-button">
+						<Button txt="En Savoir +" href={service.link} />
+					</div>
 				</div>
 			</div>
 		{/each}
@@ -143,7 +141,7 @@
 		object-fit: cover;
 		border-radius: 12px 10px 0px 0px;
 	}
-	.wrapper-button{
+	.wrapper-button {
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
@@ -191,7 +189,6 @@
 	} */
 
 	@media screen and (max-width: 768px) {
-	
 		.wrapper__service-txt h3 {
 			font-size: 1.8rem;
 		}
@@ -201,11 +198,11 @@
 			line-height: 50px;
 			margin-bottom: 50px;
 		}
-		.wrapper__cards{
+		.wrapper__cards {
 			gap: 2rem;
 			margin-bottom: 5rem;
 		}
-		.cardo{
+		.cardo {
 			width: 90vw;
 		}
 	}

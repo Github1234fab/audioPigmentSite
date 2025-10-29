@@ -19,7 +19,7 @@
 		Fondée en 1999, Audio Pigment est une agence de communication, spécialisée dans la <span
 			>conception et la production sonore</span
 		>
-		pour les secteurs de la communication, de la culture et des médias. <br /><br />
+		pour les secteurs de la communication, de l’audiovisuel et des médias. <br /><br />
 
 		Nous conjuguons <span>exigence technique, sens du détail</span> et
 		<span>approche artistique</span>

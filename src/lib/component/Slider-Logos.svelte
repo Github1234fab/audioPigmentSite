@@ -117,7 +117,13 @@
 	align-items: center; 
 	justify-content: center;
 	width: 100%; 
-	height: 100%;
+	height: 200px;
+	background-color: none;
+	
+	/* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.108);
+	border: 1px solid grey;
+	border-radius: 18px;
+	background-color: white; */
 }
 
 .logo-box :global(img),

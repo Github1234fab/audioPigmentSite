@@ -45,12 +45,40 @@ const StudioA = '/2017-11-07_17-13-40-Architecture-Audio-Pigment-www.studiolecar
 
 	<div class="wrapper__studios">
 		<p>
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus facere obcaecati asperiores
-			maxime, accusantium earum harum libero voluptatum. Provident corporis minus cum nostrum animi
-			eveniet quasi, repellat voluptatum cumque earum.
+			Spécialisés dans la conception et la production sonore pour les secteurs de la
+
+			communication, de l’audiovisuel et des médias.
+			<br><br>
+			
+			Nous conjuguons exigence technique, sens du détail et approche artistique pour
+			
+			offrir des productions haut de gamme, pensées sur mesure.
+			<br><br>
 		</p>
+		<div class="wrapper__info-studio">
+			<strong>3 studios son équipés de : </strong>
+		
+			<ul>
+				<li>	 Pro Tools Ultimate + HDX</li>
+				<li> Source Connect PRO</li>
+				<li> FOCAL + GENELEC monitoring</li>
+				<li> MERGING + AVID i/o</li>
+				<li> AVALON preamps</li>
+				<li>LIP-SYNC dubbing</li>
+				<li>5.1 mixing</li>
+				
+				
+
+
+			</ul>
+			<img class="label" src={SC} alt="Certified source-connect studio" />
+		</div>
+			
+
+
+	
 		<!-- <h2>Visite de nos locaux</h2> -->
-		<img class="label" src={SC} alt="Certified source-connect studio" />
+	
 		<div class="slider" role="region" aria-roledescription="carousel" aria-label="Studios">
 			<div class="viewport" on:touchstart={onTouchStart} on:touchend={onTouchEnd}>
 				<div class="track" style="transform: translateX(-{index * 100}%);" aria-live="polite">
@@ -104,7 +132,7 @@ const StudioA = '/2017-11-07_17-13-40-Architecture-Audio-Pigment-www.studiolecar
 		text-align: center;
 		padding: 1.5rem;
 		background-image: linear-gradient(22.5deg, rgba(67, 67, 67, 0.02) 0%, rgba(67, 67, 67, 0.02) 29%,rgb(255,255,255) 29%, rgb(255,255,255) 37%,rgba(23, 23, 23, 0.02) 37%, rgba(23, 23, 23, 0.02) 55%,rgba(182, 182, 182, 0.02) 55%, rgba(182, 182, 182, 0.02) 69%,rgba(27, 27, 27, 0.02) 69%, rgba(27, 27, 27, 0.02) 71%,rgba(250, 250, 250, 0.02) 71%, rgba(250, 250, 250, 0.02) 100%),linear-gradient(67.5deg, rgba(117, 117, 117, 0.02) 0%, rgba(117, 117, 117, 0.02) 14%,rgba(199, 199, 199, 0.02) 14%, rgba(199, 199, 199, 0.02) 40%,rgba(33, 33, 33, 0.02) 40%, rgba(33, 33, 33, 0.02) 48%,rgba(135, 135, 135, 0.02) 48%, rgba(135, 135, 135, 0.02) 60%,rgba(148, 148, 148, 0.02) 60%, rgba(148, 148, 148, 0.02) 95%,rgba(53, 53, 53, 0.02) 95%, rgba(53, 53, 53, 0.02) 100%),linear-gradient(135deg, rgba(190, 190, 190, 0.02) 0%, rgba(190, 190, 190, 0.02) 6%,rgba(251, 251, 251, 0.02) 6%, rgba(251, 251, 251, 0.02) 18%,rgba(2, 2, 2, 0.02) 18%, rgba(2, 2, 2, 0.02) 27%,rgba(253, 253, 253, 0.02) 27%, rgba(253, 253, 253, 0.02) 49%,rgba(128, 128, 128, 0.02) 49%, rgba(128, 128, 128, 0.02) 76%,rgba(150, 150, 150, 0.02) 76%, rgba(150, 150, 150, 0.02) 100%),linear-gradient(90deg, #ffffff,#ffffff);
-		height: 100vh;
+		min-height: 100vh;
 		z-index: 0;
 		gap: 10px;
 	}
@@ -113,7 +141,8 @@ const StudioA = '/2017-11-07_17-13-40-Architecture-Audio-Pigment-www.studiolecar
 		font-size: 3.5rem;
 		color: var(--ardoise);
 		font-weight: var(--bold);
-		letter-spacing: -2.5px;
+		letter-spacing: -2px;
+		margin-top: 50px;
 	}
 	section h2 {
 		font-family: var(--bebas);
@@ -126,23 +155,59 @@ const StudioA = '/2017-11-07_17-13-40-Architecture-Audio-Pigment-www.studiolecar
 		width: auto;
 		height: 60px;
 		object-fit: cover;
+		margin-top: 20px;
 	}
 	.wrapper__studios {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		gap: 40px;
+		gap: 20px;
+		background-color: rgba(211, 211, 211, 0.169);
+		padding: 50px;
+		border-radius: 15px;
 	}
+	.wrapper__info-studio {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		font-family: var(--raleway);
+		font-size: 1rem;
+		color: var(--ardoise);
+		text-align: left;
+		max-width: 600px;
+		background-color: #ec4034df;
+		padding: 30px 20px 20px 40px ;
+		border-radius: 20px;
+	}
+	.wrapper__info-studio ul {
+		margin-top: 10px;
+	
+		color: white;
+
+	}
+	.wrapper__info-studio li {
+		margin-top: 10px;
+		font-weight: 600;
+
+	}
+	.wrapper__info-studio strong {
+		font-size: 1.2rem;
+		margin-bottom: 10px;
+		color: white;
+	}
+
 
 	.wrapper__studios p {
 		font-family: var(--raleway);
 		font-size: 1rem;
 		color: var(--ardoise);
-		margin-bottom: 10px;
+		margin-bottom: 0px;
 		padding: 1rem;
-		/* background-color: rgb(240, 239, 239); */
 		border-radius: 5px;
-		max-width: 960px;
+		max-width: 800px;
+		line-height: 30px;
+		font-weight: 500;
 	
 	}
 	.nous-ecouter {
@@ -300,6 +365,7 @@ const StudioA = '/2017-11-07_17-13-40-Architecture-Audio-Pigment-www.studiolecar
 		.wrapper__studios {
 			flex-direction: column;
 			gap: 20px;
+			padding: 0px;
 		}
 	}
 </style>

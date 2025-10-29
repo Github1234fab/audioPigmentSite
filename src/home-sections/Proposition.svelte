@@ -32,9 +32,9 @@
 		<CardDotWhite
 			title="Voix"
 			subtitle={`Voix off
-	Doublage/Dubbing/ADR
+	Doublage / Dubbing / ADR
 	Voice over`}
-			txt="En savoir +"
+			txt="Écouter"
 			href="/fr/expertise/#Voix"
 			videoSrc="https://www.pexels.com/fr-fr/download/video/7586638-hd_1920_1080_24fps.mp4"
 		/>

@@ -8,11 +8,11 @@
 <style>
 	.card {
 		position: relative;
-		height: 90px;
-		width: auto;
-		background-size: cover;
+		height: 100px;
+		width: 100%;
+		/* background-size: cover;
 		background-position: center;
-		background-repeat: no-repeat;
+		background-repeat: no-repeat; */
 		border-radius: 5px;
 		transition: transform 0.3s ease;
 		background-color: white;
@@ -20,13 +20,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.239);
 	}
 	.img {
-		width: 100%;
-		height: 100%;
+		min-width: 100%;
+		min-height: 100%;
 		object-fit: cover;
-		border-radius: 5px;
 	}
 
 	.card:hover {

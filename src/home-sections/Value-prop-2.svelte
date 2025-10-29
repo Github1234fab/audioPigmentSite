@@ -13,18 +13,18 @@
 
 	<div class="wrapper__section-txt">
 		<h2><strong>Ensemble, créons des émotions, marquons les esprits</strong></h2>
-
+<br>
 		<p>
-			Chez AUDIO PIGMENT, chaque projet est écouté, pensé et façonné avec soin, expertise et
-			inventivité. À vos côtés. <br />
+			Chez AUDIO PIGMENT, chaque projet est écouté, pensé et façonné avec <strong>soin, expertise et
+			inventivité.</strong> <br> À <strong>vos côtés.</strong> <br /><br>
 			Une <strong>écoute attentive</strong>, un <strong>savoir-faire affûté </strong> et
-			<strong>le goût du sur-mesure</strong>
+			<strong>le soin du sur-mesure</strong>
 			pour un impact optimal.
 
 			<br /> <br /><strong>Comprendre</strong>, <strong>ressentir</strong>,
 			<strong>transmettre</strong>
 			: c’est notre métier. <br />
-			<br /> <span>Faites nous confiance</span>
+			<br /><br> Faites nous confiance
 		</p>
 
 		<!-- <p>
@@ -73,15 +73,16 @@
 		color: white;
 		margin-bottom: 20px;
 	}
-	.wrapper__section-txt p span {
+	/* .wrapper__section-txt p span {
 		font-weight: var(--extra-bold);
 		font-family: var(--bebas);
-	}
+	} */
 
 	.wrapper__buttons {
 		display: flex;
 		/* flex-direction: column; */
 		margin-bottom: 50px;
+		gap: 10px;
 	}
 	.wrapper__section-txt {
 		display: flex;

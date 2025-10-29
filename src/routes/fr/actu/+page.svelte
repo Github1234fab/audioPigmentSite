@@ -9,7 +9,7 @@ import Slider from '$lib/component/Slider.svelte';
 
 <section>
 	<h1>Notre actualité</h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia facere odio consequuntur. Voluptates quos ea exercitationem deleniti odio odit, mollitia esse enim, hic necessitatibus aut non impedit nostrum ab! Vel!</p>
+    <p>Découvrez quelques-unes de nos dernières réalisations et suivez notre actualité…</p>
 <Btn txt="Nous contacter" href="/fr/contact"/>
 <Slider/>
 </section>
