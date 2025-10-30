@@ -51,7 +51,7 @@
 <section>
 	<div class="wrapper__section-txt">
 		<h2>Identité sonore, Sound design, Voix ...</h2>
-		<h3>Ensemble, créons des émotions, marquons les esprits !</h3>
+		
 
 		<!-- On bind le conteneur des h4 -->
 		<!-- <div class="wrapper__h4" bind:this={wrapperH4}>
@@ -81,40 +81,51 @@
 				<h4>Réseau International</h4>
 			</div>
 		</div>
+		<h3>Ensemble, créons des émotions, marquons les esprits !</h3>
+		<div class="container">
+			<div class="wrapper__p">
+			<p>
+				<strong>Acteurs reconnus</strong> de la production sonore, <strong>en France</strong> comme
+				<strong>à l’international</strong>, nous sommes spécialisés dans la voix off, le doublage,
+				le sound design, la création musicale, la postproduction, et le mixage. <br />
 
-		<p>
-			<strong>Acteurs reconnus</strong> de la production sonore, <strong>en France</strong> comme
-			<strong>à l’international</strong>, nous sommes spécialisés dans la voix off, le doublage, le
-			sound design, la création musicale, la postproduction, et le mixage. <br />
+				Nous conjuguons <strong>exigence technique</strong>, <strong>sens du détail </strong> et
+				<strong>approche artistique</strong>
+				pour des productions
+				<strong>haut de gamme</strong>, conçues <strong>sur mesure</strong>. <br /><br />
 
-			Nous conjuguons <strong>exigence technique</strong>, <strong>sens du détail </strong> et
-			<strong>approche artistique</strong>
-			pour des productions
-			<strong>haut de gamme</strong>, conçues <strong>sur mesure</strong>. <br /><br />
+				Chez <strong>Audio Pigment</strong>, chaque projet est pensé comme une
+				<strong>pièce unique</strong>, où notre <strong>savoir-faire</strong>, notre
+				<strong>expérience</strong>
+				, et notre <strong>créativité</strong> sont mis au service de <strong>l’impact</strong>, de
+				<strong>l’image</strong>
+				, du <strong>récit</strong> et de <strong>l’identité</strong>.
 
-			Chez <strong>Audio Pigment</strong>, chaque projet est pensé comme une
-			<strong>pièce unique</strong>, où notre <strong>savoir-faire</strong>, notre
-			<strong>expérience</strong>
-			, et notre <strong>créativité</strong> sont mis au service de <strong>l’impact</strong>, de
-			<strong>l’image</strong>
-			, du <strong>récit</strong> et de <strong>l’identité</strong>.
+				<br /><br /> <strong>Depuis 1999</strong> , nous accompagnons de
+				<strong>grandes marques</strong>
+				et <strong>institutions</strong> telles que : L’Oréal, Chanel, Air France, Disneyland Paris,
+				Ferrero, bioMérieux, Caisse d’Epargne, Puy du Fou, Point S, Orange, EDF, Région
+				Auvergne-Rhône-Alpes et beaucoup d’autres…
 
-			<br /><br /> <strong>Depuis 1999</strong> , nous accompagnons de
-			<strong>grandes marques</strong>
-			et <strong>institutions</strong> telles que : L’Oréal, Chanel, Air France, Disneyland Paris,
-			Ferrero, bioMérieux, Caisse d’Epargne, Puy du Fou, Point S, Orange, EDF, Région
-			Auvergne-Rhône-Alpes et beaucoup d’autres…
-
-			<br /><br />Et nous sommes fiers de la confiance qu’ils continuent de nous accorder
-			aujourd’hui…
-		</p>
-
+				<br /><br />Et nous sommes fiers de la confiance qu’ils continuent de nous accorder
+				aujourd’hui…
+			</p>
+			<div class="wrapper-button">
+				<Button txt="Contactez-nous" href="/fr/contact" />
+			</div>
+		</div>
+			<img
+				class="img"
+				src="https://images.pexels.com/photos/4889024/pexels-photo-4889024.jpeg"
+				alt="microphones"
+			/>
+		</div>
+	
 		<div class="wrapper__slider-logos">
+			<h4>Nos clients sont satisfaits</h4>
 			<SliderLogos />
 		</div>
-		<div class="wrapper-button">
-			<Button txt="Contactez-nous" href="/fr/contact" />
-		</div>
+	
 	</div>
 </section>
 
@@ -153,11 +164,27 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-top: 50px;
-		margin-bottom: 100px;
+		margin-top: 0px;
+		margin-bottom: 60px;
 	}
 	.wrapper__slider-logos {
 		width: 100%;
+	}
+	.container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 30px;
+		background-color: rgba(211, 211, 211, 0.191);
+		border-radius: 10px;
+	}
+	.img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 5px;
 	}
 	.wrapper__section-txt {
 		display: flex;
@@ -168,7 +195,7 @@
 		margin-bottom: 0px;
 		color: white;
 		margin-top: 100px;
-		gap: 20px;
+		gap: 50px;
 		width: 100%;
 	}
 	.wrapper__section-txt h2 {
@@ -197,14 +224,14 @@
 		align-items: center;
 		justify-content: center;
 		gap: 5px;
-		background: linear-gradient(to top, rgba(23, 23, 23, 0.469), rgba(119, 115, 115, 0.469));
+		background: linear-gradient(to top, rgba(23, 23, 23, 0.641), rgba(119, 115, 115, 0.469));
 		padding: 10px 10px;
 		border-radius: 8px;
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
 	}
 	.icon {
-		font-size: 2rem;
+		font-size: 1.5rem;
 		color: white;
 	}
 	section h4 {
@@ -219,20 +246,34 @@
 		border-radius: 5px;
 	}
 	.wrapper__h4 {
-		gap: 20px;
-		margin-top: 30px;
+		gap: 10px;
+		margin-top: 0px;
 		display: flex;
 	}
 	p {
 		font-family: var(--raleway);
-		font-size: 1.2rem;
+		font-size: 1.1rem;
 		color: var(--ardoise);
 		margin-top: 20px;
 		max-width: 800px;
 		line-height: 1.5;
-		margin-top: 50px;
+		margin-top: 0px;
 		margin-bottom: 30px;
 		font-weight: 500;
+		text-align: left;
+	}
+	.wrapper__slider-logos{
+		margin-top: 50px;
+	}
+	.wrapper__slider-logos h4{
+		font-family: var(--bebas);
+		font-size: 2rem;
+		color: var(--ardoise);
+		font-weight: 500;
+		margin-bottom: 20px;
+		font-weight: var(--bold);
+		text-align: left;
+		margin-left: 10%;
 	}
 
 	@media screen and (max-width: 768px) {

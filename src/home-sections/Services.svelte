@@ -56,7 +56,7 @@
 				delay: i * 0.1,
 				scrollTrigger: {
 					trigger: el,
-					start: 'top 80%', // l’élément entre bien dans le viewport
+					start: 'top 60%', // l’élément entre bien dans le viewport
 					end: 'top 30%', // nécessaire pour bien “sentir” le scrub
 					scrub: 1 // lisser avec le scroll
 					// markers: true,   // décommente pour débug
@@ -126,20 +126,22 @@
 		margin-bottom: 10rem;
 	}
 	.cardo {
-		display: flex;
+		/* display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
-		height: auto;
+		justify-content: center; */
+		display:grid;
+		grid-template-columns: auto 1fr;
+		height: 420px;
 		border-radius: 12px 10px 12px 12px;
 		box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.462);
 		width: 80vw;
 	}
 	.cardo img {
 		width: 100%;
-		height: 300px;
+		height: 420px;
 		object-fit: cover;
-		border-radius: 12px 10px 0px 0px;
+		border-radius: 12px 0px 0px 0px;
 	}
 	.wrapper-button {
 		display: flex;
@@ -161,15 +163,16 @@
 	.wrapper__service-txt {
 		display: flex;
 		flex-direction: column;
-		align-items: left;
+		align-items: center;
 		justify-content: center;
 		padding: 0.5rem 1rem;
 		z-index: 2;
-		border-radius: 0px 0px 12px 12px;
+		border-radius: 0px 0px 12px 0px;
 		/* background-color: rgb(157, 154, 154); */
 		background-color: rgb(105, 99, 99);
 		width: 100%;
 		margin-top: 0px;
+		gap: 30px
 	}
 
 	.wrapper__service-txt h3 {
@@ -183,6 +186,7 @@
 		font-size: 1rem;
 		font-weight: 600;
 		font-family: var(--bebas);
+		max-width: 70%;
 	}
 	/* a {
 		text-decoration: none;
