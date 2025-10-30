@@ -74,19 +74,19 @@
 		<div class="container">
 			<h2>Création originale</h2>
 			<p>
-				Chez Audio Pigment, nous imaginons et produisons des univers sonores sur mesure : signature
+				Chez Audio Pigment, nous imaginons et produisons des <strong>univers sonores sur mesure </strong> : signature
 				sonore, habillage sonore, composition musicale, sound design ou événementiel…<br /><br />
-				Notre rôle : transformer une idée ou une intention, en matière sonore et en émotion.
+				Notre rôle : <strong>transformer une idée ou une intention, en matière sonore et en émotion</strong> .
 				<br /><br />Qu’il s’agisse de donner une identité sonore à une marque, d’accompagner un
 				film, une publicité, un podcast, ou de concevoir une expérience immersive, nous nous
-				approprions les enjeux, nous adaptons notre approche au contexte et aux contraintes de
-				diffusion, et nous cherchons la justesse émotionnelle, celle qui permet au son de porter la
-				narration, l’image ou le message auprès du public. <br /><br />Pour les compositions
+				approprions les <strong>enjeux</strong>, nous adaptons notre approche au <strong>contexte</strong>  et aux <strong>contraintes de
+					diffusion</strong> , et nous cherchons la <strong>justesse émotionnelle</strong> , celle qui permet au son de porter la
+				narration, l’image ou le message <strong>auprès du public</strong> . <br /><br />Pour les compositions
 				musicales, nous proposons également des licences à partir de notre catalogue, et
-				accompagnons nos clients dans leur sélection. Ces musiques sont personnalisables, mais
-				lorsqu’un projet exige une identité unique, la création originale reste la plus adaptée :
+				<strong>accompagnons nos clients </strong>dans leur sélection. Ces musiques sont personnalisables, mais
+				lorsqu’un projet exige une identité unique, la <strong>création originale</strong> reste la plus adaptée :
 				elle assure une adéquation complète entre musique, intention et émotion, ainsi qu’une
-				exclusivité totale de diffusion.
+				<strong>exclusivité totale</strong> de diffusion.
 				<br /><br /> Notre objectif : donner à chaque projet sa propre identité, son rythme et sa signature
 				émotionnelle.
 			</p>
@@ -135,19 +135,20 @@
 		<div class="container">
 			<h2>Voix</h2>
 			<p>
-				La voix capte naturellement l’attention : elle parle à l’inconscient, crée des émotions,
-				donne du sens et relie le message à la mémoire. <br /><br />Qu’il s’agisse de supports
-				sonores (radio, podcasts, audioguides) ou de productions audiovisuelles (films, publicités,
-				e-learning, jeux vidéo, installations), la voix incarne un message, un récit, elle explique,
-				personnifie, renforce la portée émotionnelle. <br /><br />Mais face à la profusion de
-				contenus auxquels nous sommes exposés, se faire entendre ne suffit plus : il faut se
-				démarquer et retenir l’attention. Cela passe par le choix d’une voix juste, une direction
+				La voix <strong>capte naturellement l’attention </strong>: elle parle à l’inconscient, crée des émotions,
+				donne du sens et relie le message à la mémoire. <br /><br />Qu’il s’agisse de <strong>supports
+					sonores </strong>s(radio, podcasts, audioguides) ou de <strong>productions audiovisuelles </strong>(films, publicités,
+				e-learning, jeux vidéo, installations), la voix <strong>incarne </strong>un message, un récit, elle <strong>explique,
+					personnifie, renforce la portée émotionnelle.</strong> <br /><br />Mais face à la profusion de
+				contenus auxquels nous sommes exposés, <strong>se faire entendre ne
+					suffit plus</strong> :se faire entendre ne suffit plus : il faut <strong>se
+						démarquer et retenir l’attention</strong>. Cela passe par le choix d’une voix juste, une direction
 				d'acteur impliquée, et une qualité d'enregistrement irréprochable. <br /><br />Voix off,
-				doublage / dubbing / ADR, voice-over, adaptation multilingue : nous ne nous contentons pas
-				d&#39;enregistrer. Chaque projet bénéficie d’un accompagnement complet, du choix du comédien
+				doublage / dubbing / ADR, voice-over, adaptation multilingue : <strong>nous ne nous contentons pas
+					d'enregistrer</strong>. Chaque projet bénéficie d’un <strong>accompagnement complet</strong>, du choix du comédien
 				à la finalisation audio. Nous assurons le casting, la direction artistique,
-				l’enregistrement, ajustons l&#39;interprétation en temps réel avec nos clients, et veillons
-				attentivement à ce que la voix serve le sens, l’intention, et l&#39;impact émotionnel
+				l’enregistrement, ajustons l'interprétation en temps réel avec nos clients, et veillons
+				attentivement à ce que <strong>la voix serve le sens, l’intention, et l&#39;impact émotionnel</strong>
 				recherchés.
 			</p>
 			<div class="wrapper__advantages">
@@ -294,7 +295,7 @@
 		margin-bottom: 0.5rem;
 		color: var(--ardoise);
 		margin-top: 20px;
-		font-weight: 400;
+		font-weight: 700;
 		letter-spacing: -1.5px;
 	}
 	section h3 {
