@@ -1,38 +1,43 @@
 <script>
 	import Bilingue from '../assets/bilingue.png';
 	import Button from '$lib/component/btn-black.svelte';
+	import ComSonore from "../assets/ComSonore.webp";
+	import MarkSonore from "../assets/MarkSonore.webp";
+	import AudioVisuel from "../assets/AudioVisuel.webp";
+	import VoixMulti from "../assets/VoixMulti.webp";
+	import Mixage from "../assets/Mixage.webp";
 
 	const services = [
 		{
 			label: 'Communication sonore',
 			desc: 'Audio branding / Identité sonore (signature sonore, identité musicale, voix de marque, sound design produit…)',
 			link: '/fr/services/#1',
-			image: 'https://images.pexels.com/photos/776153/pexels-photo-776153.jpeg'
+			image: ComSonore
 		},
 		{
 			label: 'Marketing sonore',
 			desc: 'Spot radio, podcast, création sonore événementiel, sonorisation d’espace, svi, message téléphonique…',
 			link: '/fr/services/#2',
 
-			image: 'https://images.pexels.com/photos/1271380/pexels-photo-1271380.jpeg'
+			image: MarkSonore
 		},
 		{
 			label: 'Audiovisuel & Digital',
 			desc: 'Habillage sonore &amp; voix off (pub TV, pub cinéma, film corporate, institutionnel, motion design, e-learning…)',
 			link: '/fr/services/#3',
-			image: 'https://images.pexels.com/photos/66134/pexels-photo-66134.jpeg'
+			image: AudioVisuel
 		},
 		{
 			label: 'Doublage multilingue / Localisation',
 			desc: 'Dubbing, lip sync, enregistrement voix off en voice over, traduction + adaptation (audioguide, elearning, reportage…)',
 			link: '/fr/services/#4',
-			image: 'https://images.pexels.com/photos/8828605/pexels-photo-8828605.jpeg'
+			image: VoixMulti
 		},
 		{
 			label: 'Mixage & Post-prod broadcast',
 			desc: 'Mix stéréo, multicanal 5.1 / 7.1, mix VR Binaural / Ambisonique, Normalisation broadcast PAD « Prêt A Diffuser »',
 			link: '/fr/services/#5',
-			image: 'https://images.pexels.com/photos/7899457/pexels-photo-7899457.png'
+			image: Mixage
 		}
 	];
 
@@ -131,7 +136,7 @@
 		align-items: center;
 		justify-content: center; */
 		display:grid;
-		grid-template-columns: auto 1fr;
+		grid-template-columns: auto 500px;
 		height: 420px;
 		border-radius: 12px 10px 12px 12px;
 		box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.462);
@@ -180,6 +185,7 @@
 		font-size: 2rem;
 		font-family: var(--bebas);
 		margin-top: 20px;
+		text-align: center;
 	}
 	.wrapper__service-txt p {
 		color: white;

@@ -61,27 +61,28 @@
 			<h4>Réseau International</h4>
 		</div> -->
 
-		<div class="wrapper__h4" bind:this={wrapperh4}>
-			<div class="wrapper__title-icon">
-				<i class="fa-solid fa-thumbs-up icon"></i>
-				<h4>+ 25 ans d'expérience</h4>
-			</div>
-			<div class="wrapper__title-icon">
-				<i class="fa-solid fa-microphone-lines icon"></i>
-				<h4>3 studios</h4>
-			</div>
-
-			<div class="wrapper__title-icon">
-				<i class="fa-solid fa-flag icon"></i>
-				<h4>+ 50 langues</h4>
-			</div>
-
-			<div class="wrapper__title-icon">
-				<i class="fa-solid fa-earth-americas icon"></i>
-				<h4>Réseau International</h4>
-			</div>
-		</div>
-		<h3>Ensemble, créons des émotions, marquons les esprits !</h3>
+				<h3>Ensemble, créons des émotions, marquons les esprits !</h3>
+				<div class="wrapper__h4" bind:this={wrapperh4}>
+					<div class="wrapper__title-icon">
+						<i class="fa-solid fa-thumbs-up icon"></i>
+						<h4>+ 25 ans d'expérience</h4>
+					</div>
+					<div class="wrapper__title-icon">
+						<i class="fa-solid fa-microphone-lines icon"></i>
+						<h4>3 studios</h4>
+					</div>
+		
+					<div class="wrapper__title-icon">
+						<i class="fa-solid fa-flag icon"></i>
+						<h4>+ 50 langues</h4>
+					</div>
+		
+					<div class="wrapper__title-icon">
+						<i class="fa-solid fa-earth-americas icon"></i>
+						<h4>Réseau International</h4>
+					</div>
+				</div>
+		
 		<div class="container">
 			<div class="wrapper__p">
 			<p>
@@ -114,11 +115,11 @@
 				<Button txt="Contactez-nous" href="/fr/contact" />
 			</div>
 		</div>
-			<img
+			<!-- <img
 				class="img"
 				src="https://images.pexels.com/photos/4889024/pexels-photo-4889024.jpeg"
 				alt="microphones"
-			/>
+			/> -->
 		</div>
 	
 		<div class="wrapper__slider-logos">
@@ -138,7 +139,8 @@
 		justify-content: center;
 		text-align: center;
 		padding: 2rem;
-		background-image: radial-gradient(
+		background-image: url('../assets/bg-valueProp.webp');
+		/* background-image: radial-gradient(
 			circle at top right,
 			rgb(255, 255, 255) 0%,
 			rgb(255, 255, 255) 48%,
@@ -150,7 +152,7 @@
 			rgb(229, 229, 229) 69%,
 			rgb(229, 229, 229) 69%,
 			rgb(229, 229, 229) 100%
-		);
+		); */
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
@@ -159,6 +161,16 @@
 		gap: 30px;
 		overflow: hidden;
 		z-index: 0;
+	}
+	section::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.231);
+		z-index: -1;
 	}
 	.wrapper-button {
 		display: flex;
@@ -171,21 +183,22 @@
 		width: 100%;
 	}
 	.container {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
+	display: flex;
 		gap: 20px;
 		max-width: 1200px;
 		margin: 0 auto;
 		padding: 30px;
-		background-color: rgba(211, 211, 211, 0.191);
+		background-color: rgba(255, 255, 255, 0.205);
 		border-radius: 10px;
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
 	}
-	.img{
+	/* .img{
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		border-radius: 5px;
-	}
+	} */
 	.wrapper__section-txt {
 		display: flex;
 		flex-direction: column;
@@ -212,7 +225,7 @@
 	.wrapper__section-txt h3 {
 		font-family: var(--bebas);
 		font-size: 3.5rem;
-		color: var(--ardoise);
+		color: white;
 		margin-top: 0px;
 		font-weight: var(--bold);
 		width: 100%;
@@ -268,12 +281,14 @@
 	.wrapper__slider-logos h4{
 		font-family: var(--bebas);
 		font-size: 2rem;
-		color: var(--ardoise);
+		color: white;
 		font-weight: 500;
-		margin-bottom: 20px;
+		margin-bottom: 0px;
 		font-weight: var(--bold);
 		text-align: left;
-		margin-left: 10%;
+		margin-left: 2%;
+		letter-spacing: -1px;
+		
 	}
 
 	@media screen and (max-width: 768px) {
