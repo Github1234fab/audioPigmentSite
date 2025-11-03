@@ -1,6 +1,11 @@
 <script>
 	let txt = '';
 	let href = '';
+	import ComSonore from '../../../assets/ComSonore.webp';
+	import MarkSonore from '../../../assets/MarkSonore2.webp';
+	import AudioVisuel from '../../../assets/AudioVisuel2.webp';
+	import Voix from '../../../assets/Voix.webp';
+	import Mixage from '../../../assets/Mixage2.webp';
 
 	const services = [
 		{
@@ -23,7 +28,8 @@ ou événementiels) pour assurer une présence cohérente et reconnaissable.
 Dans un monde saturé de sons, nous aidons les marques à se <strong>distinguer, être entendues et
 mémorisées</strong>, avec justesse et émotion.`,
 			link: '/fr/contact',
-			image: 'https://images.pexels.com/photos/7859937/pexels-photo-7859937.jpeg'
+			image: ComSonore,
+			alt: "Personne utilisant un microphone dans un studio d'enregistrement"
 		},
 		{
 			id: '2',
@@ -45,7 +51,7 @@ sonore pour garantir <strong>	l’impact, la pertinence et l’émotion</strong>
 en une expérience d’écoute identifiable et marquante.`,
 			link: '/fr/contact',
 
-			image: 'https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg'
+			image: MarkSonore
 		},
 		{
 			id: '3',
@@ -75,7 +81,7 @@ immersif, notre approche reste la même : <strong>construire un paysage sonore c
 et identitaire </strong>, où chaque son, chaque voix, chaque silence participe à raconter l’histoire et
 servir l’image.`,
 			link: '/fr/contact',
-			image: 'https://images.pexels.com/photos/7586136/pexels-photo-7586136.jpeg'
+			image: AudioVisuel
 		},
 		{
 			id: '4',
@@ -97,7 +103,7 @@ Qu’il s’agisse d’un film, d’une vidéo de marque, d’un contenu institu
 considérons la localisation et le doublage comme un art d’équilibre entre <strong>	technique,
 interprétation et fidélité à l’œuvre </strong>	, pour que la langue change, mais pas l’émotion.`,
 			link: '/fr/contact',
-			image: 'https://images.pexels.com/photos/4476164/pexels-photo-4476164.jpeg'
+			image: Voix
 		},
 		{
 			id: '5',
@@ -121,7 +127,7 @@ Nous assurons également la <strong> conformation technique et la normalisation 
 garantissant que les masters livrés respectent toutes les contraintes de diffusion et soient
 immédiatement exploitables, sans compromis sur la qualité.`,
 			link: '/fr/contact',
-			image: 'https://images.pexels.com/photos/4988131/pexels-photo-4988131.jpeg'
+			image: Mixage
 		}
 	];
 </script>
@@ -130,21 +136,25 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 	<h2>Nos prestations</h2>
 	<div class="wrapper__services-cards">
 		{#each services as service}
-			<div
-				class="service-card"
-				id={service.id}
-				style={service.image ? `background-image: url(${service.image});` : ''}
-			>
-				<div class="wrapper__service-txt">
-					<h3>{service.label}</h3>
-					<h4>{service.subLabel}</h4>
-					<p>{@html service.desc}</p>
-					<a href={service.link}>Contact</a>
+			<div class="service-card" id={service.id}>
+				<div class="wrapper__img-title">
+					<img class="img" src={service.image} alt={service.alt} />
+					<div class="wrapper__service-txt">
+						<h3>{service.label}</h3>
+						<h4>{service.subLabel}</h4>
+					</div>
 				</div>
+				<div class="wrapper__p-cta">
+					<p>{@html service.desc}</p>
+					<a class="cta" href={service.link}>Contact</a>
+				</div>
+			
 			</div>
 		{/each}
 	</div>
 </section>
+
+<!-- style={service.image ? `background-image: url(${service.image});` : ''} -->
 
 <style>
 	section {
@@ -159,11 +169,11 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 	}
 	section h2 {
 		font-family: var(--bebas);
-		font-size: 4rem;
+		font-size: 5rem;
 		margin-bottom: 3rem;
 		margin-top: 50px;
-		font-weight: var(--bold);
-		letter-spacing: -1.7px;
+		font-weight: 600;
+		letter-spacing: -2.5px;
 	}
 	.wrapper__services-cards {
 		display: flex;
@@ -174,25 +184,97 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 		font-family: var(--raleway);
 		height: 100%;
 	}
+
+	
+	.service-card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		border-radius: 18px;
+		box-shadow: 0 0px 20px rgba(50, 50, 50, 0.148);
+		height: 100%;
+		max-width: 1200px;
+		position: relative;
+		z-index: 0;
+	}
+	
+	.wrapper__img-title {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		width: 100%;
+		gap: 2px;
+		border-radius: 18px 18px 0px 0px;
+		border: 1px solid rgb(223, 223, 223);
+		background-color: transparent;
+	}
+	.img {
+		width: 100%;
+		height: 400px;
+		object-fit: cover;
+		object-position: center;
+		border-radius: 18px 0px 0px 0px;
+	}
 	.wrapper__service-txt {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		padding: 0.5rem 1rem;
-		border-radius: 8px;
-		margin-bottom: 0.6rem;
+		border-radius: 0px 18px 0px 0px;
 		z-index: 2;
-		gap: 5px;
+		gap: 25px;
+		padding: 20px;
+		max-height: 400px;
+		background: linear-gradient(to left,rgb(101, 99, 99), rgb(153, 150, 150)) ;
+	}
+	.wrapper__service-txt h3 {
+		margin-bottom: 0rem;
+		color: white;
+		font-size: 2.5rem;
+		font-family: var(--bebas);
+		line-height: 50px;
+		text-align: center;
+	
+	}
+	.wrapper__service-txt h4 {
+		color: rgba(255, 255, 255, 0.884);
+		font-size: 1rem;
+		font-family: var(--bebas);
+		text-align: center;
+		line-height: 30px;
+	}
+	.wrapper__p-cta {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		margin-top: 1rem;
+		z-index: 2;
+		width: 100%;
+	}
+	.wrapper__p-cta p {
+		color: var(--ardoise);
+		font-weight: 500;
+		font-size: 1rem;
+		line-height: 2.5;
+		max-width: 800px;
+		padding: 2rem;
+		border-radius: 10px;
+		transition: 0.3s ease-in-out;
 	}
 	.wrapper__services-cards a {
 		font-family: var(--bebas);
 		text-decoration: none;
 		color: white;
 		font-weight: bold;
-		font-size: 1.2rem;
+		font-size: 1rem;
 		margin-top: 1rem;
-		padding: 0.5rem 1rem;
+		margin-bottom: 3rem;
+		padding: 0.8rem 1.5rem;
 		background-color: var(--red);
 		text-align: center;
 		border-radius: 5px;
@@ -205,62 +287,8 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 		transform: scale(1.2);
 	}
 
-	.service-card {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-		border-radius: 12px;
-		box-shadow: 0 0px 20px rgba(50, 50, 50, 0.573);
-		padding: 4rem;
-		height: 100%;
-		max-width: 1200px;
-		position: relative;
-		z-index: 0;
-	}
-	.service-card::after {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 1;
-		height: 100%;
-		width: 100%;
-		background: linear-gradient(to top, rgba(0, 0, 0, 0.832), rgba(255, 255, 255, 0) 100%);
-	}
-
-	.wrapper__service-txt h3 {
-		margin-bottom: 0rem;
-		color: white;
-		font-size: 4rem;
-		font-family: var(--bebas);
-	}
-	.wrapper__service-txt h4 {
-		color: rgba(255, 255, 255, 0.884);
-		font-size: 1rem;
-		font-family: var(--bebas);
-	}
-	.wrapper__service-txt p {
-		margin-top: 50px;
-		margin-bottom: 1rem;
-		color: white;
-		font-weight: 500;
-		font-size: 1rem;
-		line-height: 2.5;
-		background-color: rgba(255, 255, 255, 0.082);
-		backdrop-filter: blur(25px);
-		-webkit-backdrop-filter: blur(25px);
-		padding: 4rem;
-		border-radius: 10px;
-		transition: 0.3s ease-in-out;
-	}
-	.wrapper__service-txt p:hover {
-		transform: scale(1.04);
-		box-shadow: 0 0px 20px rgba(50, 50, 50, 0.541);
-	}
+	
+	
 
 	@media screen and (max-width: 768px) {
 		section {
@@ -286,6 +314,21 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 			line-height: 50px;
 			text-align: center;
 		}
+		.wrapper__img-title {
+		display: grid;
+		grid-template-columns: 1fr ;
+		width: 100%;
+		border-radius: 18px 18px 0px 0px;
+		border: 1px solid rgb(223, 223, 223);
+		background-color: transparent;
+	}
+	.img{
+		width: 100%;
+		max-height: 300px;
+		object-fit: cover;
+		object-position: center;
+		border-radius: 18px 18px 0px 0px;
+	}
 		.service-card {
 			display: flex;
 			flex-direction: column;
@@ -294,7 +337,7 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
-			border-radius: 12px;
+			border-radius: 18px;
 			box-shadow: 0 0px 20px rgba(50, 50, 50, 0.573);
 			padding: 0px;
 			height: auto;
@@ -303,27 +346,38 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 			z-index: 0;
 			margin: 0 auto;
 		}
+		.wrapper__service-txt {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		border-radius: 0px 0px;
+		z-index: 2;
+		gap: 25px;
+		padding: 20px;
+		max-height: 400px;
+	height: 350px;
+		background: linear-gradient(to left,rgb(101, 99, 99), rgb(153, 150, 150)) ;
+	}
 		.wrapper__service-txt h3 {
 			margin-bottom: 10px;
 			color: white;
-			font-size: 1.8rem;
+			font-size: 2.2rem;
 			font-family: var(--bebas);
-			line-height: 35px;
+			line-height: 40px;
 			margin-top: 30px;
 		}
-		.wrapper__service-txt p {
-			margin-bottom: 1rem;
-			color: white;
-			font-weight: 500;
-			font-size: 1rem;
-			line-height: 1.9;
-			background-color: rgba(255, 255, 255, 0.082);
-			backdrop-filter: blur(25px);
-			-webkit-backdrop-filter: blur(25px);
-			border-radius: 10px;
-			transition: 0.3s ease-in-out;
-			padding: 20px;
-		}
+		.wrapper__p-cta p {
+		color: var(--ardoise);
+		font-weight: 500;
+		font-size: 1rem;
+		line-height: 1.5;
+		max-width: 800px;
+		padding: 2rem;
+		border-radius: 10px;
+		transition: 0.3s ease-in-out;
+	}
+		
 		.wrapper__services-cards a {
 			font-size: 1rem;
 		}

@@ -12,6 +12,7 @@
 	.wrapper__slider-logos {
 		width: 100%;
 		min-height: 200px;
+	
 	}
 	section {
 		display: flex;
@@ -19,10 +20,14 @@
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		height: 100%;
+		height: 900px;
 		z-index: 0;
 		gap: 0px;
 		overflow: hidden;
+		background-image: url(../assets/bg-Actu.webp);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 	section h2 {
 		font-family: var(--bebas);

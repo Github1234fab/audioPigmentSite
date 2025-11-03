@@ -279,11 +279,11 @@
     }
     section h2 {
       font-family: var(--bebas);
-      font-size: 4rem;
+      font-size: 5rem;
       margin-bottom: 1rem;
       margin-top: 50px;
-      font-weight: 500;
-      letter-spacing: -1.5px;
+      font-weight: 600;
+      letter-spacing: -2.5px;
     }
     .filters {
       display: flex;

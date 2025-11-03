@@ -158,9 +158,9 @@
 		background-attachment: fixed;
 		min-height: 100vh;
 		z-index: 0;
-		gap: 30px;
 		overflow: hidden;
 		z-index: 0;
+		margin-top: 10px;
 	}
 	section::after {
 		content: '';
@@ -188,7 +188,7 @@
 		max-width: 1200px;
 		margin: 0 auto;
 		padding: 30px;
-		background-color: rgba(255, 255, 255, 0.205);
+		background-color: rgba(255, 255, 255, 0);
 		border-radius: 10px;
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
@@ -208,7 +208,7 @@
 		margin-bottom: 0px;
 		color: white;
 		margin-top: 100px;
-		gap: 50px;
+		gap: 80px;
 		width: 100%;
 	}
 	.wrapper__section-txt h2 {
@@ -237,7 +237,7 @@
 		align-items: center;
 		justify-content: center;
 		gap: 5px;
-		background: linear-gradient(to top, rgba(23, 23, 23, 0.641), rgba(119, 115, 115, 0.469));
+		background: linear-gradient(to top, rgba(23, 23, 23, 0.518), rgba(119, 115, 115, 0.307));
 		padding: 10px 10px;
 		border-radius: 8px;
 		backdrop-filter: blur(10px);
@@ -266,7 +266,7 @@
 	p {
 		font-family: var(--raleway);
 		font-size: 1.1rem;
-		color: var(--ardoise);
+		color: white;
 		margin-top: 20px;
 		max-width: 800px;
 		line-height: 1.5;

@@ -237,7 +237,7 @@
 		gap: 0px;
 		position: relative;
 		overflow: hidden;
-		max-width: 1200px;
+		max-width: 12000px;
 		margin: 0 auto;
 		border-radius: 18px;
 	}
@@ -269,6 +269,7 @@
 	}
 	.container {
 		margin-top: 400px;
+
 	}
 	.background-video-banner {
 		position: absolute;
@@ -285,8 +286,8 @@
 		font-size: 5rem;
 		margin-top: 50px;
 		color: var(--ardoise);
-		font-weight: 400;
-		letter-spacing: -2px;
+		font-weight: 600;
+		letter-spacing: -3px;
 		text-align: center;
 	}
 	section h2 {

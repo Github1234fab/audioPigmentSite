@@ -4,20 +4,19 @@
 
 	const slides = [
 		{ src: '/studios/Studio1.webp', alt: 'studio 1' },
-		{ src: '/studios/Studio2.webp', alt: 'studio 2' },
-		{ src: '/studios/Studio3.webp', alt: 'studio 3' },
-		{ src: '/studios/Studio4.webp', alt: 'studio 4' },
-		{ src: '/studios/Studio5.webp', alt: 'studio 5' },
-		{ src: '/studios/Studio6.webp', alt: 'studio 6' },
 		{ src: '/studios/Studio7.webp', alt: 'studio 7' },
-		{ src: '/studios/Studio8.webp', alt: 'studio 8' },
-		{ src: '/studios/Studio9.webp', alt: 'studio 9' },
+		{ src: '/studios/Studio6.webp', alt: 'studio 6' },
+		{ src: '/studios/Studio15.webp', alt: 'studio 15' },
+		{ src: '/studios/Studio14.webp', alt: 'studio 14' },
+		{ src: '/studios/Studio2.webp', alt: 'studio 2' },
+		{ src: '/studios/Studio5.webp', alt: 'studio 5' },
+		{ src: '/studios/Studio4.webp', alt: 'studio 4' },
 		{ src: '/studios/Studio10.webp', alt: 'studio 10' },
 		{ src: '/studios/Studio11.webp', alt: 'studio 11' },
+		{ src: '/studios/Studio9.webp', alt: 'studio 9' },
 		{ src: '/studios/Studio12.webp', alt: 'studio 12' },
 		{ src: '/studios/Studio13.webp', alt: 'studio 13' },
-		{ src: '/studios/Studio14.webp', alt: 'studio 14' },
-		{ src: '/studios/Studio15.webp', alt: 'studio 15' }
+		{ src: '/studios/Studio8.webp', alt: 'studio 8' }
 	];
 
 	let index = 0;
@@ -42,34 +41,36 @@
 </script>
 
 <section>
-
-
 	<div class="wrapper__studios">
 		<h1>Nos Studios</h1>
-		<p>
-			Spécialisés dans la conception et la production sonore pour les secteurs de la communication,
-			de l’audiovisuel et des médias.
-			<br /><br />
+		<div class="container__info-desc">
+			<div class="wrapper__p-btn">
+				<p>
+					Spécialisés dans la conception et la production sonore pour les secteurs de la
+					communication, de l’audiovisuel et des médias.
+					<br /><br />
 
-			Nous conjuguons exigence technique, sens du détail et approche artistique pour offrir des
-			productions haut de gamme, pensées sur mesure.
-			<br /><br />
-		</p>
-		<div class="wrapper__info-studio">
-			<strong>3 studios son équipés de : </strong>
+					Nous conjuguons exigence technique, sens du détail et approche artistique pour offrir des
+					productions haut de gamme, pensées sur mesure.
+					<br /><br />
+				</p>
+				<Btn txt="Nous contacter" href="/fr/contact" />
+			</div>
+			<div class="wrapper__info-studio">
+				<strong>3 studios son équipés de : </strong>
 
-			<ul>
-				<li>Pro Tools Ultimate + HDX</li>
-				<li>Source Connect PRO</li>
-				<li>FOCAL + GENELEC monitoring</li>
-				<li>MERGING + AVID i/o</li>
-				<li>AVALON preamps</li>
-				<li>LIP-SYNC dubbing</li>
-				<li>5.1 mixing</li>
-			</ul>
-			<img class="label" src={SConnect} alt="Certified source-connect studio" />
+				<ul>
+					<li>Pro Tools Ultimate + HDX</li>
+					<li>Source Connect PRO</li>
+					<li>FOCAL + GENELEC monitoring</li>
+					<li>MERGING + AVID i/o</li>
+					<li>AVALON preamps</li>
+					<li>LIP-SYNC dubbing</li>
+					<li>5.1 mixing</li>
+				</ul>
+				<img class="label" src={SConnect} alt="Certified source-connect studio" />
+			</div>
 		</div>
-
 		<!-- <h2>Visite de nos locaux</h2> -->
 
 		<div class="slider" role="region" aria-roledescription="carousel" aria-label="Studios">
@@ -123,35 +124,53 @@
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		padding: 1.5rem;
-		background-image: url('../../../assets/studios/bg-studio.webp');
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
 		height: 100%;
 		z-index: 0;
 		gap: 10px;
 		position: relative;
 	}
-	section::after {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
+	.container__info-desc {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+		z-index: 4;
+		padding: 20px;
+		max-width: 1200px;
 		height: 100%;
-		background: rgba(35, 35, 35, 0.719);
-		z-index: 1;
+		/* background-image: url('../../../assets/studios/bg-studio.webp');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat; */
 	}
-.wrapper__studios h1 {
-		font-family: var(--bebas);
-		font-size: 3.5rem;
+	.wrapper__p-btn {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: grey;
+		border-radius: 18px;
+	}
+
+	.wrapper__p-btn p {
+		font-family: var(--raleway);
+		font-size: 1rem;
 		color: white;
-		font-weight: var(--bold);
-		letter-spacing: -2px;
-		margin-top: 0px;
+		max-width: 80%;
+		border-radius: 18px;
+		line-height: 30px;
+		font-weight: 600;
+		background-color: grey;
+		text-align: center;
 	}
-	
+	.wrapper__studios h1 {
+		font-family: var(--bebas);
+		font-size: 5rem;
+		color: var(--ardoise);
+		font-weight: 600;
+		letter-spacing: -2px;
+		margin-top: 50px;
+	}
+
 	.label {
 		width: auto;
 		height: 60px;
@@ -163,13 +182,13 @@
 		align-items: center;
 		flex-direction: column;
 		gap: 20px;
-		background-color: rgba(248, 248, 248, 0.212);
+		background-color: rgba(248, 248, 248, 0.101);
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
-		padding: 30px;
+		padding: 0px;
 		border-radius: 15px;
 		z-index: 4;
-		width: 800px
+		width: 100vw;
 	}
 	.wrapper__info-studio {
 		display: flex;
@@ -200,17 +219,6 @@
 		color: white;
 	}
 
-	.wrapper__studios p {
-		font-family: var(--raleway);
-		font-size: 1rem;
-		color: white;
-		margin-bottom: 0px;
-		padding: 1rem;
-		border-radius: 5px;
-		max-width: 400px;
-		line-height: 30px;
-		font-weight: 500;
-	}
 	.nous-ecouter {
 		display: flex;
 		flex-direction: column;
@@ -272,18 +280,17 @@
 	.slider {
 		position: relative;
 		width: 100%;
-		max-width: 960px; /* ajuste selon ton layout */
+		padding: 0px 20px;
 		margin: 0 auto;
 		user-select: none;
 		-webkit-tap-highlight-color: transparent;
-		margin-top: 100px;
 	}
 
 	.viewport {
 		overflow: hidden;
 		width: 100%;
 		border-radius: 12px;
-		box-shadow: 0px 0px 20px rgb(25, 25, 25);
+		/* box-shadow: 0px 0px 20px rgb(25, 25, 25); */
 	}
 
 	.track {
@@ -309,8 +316,6 @@
 		object-fit: cover; /* ou "contain" si tu veux voir 100% de l’image */
 		display: block;
 		box-shadow: 0px 0px 20px rgb(16, 16, 16);
-		
-
 	}
 
 	/* boutons */
@@ -322,8 +327,8 @@
 		block-size: 42px;
 		border-radius: 50%;
 		border: 0;
-		background: rgba(0, 0, 0, 0.5);
-		color: #fff;
+		background: rgb(247, 245, 245);
+		color: #be1a1a;
 		font-size: 24px;
 		line-height: 42px;
 		text-align: center;
@@ -331,12 +336,13 @@
 	}
 	.nav:hover {
 		background: rgba(0, 0, 0, 0.65);
+		color: var(--red);
 	}
 	.nav.prev {
-		left: 8px;
+		left: 28px;
 	}
 	.nav.next {
-		right: 8px;
+		right: 28px;
 	}
 
 	/* points */
@@ -369,6 +375,50 @@
 			flex-direction: column;
 			gap: 20px;
 			padding: 0px;
+		}
+		.container__info-desc {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 20px;
+			z-index: 4;
+			padding: 20px;
+			max-width: 100vw;
+		}
+		.slider {
+			position: relative;
+			width: 100%;
+			padding: 0px 10px;
+			margin: 0 auto;
+			user-select: none;
+			-webkit-tap-highlight-color: transparent;
+		}
+		.wrapper__studios h1 {
+			font-family: var(--bebas);
+			font-size: 4rem;
+			color: var(--ardoise);
+			font-weight: 600;
+			letter-spacing: -2px;
+			margin-top: 50px;
+			line-height: 60px;
+		}
+		.wrapper__p-btn {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			background-color: grey;
+			border-radius: 18px;
+			height: 530px;
+		}
+
+		.wrapper__p-btn p {
+			font-family: var(--raleway);
+			font-size: 1rem;
+			color: white;
+			border-radius: 18px;
+			line-height: 30px;
+			font-weight: 600;
+			text-align: center;
 		}
 	}
 </style>

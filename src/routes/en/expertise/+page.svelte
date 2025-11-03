@@ -214,7 +214,7 @@
 		margin-top: 50px;
 		color: var(--ardoise);
 		font-weight: 400;
-		letter-spacing: -1.5px;
+		letter-spacing: -2px;
 	}
 	section h2 {
 		font-family: var(--bebas);

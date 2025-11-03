@@ -2,10 +2,10 @@
 	import Bilingue from '../assets/bilingue.png';
 	import Button from '$lib/component/btn-black.svelte';
 	import ComSonore from "../assets/ComSonore.webp";
-	import MarkSonore from "../assets/MarkSonore.webp";
-	import AudioVisuel from "../assets/AudioVisuel.webp";
-	import VoixMulti from "../assets/VoixMulti.webp";
-	import Mixage from "../assets/Mixage.webp";
+	import MarkSonore from "../assets/MarkSonore2.webp";
+	import AudioVisuel from "../assets/AudioVisuel2.webp";
+	import VoixMulti from "../assets/Voix.webp";
+	import Mixage from "../assets/Mixage2.webp";
 
 	const services = [
 		{
@@ -136,15 +136,15 @@
 		align-items: center;
 		justify-content: center; */
 		display:grid;
-		grid-template-columns: auto 500px;
-		height: 420px;
+		grid-template-columns: 1fr 1fr;
+		height: 500px;
 		border-radius: 12px 10px 12px 12px;
 		box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.462);
 		width: 80vw;
 	}
 	.cardo img {
 		width: 100%;
-		height: 420px;
+		height: 500px;
 		object-fit: cover;
 		border-radius: 12px 0px 0px 0px;
 	}
@@ -213,7 +213,16 @@
 			margin-bottom: 5rem;
 		}
 		.cardo {
-			width: 90vw;
-		}
+		/* display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center; */
+		display:grid;
+		grid-template-columns: 1fr ;
+		height: 100%;
+		border-radius: 12px 10px 12px 12px;
+		box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.462);
+		width: 80vw;
+	}
 	}
 </style>

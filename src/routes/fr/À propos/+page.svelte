@@ -96,9 +96,9 @@
 	section h1 {
 		font-family: var(--bebas);
 		color: white;
-		font-size: 3rem;
+		font-size: 5rem;
 		margin-top: 50px;
-		font-weight: 200;
+		font-weight: 600;
 		letter-spacing: -2px;
 		z-index: 2;
 	}
@@ -107,7 +107,7 @@
 		font-weight: var(--bold);
 		color: white;
 		font-size: 2.5rem;
-		margin-top: 50px;
+		margin-top: 0px;
 		letter-spacing: -1px;
 		z-index: 2;
 	}
