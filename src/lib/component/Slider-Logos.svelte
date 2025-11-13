@@ -25,7 +25,7 @@
 	import Saupiquet from '../../assets/LogosV2/SAUPIQUET DEF.png';
 	import SNCF from '../../assets/LogosV2/SNCF DEF.png';
 	import TotalEnergie from '../../assets/LogosV2/TotalEnergies DEF.png';
-	import Vulcania from '../../assets/LogosV2/Vulcania DEF.png';
+	import Vulcania from '../../assets/LogosV2/VULCANIA DEF.png';
 
 	const cards = [
 		{ image: BP, href: 'https://www.banque-france.fr/' },
