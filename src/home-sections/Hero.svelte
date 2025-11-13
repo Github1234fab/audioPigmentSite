@@ -2,20 +2,25 @@
 	import Button from '$lib/component/btn-black.svelte';
 	import ButtonWhite from '$lib/component/btn-white.svelte';
 	import Test from '$lib/component/Test.svelte';
+
 </script>
 
 <section class="section">
+
 	<video
 		autoplay
-		loop
 		muted
+		loop
 		playsinline
 		preload="metadata"
-		poster="/BG-hero"
 		class="hero-video"
 		aria-hidden="true"
+		poster="https://res.cloudinary.com/dkw5bl7fx/video/upload/v1763025454/FOND_AP_2025_Boucle_MOV_hkwxu1.mov"
 	>
-		<source src="/APBG.mov" type="video/mp4" />
+		<source
+			src="https://res.cloudinary.com/dkw5bl7fx/video/upload/v1763025454/FOND_AP_2025_Boucle_MOV_hkwxu1.mov"
+			type="video/mp4"
+		/>
 	</video>
 
 	<div class="wrapper__txt">

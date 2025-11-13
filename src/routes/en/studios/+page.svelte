@@ -1,207 +1,22 @@
-<!-- <h1>EN/studio</h1>
-
-<script>
-    import Btn from '$lib/component/btn-white.svelte';
-</script>
-
-<section>
-	<h1>OUR STUDIOS</h1>
-	<h2>Visite de nos studios</h2>
-	<div class="wrapper__studios">
-		<div class="wrapper__studios-room">
-			<h3>Studio I</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus facere obcaecati asperiores maxime, accusantium earum harum libero voluptatum. Provident corporis minus cum nostrum animi eveniet quasi, repellat voluptatum cumque earum.</p>
-			<img
-				class="img"
-				src="https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg"
-				alt="Studio 1"
-			/>
-			<img
-				class="img"
-				src="https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg"
-				alt="Studio 1"
-			/>
-			<img
-				class="img"
-				src="https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg"
-				alt="Studio 1"
-			/>
-		</div>
-
-		<div class="wrapper__studios-room">
-			<h3>Studio II</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus facere obcaecati asperiores maxime, accusantium earum harum libero voluptatum. Provident corporis minus cum nostrum animi eveniet quasi, repellat voluptatum cumque earum.</p>
-
-			<img
-				class="img"
-				src="https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg"
-				alt="Studio 1"
-			/>
-			<img
-				class="img"
-				src="https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg"
-				alt="Studio 1"
-			/>
-			<img
-				class="img"
-				src="https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg"
-				alt="Studio 1"
-			/>
-		</div>
-		<div class="wrapper__studios-room">
-			<h3>Studio III</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus facere obcaecati asperiores maxime, accusantium earum harum libero voluptatum. Provident corporis minus cum nostrum animi eveniet quasi, repellat voluptatum cumque earum.</p>
-
-			<img
-				class="img"
-				src="https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg"
-				alt="Studio 1"
-			/>
-			<img
-				class="img"
-				src="https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg"
-				alt="Studio 1"
-			/>
-			<img
-				class="img"
-				src="https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg"
-				alt="Studio 1"
-			/>
-		</div>
-	</div>
-</section>
-
-<section class="nous-ecouter">
-    <h2>NOUS ÉCOUTER</h2>
-    <p>
-        Audio Pigment est une agence de communication, spécialisée dans la conception, et la production sonore haut de gamme pour les secteurs de la communication, de la culture et des médias.
-    </p>
-    <p>
-        Fondée en 1999, Audio Pigment est une agence de communication, spécialisée dans la conception, et la production sonore haut de gamme pour les secteurs de la communication, de la culture et des médias.
-    </p>
-<Btn txt="Nous écouter" href="/fr/realisations"/>
-</section>
-
-<style>
-	section {
-        display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 2rem;
-            background-color: transparent;
-            min-height: 100vh;
-            z-index: 0;
-            gap: 10px;
-	}
-	section h1 {
-		font-family: var(--bebas);
-		font-size: 5rem;
-		color: var(--ardoise);
-		font-weight: 400;
-		letter-spacing: -1.5px;
-	}
-	section h2 {
-		font-family: var(--raleway);
-		font-size: 1.5rem;
-		margin-bottom: 2rem;
-		color: var(--ardoise);
-		letter-spacing: -1px;
-
-	}
-	.wrapper__studios {
-		display: flex;
-        align-items: center;
-		justify-content: center;
-		gap: 20px;
-  
-	}
-	.wrapper__studios-room {
-        background-color: rgb(255, 254, 253);
-		border-radius: 10px;
-		box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.339);
-        padding: 20px;
-	}
-	.wrapper__studios-room h3 {
-		font-family: var(--bebas);
-		font-size: 1.5rem;
-		margin-bottom: 10px;
-		font-weight: 400;
-		letter-spacing: 0px;
-	}
-	.wrapper__studios-room .img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		border-radius: 10px;
-		margin-bottom: 10px;
-	}
-    .wrapper__studios-room p {
-        font-family: var(--raleway);
-        font-size: 1rem;
-        color: var(--ardoise);
-        margin-bottom: 10px;
-        padding: 1rem;
-    }
-    .nous-ecouter{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 2rem;
-        background-color: var(--ardoise);
-        color: white;
-        min-height: 50vh;
-        gap: 20px;
-    }
-    .nous-ecouter h2 {
-        font-family: var(--bebas);
-        font-size: 3rem;
-        color: white;
-        margin-bottom: 1rem;
-		font-weight: 400;
-		letter-spacing: -1.5px;
-    }
-    .nous-ecouter p {
-        font-family: var(--raleway);
-        font-size: 1.2rem;
-        color: white;
-        max-width: 800px;
-        margin: 0 auto;
-        line-height: 1.6;
-    }
-
-	@media (max-width: 768px) {
-		.wrapper__studios {
-			flex-direction: column;
-			gap: 20px;
-		}
-		.wrapper__studios-room {
-			width: 100%;
-		}
-	}
-</style> -->
-
-
 <script>
 	import Btn from '$lib/component/btn-white.svelte';
-const StudioA = '/2017-11-07_17-13-40-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
-	const StudioB = '/2017-11-07_18-03-38-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
-	const StudioC = '/2017-11-07_18-17-49-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
-	const StudioD = '/2017-11-07_18-29-09-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
-	const StudioE = '/2017-11-07_18-42-11-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
-	const StudioF = '/2017-11-07_19-08-06-Architecture-Audio-Pigment-www.studiolecarre.com.jpg';
-	import SC from '../../../assets/studios/SCS.png';
+	import SConnect from '../../../assets/studios/SCS.png';
 
 	const slides = [
-		{ src: StudioA, alt: 'studio A' },
-		{ src: StudioB, alt: 'studio B' },
-		{ src: StudioC, alt: 'studio C' },
-		{ src: StudioD, alt: 'studio D' },
-		{ src: StudioE, alt: 'studio E' },
-		{ src: StudioF, alt: 'studio F' }
+		{ src: '/studios/Studio1.webp', alt: 'studio 1' },
+		{ src: '/studios/Studio7.webp', alt: 'studio 7' },
+		{ src: '/studios/Studio6.webp', alt: 'studio 6' },
+		{ src: '/studios/Studio15.webp', alt: 'studio 15' },
+		{ src: '/studios/Studio14.webp', alt: 'studio 14' },
+		{ src: '/studios/Studio2.webp', alt: 'studio 2' },
+		{ src: '/studios/Studio5.webp', alt: 'studio 5' },
+		{ src: '/studios/Studio4.webp', alt: 'studio 4' },
+		{ src: '/studios/Studio10.webp', alt: 'studio 10' },
+		{ src: '/studios/Studio11.webp', alt: 'studio 11' },
+		{ src: '/studios/Studio9.webp', alt: 'studio 9' },
+		{ src: '/studios/Studio12.webp', alt: 'studio 12' },
+		{ src: '/studios/Studio13.webp', alt: 'studio 13' },
+		{ src: '/studios/Studio8.webp', alt: 'studio 8' }
 	];
 
 	let index = 0;
@@ -226,59 +41,79 @@ const StudioA = '/2017-11-07_17-13-40-Architecture-Audio-Pigment-www.studiolecar
 </script>
 
 <section>
-	<h1>Our studios</h1>
-
-
-
 	<div class="wrapper__studios">
-		<p>
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus facere obcaecati asperiores
-			maxime, accusantium earum harum libero voluptatum. Provident corporis minus cum nostrum animi
-			eveniet quasi, repellat voluptatum cumque earum.
-		</p>
-		<!-- <h2>Visite de nos locaux</h2> -->
-		<img class="label" src={SC} alt="Certified source-connect studio" />
-		<div class="slider" role="region" aria-roledescription="carousel" aria-label="Studios">
-			<div class="viewport" on:touchstart={onTouchStart} on:touchend={onTouchEnd}>
-				<div class="track" style="transform: translateX(-{index * 100}%);" aria-live="polite">
-					{#each slides as s, i (s.src)}
-						<div class="slide" aria-hidden={i !== index}>
-							<img class="img" src={s.src} alt={s.alt} />
-						</div>
+		<h1>Our Studios</h1>
+		<div class="container__info-desc">
+			<!-- <div class="wrapper__p-btn">
+				<p>
+					Spécialisés dans la conception et la production sonore pour les secteurs de la
+					communication, de l’audiovisuel et des médias.
+					<br /><br />
+
+					Nous conjuguons exigence technique, sens du détail et approche artistique pour offrir des
+					productions haut de gamme, pensées sur mesure.
+					<br /><br />
+				</p>
+				<Btn txt="Nous contacter" href="/fr/contact" />
+			</div> -->
+			<div class="wrapper__info-studio">
+				<strong>3 state-of-the-art studios, equipped with: : </strong>
+
+				<ul>
+					<li>Pro Tools Ultimate + HDX</li>
+					<li>Source Connect PRO</li>
+					<li>FOCAL + GENELEC monitoring</li>
+					<li>MERGING + AVID i/o</li>
+					<li>AVALON preamps</li>
+					<li>LIP-SYNC dubbing</li>
+					<li>5.1 mixing</li>
+				</ul>
+				<img class="label" src={SConnect} alt="Certified source-connect studio" />
+			</div>
+			<div class="slider" role="region" aria-roledescription="carousel" aria-label="Studios">
+				<div class="viewport" on:touchstart={onTouchStart} on:touchend={onTouchEnd}>
+					<div class="track" style="transform: translateX(-{index * 100}%);" aria-live="polite">
+						{#each slides as s, i (s.src)}
+							<div class="slide" aria-hidden={i !== index}>
+								<img class="img" src={s.src} alt={s.alt} />
+							</div>
+						{/each}
+					</div>
+				</div>
+
+				<button class="nav prev" on:click={prev} aria-label="Slide précédent">‹</button>
+				<button class="nav next" on:click={next} aria-label="Slide suivant">›</button>
+
+				<!-- points (optionnel) -->
+				<div class="dots" role="tablist" aria-label="Navigation des slides">
+					{#each slides as _, i}
+						<button
+							class="dot"
+							class:active={i === index}
+							on:click={() => go(i)}
+							role="tab"
+							aria-selected={i === index}
+							aria-controls={'slide-' + i}
+							tabindex={i === index ? 0 : -1}
+							aria-label={`Go to slide ${i + 1}`}
+						></button>
 					{/each}
 				</div>
 			</div>
-
-			<button class="nav prev" on:click={prev} aria-label="Slide précédent">‹</button>
-			<button class="nav next" on:click={next} aria-label="Slide suivant">›</button>
-
-			<!-- points (optionnel) -->
-			<div class="dots" role="tablist" aria-label="Navigation des slides">
-				{#each slides as _, i}
-					<button
-						class="dot"
-						class:active={i === index}
-						on:click={() => go(i)}
-						role="tab"
-						aria-selected={i === index}
-						aria-controls={'slide-' + i}
-						tabindex={i === index ? 0 : -1}
-						aria-label={`Go to slide ${i + 1}`}
-					></button>
-				{/each}
-			</div>
 		</div>
+		<!-- <h2>Visite de nos locaux</h2> -->
 	</div>
 </section>
 
 <section class="nous-ecouter">
-	<h2>LISTEN TO US</h2>
+	<h2>CRAFTED SOUND. MADE TO MOVE.</h2>
 	<p>
-		Audio Pigment is a communication agency specializing in high-end sound design, conception, and production for the communication, culture, and media sectors..
+		Based in France, Audio Pigment provides high-end voice-over, dubbing, sound design, and audio
+		post-production services — where technical precision meets artistic creativity.
 	</p>
-<div class="wrapper__btn">
-	<Btn txt="Listen to us" href="/fr/realisations" />
-</div>
+	<div class="wrapper__btn">
+		<Btn txt="Hear our work" href="/fr/realisations" />
+	</div>
 </section>
 
 <style>
@@ -288,49 +123,98 @@ const StudioA = '/2017-11-07_17-13-40-Architecture-Audio-Pigment-www.studiolecar
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		padding: 1.5rem;
-		background-image: linear-gradient(22.5deg, rgba(67, 67, 67, 0.02) 0%, rgba(67, 67, 67, 0.02) 29%,rgb(255,255,255) 29%, rgb(255,255,255) 37%,rgba(23, 23, 23, 0.02) 37%, rgba(23, 23, 23, 0.02) 55%,rgba(182, 182, 182, 0.02) 55%, rgba(182, 182, 182, 0.02) 69%,rgba(27, 27, 27, 0.02) 69%, rgba(27, 27, 27, 0.02) 71%,rgba(250, 250, 250, 0.02) 71%, rgba(250, 250, 250, 0.02) 100%),linear-gradient(67.5deg, rgba(117, 117, 117, 0.02) 0%, rgba(117, 117, 117, 0.02) 14%,rgba(199, 199, 199, 0.02) 14%, rgba(199, 199, 199, 0.02) 40%,rgba(33, 33, 33, 0.02) 40%, rgba(33, 33, 33, 0.02) 48%,rgba(135, 135, 135, 0.02) 48%, rgba(135, 135, 135, 0.02) 60%,rgba(148, 148, 148, 0.02) 60%, rgba(148, 148, 148, 0.02) 95%,rgba(53, 53, 53, 0.02) 95%, rgba(53, 53, 53, 0.02) 100%),linear-gradient(135deg, rgba(190, 190, 190, 0.02) 0%, rgba(190, 190, 190, 0.02) 6%,rgba(251, 251, 251, 0.02) 6%, rgba(251, 251, 251, 0.02) 18%,rgba(2, 2, 2, 0.02) 18%, rgba(2, 2, 2, 0.02) 27%,rgba(253, 253, 253, 0.02) 27%, rgba(253, 253, 253, 0.02) 49%,rgba(128, 128, 128, 0.02) 49%, rgba(128, 128, 128, 0.02) 76%,rgba(150, 150, 150, 0.02) 76%, rgba(150, 150, 150, 0.02) 100%),linear-gradient(90deg, #ffffff,#ffffff);
 		height: 100%;
 		z-index: 0;
 		gap: 10px;
+		position: relative;
+		background-image: url(../../../assets/bg-Actu.webp);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 	}
-	section h1 {
+	.container__info-desc {
+		display: grid;
+		grid-template-columns: 30% 70%;
+		gap: 10px;
+		z-index: 4;
+		padding: 40px;
+		width: 100%;
+		height: 100%;
+	}
+	/* .wrapper__p-btn {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: grey;
+		border-radius: 18px;
+	}
+
+	.wrapper__p-btn p {
+		font-family: var(--raleway);
+		font-size: 1rem;
+		color: white;
+		max-width: 80%;
+		border-radius: 18px;
+		line-height: 30px;
+		font-weight: 600;
+		background-color: grey;
+		text-align: center;
+	} */
+	.wrapper__studios h1 {
 		font-family: var(--bebas);
-		font-size: 3.5rem;
+		font-size: 5rem;
 		color: var(--ardoise);
-		font-weight: var(--bold);
-		letter-spacing: -2.5px;
+		font-weight: 600;
+		letter-spacing: -2px;
+		margin-top: 50px;
 	}
-	section h2 {
-		font-family: var(--bebas);
-		font-size: 1.5rem;
-		color: var(--ardoise);
-		font-weight: var(--bold);
-		letter-spacing: -0.6px;
-	}
+
 	.label {
 		width: auto;
 		height: 60px;
 		object-fit: cover;
+		margin-top: 20px;
 	}
 	.wrapper__studios {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		gap: 40px;
+		gap: 20px;
+		padding: 0px;
+		border-radius: 15px;
+		z-index: 4;
+		width: 100vw;
 	}
-
-	.wrapper__studios p {
+	.wrapper__info-studio {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 		font-family: var(--raleway);
 		font-size: 1rem;
 		color: var(--ardoise);
-		margin-bottom: 10px;
-		padding: 1rem;
-		/* background-color: rgb(240, 239, 239); */
-		border-radius: 5px;
-		max-width: 960px;
-	
+		text-align: left;
+		max-width: 800px;
+		background-color: #ec4034df;
+		padding: 50px;
+		border-radius: 20px;
 	}
+	.wrapper__info-studio ul {
+		margin-top: 10px;
+
+		color: white;
+	}
+	.wrapper__info-studio li {
+		margin-top: 10px;
+		font-weight: 600;
+	}
+	.wrapper__info-studio strong {
+		font-size: 1.2rem;
+		margin-bottom: 10px;
+		color: white;
+	}
+
 	.nous-ecouter {
 		display: flex;
 		flex-direction: column;
@@ -392,18 +276,18 @@ const StudioA = '/2017-11-07_17-13-40-Architecture-Audio-Pigment-www.studiolecar
 	.slider {
 		position: relative;
 		width: 100%;
-		max-width: 960px; /* ajuste selon ton layout */
+		height: 100%;
+		padding: 0px 20px;
 		margin: 0 auto;
 		user-select: none;
 		-webkit-tap-highlight-color: transparent;
-		margin-top: 20px;
 	}
 
 	.viewport {
 		overflow: hidden;
 		width: 100%;
+		margin: 0 auto;
 		border-radius: 12px;
-		box-shadow: 0px 0px 20px rgb(150, 150, 150);
 	}
 
 	.track {
@@ -414,10 +298,8 @@ const StudioA = '/2017-11-07_17-13-40-Architecture-Audio-Pigment-www.studiolecar
 
 	.slide {
 		min-width: 100%;
-		height: 0;
-		padding-top: 56.25%; /* ratio 16:9 ; change si besoin */
 		position: relative;
-		background: #f3f3f3;
+		background: #9a1f1f;
 		height: 500px;
 	}
 
@@ -428,7 +310,7 @@ const StudioA = '/2017-11-07_17-13-40-Architecture-Audio-Pigment-www.studiolecar
 		height: 100%;
 		object-fit: cover; /* ou "contain" si tu veux voir 100% de l’image */
 		display: block;
-		box-shadow: 0px 0px 20px rgb(150, 150, 150);
+		box-shadow: 0px 0px 20px rgb(16, 16, 16);
 	}
 
 	/* boutons */
@@ -440,8 +322,8 @@ const StudioA = '/2017-11-07_17-13-40-Architecture-Audio-Pigment-www.studiolecar
 		block-size: 42px;
 		border-radius: 50%;
 		border: 0;
-		background: rgba(0, 0, 0, 0.5);
-		color: #fff;
+		background: rgb(247, 245, 245);
+		color: #be1a1a;
 		font-size: 24px;
 		line-height: 42px;
 		text-align: center;
@@ -449,12 +331,13 @@ const StudioA = '/2017-11-07_17-13-40-Architecture-Audio-Pigment-www.studiolecar
 	}
 	.nav:hover {
 		background: rgba(0, 0, 0, 0.65);
+		color: var(--red);
 	}
 	.nav.prev {
-		left: 8px;
+		left: 28px;
 	}
 	.nav.next {
-		right: 8px;
+		right: 28px;
 	}
 
 	/* points */
@@ -486,7 +369,51 @@ const StudioA = '/2017-11-07_17-13-40-Architecture-Audio-Pigment-www.studiolecar
 		.wrapper__studios {
 			flex-direction: column;
 			gap: 20px;
+			padding: 0px;
+		}
+		.container__info-desc {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 20px;
+			z-index: 4;
+			padding: 20px;
+			max-width: 100vw;
+		}
+		.slider {
+			position: relative;
+			width: 100%;
+			padding: 0px 10px;
+			margin: 0 auto;
+			user-select: none;
+			-webkit-tap-highlight-color: transparent;
+		}
+		.wrapper__studios h1 {
+			font-family: var(--bebas);
+			font-size: 4rem;
+			color: var(--ardoise);
+			font-weight: 600;
+			letter-spacing: -2px;
+			margin-top: 50px;
+			line-height: 60px;
+		}
+		.wrapper__p-btn {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			background-color: grey;
+			border-radius: 18px;
+			height: 530px;
+		}
+
+		.wrapper__p-btn p {
+			font-family: var(--raleway);
+			font-size: 1rem;
+			color: white;
+			border-radius: 18px;
+			line-height: 30px;
+			font-weight: 600;
+			text-align: center;
 		}
 	}
 </style>
-

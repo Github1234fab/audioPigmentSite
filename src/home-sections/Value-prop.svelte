@@ -111,16 +111,14 @@
 				<br /><br />Et nous sommes fiers de la confiance qu’ils continuent de nous accorder
 				aujourd’hui…
 			</p>
-			<div class="wrapper-button">
-				<Button txt="Contactez-nous" href="/fr/contact" />
-			</div>
+			
 		</div>
-			<!-- <img
-				class="img"
-				src="https://images.pexels.com/photos/4889024/pexels-photo-4889024.jpeg"
-				alt="microphones"
-			/> -->
+	
 		</div>
+		<div class="wrapper-button">
+			<Button txt="Contactez-nous" href="/fr/contact" />
+		</div>
+		
 	
 		<div class="wrapper__slider-logos">
 			<h4>Nos clients sont satisfaits</h4>
@@ -176,8 +174,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-top: 0px;
-		margin-bottom: 60px;
+		margin-top: -50px;
+		margin-bottom: 0px;
 	}
 	.wrapper__slider-logos {
 		width: 100%;
@@ -187,7 +185,7 @@
 		gap: 20px;
 		max-width: 1200px;
 		margin: 0 auto;
-		padding: 30px;
+		padding: 10px;
 		background-color: rgba(255, 255, 255, 0);
 		border-radius: 10px;
 		backdrop-filter: blur(10px);

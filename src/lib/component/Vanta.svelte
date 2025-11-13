@@ -258,7 +258,7 @@
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 
-	export let effect = 'WAVES'; // Le nom de l'effet Vanta désiré
+	export let effect = 'TRUNK'; // Le nom de l'effet Vanta désiré
 	export let config = {};
 
 	let vantaRef;

@@ -11,9 +11,10 @@ addMessages('fr', {
     email: "contact@audiopigment.com",
     mentions: [
       { label: "STUDIO AUDIO PIGMENT", url: "/" },
-      { label: "MENTIONS LÉGALES", url: "/fr/Mentions/#mentions" },
-      { label: "POLITIQUES DE CONFIDENTIALITÉ", url: "/fr/Mentions/#politique" },
-      { label: "SITE BY GRALYPHO", url: "https://www.gralypho.com" }
+      { label: "MENTIONS LÉGALES", url: "/fr/cgu" },
+      { label: "POLITIQUES DE CONFIDENTIALITÉ", url: "/fr/cgu" },
+      { label: "SITE RÉALISÉ PAR GRALYPHO", url: "https://www.gralypho.com" },
+      { label: "©AUDIO PIGMENT", url: "/" }
     ]
   },
   form: {
@@ -34,22 +35,23 @@ addMessages('en', {
     // localisation_title: "Come to <br> Audio Pigment studio",
     studio: "Audio Pigment",
     address: "10 Rue Nicolaï, 69007 Lyon",
-    phone: "04 72 73 47 21",
+    phone: "+33 472 734 721",
     email: "contact@audiopigment.com",
     mentions: [
       { label: "STUDIO AUDIO PIGMENT", url: "/" },
-      { label: "LEGAL NOTICE", url: "/en/Mentions/#mentions" },
-      { label: "PRIVACY POLICY", url: "/en/Mentions/#politique" },
-      { label: "SITE BY GRALYPHO", url: "https://www.gralypho.com" }
+      { label: "LEGAL NOTICE", url: "/en/cgu" },
+      { label: "PRIVACY POLICY", url: "/en/cgu" },
+      { label: "WEBSITE BY GRALYPHO", url: "https://www.gralypho.com" },
+      { label: "©AUDIO PIGMENT", url: "/" }
     ]
   },
   form: {
     placeholder_nom: "Last name",
     placeholder_prenom: "First name",
-    placeholder_societe: "Company",
-    placeholder_email: "E-mail address",
-    placeholder_telephone: "Phone",
-    placeholder_demande: "Your request",
+    placeholder_societe: "Company Name",
+    placeholder_email: "E-mail",
+    placeholder_telephone: "Phone Number",
+    placeholder_demande: "Tell us about your project",
     send: "Send"
   }
 });

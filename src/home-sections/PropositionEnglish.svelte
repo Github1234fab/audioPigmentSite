@@ -1,76 +1,3 @@
-<!-- <script>
-	import CardDotWhite from '$lib/component/cards-dot-white.svelte';
-	import TitleDot from '$lib/component/Title-dot.svelte';
-	import Btn from '$lib/component/btn-black-shadow.svelte';
-</script>
-
-<section>
-	<TitleDot title="Our know-how." />
-
-	<div class="wrapper__card">
-		<CardDotWhite
-			title="Audio Post-production"
-			subtitle={`Sound Design
-Mixing (broadcast, 5.1)
-Localization`}
-			txt="Experience"
-			href="/fr/expertise/#post-production-audio"
-		/>
-
-		<CardDotWhite
-			title="Sound Creation"
-			subtitle={`Sonic Branding
-Original Music
-Soundscaping &amp; Design`}
-			txt="Explore"
-			href="/fr/expertise/#creation-originale"
-		/>
-		<CardDotWhite
-			title="Voices"
-			subtitle={`Voice over
-Dubbing & ADR
-
-Voice Acting`}
-			txt="Listen"
-			href="/fr/expertise/#Voix"
-		/>
-	</div>
-</section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		padding: 1rem;
-		background-color: rgb(232, 226, 226);
-
-		color: var(--black);
-		min-height: 70vh;
-	}
-	.wrapper__card {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 20px;
-		align-items: center;
-		justify-content: center;
-		margin: 100px;
-		padding: 0px;
-	}
-
-	@media screen and (max-width: 768px) {
-		.wrapper__card {
-			flex-direction: column;
-			gap: 20px;
-			margin: 0px;
-			padding: 0px;
-			margin-bottom: 100px;
-			margin-top: 50px;
-		}
-	}
-</style> -->
-
 <script>
 	import CardDotWhite from '$lib/component/cards-dot-white.svelte';
 	import TitleDot from '$lib/component/Title-dot.svelte';
@@ -85,10 +12,10 @@ Voice Acting`}
 		<CardDotWhite
 			title="Audio Post-production"
 			subtitle={`Sound Design
-				Mixing (broadcast, 5.1)
-				Localization`}
+Mixing (broadcast, 5.1)
+Localization`}
 			txt="Experience"
-			href="/en/expertise/#post-production-audio"
+			href="/fr/expertise/#post-production-audio"
 			videoSrc="https://videos.pexels.com/video-files/7087632/7087632-uhd_2732_1440_25fps.mp4"
 			imgSrc="../assets/heroBanner-A.jpeg"
 		/>
@@ -97,7 +24,7 @@ Voice Acting`}
 			title="Sound Creation"
 			subtitle={`Sonic Branding
 Original Music
-Soundscaping &amp; Design`}
+Soundscaping & Design`}
 			txt="Explore"
 			href="/fr/expertise/#creation-originale"
 			videoSrc="https://www.pexels.com/fr-fr/download/video/19277040-uhd_3840_2160_24fps.mp4"

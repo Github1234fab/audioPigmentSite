@@ -5,12 +5,12 @@
 	import MarkSonore from "../assets/MarkSonore2.webp";
 	import AudioVisuel from "../assets/AudioVisuel2.webp";
 	import VoixMulti from "../assets/Voix.webp";
-	import Mixage from "../assets/Mixage2.webp";
+	import Mixage from "../assets/Mixage3.jpg";
 
 	const services = [
 		{
 			label: 'Communication sonore',
-			desc: 'Audio branding / Identité sonore (signature sonore, identité musicale, voix de marque, sound design produit…)',
+			desc: 'Audio branding / Identité sonore <br> (signature sonore, identité musicale, voix de marque, sound design produit…)',
 			link: '/fr/services/#1',
 			image: ComSonore
 		},
@@ -23,15 +23,15 @@
 		},
 		{
 			label: 'Audiovisuel & Digital',
-			desc: 'Habillage sonore &amp; voix off (pub TV, pub cinéma, film corporate, institutionnel, motion design, e-learning…)',
+			desc: 'Habillage sonore & voix off <br> (pub TV, pub cinéma, film corporate, institutionnel, motion design, e-learning…)',
 			link: '/fr/services/#3',
-			image: AudioVisuel
+			image: "https://images.pexels.com/photos/4941721/pexels-photo-4941721.jpeg?_gl=1*sihbeq*_ga*NjY3ODMwNzE5LjE3MjQ4Nzc0OTQ.*_ga_8JE65Q40S6*czE3NjMwMTU5NTEkbzM2JGcwJHQxNzYzMDE1OTUxJGo2MCRsMCRoMA."
 		},
 		{
 			label: 'Doublage multilingue / Localisation',
-			desc: 'Dubbing, lip sync, enregistrement voix off en voice over, traduction + adaptation (audioguide, elearning, reportage…)',
+			desc: 'Dubbing, lip sync, enregistrement voix off en voice over, traduction + adaptation <br> (audioguide, elearning, reportage…)',
 			link: '/fr/services/#4',
-			image: VoixMulti
+			image: "https://images.pexels.com/photos/8001238/pexels-photo-8001238.jpeg?_gl=1*1t4lt56*_ga*NjY3ODMwNzE5LjE3MjQ4Nzc0OTQ.*_ga_8JE65Q40S6*czE3NjMwMTU5NTEkbzM2JGcxJHQxNzYzMDE2MDU2JGo1NSRsMCRoMA."
 		},
 		{
 			label: 'Mixage & Post-prod broadcast',
@@ -99,7 +99,7 @@
 				<img src={service.image} alt="" />
 				<div class="wrapper__service-txt">
 					<h3>{service.label}</h3>
-					<p>{service.desc}</p>
+					<p>{@html service.desc}</p>
 					<!-- <a class="button" href={service.link} aria-label="button">En savoir +</a> -->
 					<div class="wrapper-button">
 						<Button txt="En Savoir +" href={service.link} />
@@ -190,13 +190,11 @@
 	.wrapper__service-txt p {
 		color: white;
 		font-size: 1rem;
-		font-weight: 600;
+		font-weight: 500;
 		font-family: var(--bebas);
 		max-width: 70%;
+		text-align: center;
 	}
-	/* a {
-		text-decoration: none;
-	} */
 
 	@media screen and (max-width: 768px) {
 		.wrapper__service-txt h3 {

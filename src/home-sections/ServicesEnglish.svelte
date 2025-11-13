@@ -261,31 +261,31 @@
 	const services = [
 		{
 			label: 'Sound communication',
-			desc: 'Sonic branding &amp; audio identity',
+			desc: 'Sonic branding & audio identity <br> (sonic logo, musical identity, brand voice, product sound design)',
 			link: '/en/services/#1',
 			image: 'https://images.pexels.com/photos/776153/pexels-photo-776153.jpeg'
 		},
 		{
 			label: 'Audio marketing',
-			desc: 'Creative audio for brand communication',
+			desc: 'Creative audio for brand communication <br> (radio commercials, podcasts, event soundscapes, spatial audio, IVR systems, on-hold messages)',
 			link: '/en/services/#2',
 			image: 'https://images.pexels.com/photos/1271380/pexels-photo-1271380.jpeg'
 		},
 		{
 			label: 'Audiovisual & Digital Media',
-			desc: 'Voices, sound design &amp; soundtrack creation',
+			desc: 'Voices, sound design &amp; soundtrack creation <br> (TV commercials, cinema ads, corporate films, institutional videos, motion design, VR, e-learning)',
 			link: '/en/services/#3',
 			image: 'https://images.pexels.com/photos/66134/pexels-photo-66134.jpeg'
 		},
 		{
 			label: 'Multilingual Dubbing & Localization',
-			desc: 'Dubbing, lip sync &amp; voice-over recording for international content',
+			desc: 'Dubbing, lip sync & voice-over recording for international content <br> (audioguides, e-learning, documentaries, translation &amp; adaptation)',
 			link: '/en/services/#4',
 			image: 'https://images.pexels.com/photos/8828605/pexels-photo-8828605.jpeg'
 		},
 		{
 			label: 'Mixing & Post-Production',
-			desc: 'High-end audio mixing and finishing',
+			desc: 'High-end audio mixing and finishing <br> (stereo, 5.1, 7.1, binaural/ambisonic VR, PAD-ready broadcast delivery)',
 			link: '/en/services/#5',
 			image: 'https://images.pexels.com/photos/7899457/pexels-photo-7899457.png'
 		}
@@ -311,7 +311,7 @@
 				delay: i * 0.1,
 				scrollTrigger: {
 					trigger: el,
-					start: 'top 80%', // l’élément entre bien dans le viewport
+					start: 'top 60%', // l’élément entre bien dans le viewport
 					end: 'top 30%', // nécessaire pour bien “sentir” le scrub
 					scrub: 1 // lisser avec le scroll
 					// markers: true,   // décommente pour débug
@@ -349,10 +349,10 @@
 				<img src={service.image} alt="" />
 				<div class="wrapper__service-txt">
 					<h3>{service.label}</h3>
-					<p>{service.desc}</p>
+					<p>{@html service.desc}</p>
 					<!-- <a class="button" href={service.link} aria-label="button">En savoir +</a> -->
 					<div class="wrapper-button">
-						<Button txt="Learn more" href={service.link} />
+						<Button txt="En Savoir +" href={service.link} />
 					</div>
 				</div>
 			</div>
@@ -381,20 +381,22 @@
 		margin-bottom: 10rem;
 	}
 	.cardo {
-		display: flex;
+		/* display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
-		height: auto;
+		justify-content: center; */
+		display:grid;
+		grid-template-columns: 1fr 1fr;
+		height: 500px;
 		border-radius: 12px 10px 12px 12px;
 		box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.462);
 		width: 80vw;
 	}
 	.cardo img {
 		width: 100%;
-		height: 300px;
+		height: 500px;
 		object-fit: cover;
-		border-radius: 12px 10px 0px 0px;
+		border-radius: 12px 0px 0px 0px;
 	}
 	.wrapper-button {
 		display: flex;
@@ -416,15 +418,16 @@
 	.wrapper__service-txt {
 		display: flex;
 		flex-direction: column;
-		align-items: left;
+		align-items: center;
 		justify-content: center;
 		padding: 0.5rem 1rem;
 		z-index: 2;
-		border-radius: 0px 0px 12px 12px;
+		border-radius: 0px 0px 12px 0px;
 		/* background-color: rgb(157, 154, 154); */
 		background-color: rgb(105, 99, 99);
 		width: 100%;
 		margin-top: 0px;
+		gap: 30px
 	}
 
 	.wrapper__service-txt h3 {
@@ -432,16 +435,16 @@
 		font-size: 2rem;
 		font-family: var(--bebas);
 		margin-top: 20px;
+		text-align: center;
 	}
 	.wrapper__service-txt p {
 		color: white;
 		font-size: 1rem;
-		font-weight: 600;
+		font-weight: 500;
 		font-family: var(--bebas);
+		max-width: 70%;
+		text-align: center;
 	}
-	/* a {
-		text-decoration: none;
-	} */
 
 	@media screen and (max-width: 768px) {
 		.wrapper__service-txt h3 {
@@ -458,7 +461,16 @@
 			margin-bottom: 5rem;
 		}
 		.cardo {
-			width: 90vw;
-		}
+		/* display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center; */
+		display:grid;
+		grid-template-columns: 1fr ;
+		height: 100%;
+		border-radius: 12px 10px 12px 12px;
+		box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.462);
+		width: 80vw;
+	}
 	}
 </style>

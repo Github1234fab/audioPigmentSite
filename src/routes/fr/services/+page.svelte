@@ -5,7 +5,7 @@
 	import MarkSonore from '../../../assets/MarkSonore2.webp';
 	import AudioVisuel from '../../../assets/AudioVisuel2.webp';
 	import Voix from '../../../assets/Voix.webp';
-	import Mixage from '../../../assets/Mixage2.webp';
+	import Mixage from '../../../assets/Mixage3.jpg';
 
 	const services = [
 		{
@@ -81,7 +81,8 @@ immersif, notre approche reste la même : <strong>construire un paysage sonore c
 et identitaire </strong>, où chaque son, chaque voix, chaque silence participe à raconter l’histoire et
 servir l’image.`,
 			link: '/fr/contact',
-			image: AudioVisuel
+			image:  "https://images.pexels.com/photos/4941721/pexels-photo-4941721.jpeg?_gl=1*sihbeq*_ga*NjY3ODMwNzE5LjE3MjQ4Nzc0OTQ.*_ga_8JE65Q40S6*czE3NjMwMTU5NTEkbzM2JGcwJHQxNzYzMDE1OTUxJGo2MCRsMCRoMA."
+
 		},
 		{
 			id: '4',
@@ -103,7 +104,8 @@ Qu’il s’agisse d’un film, d’une vidéo de marque, d’un contenu institu
 considérons la localisation et le doublage comme un art d’équilibre entre <strong>	technique,
 interprétation et fidélité à l’œuvre </strong>	, pour que la langue change, mais pas l’émotion.`,
 			link: '/fr/contact',
-			image: Voix
+			image: "https://images.pexels.com/photos/8001238/pexels-photo-8001238.jpeg?_gl=1*1t4lt56*_ga*NjY3ODMwNzE5LjE3MjQ4Nzc0OTQ.*_ga_8JE65Q40S6*czE3NjMwMTU5NTEkbzM2JGcxJHQxNzYzMDE2MDU2JGo1NSRsMCRoMA."
+
 		},
 		{
 			id: '5',
@@ -252,9 +254,14 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		margin-top: 1rem;
+		margin-top: 0rem;
 		z-index: 2;
 		width: 100%;
+		/* background-color: #FAFAFA; */
+		background-image: url(../../../assets/bg-Actu.webp);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 	.wrapper__p-cta p {
 		color: var(--ardoise);
@@ -265,6 +272,7 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 		padding: 2rem;
 		border-radius: 10px;
 		transition: 0.3s ease-in-out;
+	
 	}
 	.wrapper__services-cards a {
 		font-family: var(--bebas);

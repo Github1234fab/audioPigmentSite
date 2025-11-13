@@ -44,7 +44,7 @@
 	<div class="wrapper__studios">
 		<h1>Nos Studios</h1>
 		<div class="container__info-desc">
-			<div class="wrapper__p-btn">
+			<!-- <div class="wrapper__p-btn">
 				<p>
 					Spécialisés dans la conception et la production sonore pour les secteurs de la
 					communication, de l’audiovisuel et des médias.
@@ -55,7 +55,7 @@
 					<br /><br />
 				</p>
 				<Btn txt="Nous contacter" href="/fr/contact" />
-			</div>
+			</div> -->
 			<div class="wrapper__info-studio">
 				<strong>3 studios son équipés de : </strong>
 
@@ -70,44 +70,43 @@
 				</ul>
 				<img class="label" src={SConnect} alt="Certified source-connect studio" />
 			</div>
-		</div>
-		<!-- <h2>Visite de nos locaux</h2> -->
+			<div class="slider" role="region" aria-roledescription="carousel" aria-label="Studios">
+				<div class="viewport" on:touchstart={onTouchStart} on:touchend={onTouchEnd}>
+					<div class="track" style="transform: translateX(-{index * 100}%);" aria-live="polite">
+						{#each slides as s, i (s.src)}
+							<div class="slide" aria-hidden={i !== index}>
+								<img class="img" src={s.src} alt={s.alt} />
+							</div>
+						{/each}
+					</div>
+				</div>
 
-		<div class="slider" role="region" aria-roledescription="carousel" aria-label="Studios">
-			<div class="viewport" on:touchstart={onTouchStart} on:touchend={onTouchEnd}>
-				<div class="track" style="transform: translateX(-{index * 100}%);" aria-live="polite">
-					{#each slides as s, i (s.src)}
-						<div class="slide" aria-hidden={i !== index}>
-							<img class="img" src={s.src} alt={s.alt} />
-						</div>
+				<button class="nav prev" on:click={prev} aria-label="Slide précédent">‹</button>
+				<button class="nav next" on:click={next} aria-label="Slide suivant">›</button>
+
+				<!-- points (optionnel) -->
+				<div class="dots" role="tablist" aria-label="Navigation des slides">
+					{#each slides as _, i}
+						<button
+							class="dot"
+							class:active={i === index}
+							on:click={() => go(i)}
+							role="tab"
+							aria-selected={i === index}
+							aria-controls={'slide-' + i}
+							tabindex={i === index ? 0 : -1}
+							aria-label={`Go to slide ${i + 1}`}
+						></button>
 					{/each}
 				</div>
 			</div>
-
-			<button class="nav prev" on:click={prev} aria-label="Slide précédent">‹</button>
-			<button class="nav next" on:click={next} aria-label="Slide suivant">›</button>
-
-			<!-- points (optionnel) -->
-			<div class="dots" role="tablist" aria-label="Navigation des slides">
-				{#each slides as _, i}
-					<button
-						class="dot"
-						class:active={i === index}
-						on:click={() => go(i)}
-						role="tab"
-						aria-selected={i === index}
-						aria-controls={'slide-' + i}
-						tabindex={i === index ? 0 : -1}
-						aria-label={`Go to slide ${i + 1}`}
-					></button>
-				{/each}
-			</div>
 		</div>
+		<!-- <h2>Visite de nos locaux</h2> -->
 	</div>
 </section>
 
 <section class="nous-ecouter">
-	<h2>NOUS ÉCOUTER</h2>
+	<h2>Ensemble, créons des émotions, marquons les esprits !</h2>
 	<p>
 		Audio Pigment est une agence de communication, spécialisée dans la conception, et la production
 		sonore haut de gamme pour les secteurs de la communication, de la culture et des médias.
@@ -124,25 +123,25 @@
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		height: 100%;
+		height:100%;
 		z-index: 0;
 		gap: 10px;
 		position: relative;
+		background-image: url(../../../assets/bg-Actu.webp);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 	.container__info-desc {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 20px;
+		grid-template-columns: 30% 70%;
+		gap: 10px;
 		z-index: 4;
-		padding: 20px;
-		max-width: 1200px;
+		padding: 40px;
+		width: 100%;
 		height: 100%;
-		/* background-image: url('../../../assets/studios/bg-studio.webp');
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat; */
 	}
-	.wrapper__p-btn {
+	/* .wrapper__p-btn {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -161,7 +160,7 @@
 		font-weight: 600;
 		background-color: grey;
 		text-align: center;
-	}
+	} */
 	.wrapper__studios h1 {
 		font-family: var(--bebas);
 		font-size: 5rem;
@@ -182,9 +181,6 @@
 		align-items: center;
 		flex-direction: column;
 		gap: 20px;
-		background-color: rgba(248, 248, 248, 0.101);
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
 		padding: 0px;
 		border-radius: 15px;
 		z-index: 4;
@@ -280,6 +276,7 @@
 	.slider {
 		position: relative;
 		width: 100%;
+		height: 100%;
 		padding: 0px 20px;
 		margin: 0 auto;
 		user-select: none;
@@ -289,8 +286,8 @@
 	.viewport {
 		overflow: hidden;
 		width: 100%;
+		margin: 0 auto;
 		border-radius: 12px;
-		/* box-shadow: 0px 0px 20px rgb(25, 25, 25); */
 	}
 
 	.track {
@@ -301,10 +298,8 @@
 
 	.slide {
 		min-width: 100%;
-		height: 0;
-		padding-top: 56.25%; /* ratio 16:9 ; change si besoin */
 		position: relative;
-		background: #f3f3f3;
+		background: #9a1f1f;
 		height: 500px;
 	}
 

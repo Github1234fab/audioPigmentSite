@@ -1,31 +1,31 @@
 <script>
 	import CardRealisation from '$lib/component/Card-logo.svelte';
-	import BP from '../../assets/logos/Banque_de_France_1.png';
-	import Barilla from '../../assets/logos/barilla-1.png';
-	import BioMerieux from '../../assets/logos/BioMerieux 1.png';
-	import BlablaCar from '../../assets/logos/blablaCar.webp';
-	import BMW from '../../assets/logos/BMW.png';
-	import burgerKing from '../../assets/logos/burger king.png';
-	import CiteEspace from '../../assets/logos/citeEspace.jpg';
-	import Costa from '../../assets/logos/Costa.png';
-	import Decathlon from '../../assets/logos/decathlon.png';
-	import Delacre from '../../assets/logos/Delacre.png';
-	import Disneyland from '../../assets/logos/disneyland-paris-1995-logo-png_seeklogo-431918.png';
-	import Evian from '../../assets/logos/Evian.png';
-	import FDJ from '../../assets/logos/FDJ.png';
-	import Fnac from '../../assets/logos/fnac-2-logo.png';
-	import LEGO from '../../assets/logos/LEGO_1.png';
-	import loreal from '../../assets/logos/loreal-logo-3.png';
-	import Peugeot from '../../assets/logos/Peugeot 1.png';
-	import PointS from '../../assets/logos/Point S 1.png';
+	import BP from '../../assets/logosV2/Banque_de_France_DEF.png';
+	import Barilla from '../../assets/logosV2/barilla-DEF.png';
+	import BioMerieux from '../../assets/LogosV2/BioMerieux DEF.png';
+	import BlablaCar from '../../assets/LogosV2/BlaBlaCar NEW DEF.png';
+	import BMW from '../../assets/LogosV2/BMW_DEF.png';
+	import burgerKing from '../../assets/LogosV2/burger king DEF.png';
+	import CiteEspace from '../../assets/LogosV2/CiteEspace Toulouse  DEF.png';
+	import Costa from '../../assets/LogosV2/Costa DEF.png';
+	import Decathlon from '../../assets/LogosV2/Decathlon DEF.png';
+	import Delacre from '../../assets/LogosV2/Delacre DEF.png';
+	import Disneyland from '../../assets/LogosV2/Disneyland_Paris_2 DEF.png';
+	import Evian from '../../assets/LogosV2/Evian DEF.png';
+	import FDJ from '../../assets/LogosV2/FDJ DEF.png';
+	import Fnac from '../../assets/LogosV2/fnac-2 DEF.png';
+	import LEGO from '../../assets/LogosV2/LEGO_1 DEF.png';
+	import loreal from '../../assets/LogosV2/loreal-logo-2 DEF.png';
+	import Peugeot from '../../assets/LogosV2/Peugeot 1 DEF.png';
+	import PointS from '../../assets/LogosV2/Point S 1 DEF.png';
 	import PuyDuFou from '../../assets/logos/Puy-du-fou_2.png';
-	import Region from '../../assets/logos/laRegion.png';
-	import Renault from '../../assets/logos/Renault 1.png';
+	import Region from '../../assets/LogosV2/Region_Auvergne-Rhone-Alpes GROS DEF.png';
+	import Renault from '../../assets/LogosV2/Renault GROS DEF.png';
 	import SanPe from '../../assets/logos/San-Pellegrino-Logo 1.png';
-	import Saupiquet from '../../assets/logos/SAUPIQUET.jpg';
-	import SNCF from '../../assets/logos/SNCF.png';
-	import TotalEnergie from '../../assets/logos/TotalEnergies.png';
-	import Vulcania from '../../assets/logos/Vulcania.png';
+	import Saupiquet from '../../assets/LogosV2/SAUPIQUET DEF.png';
+	import SNCF from '../../assets/LogosV2/SNCF DEF.png';
+	import TotalEnergie from '../../assets/LogosV2/TotalEnergies DEF.png';
+	import Vulcania from '../../assets/LogosV2/Vulcania DEF.png';
 
 	const cards = [
 		{ image: BP, href: 'https://www.banque-france.fr/' },
@@ -85,7 +85,7 @@
 .marquee-wrapper {
 	overflow: hidden;
 	width: 100%;
-	padding: 20px 0;
+	padding: 0px 0;
 }
 
 .marquee {
@@ -108,7 +108,7 @@
 .marquee__item {
 	flex: 0 0 auto;
 	width: 150px;
-	padding: 4px;
+	padding: 10px;
 	box-sizing: border-box;
 }
 

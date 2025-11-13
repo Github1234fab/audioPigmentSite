@@ -1,10 +1,10 @@
-<!-- <script>
+<script>
 	import BtnBlack from '$lib/component/btn-black.svelte';
 	import BtnWhite from '$lib/component/btn-white.svelte';
 </script>
 
 <section>
-	<video autoplay muted loop playsinline class="background-video">
+	<video autoplay muted loop playsinline preload="none" class="background-video">
 		<source
 			src="https://videos.pexels.com/video-files/7087627/7087627-uhd_2732_1440_25fps.mp4"
 			type="video/mp4"
@@ -12,28 +12,36 @@
 	</video>
 
 	<div class="wrapper__section-txt">
-		<h2>Our commitment to exceptional sound quality.</h2>
-		<h3>
-			At AUDIO PIGMENT, every project is listened to, crafted, and refined with care, expertise, and
-			creativity. By your side.
-		</h3>
-
+		<h2><strong>Together, let’s shape emotion and make it memorable !</strong></h2>
+<br>
 		<p>
-			Attentive listening, sharp technical skills, and a commitment to tailor-made sound — for
-			maximum impact.
-			<br /><br />
-			To understand, to feel, to convey — that’s our craft.
-			<br />
-			You can trust us.
-			<br />
-			Voice, sound design, sonic identity (…)
-			<br />
+			At <strong>AUDIO PIGMENT</strong> , every project is listened to, crafted, and refined with <strong>care, expertise</strong> , and <strong>creativity</strong> .
 
-			<strong>Together, let’s shape emotion — and make it memorable.</strong>
+			<strong>By your side</strong>.
+			<br>
+			<br>
+
+			
+			<strong>Attentive listening, sharp technical skills</strong>, and a commitment to <strong>tailor-made sound </strong> for maximum impact.
+			<br>
+			<br>
+
+			
+			To <strong>understand</strong> , to <strong>feel</strong>, to <strong>convey</strong>: that’s our craft.
+			<br>
+			<br>
+			You can trust us.
 		</p>
+
+		<!-- <p>
+			Chez AUDIO PIGMENT, chaque projet est pensé, écouté, façonné avec précision par l’expertise
+			humaine, pour créer un impact optimal. Une écoute exigeante, un savoir-faire affûté, et le
+			goût du sur-mesure. Comprendre, ressentir, transmettre : c’est notre métier. Faisons-nous
+			confiance.
+		</p> -->
 		<div class="wrapper__buttons">
 			<BtnBlack txt="Get in touch" href="/fr/contact" />
-			<BtnWhite txt="Have a listen" href="/en/services" />
+			<BtnWhite txt="Discover more" href="/fr/services" />
 		</div>
 	</div>
 </section>
@@ -45,59 +53,53 @@
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		padding: 2rem;
 		background-color: transparent;
 		min-height: 100vh;
 		z-index: 0;
-		gap: 40px;
 		position: relative;
 		overflow: hidden;
 		z-index: 0;
+		padding: 5rem;
 	}
-	section h2 {
+
+	.wrapper__section-txt h2 {
 		font-family: var(--bebas);
-		font-size: 3.5rem;
-		margin-bottom: 0.5rem;
+		font-size: 3rem;
+		line-height: 1.4;
 		color: white;
-		margin-top: 50px;
-		font-weight: 400;
-		letter-spacing: -1.5px;
-	}
-	section p {
-		font-family: var(--raleway);
-		font-size: 1rem;
-		margin-bottom: 0.5rem;
-		line-height: 1.8;
-		color: white;
-		font-weight: var(--regular);
-		margin-top: 0px;
-		padding: 20px 40px;
+		font-weight: var(--bold);
 		width: 100%;
 	}
-	section h3 {
+
+	.wrapper__section-txt p {
 		font-family: var(--raleway);
 		font-size: 1.5rem;
-		font-weight: var(--medium);
-		margin-bottom: 0.5rem;
+		line-height: 1.6;
+		font-weight: var(--regular);
 		color: white;
-		margin-top: 0px;
-		letter-spacing: -1px;
+		margin-bottom: 20px;
 	}
+	/* .wrapper__section-txt p span {
+		font-weight: var(--extra-bold);
+		font-family: var(--bebas);
+	} */
+
 	.wrapper__buttons {
 		display: flex;
 		/* flex-direction: column; */
 		margin-bottom: 50px;
+		gap: 10px;
 	}
 	.wrapper__section-txt {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		gap: 20px;
+		gap: 50px;
 		color: white;
 		z-index: 2;
 		position: relative;
-		padding: 2rem;
+		padding: 50px;
 	}
 	section::after {
 		position: absolute;
@@ -141,23 +143,36 @@
 			width: 100%;
 			padding: 20px 0px;
 		}
+		.wrapper__section-txt p {
+			font-family: var(--raleway);
+			font-size: 1rem;
+			line-height: 1.6;
+			margin-top: 0px;
+			font-weight: var(--regular);
+			color: white;
+			padding: 0px 0px;
+			margin-bottom: 3rem;
+		}
 		section {
 			background-image: url('https://images.pexels.com/photos/14828529/pexels-photo-14828529.jpeg?w=600&h=400&auto=compress&cs=tinysrgb');
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
+			height: 100%;
+			padding: 0.5rem;
 		}
 		.background-video {
 			display: none;
 		}
-		section h2 {
-		font-family: var(--bebas);
-		font-size: 3rem;
-		margin-bottom: 0.5rem;
-		color: white;
-		margin-top: 50px;
-		font-weight: 400;
-		letter-spacing: -1.5px;
+		.wrapper__section-txt h2 {
+			font-family: var(--bebas);
+			font-size: 2rem;
+			line-height: 1.4;
+			color: white;
+			font-weight: var(--bold);
+			margin-top: 0px;
+			padding: 20px 0px;
+			width: 100%;
+		}
 	}
-	}
-</style> -->
+</style>
