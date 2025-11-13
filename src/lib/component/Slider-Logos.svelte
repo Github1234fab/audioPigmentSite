@@ -1,6 +1,6 @@
 <script>
 	import CardRealisation from '$lib/component/Card-logo.svelte';
-	import BP from '../../assets/logosV2/Banque_de_France_DEF.png';
+	import BP from '../../assets/LogosV2/Banque_de_France_DEF.png';
 	import Barilla from '../../assets/logosV2/barilla-DEF.png';
 	import BioMerieux from '../../assets/LogosV2/BioMerieux DEF.png';
 	import BlablaCar from '../../assets/LogosV2/BlaBlaCar NEW DEF.png';
