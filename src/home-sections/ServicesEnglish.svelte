@@ -352,7 +352,7 @@
 					<p>{@html service.desc}</p>
 					<!-- <a class="button" href={service.link} aria-label="button">En savoir +</a> -->
 					<div class="wrapper-button">
-						<Button txt="En Savoir +" href={service.link} />
+						<Button txt="learn more" href={service.link} />
 					</div>
 				</div>
 			</div>
