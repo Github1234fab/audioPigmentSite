@@ -47,9 +47,19 @@
 			p: 'Mise à disposition de notre <strong>réseau de partenaires </strong>: artistique, technique, traduction/adaptation'
 		}
 	];
+	import { onMount } from 'svelte';
+	let isDesktop = false;
+	onMount(() => {
+		isDesktop = window.innerWidth > 1024;
+	});
 </script>
 
 <section>
+	{#if isDesktop}
+		<video autoplay muted loop playsinline preload="none" class="background-video">
+			<source src="https://www.pexels.com/fr-fr/download/video/27660115/" type="video/mp4" />
+		</video>
+	{/if}
 	<h2>Nos Atouts</h2>
 	<p class="section-intro">Ce qui fait la force d'Audio Pigment</p>
 	<div class="features-grid">
@@ -79,7 +89,12 @@
 	}
 
 	.background-video {
-		display: none; /* Désactivé pour la performance */
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
 	}
 
 	section {

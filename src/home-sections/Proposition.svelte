@@ -16,6 +16,7 @@
 	 Mastering`}
 			txt="Découvrir"
 			href="/fr/expertise/#post-production-audio"
+			videoSrc="https://videos.pexels.com/video-files/7087632/7087632-uhd_2732_1440_25fps.mp4"
 			imgSrc="../assets/AudioVisuel.webp"
 		/>
 
@@ -26,6 +27,7 @@
 		Composition musicale`}
 			txt="Explorer"
 			href="/fr/expertise/#creation-originale"
+			videoSrc="https://www.pexels.com/fr-fr/download/video/19277040-uhd_3840_2160_24fps.mp4"
 			imgSrc="../assets/MarkSonore.webp"
 		/>
 		<CardDotWhite
@@ -35,6 +37,7 @@
 	Voice over`}
 			txt="Écouter"
 			href="/fr/expertise/#Voix"
+			videoSrc="https://www.pexels.com/fr-fr/download/video/7586638-hd_1920_1080_24fps.mp4"
 			imgSrc="../assets/Voix.webp"
 		/>
 	</div>

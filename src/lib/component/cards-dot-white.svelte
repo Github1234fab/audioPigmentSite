@@ -164,11 +164,14 @@
 	export let imgSrc; // prop pour fallback image
 
 	let videoEl;
+	let isDesktop = false;
 
 	onMount(() => {
-		if (videoEl && videoSrc) {
+		// On ne charge la vidéo que si l'écran est large (> 1024px)
+		isDesktop = window.innerWidth > 1024;
+
+		if (isDesktop && videoEl && videoSrc) {
 			videoEl.src = videoSrc;
-			// tente de lancer la vidéo (ignore erreurs autoplay)
 			videoEl.play().catch(() => {});
 		}
 	});
@@ -180,7 +183,7 @@
 		<div class="subtitle">{subtitle}</div>
 		<Btn {txt} {href} />
 
-		{#if videoSrc}
+		{#if videoSrc && isDesktop}
 			<video
 				bind:this={videoEl}
 				class="video-background"
