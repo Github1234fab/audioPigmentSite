@@ -1,0 +1,12 @@
+# Redirection de la racine vers la version française par défaut
+/  /fr  301
+
+# Redirections des anciennes pages (à adapter selon l'ancien site)
+/expertise    /fr/expertise    301
+/services     /fr/services     301
+/realisations /fr/realisations 301
+/contact      /fr/contact      301
+
+# Si l'ancien site utilisait des extensions .php ou .html
+#/index.php    /fr              301
+#/expertise.php /fr/expertise   301
