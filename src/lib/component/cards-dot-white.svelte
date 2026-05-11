@@ -202,7 +202,7 @@
 <style>
 	.card {
 		/* aspect-ratio: 1.8; */
-		width: 100vw;
+		width: 100%;
 		height: 550px;
 		border-radius: 0px;
 		padding: 1rem;
@@ -212,7 +212,7 @@
 		align-items: center;
 		justify-content: center;
 		color: black;
-		font-family: var(--raleway);
+		font-family: var(--font-main);
 		/* box-shadow: 0px 0px 20px rgb(150, 150, 150); */
 		overflow: hidden;
 	}
@@ -240,22 +240,24 @@
 	}
 
 	.title {
-		font-family: var(--bebas);
-		font-size: 2.8rem;
-		font-weight: var(--black);
+		font-family: var(--font-heading); /* Inter (moins large) */
+		font-size: 2.6rem;
+		font-weight: 300;
 		margin-bottom: 10px;
 		color: white;
 		width: 100%;
 		text-align: center;
-		border: 2.5px solid rgba(255, 255, 255, 0.425);
-		padding: 30px 20px;
-		border-radius: 5px;
+		border: 1px solid rgba(255, 255, 255, 0.4);
+		padding: 25px 20px;
+		border-radius: 2px;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
 	}
 
 	.subtitle {
-		font-family: var(--raleway);
+		font-family: var(--font-main);
 		font-size: 1.3rem;
-		font-weight: var(--extra-bold);
+		font-weight: 700;
 		white-space: pre-line;
 		text-align: center;
 		color: rgb(255, 255, 255);
@@ -266,33 +268,35 @@
 		.card {
 			aspect-ratio: none;
 			padding: 10px 10px;
-			width: 100vw;
+			width: 100%;
 			height: 600px;
 			border-radius: 0px;
 			position: relative;
-			background-color: var(--red);
+			background-color: var(--accent);
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			color: black;
-			font-family: var(--raleway);
+			font-family: var(--font-main);
 			box-shadow: 0px 0px 20px rgb(150, 150, 150);
 			overflow: hidden;
 		}
 		.title {
-		font-family: var(--bebas);
-		font-size: 2rem;
-		font-weight: var(--black);
+		font-family: var(--font-heading);
+		font-size: 1.8rem;
+		font-weight: 300;
 		margin-bottom: 10px;
 		color: white;
 		width: 100%;
 		text-align: center;
-		border: 2.5px solid rgba(255, 255, 255, 0.425);
-		padding: 5px 10px;
-		border-radius: 5px;
+		border: 1px solid rgba(255, 255, 255, 0.4);
+		padding: 15px 10px;
+		border-radius: 2px;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
 	}
 	.subtitle {
-		font-family: var(--raleway);
+		font-family: var(--font-main);
 		font-size: 1.3rem;
 		white-space: pre-line;
 		text-align: center;

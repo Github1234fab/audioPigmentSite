@@ -23,49 +23,51 @@
 <style>
 	.card {
 		position: relative;
-		aspect-ratio: 1;
-		height: 200px;
+		aspect-ratio: 16/9;
+		width: 100%;
+		max-width: 450px;
 		background-size: cover;
 		background-position: center;
-		border-radius: 16px;
+		border-radius: var(--radius-lg);
 		overflow: hidden;
-		box-shadow: 0 20px 20px rgba(0, 0, 0, 0.457);
+		box-shadow: var(--shadow-lg);
 		display: flex;
 		align-items: flex-end;
-		transition: transform 0.3s ease;
-		z-index: 4;
+		transition: var(--transition);
 		cursor: pointer;
-		margin: 5px;
 	}
 
 	.card:hover {
-		transform: scale(1.02);
+		transform: translateY(-5px);
+		box-shadow: 0 30px 60px rgba(0,0,0,0.4);
 	}
 
 	.overlay {
 		width: 100%;
-		background: linear-gradient(to top, rgba(0, 0, 0, 0.647) 80%, transparent 100%);
-		color: white;
-		padding: 10px;
+		background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+		color: var(--white);
+		padding: var(--space-md);
 		box-sizing: border-box;
+		transition: var(--transition);
 	}
 
 	h3 {
-		margin: 0 0 10px;
+		margin: 0;
 		font-size: 1.1rem;
-		font-weight: 600;
-		font-family: var(--bebas);
-		font-weight: var(--extra-bold);
-		text-transform: lowercase
+		font-family: var(--font-heading);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		line-height: 1.2;
 	}
 
 	@media (max-width: 768px) {
 		.card {
-			height: 280px;
+			max-width: 100%;
 		}
 
 		h3 {
-			font-size: 1.4rem;
+			font-size: 1.2rem;
 		}
 	}
 

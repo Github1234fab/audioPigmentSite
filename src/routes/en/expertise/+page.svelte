@@ -1,5 +1,4 @@
 <script>
-	// import Vanta from '$lib/component/Vanta.svelte'
 </script>
 
 <main>
@@ -9,22 +8,15 @@
 		<div class="container">
 			<h2>Audio Post-Production</h2>
 			<p>
-				Audio post-production is the stage where every sound element is <strong>precisely adjusted </strong> within an
-				<strong>audiovisual or musical creation</strong> , whether narrative, commercial, or immersive.
-				<br>
-				<br>
-				 At Audio Pigment, we approach this phase as a true <strong>balance between technology and artistry</strong> , combining
-				<strong>technical</strong> accuracy, <strong>creative</strong> sensitivity, and a deep understanding of <strong>storytelling</strong> . 
-				<br>
-				<br>
-				 Sound design, editing and source optimization, dubbing and voice-over, mixing (stereo,
-				multichannel or ambisonic VR), mastering and broadcast normalization: our <strong>technical
-					expertise</strong>  and <strong>close collaboration with creative teams</strong>  ensure results that are both precise
-				and inspired, perfectly aligned with our clients’ vision. 
-				<br>
-				<br>
-				Our goal: <strong>to enhance the impact</strong> ,
-				clarity, <strong>emotional resonance</strong>and  of every project.
+				Audio post-production is the stage where every sound element is <strong>precisely adjusted</strong> within an
+				<strong>audiovisual or musical creation</strong>, whether narrative, commercial, or immersive.
+				<br/><br/>
+				At Audio Pigment, we approach this phase as a true <strong>balance between technology and artistry</strong>, combining
+				<strong>technical</strong> accuracy, <strong>creative</strong> sensitivity, and a deep understanding of <strong>storytelling</strong>.
+				<br/><br/>
+				Sound design, editing and source optimization, dubbing and voice-over, mixing (stereo, multichannel or ambisonic VR), mastering and broadcast normalization: our <strong>technical expertise</strong> and <strong>close collaboration with creative teams</strong> ensure results that are both precise and inspired, perfectly aligned with our clients’ vision.
+				<br/><br/>
+				Our goal: <strong>to enhance the impact</strong>, clarity, and <strong>emotional resonance</strong> of every project.
 			</p>
 			<video
 				class="background-video"
@@ -53,17 +45,14 @@
 				<h3>Tailor-made, demanding collaboration</h3>
 				<p>
 					We maintain a close dialogue with our clients and creative teams to ensure a seamless link
-					between artistic intention and final rendering. This proximity, built through experience,
-					guarantees a bespoke post-production process that is efficient, consistent, and
-					uncompromising in quality.
+					between artistic intention and final rendering.
 				</p>
 			</div>
 			<div class="advantage">
 				<h3>Expertise across all formats</h3>
 				<p>
 					Cinema, television, digital, radio or VR: we master the aesthetic codes and technical
-					standards of every medium so that each project delivers a sound that is coherent,
-					expressive, and faithful to its context.
+					standards of every medium so that each project delivers a sound faithful to its context.
 				</p>
 			</div>
 		</div>
@@ -73,34 +62,15 @@
 		<div class="container">
 			<h2>Original Sound Creation</h2>
 			<p>
-				At Audio Pigment, we imagine and produce tailor-made sonic worlds: sonic branding, sound
-				design, musical composition, sound identity, and event soundscapes. 
-				<br>
-				<br>
-				 Our role: <strong>to transform
-					an idea or an intention, into sound and emotion</strong>.
-				<br>
-				<br>
-				 Whether it’s giving a brand its sonic
-				identity, scoring a film, shaping the sound of a commercial or podcast, or designing an
-				immersive experience, <strong> we adapt our creative process</strong> to the project’s context, objectives,
-				and broadcast constraints. Our goal is to find <strong>the right emotional resonance</strong> : the one that
-				allows sound to carry the story, the image, and the message to its audience.
-				<br>
-				<br>
-				 For musical
-				compositions, we also offer licensing options from our <strong>in-house catalog </strong> and <strong>assist our
-					clients</strong>  throughout the selection process. 
-				<br>
-				<br>
-				These tracks can be customized to fit each
-				project, but when a truly unique sound identity is required, <strong>original composition</strong>  remains
-				the best choice: it ensures perfect alignment between music, intention, and emotion, along
-				with <strong>complete exclusivity </strong> for broadcast and usage rights.
-				<br>
-				<br>
-				 Our mission: to give every project
-				its own identity, rhythm, and emotional signature.
+				At Audio Pigment, we imagine and produce tailor-made sonic worlds: sonic branding, sound design, musical composition, sound identity, and event soundscapes.
+				<br/><br/>
+				Our role: <strong>to transform an idea or an intention, into sound and emotion</strong>.
+				<br/><br/>
+				Whether it’s giving a brand its sonic identity, scoring a film, shaping the sound of a commercial or podcast, or designing an immersive experience, <strong>we adapt our creative process</strong> to the project’s context, objectives, and broadcast constraints.
+				<br/><br/>
+				For musical compositions, we also offer licensing options from our <strong>in-house catalog</strong> and <strong>assist our clients</strong> throughout the selection process.
+				<br/><br/>
+				Our mission: to give every project its own identity, rhythm, and emotional signature.
 			</p>
 
 			<video
@@ -122,24 +92,19 @@
 			<div class="advantage">
 				<h3>A process rooted in dialogue</h3>
 				<p>
-					Every creation begins with an in-depth exchange with our clients to understand goals,
-					constraints, intentions, and the emotions to convey. This close collaboration allows
-					creative teams to deliver compositions that are perfectly tuned and never compromised.
+					Every creation begins with an in-depth exchange with our clients to understand goals, constraints, intentions, and the emotions to convey.
 				</p>
 			</div>
 			<div class="advantage">
 				<h3>A broad musical palette</h3>
 				<p>
-					Our composers master a wide range of styles: from minimal electronic textures to classical
-					orchestral scoring, as well as abstract or narrative sound design.
+					Our composers master a wide range of styles: from minimal electronic textures to classical orchestral scoring, as well as abstract or narrative sound design.
 				</p>
 			</div>
 			<div class="advantage">
-				<h3>End-to-end production, from writing to mastering</h3>
+				<h3>End-to-end production</h3>
 				<p>
-					We handle the entire chain: composition, arrangements, recording when required, mixing,
-					and mastering. Our clients benefit from a single point of contact throughout the process,
-					and complete peace of mind regarding rights management and licensing.
+					We handle the entire chain: composition, arrangements, recording, mixing, and mastering. Our clients benefit from a single point of contact.
 				</p>
 			</div>
 		</div>
@@ -149,30 +114,13 @@
 		<div class="container">
 			<h2>Voices</h2>
 			<p>
-				The human voice <strong>naturally draws attention</strong> : it speaks to the subconscious, evokes emotion,
-				gives meaning, and anchors a message in memory.
-				<br>
-				<br>
-
-				
-				Whether for <strong>audio media</strong>  (radio, podcasts,
-				audioguides) or <strong>audiovisual productions </strong>(films, advertising, e-learning, video games, or
-				installations), the voice <strong>embodies</strong>  a story, it <strong>explains, personifies, and amplifies
-					emotional impact</strong>. 
-				<br>
-				<br>
-				But in a world overflowing with media and content, <strong>being heard is no
-					longer enough</strong> : the voice must <strong>stand out and capture attention</strong> . That comes from the <strong>right
-						voice casting</strong> , inspired and dedicated <strong>artistic direction</strong> , and impeccable <strong>recording quality</strong> .
-				<br>
-				<br>
-
-				Voice-over recording, dubbing, ADR, multilingual localization: <strong>we don’t just record, we
-					craft performances</strong>. Each project benefits from a  <strong>close, comprehensive, tailor-made
-						collaboration</strong> within a high- end voice production environment. From voice casting and
-				artistic direction to recording, editing, and final mix delivery, we fine-tune performances
-				in real time with our clients, ensuring each voice <strong>conveys clarity, intention, and emotional
-					resonance</strong> .
+				The human voice <strong>naturally draws attention</strong>: it speaks to the subconscious, evokes emotion, gives meaning, and anchors a message in memory.
+				<br/><br/>
+				Whether for <strong>audio media</strong> or <strong>audiovisual productions</strong>, the voice <strong>embodies</strong> a story, it <strong>explains, personifies, and amplifies emotional impact</strong>.
+				<br/><br/>
+				In a world overflowing with content, the voice must <strong>stand out</strong>. That comes from the <strong>right voice casting</strong>, inspired <strong>artistic direction</strong>, and impeccable <strong>recording quality</strong>.
+				<br/><br/>
+				Voice-over recording, dubbing, ADR, multilingual localization: <strong>we don’t just record, we craft performances</strong>.
 			</p>
 			<video
 				class="background-video"
@@ -191,28 +139,21 @@
 		<div class="wrapper__advantages">
 			<h2>Our Strengths</h2>
 			<div class="advantage">
-				<h3>A network of 800 professional voices in 50+ languages</h3>
+				<h3>A network of 800 professional voices</h3>
 				<p>
-					An international roster of native voice actors in French and foreign languages for
-					diverse, multicultural projects. Adaptation, translation, multilingual voice-over and
-					dubbing:
+					An international roster of native voice actors in French and foreign languages for diverse, multicultural projects.
 				</p>
 			</div>
 			<div class="advantage">
 				<h3>Dedicated artistic direction</h3>
 				<p>
-					We master the entire process: voice selection, session organization, recording, editing,
-					processing, mixing, and final integration. A single point of contact, meticulous
-					follow-up, and a constant commitment to excellence.
+					We master the entire process: selection, recording, editing, and final integration. A single point of contact and meticulous follow-up.
 				</p>
 			</div>
 			<div class="advantage">
-				<h3>An international network and long-term project support</h3>
+				<h3>International network</h3>
 				<p>
-					Through our worldwide partner studios, we conduct remote, real-time recording sessions
-					with live client supervision. We also ensure long-term project continuity (managing
-					updates, series across multiple seasons, and urgent adaptations) with flexibility and
-					precision.
+					Through our worldwide partner studios, we conduct remote, real-time recording sessions with live client supervision.
 				</p>
 			</div>
 		</div>
@@ -221,7 +162,7 @@
 	<div class="bg-black section-video-banner">
 		<video autoplay muted loop playsinline class="background-video-banner">
 			<source
-				src=" https://videos.pexels.com/video-files/8319438/8319438-uhd_2560_1440_25fps.mp4"
+				src="https://videos.pexels.com/video-files/8319438/8319438-uhd_2560_1440_25fps.mp4"
 				type="video/mp4"
 			/>
 		</video>
@@ -230,21 +171,11 @@
 			<h3>Every project deserves its own sonic story</h3>
 
 			<p>
-				At Audio Pigment, every creation begins with attentive listening to a vision, a story, an
-
-				emotion.
-				
-				We craft sound with precision and intent, blending technical mastery with the sensitivity
-				
-				that turns listening into experience.
-				<br>
-				<br>
+				At Audio Pigment, every creation begins with attentive listening to a vision, a story, an emotion.
+				We craft sound with precision and intent, blending technical mastery with the sensitivity that turns listening into experience.
+				<br/><br/>
 				<strong>Understanding, feeling, transmitting: we do it for you.</strong>
 			</p>
-			<!-- <div class="wrapper__buttons">
-			<BtnBlack txt="Contactez-nous" />
-			<BtnWhite txt="Découvrez nos services" />
-		</div> -->
 		</div>
 	</div>
 </main>
@@ -254,68 +185,68 @@
 		display: flex;
 		flex-direction: column;
 	}
+
+	main h1 {
+		font-family: var(--font-heading);
+		font-size: var(--fs-h1);
+		color: var(--ardoise);
+		font-weight: 800;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		position: relative;
+		width: fit-content;
+		margin: var(--space-xl) auto;
+		padding-bottom: 1.5rem;
+		text-align: center;
+	}
+
+	main h1::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 60px;
+		height: 4px;
+		background: var(--accent);
+		border-radius: 4px;
+	}
+
 	section {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		padding: 0rem;
-		background-color: rgba(211, 211, 211, 0.122);
-		min-height: 100vh;
+		background-color: var(--white-off);
 		z-index: 0;
-		gap: 0px;
 		overflow: hidden;
-		max-width: 12000px;
-		margin: 0 auto;
+		width: 100%;
 	}
-	.section-video-banner {
+
+	.container {
 		position: relative;
+		width: 100%;
+		min-height: 80vh;
+		overflow: hidden;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		text-align: center;
-		background-color: transparent;
-		min-height: 1000px;
 		z-index: 0;
-		gap: 20px;
-	}
-	.section-video-banner video {
-		filter: brightness(1) contrast(0.9) saturate(1.3);
 	}
 
-	.section-video-banner::after {
+	.container::after {
 		position: absolute;
 		content: '';
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0, 1));
-		z-index: 1;
-	}
-	.container {
-		position: relative;
-		width: 100%;
-		min-height: 100vh;
-		overflow: hidden;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		z-index: 0;
-	}
-	.container::after {
-		position: absolute;
-		content: '';
-		top: 0;
-		left: 0;
-		width: 100vw;
-		min-height: 100vh;
-		background: linear-gradient(to bottom, rgba(52, 52, 52, 0.779), rgba(36, 35, 35, 0.498));
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
 		z-index: 2;
 	}
+
 	.background-video {
 		position: absolute;
 		top: 50%;
@@ -323,191 +254,159 @@
 		transform: translate(-50%, -50%);
 		min-width: 100%;
 		min-height: 100%;
-		width: auto;
-		height: auto;
 		object-fit: cover;
 		z-index: -1;
 	}
 
 	.container h2 {
-		font-family: var(--bebas);
-		font-size: 3.2rem;
-		color: white;
-		margin-top: -20px;
+		font-family: var(--font-heading);
+		font-size: var(--fs-h2);
+		color: var(--white);
 		font-weight: 700;
-		letter-spacing: -1.5px;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
 		z-index: 4;
+		margin-bottom: var(--space-md);
 	}
+
 	.container p {
-		font-family: var(--raleway);
-		font-size: 1rem;
-		line-height: 1.6;
-		margin-top: 30px;
-		color: white;
-		font-weight: var(--regular);
+		font-family: var(--font-main);
+		font-size: var(--fs-body);
+		line-height: 1.8;
+		color: var(--white-off);
 		max-width: 800px;
 		z-index: 4;
-		padding: 10px;
+		padding: 0 var(--space-md);
+	}
+
+	.container p strong {
+		color: var(--white);
+		font-weight: 700;
+	}
+
+	.wrapper__advantages {
+		display: flex;
+		justify-content: center;
+		gap: var(--space-md);
+		width: 100%;
+		max-width: 1200px;
+		padding: var(--space-xl) var(--space-md);
+		margin: 0 auto;
+	}
+
+	.wrapper__advantages h2 {
+		display: none;
+	}
+
+	.advantage {
+		background: linear-gradient(135deg, var(--accent) 0%, #c02d24 100%);
+		padding: var(--space-lg);
+		border-radius: var(--radius-lg);
+		width: 33%;
+		text-align: left;
+		box-shadow: var(--shadow-lg);
+		transition: var(--transition);
+	}
+
+	.advantage:hover {
+		transform: translateY(-10px);
+		box-shadow: 0 20px 40px rgba(231, 76, 60, 0.3);
+	}
+
+	.advantage h3 {
+		font-family: var(--font-heading);
+		font-size: 1.25rem;
+		margin-bottom: var(--space-sm);
+		color: var(--white);
+		text-transform: uppercase;
+		line-height: 1.3;
+	}
+
+	.advantage p {
+		font-family: var(--font-main);
+		font-size: 0.95rem;
+		line-height: 1.5;
+		color: rgba(255, 255, 255, 0.9);
+	}
+
+	.section-video-banner {
+		position: relative;
+		min-height: 600px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+	}
+
+	.section-video-banner::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.6);
+		z-index: 2;
 	}
 
 	.background-video-banner {
 		position: absolute;
-		top: 0;
-		left: 0;
-		height: 100%;
+		inset: 0;
 		width: 100%;
+		height: 100%;
 		object-fit: cover;
 		z-index: 1;
 	}
 
-	main h1 {
-		font-family: var(--bebas);
-		font-size: 5rem;
-		margin-top: 50px;
-		margin-bottom: 50px;
-		color: var(--ardoise);
-		font-weight: 600;
-		letter-spacing: -3px;
-		text-align: center;
-	}
-
-	section h3 {
-		font-family: var(--raleway);
-		font-size: 1.5rem;
-		margin-top: 20px;
-		color: var(--ardoise);
-		letter-spacing: -1px;
-		font-weight: var(--bold);
-		z-index: 4;
-	}
-	section h2 {
-		font-family: var(--bebas);
-		font-size: 3.2rem;
-		color: var(--ardoise);
-		margin-top: 80px;
-		font-weight: 700;
-		letter-spacing: -1.5px;
-		z-index: 4;
-	}
-
-	.wrapper__advantages {
-		display: flex;
-		justify-content: space-around;
-		width: 100%;
-		min-width: 100vw;
-		padding: 30px;
-	}
-	.wrapper__advantages h2 {
-		font-size: 2rem;
-		margin-top: 30px;
-	}
-	.advantage {
-		background: linear-gradient(to left, rgba(189, 28, 28, 0.813), rgba(189, 28, 28, 0.604));
-		padding: 40px;
-		border-radius: 10px;
-		width: 30%;
-	}
-	.advantage h3 {
-		/* font-family: var(--bebas); */
-		font-size: 1.5rem;
-		margin-bottom: 10px;
-		color: white;
-	}
-	.advantage p {
-		font-family: var(--raleway);
-		font-size: 1rem;
-		line-height: 1.4;
-		color: white;
-	}
-
-	.bg-black {
-		background-color: var(--ardoise);
-	}
-	.bg-black h2,
-	.bg-black h3,
-	.bg-black p {
-		color: white;
-	}
 	.wrapper__section-txt {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 40px;
-		color: white;
-		z-index: 2;
 		position: relative;
-		padding: 2rem;
-		z-index: 2;
-		font-family: var(--raleway);
-	}
-	.wrapper__section-txt p {
-		font-weight: var(--regular);
+		z-index: 3;
+		text-align: center;
+		color: var(--white);
+		padding: var(--space-md);
 		max-width: 800px;
+	}
+
+	.wrapper__section-txt h2 {
+		font-family: var(--font-heading);
+		font-size: 2.5rem;
+		text-transform: uppercase;
+		margin-bottom: var(--space-sm);
+	}
+
+	.wrapper__section-txt h3 {
+		font-family: var(--font-main);
+		font-size: 1.5rem;
+		margin-bottom: var(--space-md);
+		font-weight: 300;
+		font-style: italic;
+	}
+
+	.wrapper__section-txt p {
+		font-family: var(--font-main);
+		font-size: 1.1rem;
 		line-height: 1.8;
 	}
-	.wrapper__section-txt h3 {
-		font-weight: var(--medium);
-		font-size: 1.5rem;
-	}
-	.wrapper__section-txt h2 {
-		font-weight: var(--bold);
-		font-family: var(--bebas);
-		font-size: 2.3rem;
-	}
 
-	@media screen and (max-width: 768px) {
-		.container {
-			position: relative;
-			width: 100%;
-			min-height: 100vh;
-			overflow: hidden;
-		}
-		.background-video {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			min-width: 100%;
-			min-height: 100%;
-			width: auto;
-			height: auto;
-			object-fit: cover;
-			z-index: -1;
-		}
-
-		main h1 {
-			font-size: 4rem;
-			line-height: 60px;
-		}
-		section h2 {
-			font-size: 2.6rem;
-		}
-		section h3 {
-			font-size: 1.2rem;
-		}
-		section p {
-			font-size: 1rem;
-			line-height: 1.4;
-			font-weight: var(--regular);
-		}
+	@media (max-width: 968px) {
 		.wrapper__advantages {
+			display: flex;
 			flex-direction: column;
 			align-items: center;
-			gap: 20px;
+			gap: 30px;
+			padding: var(--space-lg) var(--space-md);
+			width: 100%;
 		}
 		.advantage {
-			width: 90%;
-			max-width: 600px;
+			width: 100%;
+			max-width: 450px;
+			margin: 0 auto !important;
+			text-align: center;
 		}
-	}
-	.wrapper__advantages {
-		flex-direction: column;
-		align-items: center;
-		gap: 20px;
-	}
-	.advantage {
-		width: 90%;
-		max-width: 600px;
+		main h1 {
+			font-size: 2.4rem;
+			letter-spacing: -1px;
+			line-height: 1.2;
+			padding-bottom: 1.5rem;
+			margin-top: 40px;
+			margin-bottom: 2.5rem;
+		}
 	}
 </style>

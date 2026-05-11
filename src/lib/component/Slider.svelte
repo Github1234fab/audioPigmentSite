@@ -134,15 +134,14 @@
     class="modal-overlay" 
     on:click={closeModal} 
     on:keydown={(e) => e.key === 'Escape' && closeModal()}
-    role="dialog" 
-    aria-modal="true"
-    tabindex="-1"
+    role="button" 
+    aria-label="Fermer la vidéo"
+    tabindex="0"
   >
     <div 
       class="modal-content" 
       on:click|stopPropagation
-      on:keydown|stopPropagation
-      role="document"
+      role="none"
     >
       <button class="close-btn" on:click={closeModal} aria-label="Fermer">
         ✕
@@ -171,17 +170,17 @@
     display: flex;
     overflow: hidden;
     user-select: none;
-    gap: 0;
+    gap: 40px; /* Même gap que les items pour un raccord parfait */
   }
   
   .marquee__group {
     flex-shrink: 0;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 12px;
-    min-width: 60%;
-    animation: scroll-video 35s linear infinite;
+    justify-content: flex-start;
+    gap: 40px; /* Plus d'espace entre les vignettes */
+    min-width: 100%;
+    animation: scroll-video 40s linear infinite;
   }
   
   .marquee__item {

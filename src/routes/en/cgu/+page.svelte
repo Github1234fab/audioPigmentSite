@@ -43,15 +43,18 @@
 
 <style>
 	main {
-		padding: 2rem;
-		max-width: 800px;
+		padding: var(--space-xl) var(--space-md);
+		max-width: 900px;
 		margin: auto;
-		font-family: var(--raleway);
-		line-height: 1.6;
+		font-family: var(--font-main);
+		line-height: 1.8;
 		color: var(--ardoise);
-		background-image: '../../assets/bg-Actu.webp';
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
+	}
+	h1 {
+		font-family: var(--font-heading);
+		text-transform: uppercase;
+		font-size: 2rem;
+		margin-bottom: var(--space-md);
+		color: var(--accent);
 	}
 </style>

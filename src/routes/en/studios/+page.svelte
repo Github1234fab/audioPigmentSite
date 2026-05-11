@@ -44,29 +44,17 @@
 	<div class="wrapper__studios">
 		<h1>Our Studios</h1>
 		<div class="container__info-desc">
-			<!-- <div class="wrapper__p-btn">
-				<p>
-					Spécialisés dans la conception et la production sonore pour les secteurs de la
-					communication, de l’audiovisuel et des médias.
-					<br /><br />
-
-					Nous conjuguons exigence technique, sens du détail et approche artistique pour offrir des
-					productions haut de gamme, pensées sur mesure.
-					<br /><br />
-				</p>
-				<Btn txt="Nous contacter" href="/fr/contact" />
-			</div> -->
 			<div class="wrapper__info-studio">
-				<strong>3 state-of-the-art studios, equipped with: : </strong>
+				<strong>3 state-of-the-art studios, equipped with:</strong>
 
 				<ul>
 					<li>Pro Tools Ultimate + HDX</li>
-					<li>Source Connect PRO</li>
+					<li>Source Connect PRO</li>
 					<li>FOCAL + GENELEC monitoring</li>
 					<li>MERGING + AVID i/o</li>
 					<li>AVALON preamps</li>
-					<li>LIP-SYNC dubbing</li>
-					<li>5.1 mixing</li>
+					<li>LIP-SYNC dubbing</li>
+					<li>5.1 mixing</li>
 				</ul>
 				<img class="label" src={SConnect} alt="Certified source-connect studio" />
 			</div>
@@ -81,11 +69,10 @@
 					</div>
 				</div>
 
-				<button class="nav prev" on:click={prev} aria-label="Slide précédent">‹</button>
-				<button class="nav next" on:click={next} aria-label="Slide suivant">›</button>
+				<button class="nav prev" on:click={prev} aria-label="Previous slide">‹</button>
+				<button class="nav next" on:click={next} aria-label="Next slide">›</button>
 
-				<!-- points (optionnel) -->
-				<div class="dots" role="tablist" aria-label="Navigation des slides">
+				<div class="dots" role="tablist" aria-label="Slide navigation">
 					{#each slides as _, i}
 						<button
 							class="dot"
@@ -101,7 +88,6 @@
 				</div>
 			</div>
 		</div>
-		<!-- <h2>Visite de nos locaux</h2> -->
 	</div>
 </section>
 
@@ -112,7 +98,7 @@
 		post-production services — where technical precision meets artistic creativity.
 	</p>
 	<div class="wrapper__btn">
-		<Btn txt="Hear our work" href="/fr/realisations" />
+		<Btn txt="Hear our work" href="/en/realisations" />
 	</div>
 </section>
 
@@ -132,42 +118,45 @@
 		background-position: center;
 		background-repeat: no-repeat;
 	}
+
 	.container__info-desc {
 		display: grid;
-		grid-template-columns: 30% 70%;
-		gap: 10px;
+		grid-template-columns: minmax(350px, 1fr) 2fr;
+		gap: 30px;
 		z-index: 4;
-		padding: 40px;
+		padding: var(--space-lg) var(--space-md);
 		width: 100%;
-		height: 100%;
-	}
-	/* .wrapper__p-btn {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		background-color: grey;
-		border-radius: 18px;
+		max-width: 1400px;
+		margin: 0 auto;
+		align-items: stretch;
 	}
 
-	.wrapper__p-btn p {
-		font-family: var(--raleway);
-		font-size: 1rem;
-		color: white;
-		max-width: 80%;
-		border-radius: 18px;
-		line-height: 30px;
-		font-weight: 600;
-		background-color: grey;
-		text-align: center;
-	} */
 	.wrapper__studios h1 {
-		font-family: var(--bebas);
-		font-size: 5rem;
+		font-family: var(--font-heading);
+		font-size: var(--fs-h1);
 		color: var(--ardoise);
-		font-weight: 600;
-		letter-spacing: -2px;
+		font-weight: 800;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		margin-bottom: var(--space-xl);
+		position: relative;
+		width: fit-content;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 1.5rem;
 		margin-top: 50px;
+	}
+
+	.wrapper__studios h1::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 60px;
+		height: 4px;
+		background: var(--accent);
+		border-radius: 4px;
 	}
 
 	.label {
@@ -176,6 +165,7 @@
 		object-fit: cover;
 		margin-top: 20px;
 	}
+
 	.wrapper__studios {
 		display: flex;
 		align-items: center;
@@ -184,31 +174,35 @@
 		padding: 0px;
 		border-radius: 15px;
 		z-index: 4;
-		width: 100vw;
+		width: 100%;
 	}
+
 	.wrapper__info-studio {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: center;
-		font-family: var(--raleway);
-		font-size: 1rem;
-		color: var(--ardoise);
+		font-family: var(--font-main);
+		font-size: 1.1rem;
+		color: var(--white);
 		text-align: left;
-		max-width: 800px;
-		background-color: #ec4034df;
-		padding: 50px;
-		border-radius: 20px;
+		background: linear-gradient(135deg, var(--accent) 0%, #a32219 100%);
+		padding: var(--space-lg);
+		border-radius: var(--radius-lg);
+		box-shadow: var(--shadow-lg);
+		border: 1px solid rgba(255, 255, 255, 0.1);
 	}
+
 	.wrapper__info-studio ul {
 		margin-top: 10px;
-
 		color: white;
 	}
+
 	.wrapper__info-studio li {
 		margin-top: 10px;
 		font-weight: 600;
 	}
+
 	.wrapper__info-studio strong {
 		font-size: 1.2rem;
 		margin-bottom: 10px;
@@ -233,6 +227,7 @@
 		z-index: -2;
 		position: relative;
 	}
+
 	.nous-ecouter::after {
 		position: absolute;
 		content: '';
@@ -242,28 +237,29 @@
 		height: 100%;
 		background: rgba(18, 18, 19, 0.699);
 		z-index: -1;
-		border-radius: 10px;
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 		backdrop-filter: blur(5px);
 		-webkit-backdrop-filter: blur(5px);
-		-webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 	}
+
 	.nous-ecouter h2 {
-		font-family: var(--bebas);
+		font-family: var(--font-heading);
 		font-size: 3rem;
 		color: white;
 		margin-bottom: 1rem;
 		z-index: 3;
+		text-transform: uppercase;
 	}
+
 	.nous-ecouter p {
-		font-family: var(--raleway);
-		font-size: 1.2rem;
-		color: white;
+		font-family: var(--font-main);
+		font-size: var(--fs-body);
+		color: var(--white-off);
 		max-width: 800px;
 		margin: 0 auto;
 		line-height: 1.6;
 		z-index: 3;
 	}
+
 	.wrapper__btn {
 		display: flex;
 		justify-content: center;
@@ -272,13 +268,11 @@
 	}
 
 	/*******SLIDER**************/
-
 	.slider {
 		position: relative;
 		width: 100%;
-		height: 100%;
-		padding: 0px 20px;
-		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
 		user-select: none;
 		-webkit-tap-highlight-color: transparent;
 	}
@@ -286,21 +280,24 @@
 	.viewport {
 		overflow: hidden;
 		width: 100%;
-		margin: 0 auto;
-		border-radius: 12px;
+		flex: 1;
+		border-radius: var(--radius-lg);
+		box-shadow: var(--shadow-lg);
 	}
 
 	.track {
 		display: flex;
+		height: 100%;
 		transition: transform 380ms ease-in-out;
 		will-change: transform;
 	}
 
 	.slide {
 		min-width: 100%;
+		height: 100%;
 		position: relative;
-		background: #9a1f1f;
-		height: 500px;
+		background: var(--ardoise);
+		min-height: 400px;
 	}
 
 	.img {
@@ -308,18 +305,17 @@
 		inset: 0;
 		width: 100%;
 		height: 100%;
-		object-fit: cover; /* ou "contain" si tu veux voir 100% de l’image */
+		object-fit: cover;
+		object-position: center;
 		display: block;
-		box-shadow: 0px 0px 20px rgb(16, 16, 16);
 	}
 
-	/* boutons */
 	.nav {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		inline-size: 42px;
-		block-size: 42px;
+		width: 42px;
+		height: 42px;
 		border-radius: 50%;
 		border: 0;
 		background: rgb(247, 245, 245);
@@ -329,24 +325,22 @@
 		text-align: center;
 		cursor: pointer;
 	}
+
 	.nav:hover {
 		background: rgba(0, 0, 0, 0.65);
 		color: var(--red);
 	}
-	.nav.prev {
-		left: 28px;
-	}
-	.nav.next {
-		right: 28px;
-	}
 
-	/* points */
+	.nav.prev { left: 28px; }
+	.nav.next { right: 28px; }
+
 	.dots {
 		display: flex;
 		gap: 6px;
 		justify-content: center;
 		margin-top: 10px;
 	}
+
 	.dot {
 		width: 8px;
 		height: 8px;
@@ -355,65 +349,42 @@
 		background: #c9c9c9;
 		cursor: pointer;
 	}
-	.dot.active {
-		background: #333;
-	}
 
-	/* accessibilité: outline visible au focus clavier */
-	.slider :focus-visible {
-		outline: 2px solid #0070f3;
-		outline-offset: 2px;
-	}
+	.dot.active { background: #333; }
 
 	@media (max-width: 768px) {
-		.wrapper__studios {
-			flex-direction: column;
-			gap: 20px;
-			padding: 0px;
-		}
 		.container__info-desc {
-			display: grid;
-			grid-template-columns: 1fr;
-			gap: 20px;
-			z-index: 4;
-			padding: 20px;
-			max-width: 100vw;
-		}
-		.slider {
-			position: relative;
-			width: 100%;
-			padding: 0px 10px;
-			margin: 0 auto;
-			user-select: none;
-			-webkit-tap-highlight-color: transparent;
-		}
-		.wrapper__studios h1 {
-			font-family: var(--bebas);
-			font-size: 4rem;
-			color: var(--ardoise);
-			font-weight: 600;
-			letter-spacing: -2px;
-			margin-top: 50px;
-			line-height: 60px;
-		}
-		.wrapper__p-btn {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			background-color: grey;
-			border-radius: 18px;
-			height: 530px;
+			padding: 20px 10px;
+			width: 100%;
 		}
-
-		.wrapper__p-btn p {
-			font-family: var(--raleway);
-			font-size: 1rem;
-			color: white;
-			border-radius: 18px;
-			line-height: 30px;
-			font-weight: 600;
+		.wrapper__info-studio {
+			width: 92%;
+			max-width: 500px;
+			margin: 0 auto;
+			align-items: center;
 			text-align: center;
+		}
+		.wrapper__info-studio ul {
+			text-align: left;
+		}
+		.slider {
+			width: 92%;
+			max-width: 500px;
+			margin: 20px auto 0;
+		}
+		.wrapper__studios h1 {
+			font-family: var(--font-heading);
+			font-size: 2.4rem;
+			font-weight: 800;
+			line-height: 1.2;
+			letter-spacing: -1px;
+			padding-bottom: 1.5rem;
+			margin-top: 40px;
+			margin-bottom: 2.5rem;
 		}
 	}
 </style>

@@ -43,34 +43,30 @@
 
 <style>
 	section {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		color: var(--black);
-		min-height: 70vh;
+		padding: var(--space-md) 0; /* Marges réduites pour un enchaînement plus compact */
+		background-color: var(--white-off);
 	}
 
 	.wrapper__card {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 4px;
-		align-items: center;
+		gap: var(--space-md);
+		align-items: stretch;
 		justify-content: center;
-		margin-top: 0px;
-		padding: 0px;
+		max-width: 1400px;
+		margin: 0 auto;
+		padding: 0 var(--space-md);
 	}
 
 	@media screen and (max-width: 768px) {
 		section {
-			min-height: 100%;
-			padding: 0;
+			padding: var(--space-md) 0;
 		}
+		
 		.wrapper__card {
 			flex-direction: column;
-			gap: 2px;
-			margin: 0px;
-			padding: 0px;
+			gap: 10px;
+			padding: 0;
 		}
 	}
 </style>

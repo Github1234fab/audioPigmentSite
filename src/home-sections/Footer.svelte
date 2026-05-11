@@ -61,153 +61,112 @@
 
 <style>
 	section {
+		padding: var(--space-xl) var(--space-md);
+		background-color: var(--ardoise);
+		color: var(--white);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
-		text-align: center;
-		background-color: var(--ardoise);
-		color: white;
-		gap: 20px;
+		gap: var(--space-lg);
 	}
-	section h2 {
-		font-family: var(--bebas);
-		font-size: 3.5rem;
-		margin-bottom: 0.5rem;
-		color: white;
-		margin-top: 50px;
-		font-weight: 500;
-		letter-spacing: -1.5px;
+
+	h2 {
+		font-size: var(--fs-h2);
+		color: var(--white);
+		max-width: 800px;
+		margin: 0;
 	}
 
 	.wrapper__footer-infos {
+		width: 100%;
+		max-width: 1000px;
 		display: flex;
-		align-items: center;
 		flex-direction: column;
-		justify-content: space-around;
-		padding: 1rem;
-		margin: 0 auto;
-		gap: 20px;
-		background-color: var(--ardoise);
-		color: white;
-		border-radius: 5px;
-		border-top: 1px solid rgb(47, 47, 47);
+		align-items: center;
+		gap: var(--space-md);
+		padding-top: var(--space-md);
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
 	}
+
 	.wrapper__footer-infos-localisation {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: flex-start;
-		text-align: center;
-		background-color: var(--ardoise);
-		color: white;
-		gap: 5px;
-		font-family: var(--raleway);
+		gap: var(--space-xs);
 	}
+
+	.wrapper__footer-infos-localisation p {
+		font-size: var(--fs-body);
+		color: var(--grey);
+		margin: 0;
+	}
+
 	.wrapper__footer-infos-localisation a {
-		font-family: var(--raleway);
-		font-weight: var(--extra-bold);
-		color: white;
-		font-size: 1rem;
+		color: var(--white);
 		text-decoration: none;
-		width: 100%;
-		background-color: var(--red);
-		padding: 10px 20px;
-		border-radius: 3px;
-		margin-top: 10px;
+		font-weight: 700;
+		font-size: 1.1rem;
+		margin-top: 5px;
+		transition: var(--transition);
+		padding: 5px 10px;
+		border-radius: var(--radius-sm);
 	}
+
+	.wrapper__footer-infos-localisation a:hover {
+		color: var(--accent);
+		background: rgba(255, 255, 255, 0.05);
+	}
+
 	.wrapper__footer-infos-following {
 		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 10px;
+		gap: var(--space-md);
+		margin-top: var(--space-sm);
 	}
-	.mentions {
-		font-family: var(--raleway);
-		font-size: 0.8rem;
-		color: rgb(122, 80, 80);
-		margin-top: 0px;
-		padding: 0px;
-		text-align: center;
-		margin-bottom: 20px;
-	}
-	.mentions a {
-		color: white;
-		text-decoration: none;
-		margin: 0 5px;
-	}
-	.mentions a:hover {
-		font-weight: bold;
-		transition: 0.2s ease-in-out;
-	}
+
 	.social-link {
-		color: white;
-		text-decoration: none;
+		color: var(--white);
+		width: 45px;
+		height: 45px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		height: 40px;
-		width: 40px;
 		border-radius: 50%;
-		background-color: var(--ardoise);
-		transition: 0.3s ease-in-out;
+		background: rgba(255, 255, 255, 0.05);
+		transition: var(--transition);
+		border: 1px solid rgba(255, 255, 255, 0.1);
 	}
+
 	.social-link:hover {
-		background-color: var(--red);
-		height: 50px;
-		width: 50px;
-		border-radius: 50%;
+		background: var(--accent);
+		color: var(--white);
+		transform: translateY(-3px);
+		border-color: var(--accent);
 	}
-	.contact-link {
-		color: white;
+
+	.mentions {
+		font-size: var(--fs-small);
+		color: var(--grey-dark);
+		margin-top: var(--space-md);
+	}
+
+	.mentions a {
+		color: var(--grey);
 		text-decoration: none;
-		font-family: var(--raleway);
-		font-weight: var(--extra-bold);
-		font-size: 1rem;
-		width: auto;
-		transition: 0.6s ease-in-out;
+		transition: var(--transition);
 	}
-	.contact-link:hover {
-		background-color: var(--red);
-		padding: 20px;
+
+	.mentions a:hover {
+		color: var(--white);
 	}
 
 	@media screen and (max-width: 768px) {
+		section {
+			padding: var(--space-lg) var(--space-sm);
+			gap: var(--space-md);
+		}
+
 		.wrapper__footer-infos {
-			display: flex;
-			align-items: center;
-			justify-content: space-around;
-			flex-direction: column;
-			text-align: center;
-			width: 100%;
-			padding: 1rem;
-			background-color: var(--ardoise);
-			color: white;
-			gap: 20px;
-			width: 100%;
-			border-radius: 5px;
-		}
-		.wrapper__footer-infos-localisation {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			text-align: center;
-			background-color: var(--ardoise);
-			color: white;
-			gap: 10px;
-		}
-		section h2 {
-			font-family: var(--bebas);
-			font-size: 2rem;
-			margin-bottom: 0.5rem;
-			color: white;
-			margin-top: 50px;
-			font-weight: 400;
-			letter-spacing: -1px;
-		}
-		.mentions{
-			font-size: 0.7rem;
+			gap: var(--space-md);
 		}
 	}
 </style>

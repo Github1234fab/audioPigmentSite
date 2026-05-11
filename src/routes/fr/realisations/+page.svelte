@@ -239,7 +239,7 @@
   </script>
   
   <section>
-    <h2>Nos réalisations</h2>
+    <h1>Nos réalisations</h1>
     <div class="filters">
       <button
         class:selected={selectedType === "Tous"}
@@ -277,47 +277,60 @@
       color: var(--black);
       height: 100%;
     }
-    section h2 {
-      font-family: var(--bebas);
-      font-size: 5rem;
-      margin-bottom: 1rem;
-      margin-top: 50px;
-      font-weight: 600;
-      letter-spacing: -2.5px;
+    section h1 {
+      font-family: var(--font-heading);
+      font-size: var(--fs-h1);
+      margin-bottom: var(--space-xl);
+      margin-top: var(--space-xl);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      position: relative;
+      width: fit-content;
+      padding-bottom: 1.5rem;
+    }
+
+    section h1::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 4px;
     }
     .filters {
       display: flex;
-      gap: 1rem;
+      gap: 0.8rem;
       flex-wrap: wrap;
-      margin-bottom: 2rem;
-      margin-top: 20px;
+      margin-bottom: var(--space-xl);
+      justify-content: center;
     }
     .filters button {
-      background-color: transparent;
-      border: 1px solid var(--ardoise);
+      background-color: var(--white);
+      border: 1px solid var(--grey-light);
       color: var(--ardoise);
-      padding: 10px 20px;
+      padding: 10px 24px;
       cursor: pointer;
-      font-family: var(--raleway);
-      font-weight: var(--extra-bold);
-      transition: background-color 0.3s, color 0.3s;
-      box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.104);
-      border-radius: 5px;
-      text-transform: lowercase;
+      font-family: var(--font-main);
+      font-size: 0.85rem;
+      font-weight: 700;
+      transition: var(--transition);
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
     .filters button:hover {
-      background-color: var(--red);
-      color: #fff;
-      transition: 0.3s ease-in-out;
-
+      border-color: var(--accent);
+      color: var(--accent);
     }
     .filters button.selected {
-      color: var(--red);
-    }
-    .filters button.selected:hover {
-      background-color: var(--red);
-      color: #fff;
-      border: none;
+      background-color: var(--accent);
+      color: var(--white);
+      border-color: var(--accent);
+      box-shadow: var(--shadow-md);
     }
     .cards-grid {
   display: flex;
@@ -329,11 +342,13 @@
 
 @media (max-width: 768px) {
 
-  section h2 {
-    font-size: 3rem;
+  section h1 {
+    font-size: 2.4rem;
     letter-spacing: -1px;
-    line-height: 60px;
-
+    line-height: 1.2;
+    padding-bottom: 1.5rem;
+    margin-top: 40px;
+    margin-bottom: 2.5rem;
   }
   .filters {
       margin-top: 40px;
@@ -346,9 +361,7 @@
   margin-top: 0px;
 }
 section {
-     
-      padding: 2rem;
-      
+      padding: var(--space-lg) var(--space-sm);
     }
 
 }

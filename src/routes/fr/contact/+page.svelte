@@ -1,28 +1,184 @@
-
 <script>
-    import { onMount } from 'svelte';
-    let mapContainer;
-    const center = { lat: 45.74981, lng: 4.85661 }; // tes coordonnées personnalisées
-    const zoom = 15;
-    let map;
-  
-    // Charge la Google Maps JS API
-    onMount(() => {
-      window.initMap = () => {
-        map = new google.maps.Map(mapContainer, {
-          center,
-          zoom,
-        });
-        new google.maps.Marker({ position: center, map });
-      };
-    });
-  </script>
-  
-  <svelte:head>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEwpAek6JuWKBWxCZRWHIpJpFtLmngzLE&callback=initMap"
-      async defer>
-    </script>
-  </svelte:head>
-  
-  <div bind:this={mapContainer} style="width:100%;height:600px;border-radius:16px"></div>
+	import { onMount } from 'svelte';
+	import Form from '$lib/component/Form.svelte';
+	
+	let mapContainer;
+	const center = { lat: 45.7380, lng: 4.8455 };
+	const zoom = 15;
+	let map;
+
+	onMount(() => {
+		window.initMap = () => {
+			map = new google.maps.Map(mapContainer, {
+				center,
+				zoom,
+				styles: [
+					{ "featureType": "all", "elementType": "labels.text.fill", "stylers": [{ "color": "#ffffff" }] },
+					{ "featureType": "all", "elementType": "labels.text.stroke", "stylers": [{ "color": "#000000" }, { "lightness": 13 }] }
+				]
+			});
+			new google.maps.Marker({ position: center, map });
+		};
+	});
+</script>
+
+<svelte:head>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEwpAek6JuWKBWxCZRWHIpJpFtLmngzLE&callback=initMap"
+		async
+		defer
+	></script>
+</svelte:head>
+
+<main>
+	<section class="hero-contact">
+		<h1>Contactez-nous</h1>
+		<p class="subtitle">Une idée, un projet, une question ?<br>Notre équipe est à votre écoute.</p>
+	</section>
+
+	<section class="content-contact">
+		<div class="container-grid">
+			<div class="info-side">
+				<div class="info-block">
+					<h3>Studio Lyon</h3>
+					<p>10 Rue Nicolaï<br>69007 Lyon, France</p>
+				</div>
+				<div class="info-block">
+					<h3>Téléphone</h3>
+					<p><a href="tel:+33472734721">+33 (0)4 72 73 47 21</a></p>
+				</div>
+				<div class="info-block">
+					<h3>Email</h3>
+					<p><a href="mailto:contact@audiopigment.com">contact@audiopigment.com</a></p>
+				</div>
+			</div>
+			
+			<div class="form-side">
+				<Form />
+			</div>
+		</div>
+	</section>
+
+	<section class="map-section">
+		<div bind:this={mapContainer} class="map-container"></div>
+	</section>
+</main>
+
+<style>
+	main {
+		background-color: var(--white-off);
+		padding-top: 100px; /* Espace pour le header */
+	}
+
+	.hero-contact {
+		text-align: center;
+		padding: var(--space-xl) var(--space-md);
+		background-color: var(--white);
+	}
+
+	h1 {
+		font-family: var(--font-heading);
+		font-size: var(--fs-h1);
+		color: var(--ardoise);
+		font-weight: 800;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		position: relative;
+		width: fit-content;
+		margin: 0 auto 1.5rem;
+		padding-bottom: 1rem;
+	}
+
+	h1::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 60px;
+		height: 4px;
+		background: var(--accent);
+		border-radius: 4px;
+	}
+
+	.subtitle {
+		font-family: var(--font-main);
+		font-size: 1.2rem;
+		color: var(--accent);
+		max-width: 600px;
+		margin: 0 auto;
+		font-weight: 600;
+	}
+
+	.content-contact {
+		padding: var(--space-xl) var(--space-md);
+	}
+
+	.container-grid {
+		display: grid;
+		grid-template-columns: 1fr 1.5fr;
+		gap: var(--space-xl);
+		max-width: 1200px;
+		margin: 0 auto;
+		align-items: start;
+	}
+
+	.info-side {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-lg);
+	}
+
+	.info-block h3 {
+		font-family: var(--font-heading);
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		margin-bottom: 0.5rem;
+		color: var(--ardoise);
+	}
+
+	.info-block p {
+		font-family: var(--font-main);
+		font-size: 1.1rem;
+		line-height: 1.6;
+		color: var(--ardoise-light);
+	}
+
+	.info-block a {
+		color: var(--accent);
+		text-decoration: none;
+		font-weight: 600;
+		transition: var(--transition);
+	}
+
+	.info-block a:hover {
+		color: var(--ardoise);
+	}
+
+	.map-section {
+		padding: 0 var(--space-md) var(--space-xl);
+	}
+
+	.map-container {
+		width: 100%;
+		height: 500px;
+		border-radius: var(--radius-lg);
+		box-shadow: var(--shadow-lg);
+		overflow: hidden;
+	}
+
+	@media (max-width: 968px) {
+		.container-grid {
+			grid-template-columns: 1fr;
+			gap: var(--space-lg);
+		}
+
+		.info-side {
+			text-align: center;
+		}
+
+		.hero-contact {
+			padding: var(--space-lg) var(--space-md);
+		}
+	}
+</style>

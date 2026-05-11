@@ -10,45 +10,49 @@
 
 <style>
 	.btn {
-		margin-top: 20px;
-		margin-left: 20px;
+		display: inline-block;
 		background-color: var(--ardoise);
-		font-family: var(--raleway);
-		font-weight: var(--medium);
-		color: white;
+		font-family: var(--font-heading);
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		font-weight: 700;
+		color: var(--white);
 		border: 1px solid var(--ardoise);
-		padding: 13px 40px;
-		font-size: 1rem;
+		padding: 14px 40px;
+		font-size: 0.9rem;
 		cursor: pointer;
 		position: relative;
 		overflow: hidden;
-		transition: color 0.6s ease;
+		transition: color 0.4s ease;
+		text-decoration: none;
+		border-radius: 4px;
 	}
 
 	.btn::after {
 		content: '';
 		position: absolute;
 		top: 0;
-		left: -100%;
+		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: white;
+		background-color: var(--white);
 		z-index: 1;
-		transition: left 0.6s ease-in-out;
+		transform: translateX(-100.5%);
+		transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
 	.btn:hover::after {
-		left: 0%;
+		transform: translateX(0);
 	}
 
 	.btn span {
 		position: relative;
 		z-index: 2;
-		transition: color 0.5s ease;
+		transition: color 0.4s ease;
 	}
 
 	.btn:hover span {
-		color: black;
+		color: var(--ardoise);
 	}
 	a{
 		text-decoration: none;

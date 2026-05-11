@@ -1,6 +1,6 @@
 <script>
 	import Bilingue from '../assets/bilingue.png';
-	import Button from '$lib/component/btn-black.svelte';
+	import ButtonRed from '$lib/component/btn-white.svelte';
 	import ComSonore from "../assets/ComSonore.webp";
 	import MarkSonore from "../assets/MarkSonore2.webp";
 	import AudioVisuel from "../assets/AudioVisuel2.webp";
@@ -50,24 +50,22 @@
 	let triggers = [];
 
 	onMount(() => {
-		// Un tween + trigger par .card
+		// Animation du texte uniquement (l'image reste fixe) avec alternance de direction
 		gsap.utils.toArray('.cardo').forEach((el, i) => {
-			const tween = gsap.from(el, {
-				x: 80,
+			const txt = el.querySelector('.wrapper__service-txt');
+			const isEven = i % 2 !== 0; // i=0 est la 1ère carte (impaire visuellement)
+
+			gsap.from(txt, {
+				x: isEven ? -80 : 80, // Arrive de gauche si le texte est à gauche, sinon de droite
 				opacity: 0,
-				duration: 2,
-				ease: 'power3.out',
-				// petit décalage seulement visuel, pas un stagger global
-				delay: i * 0.1,
+				duration: 1,
+				ease: 'power2.out',
 				scrollTrigger: {
 					trigger: el,
-					start: 'top 60%', // l’élément entre bien dans le viewport
-					end: 'top 30%', // nécessaire pour bien “sentir” le scrub
-					scrub: 1 // lisser avec le scroll
-					// markers: true,   // décommente pour débug
+					start: 'top 85%',
+					toggleActions: 'play none none none'
 				}
 			});
-			triggers.push(tween.scrollTrigger);
 		});
 
 		// Recalcule après le chargement images / fonts
@@ -95,14 +93,15 @@
 	<div class="wrapper__cards">
 		{#each services as service}
 			<div class="cardo">
-				<!-- href={service.link} -->
-				<img src={service.image} alt="" />
+				<div class="cardo-img">
+					<img src={service.image} alt="" />
+				</div>
 				<div class="wrapper__service-txt">
 					<h3>{service.label}</h3>
 					<p>{@html service.desc}</p>
 					<!-- <a class="button" href={service.link} aria-label="button">En savoir +</a> -->
 					<div class="wrapper-button">
-						<Button txt="En Savoir +" href={service.link} />
+						<ButtonRed txt="En Savoir +" href={service.link} />
 					</div>
 				</div>
 			</div>
@@ -114,113 +113,105 @@
 
 <style>
 	section {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		padding: 2rem;
-		color: var(--black);
-		height: 100%;
-		overflow: hidden;
+		padding: var(--space-xl) 0;
+		background-color: var(--white);
 	}
+
+	h2 {
+		font-size: var(--fs-h2);
+		color: var(--ardoise);
+	}
+
 	.wrapper__cards {
 		display: flex;
 		flex-direction: column;
-		gap: 4rem;
-		margin-top: 0px;
-		margin-bottom: 10rem;
+		gap: var(--space-xl);
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 var(--space-md);
 	}
+
 	.cardo {
-		/* display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center; */
-		display:grid;
+		display: grid;
 		grid-template-columns: 1fr 1fr;
-		height: 500px;
-		border-radius: 12px 10px 12px 12px;
-		box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.462);
-		width: 80vw;
+		align-items: stretch;
+		background: var(--white);
+		border-radius: var(--radius-lg);
+		overflow: hidden;
+		box-shadow: var(--shadow-lg);
+		min-height: 450px;
 	}
+
+	/* On supprime les effets de hover qui font bouger la structure */
+
+	/* Alternance Image / Texte */
+	.cardo:nth-child(even) .cardo-img {
+		order: 2;
+	}
+
 	.cardo img {
 		width: 100%;
-		height: 500px;
+		height: 100%;
 		object-fit: cover;
-		border-radius: 12px 0px 0px 0px;
-	}
-	.wrapper-button {
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-		margin-bottom: 50px;
-	}
-	section h2 {
-		font-family: var(--bebas);
-		font-size: 4rem;
-		margin-bottom: 3rem;
-		margin-top: 50px;
-		font-weight: 200;
-		letter-spacing: -2px;
-		color: var(--ardoise);
-		font-weight: var(--bold);
 	}
 
 	.wrapper__service-txt {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 		justify-content: center;
-		padding: 0.5rem 1rem;
-		z-index: 2;
-		border-radius: 0px 0px 12px 0px;
-		/* background-color: rgb(157, 154, 154); */
-		background-color: rgb(105, 99, 99);
-		width: 100%;
-		margin-top: 0px;
-		gap: 30px
+		padding: var(--space-lg);
+		background-color: var(--ardoise);
+		color: var(--white);
+		gap: var(--space-md);
 	}
 
-	.wrapper__service-txt h3 {
-		color: white;
-		font-size: 2rem;
-		font-family: var(--bebas);
-		margin-top: 20px;
-		text-align: center;
-	}
-	.wrapper__service-txt p {
-		color: white;
-		font-size: 1rem;
-		font-weight: 500;
-		font-family: var(--bebas);
-		max-width: 70%;
-		text-align: center;
+	.cardo:nth-child(even) .wrapper__service-txt {
+		order: 1;
 	}
 
-	@media screen and (max-width: 768px) {
-		.wrapper__service-txt h3 {
-			font-size: 1.8rem;
-		}
-		section h2 {
-			font-size: 3rem;
-			margin-bottom: 1rem;
-			line-height: 50px;
-			margin-bottom: 50px;
-		}
-		.wrapper__cards {
-			gap: 2rem;
-			margin-bottom: 5rem;
-		}
+	h3 {
+		font-size: var(--fs-h3);
+		color: var(--white);
+		margin: 0;
+	}
+
+	p {
+		font-size: var(--fs-body);
+		line-height: 1.6;
+		color: var(--grey);
+		max-width: 90%;
+	}
+
+	.wrapper-button {
+		margin-top: var(--space-sm);
+	}
+
+	@media screen and (max-width: 968px) {
 		.cardo {
-		/* display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center; */
-		display:grid;
-		grid-template-columns: 1fr ;
-		height: 100%;
-		border-radius: 12px 10px 12px 12px;
-		box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.462);
-		width: 80vw;
-	}
+			grid-template-columns: 1fr;
+			min-height: auto;
+		}
+
+		.cardo:nth-child(even) .cardo-img {
+			order: 0;
+		}
+		
+		.cardo:nth-child(even) .wrapper__service-txt {
+			order: 1;
+		}
+
+		.cardo img {
+			height: 300px;
+		}
+
+		.wrapper__service-txt {
+			padding: var(--space-md);
+			text-align: center;
+			align-items: center;
+		}
+
+		p {
+			max-width: 100%;
+		}
 	}
 </style>

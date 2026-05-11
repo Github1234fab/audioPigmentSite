@@ -258,8 +258,9 @@
 		z-index: 0;
 		gap: 0px;
 		overflow: hidden;
-		max-width: 12000px;
+		max-width: 1200px;
 		margin: 0 auto;
+		width: 100%;
 	}
 	.section-video-banner {
 		position: relative;
@@ -303,9 +304,9 @@
 		content: '';
 		top: 0;
 		left: 0;
-		width: 100vw;
+		width: 100%;
 		min-height: 100vh;
-		background: linear-gradient(to bottom, rgba(52, 52, 52, 0.779), rgba(36, 35, 35, 0.498));
+		background: radial-gradient(circle at center, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
 		z-index: 2;
 	}
 	.background-video {
@@ -322,24 +323,25 @@
 	}
 
 	.container h2 {
-		font-family: var(--bebas);
-		font-size: 3.2rem;
-		color: white;
-		margin-top: -20px;
-		font-weight: 700;
-		letter-spacing: -1.5px;
+		font-family: var(--font-heading);
+		font-size: var(--fs-h1);
+		color: var(--white);
+		font-weight: 800;
+		letter-spacing: -0.04em;
 		z-index: 4;
+		text-transform: uppercase;
 	}
 	.container p {
-		font-family: var(--raleway);
-		font-size: 1rem;
-		line-height: 1.6;
-		margin-top: 30px;
-		color: white;
-		font-weight: var(--regular);
-		max-width: 800px;
+		font-family: var(--font-main);
+		font-size: 1.1rem;
+		line-height: 1.7;
+		margin-top: var(--space-md);
+		color: var(--white-off);
+		font-weight: 400;
+		max-width: 850px;
 		z-index: 4;
 		padding: 10px;
+		text-wrap: balance;
 	}
 
 	.background-video-banner {
@@ -353,14 +355,32 @@
 	}
 
 	main h1 {
-		font-family: var(--bebas);
-		font-size: 5rem;
-		margin-top: 50px;
-		margin-bottom: 50px;
+		font-family: var(--font-heading);
+		font-size: var(--fs-h1);
+		margin-top: var(--space-xl);
+		margin-bottom: var(--space-xl);
 		color: var(--ardoise);
-		font-weight: 600;
-		letter-spacing: -3px;
+		font-weight: 800;
+		letter-spacing: -0.04em;
 		text-align: center;
+		text-transform: uppercase;
+		position: relative;
+		width: fit-content;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 1.5rem;
+	}
+
+	main h1::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 60px;
+		height: 4px;
+		background: var(--accent);
+		border-radius: 4px;
 	}
 
 	section h3 {
@@ -386,7 +406,7 @@
 		display: flex;
 		justify-content: space-around;
 		width: 100%;
-		min-width: 100vw;
+		width: 100%;
 		padding: 30px;
 	}
 	.wrapper__advantages h2 {
@@ -394,22 +414,30 @@
 		margin-top: 30px;
 	}
 	.advantage {
-		background: linear-gradient(to left, rgba(189, 28, 28, 0.813), rgba(189, 28, 28, 0.604));
-		padding: 40px;
-		border-radius: 10px;
+		background: linear-gradient(135deg, var(--accent) 0%, #c02d24 100%);
+		padding: var(--space-lg);
+		border-radius: var(--radius-lg);
 		width: 30%;
+		box-shadow: var(--shadow-md);
+		transition: var(--transition);
+	}
+	.advantage:hover {
+		transform: translateY(-5px);
+		box-shadow: var(--shadow-lg);
 	}
 	.advantage h3 {
-		/* font-family: var(--bebas); */
-		font-size: 1.5rem;
-		margin-bottom: 10px;
-		color: white;
+		font-family: var(--font-heading);
+		font-size: 1.4rem;
+		margin-bottom: var(--space-sm);
+		color: var(--white);
+		text-transform: uppercase;
+		line-height: 1.2;
 	}
 	.advantage p {
-		font-family: var(--raleway);
-		font-size: 1rem;
-		line-height: 1.4;
-		color: white;
+		font-family: var(--font-main);
+		font-size: 0.95rem;
+		line-height: 1.6;
+		color: var(--white-off);
 	}
 
 	.bg-black {
@@ -469,8 +497,12 @@
 		}
 
 		main h1 {
-			font-size: 4rem;
-			line-height: 60px;
+			font-size: 2.4rem;
+			letter-spacing: -1px;
+			line-height: 1.2;
+			padding-bottom: 1.5rem;
+			margin-top: 40px;
+			margin-bottom: 2.5rem;
 		}
 		section h2 {
 			font-size: 2.6rem;
@@ -484,22 +516,18 @@
 			font-weight: var(--regular);
 		}
 		.wrapper__advantages {
+			display: flex;
 			flex-direction: column;
 			align-items: center;
-			gap: 20px;
+			gap: 30px;
+			padding: var(--space-lg) var(--space-md);
+			width: 100%;
 		}
 		.advantage {
-			width: 90%;
-			max-width: 600px;
+			width: 100%;
+			max-width: 450px;
+			margin: 0 auto !important;
+			text-align: center;
 		}
-	}
-	.wrapper__advantages {
-		flex-direction: column;
-		align-items: center;
-		gap: 20px;
-	}
-	.advantage {
-		width: 90%;
-		max-width: 600px;
 	}
 </style>

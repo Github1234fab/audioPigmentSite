@@ -1,9 +1,32 @@
 <script>
+	import { onMount } from 'svelte';
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import BtnBlack from '$lib/component/btn-black.svelte';
 	import BtnWhite from '$lib/component/btn-white.svelte';
+
+	gsap.registerPlugin(ScrollTrigger);
+
+	let sectionRef;
+	let contentRef;
+
+	onMount(() => {
+		gsap.from(contentRef.children, {
+			y: 50,
+			opacity: 0,
+			duration: 1,
+			stagger: 0.2,
+			ease: 'power3.out',
+			scrollTrigger: {
+				trigger: sectionRef,
+				start: 'top 80%',
+				toggleActions: 'play none none none'
+			}
+		});
+	});
 </script>
 
-<section>
+<section bind:this={sectionRef}>
 	<video autoplay muted loop playsinline preload="none" class="background-video">
 		<source
 			src="https://videos.pexels.com/video-files/7087627/7087627-uhd_2732_1440_25fps.mp4"
@@ -11,28 +34,24 @@
 		/>
 	</video>
 
-	<div class="wrapper__section-txt">
-		<h2><strong>Ensemble, créons des émotions, marquons les esprits</strong></h2>
-<br>
+	<div class="wrapper__section-txt" bind:this={contentRef}>
+		<h2>Ensemble, créons des émotions, marquons les esprits</h2>
+
 		<p>
 			Chez AUDIO PIGMENT, chaque projet est écouté, pensé et façonné avec <strong>soin, expertise et
-			inventivité.</strong> <br> À <strong>vos côtés.</strong> <br /><br>
+			inventivité.</strong> À <strong>vos côtés.</strong>
+		</p>
+		
+		<p>
 			Une <strong>écoute attentive</strong>, un <strong>savoir-faire affûté </strong> et
-			<strong>le soin du sur-mesure</strong>
-			pour un impact optimal.
-
-			<br /> <br /><strong>Comprendre</strong>, <strong>ressentir</strong>,
-			<strong>transmettre</strong>
-			: c’est notre métier. <br />
-			<br /><br> Faites nous confiance
+			<strong>le soin du sur-mesure</strong> pour un impact optimal.
 		</p>
 
-		<!-- <p>
-			Chez AUDIO PIGMENT, chaque projet est pensé, écouté, façonné avec précision par l’expertise
-			humaine, pour créer un impact optimal. Une écoute exigeante, un savoir-faire affûté, et le
-			goût du sur-mesure. Comprendre, ressentir, transmettre : c’est notre métier. Faisons-nous
-			confiance.
-		</p> -->
+		<p>
+			<strong>Comprendre</strong>, <strong>ressentir</strong>,
+			<strong>transmettre</strong> : c’est notre métier. <strong>Faites-nous confiance.</strong>
+		</p>
+
 		<div class="wrapper__buttons">
 			<BtnBlack txt="Contactez-nous" href="/fr/contact" />
 			<BtnWhite txt="Découvrez nos services" href="/fr/services" />
@@ -49,124 +68,96 @@
 		text-align: center;
 		background-color: transparent;
 		min-height: 100vh;
-		z-index: 0;
 		position: relative;
 		overflow: hidden;
-		z-index: 0;
-		padding: 5rem;
+		padding: var(--space-xl) var(--space-md);
 	}
 
-	.wrapper__section-txt h2 {
-		font-family: var(--bebas);
-		font-size: 3rem;
-		line-height: 1.4;
-		color: white;
-		font-weight: var(--bold);
-		width: 100%;
-	}
-
-	.wrapper__section-txt p {
-		font-family: var(--raleway);
-		font-size: 1.5rem;
-		line-height: 1.6;
-		font-weight: var(--regular);
-		color: white;
-		margin-bottom: 20px;
-	}
-	/* .wrapper__section-txt p span {
-		font-weight: var(--extra-bold);
-		font-family: var(--bebas);
-	} */
-
-	.wrapper__buttons {
-		display: flex;
-		/* flex-direction: column; */
-		margin-bottom: 50px;
-		gap: 10px;
-	}
 	.wrapper__section-txt {
+		position: relative;
+		z-index: 2;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
-		gap: 50px;
-		color: white;
-		z-index: 2;
-		position: relative;
-		padding: 50px;
+		gap: var(--space-lg);
+		max-width: 900px;
 	}
+
+	.wrapper__section-txt h2 {
+		font-family: var(--font-heading);
+		font-size: var(--fs-h2);
+		line-height: 1.2;
+		color: var(--white);
+		font-weight: 300; /* Plus fin et premium */
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		margin: 0;
+	}
+
+	.wrapper__section-txt p {
+		font-family: var(--font-main);
+		font-size: 1.2rem;
+		line-height: 1.8;
+		color: var(--white-off);
+		margin: 0;
+		text-wrap: balance;
+		opacity: 0.9;
+	}
+
+	strong {
+		color: var(--white);
+		font-weight: 700;
+	}
+
+	.wrapper__buttons {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: var(--space-sm);
+		margin-top: var(--space-md);
+	}
+
 	section::after {
-		position: absolute;
 		content: '';
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: linear-gradient(
-			to top,
-			rgba(0, 0, 0, 0) 0%,
-			rgb(0, 0, 0, 0.5) 50%,
-			rgba(0, 0, 0, 0) 100%
+		position: absolute;
+		inset: 0;
+		/* Dégradé plus riche : mélange d'ardoise profonde et de bleu nuit pour éviter le côté "terne" */
+		background: radial-gradient(
+			circle at center,
+			rgba(15, 23, 42, 0.5) 0%, /* Bleu nuit translucide au centre */
+			rgba(0, 0, 0, 0.85) 100% /* Noir profond sur les bords */
 		);
 		z-index: 1;
-		border-radius: 10px;
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		border-radius: 10px;
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
-		-webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+		backdrop-filter: blur(1px);
+		-webkit-backdrop-filter: blur(1px);
 	}
+
 	.background-video {
 		position: absolute;
-		top: 0;
-		left: 0;
-		height: 100%;
+		inset: 0;
 		width: 100%;
+		height: 100%;
 		object-fit: cover;
 		z-index: -1;
 	}
 
 	@media screen and (max-width: 768px) {
-		.wrapper__buttons {
-			display: flex;
-			flex-direction: column;
-			margin-top: 20px;
-		}
-		section p {
-			width: 100%;
-			padding: 20px 0px;
-		}
-		.wrapper__section-txt p {
-			font-family: var(--raleway);
-			font-size: 1rem;
-			line-height: 1.6;
-			margin-top: 0px;
-			font-weight: var(--regular);
-			color: white;
-			padding: 0px 0px;
-			margin-bottom: 3rem;
-		}
 		section {
-			background-image: url('https://images.pexels.com/photos/14828529/pexels-photo-14828529.jpeg?w=600&h=400&auto=compress&cs=tinysrgb');
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
-			height: 100%;
-			padding: 0.5rem;
+			padding: var(--space-lg) var(--space-sm);
 		}
-		.background-video {
-			display: none;
-		}
+
 		.wrapper__section-txt h2 {
-			font-family: var(--bebas);
-			font-size: 2rem;
-			line-height: 1.4;
-			color: white;
-			font-weight: var(--bold);
-			margin-top: 0px;
-			padding: 20px 0px;
+			font-size: 1.8rem;
+		}
+
+		.wrapper__section-txt p {
+			font-size: 1.1rem;
+		}
+
+		.wrapper__buttons {
+			flex-direction: column;
 			width: 100%;
+			max-width: 300px;
 		}
 	}
 </style>

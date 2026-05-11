@@ -7,36 +7,128 @@
 
 
 :root {
-	/* --ardoise: #111111; */
+	/* --- Couleurs Premium --- */
 	--ardoise: #1f1c1c;
+	--ardoise-light: #2d2a2a;
+	--grey-dark: #7a7a7a;
 	--grey: #d9d9d9;
-	--btn-sdw: rgba(0, 0, 0, 0.315);
-	--red: #e74c3c;
-	--white: #ececec;
+	--grey-light: #f5f5f5;
+	--white: #ffffff;
+	--white-off: #ececec;
+	
+	--accent: #e74c3c; /* Ton rouge actuel */
+	--accent-hover: #c0392b;
 
-	/* ======================================== */
+	/* --- Glassmorphism & Shadows --- */
+	--glass-bg: rgba(255, 255, 255, 0.05);
+	--glass-border: rgba(255, 255, 255, 0.1);
+	--shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+	--shadow-md: 0 4px 12px rgba(0,0,0,0.15);
+	--shadow-lg: 0 10px 30px rgba(0,0,0,0.2);
 
-	/* --bebas: "Bebas Neue", sans-serif; */
-	/* --bebas: "Anton SC", sans-serif; */
-	--bebas: 'Vend Sans', sans-serif;
-	/* --raleway: "Raleway", sans-serif; */
-	--raleway: 'Quicksand', sans-serif;
-	--raleway-dot: 'Raleway Dots', sans-serif;
-	--Quicksand: 'Quicksand', sans-serif;
+	/* --- Typography --- */
+	--font-main: 'Quicksand', sans-serif;
+	--font-heading: 'Inter', sans-serif; /* Plus compacte et premium */
+	
+	/* Font Sizes (Responsive via clamp) */
+	--fs-h1: clamp(2.5rem, 8vw, 5rem);
+	--fs-h2: clamp(1.5rem, 4vw, 2.5rem);
+	--fs-h3: clamp(1.25rem, 3vw, 1.75rem);
+	--fs-body: clamp(1rem, 1vw + 0.5rem, 1.125rem);
+	--fs-small: 0.875rem;
 
-	/* ======================================== */
-
-	--xl: 6rem;
-	--lg: 3rem;
-	--md: 1.5rem;
-	--sm: 1rem;
-
-	/* ======================================== */
-	--thin: 50;
-	--light: 100;
-	--regular: 400;
-	--medium: 500;
-	--bold: 600;
-	--extra-bold: 800;
-	--black: 900;
+	/* --- Spacing System (Proportionnel) --- */
+	--space-xs: 0.5rem;
+	--space-sm: 1rem;
+	--space-md: 2rem;
+	--space-lg: 4rem;
+	--space-xl: 8rem;
+	
+	/* --- Utils --- */
+	--radius-sm: 4px;
+	--radius-md: 8px;
+	--radius-lg: 24px;
+	--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* --- Base Reset & Defaults --- */
+html,
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	width: 100%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: var(--font-main);
+	background-color: var(--white);
+	color: var(--ardoise);
+	line-height: 1.6;
+	overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+	font-family: var(--font-heading);
+	line-height: 1.1;
+}
+
+h2 {
+	position: relative;
+	display: inline-block;
+	margin-bottom: var(--space-lg);
+	padding-bottom: 1rem;
+	letter-spacing: -0.02em;
+	text-transform: uppercase;
+}
+
+h2::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50px;
+	height: 3px;
+	background: var(--accent);
+	border-radius: 4px;
+}
+
+/* On s'assure que le h2 est bien considéré comme un bloc centré si besoin */
+.text-center h2, section h2 {
+	display: block;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img, video {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+section {
+	padding: var(--space-lg) 0;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 var(--space-md);
+}
+
+/* --- Utility Classes --- */
+.text-center { text-align: center; }
+.flex-center { display: flex; align-items: center; justify-content: center; }

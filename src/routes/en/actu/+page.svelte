@@ -6,27 +6,30 @@
 <section>
 	<h1>Latest News</h1>
 	<p>Discover some of our latest projects and stay up to date with our news</p>
+	
 	<div class="wrapper__footer-infos-following">
 		<a
 			href="https://www.facebook.com/p/Audio-Pigment-100047378936341/?locale=fr_FR"
 			target="_blank"
-			aria-label="link"
-			class="social-link"><i class="fa-brands fa-facebook fa-2xl"></i></a
+			aria-label="Facebook"
+			class="social-link"><i class="fa-brands fa-facebook fa-xl"></i></a
 		>
 		<a
 			href="https://www.instagram.com/explore/locations/224133827636515/audio-pigment/"
 			target="_blank"
-			aria-label="link"
-			class="social-link"><i class="fa-brands fa-instagram fa-2xl"></i></a
+			aria-label="Instagram"
+			class="social-link"><i class="fa-brands fa-instagram fa-xl"></i></a
 		>
 		<a
 			href="https://www.youtube.com/@StudioAudioPigment"
 			target="_blank"
-			aria-label="link"
-			class="social-link"><i class="fa-brands fa-youtube fa-2xl"></i></a
+			aria-label="YouTube"
+			class="social-link"><i class="fa-brands fa-youtube fa-xl"></i></a
 		>
 	</div>
-	<Btn txt="Get in touch" href="/fr/contact" />
+
+	<Btn txt="Get in touch" href="/en/contact" />
+	
 	<Slider />
 </section>
 
@@ -40,48 +43,72 @@
 		background-image: url('../../../assets/bg-Actu.webp');
 		background-size: cover;
 		background-position: center;
-
 		background-repeat: no-repeat;
-		color: white;
-		padding: 2rem;
-		height: 100%;
+		color: var(--white);
+		padding: var(--space-xl) var(--space-md);
+		min-height: 100vh;
 		gap: 20px;
 	}
+
 	section h1 {
-		font-family: var(--bebas);
+		font-family: var(--font-heading);
+		font-size: var(--fs-h1);
 		color: var(--ardoise);
-		font-size: 5rem;
-		margin-top: 50px;
-		font-weight: 600;
-		letter-spacing: -2.5px;
+		font-weight: 800;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		position: relative;
+		width: fit-content;
+		margin-top: var(--space-xl);
+		padding-bottom: 1rem;
 	}
+
+	section h1::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 60px;
+		height: 4px;
+		background: var(--accent);
+		border-radius: 4px;
+	}
+
 	section p {
-		font-family: var(--raleway);
-		font-size: 1.2rem;
+		font-family: var(--font-main);
+		font-size: 1.1rem;
 		line-height: 1.6;
-		margin-top: 20px;
-		max-width: 800px;
-		font-weight: var(--regular);
-		color: var(--ardoise);
+		margin-top: var(--space-md);
+		max-width: 700px;
+		font-weight: 400;
+		color: var(--ardoise-light);
+		margin-bottom: var(--space-md);
 	}
+
 	.social-link {
-		color: var(--red);
+		color: var(--white);
+		background-color: var(--accent);
 		text-decoration: none;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		height: 40px;
-		width: 40px;
+		height: 50px;
+		width: 50px;
 		border-radius: 50%;
-		transition: 0.3s ease-in-out;
+		transition: var(--transition);
+		box-shadow: var(--shadow-sm);
 	}
+
 	.social-link:hover {
-		transform: scale(1.3);
+		transform: translateY(-5px);
+		background-color: var(--ardoise);
+		box-shadow: var(--shadow-md);
 	}
+
 	.wrapper__footer-infos-following {
 		display: flex;
-		gap: 0px;
-		margin-top: 10px;
-		margin-bottom: 20px;
+		gap: var(--space-sm);
+		margin-bottom: var(--space-lg);
 	}
 </style>

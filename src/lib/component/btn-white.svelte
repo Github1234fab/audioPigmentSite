@@ -12,21 +12,22 @@
 
 <style>
 	.btn {
-		margin-top: 20px;
-		/* margin-left: 20px; */
-		background-color: var(--red);
-		font-family: var(--raleway);
-		font-weight: var(--bold);
-		color: white;
-		padding: 13px 40px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--accent); /* Rouge pour Nous écouter */
+		font-family: var(--font-main);
+		font-weight: 600;
+		color: var(--white);
+		padding: 12px 32px;
 		font-size: 1rem;
 		cursor: pointer;
 		position: relative;
 		overflow: hidden;
-		transition: color 0.6s ease;
-		outline: none;
-		box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.431);
-		border-radius: 5px;
+		transition: var(--transition);
+		box-shadow: var(--shadow-md);
+		border-radius: var(--radius-sm);
+		text-decoration: none;
 	}
 
 	.btn::after {
@@ -36,9 +37,9 @@
 		left: -100%;
 		width: 100%;
 		height: 100%;
-		background-color: white;
+		background-color: var(--white); /* Slide Blanc */
 		z-index: 1;
-		transition: left 0.6s ease-in-out;
+		transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
 	.btn:hover::after {
@@ -48,14 +49,10 @@
 	.btn span {
 		position: relative;
 		z-index: 2;
-		transition: color 0.5s ease;
+		transition: color 0.4s ease;
 	}
 
 	.btn:hover span {
-		color: var(--ardoise);
-		font-weight: var(--bold);
-	}
-	a {
-		text-decoration: none;
+		color: var(--accent); /* Texte devient rouge sur fond blanc */
 	}
 </style>

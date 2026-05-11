@@ -91,10 +91,10 @@ function switchLanguage(newLang) {
 
   <a href="/{lang}/home" class="home-link">
     <img src={Logo} class="logo" alt="Logo Audio Pigment" />
-    Audio Pigment
+    <span>Audio Pigment</span>
 </a>
 
-  <button class="burger" aria-label="Ouvrir le menu" on:click={() => (menuOpen = !menuOpen)}>
+  <button class="burger" class:open={menuOpen} aria-label="Menu" on:click={() => (menuOpen = !menuOpen)}>
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
@@ -110,6 +110,7 @@ function switchLanguage(newLang) {
       <div class="wrapper__buttons">
           <button
               class="buttons-switch"
+              class:active={lang === 'fr'}
               on:click={() => {
                   closeMenu();
                   switchLanguage('fr');
@@ -119,6 +120,7 @@ function switchLanguage(newLang) {
           </button>
           <button
               class="buttons-switch"
+              class:active={lang === 'en'}
               on:click={() => {
                   closeMenu();
                   switchLanguage('en');
@@ -135,133 +137,214 @@ function switchLanguage(newLang) {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1em 2em;
-      background: white;
-      position: relative;
-      z-index: 10;
-      font-family: var(--raleway);
-      border-bottom: 1px solid var(--grey);
+      padding: 0.75rem 2rem;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--glass-border);
+      transition: var(--transition);
   }
+
   .home-link {
       display: flex;
       align-items: center;
       text-decoration: none;
       color: inherit;
-      font-weight: var(--bold);
+      font-weight: 700;
       font-size: 0.8rem;
       gap: 5px;
+      font-family: var(--font-main);
   }
+
   .logo {
-      height: 70px;
+      height: 60px;
       width: auto;
       object-fit: contain;
       border-radius: 2px;
-    
+      transition: var(--transition);
   }
+
+  .home-link:hover .logo {
+      transform: scale(1.05);
+  }
+
   .main-menu {
       display: flex;
       align-items: center;
-      gap: 2em;
-  }
-  .main-menu a {
-      text-decoration: none;
-      color: inherit;
-      padding: 0.5em 0.2em;
-  }
-  .main-menu a:hover {
-      color: var(--red);
-      transition: 0.3s ease-in-out;
-   
+      gap: 1.1rem;
   }
 
+  .main-menu a {
+      text-decoration: none;
+      color: var(--ardoise-light);
+      font-family: var(--font-main);
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 0.4rem;
+      position: relative;
+      transition: var(--transition);
+  }
+
+  .main-menu a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0.5rem;
+      right: 0.5rem;
+      height: 2px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transition: var(--transition);
+  }
+
+  .main-menu a:hover {
+      color: var(--accent);
+  }
+
+  .main-menu a:hover::after {
+      transform: scaleX(1);
+  }
 
   .wrapper__buttons {
       display: flex;
-      gap: 0.5em;
-      margin-left: 0.6em;
+      align-items: center;
+      gap: 1rem;
+      margin-left: 1rem;
+      padding-left: 1rem;
+      border-left: 1px solid var(--grey);
   }
+
   .buttons-switch {
       background: none;
       border: none;
       cursor: pointer;
-      padding: 0;
-      transition: 0.3s ease-in-out;
-    
+      display: flex;
+      align-items: center;
+      transition: var(--transition);
+      opacity: 0.7;
   }
-  .buttons-switch:hover {
-        transform: scale(1.3);
-     
+
+  .buttons-switch:hover, .buttons-switch.active {
+      opacity: 1;
+      transform: translateY(-2px);
   }
-  .flag {
-      width: 22px;
-      height:22px;
+
+  .buttons-switch.active img {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
   }
-  .Enflag {
-      width: 28px;
-      height: 28px;
+
+  .flag, .Enflag {
+      width: 24px;
+      height: 18px;
+      object-fit: cover;
+      border-radius: 2px;
+      box-shadow: var(--shadow-sm);
   }
 
   .burger {
       display: none;
       flex-direction: column;
-      gap: 5px;
-      justify-content: center;
+      gap: 6px;
       background: none;
       border: none;
       cursor: pointer;
-      z-index: 200;
-      width: 35px;
-      height: 35px;
-      margin-left: 1em;
-  }
-  .bar {
-      width: 100%;
-      height: 4px;
-      background: #1f1f1f;
-      border-radius: 2px;
-      transition: 0.3s;
+      padding: 8px;
   }
 
-  @media (max-width: 1200px) {
+  .bar {
+      width: 24px;
+      height: 2px;
+      background: var(--ardoise);
+      border-radius: 2px;
+      transition: all 0.3s ease-in-out;
+  }
+
+  .burger.open .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .burger.open .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .burger.open .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
+
+  @media (max-width: 1024px) {
+      nav {
+          padding: 0.4rem 1rem;
+      }
+
+      .logo {
+          height: 65px;
+      }
+
+      .home-link span {
+          display: inline-block;
+          font-size: 0.7rem;
+      }
+
       .main-menu {
-          position: absolute;
+          position: fixed;
+          top: 100%; /* Juste sous le header */
           left: 0;
           right: 0;
-          top: 100%;
-          background: var(--red);
+          height: auto;
+          background: rgba(255, 255, 255, 0.98);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
           flex-direction: column;
-          align-items: flex-start;
-          gap: 1.2em;
-          padding: 2em 1.5em 1.5em;
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-          backdrop-filter: blur(40px);
-          border-radius: 0 0 10px 10px;
-          transition: all 0.3s ease-in-out;
-          color: white;
-          font-weight: bold;
+          align-items: center;
+          justify-content: flex-start;
+          padding: 2rem;
+          gap: 0.5rem;
+          box-shadow: var(--shadow-lg);
+          transform: translateY(-100%);
           opacity: 0;
-          pointer-events: none;
-          transform: translateY(-20px);
-          transition:
-              opacity 0.45s,
-              transform 0.45s;
+          visibility: hidden;
+          transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s, visibility 0.4s;
+          z-index: 90;
+          border-bottom: 1px solid var(--glass-border);
       }
+
       .main-menu.open {
-          display: flex;
-          opacity: 1;
-          pointer-events: auto;
           transform: translateY(0);
+          opacity: 1;
+          visibility: visible;
       }
 
       .burger {
           display: flex;
+          z-index: 200;
       }
+
       .main-menu a {
-          padding: 0.7em 0;
+          font-size: 1.1rem;
           width: 100%;
+          text-align: center;
+          padding: 0.5rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
       }
+
       .wrapper__buttons {
-          margin-left: 0;
+          border: none;
+          margin-top: 1rem;
+          padding: 0;
+          justify-content: center;
+          width: 100%;
+          gap: 1.5rem;
+      }
+  }
+
+  @media (max-width: 600px) {
+      .home-link span {
+          display: none !important;
       }
   }
 </style>

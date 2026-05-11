@@ -1,11 +1,34 @@
 <script>
-	let txt = '';
-	let href = '';
+	import { onMount } from 'svelte';
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import ComSonore from '../../../assets/ComSonore.webp';
 	import MarkSonore from '../../../assets/MarkSonore2.webp';
 	import AudioVisuel from '../../../assets/AudioVisuel2.webp';
 	import Voix from '../../../assets/Voix.webp';
 	import Mixage from '../../../assets/Mixage3.jpg';
+
+	import BtnBlack from '$lib/component/btn-black-shadow.svelte';
+
+	gsap.registerPlugin(ScrollTrigger);
+
+	onMount(() => {
+		const cards = gsap.utils.toArray('.service-card');
+		cards.forEach((card, i) => {
+			const titleBlock = card.querySelector('.wrapper__service-txt');
+			gsap.from(titleBlock, {
+				x: i % 2 === 0 ? 100 : -100,
+				opacity: 0,
+				duration: 1.2,
+				ease: 'power4.out',
+				scrollTrigger: {
+					trigger: card,
+					start: 'top 85%',
+					toggleActions: 'play none none none'
+				}
+			});
+		});
+	});
 
 	const services = [
 		{
@@ -135,11 +158,11 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 </script>
 
 <section>
-	<h2>Nos prestations</h2>
+	<h1>Nos prestations</h1>
 	<div class="wrapper__services-cards">
-		{#each services as service}
+		{#each services as service, i}
 			<div class="service-card" id={service.id}>
-				<div class="wrapper__img-title">
+				<div class="wrapper__img-title {i % 2 !== 0 ? 'reverse' : ''}">
 					<img class="img" src={service.image} alt={service.alt} />
 					<div class="wrapper__service-txt">
 						<h3>{service.label}</h3>
@@ -148,7 +171,9 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 				</div>
 				<div class="wrapper__p-cta">
 					<p>{@html service.desc}</p>
-					<a class="cta" href={service.link}>Contact</a>
+					<div class="wrapper-btn">
+						<BtnBlack txt="Nous contacter" href={service.link} />
+					</div>
 				</div>
 			
 			</div>
@@ -169,13 +194,29 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 		height: 100%;
 		margin-bottom: 2rem;
 	}
-	section h2 {
-		font-family: var(--bebas);
-		font-size: 5rem;
-		margin-bottom: 3rem;
-		margin-top: 50px;
-		font-weight: 600;
-		letter-spacing: -2.5px;
+	section h1 {
+		font-family: var(--font-heading);
+		font-size: var(--fs-h1);
+		margin-bottom: var(--space-xl);
+		margin-top: var(--space-xl);
+		font-weight: 800;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		position: relative;
+		width: fit-content;
+		padding-bottom: 1.5rem;
+	}
+
+	section h1::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 60px;
+		height: 4px;
+		background: var(--accent);
+		border-radius: 4px;
 	}
 	.wrapper__services-cards {
 		display: flex;
@@ -208,45 +249,57 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		width: 100%;
-		gap: 2px;
-		border-radius: 18px 18px 0px 0px;
-		border: 1px solid rgb(223, 223, 223);
+		gap: 0;
+		border-radius: var(--radius-lg) var(--radius-lg) 0px 0px;
+		border: 1px solid rgba(0,0,0,0.05);
 		background-color: transparent;
+		overflow: hidden;
 	}
+
+	.wrapper__img-title.reverse .img {
+		grid-column: 2;
+		border-radius: 0;
+	}
+
+	.wrapper__img-title.reverse .wrapper__service-txt {
+		grid-column: 1;
+		grid-row: 1;
+		border-radius: 0;
+	}
+
 	.img {
 		width: 100%;
 		height: 400px;
 		object-fit: cover;
 		object-position: center;
-		border-radius: 18px 0px 0px 0px;
 	}
 	.wrapper__service-txt {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		border-radius: 0px 18px 0px 0px;
 		z-index: 2;
-		gap: 25px;
-		padding: 20px;
+		gap: var(--space-sm);
+		padding: var(--space-lg);
 		max-height: 400px;
-		background: linear-gradient(to left,rgb(101, 99, 99), rgb(153, 150, 150)) ;
+		background-color: #2c2c2c;
 	}
 	.wrapper__service-txt h3 {
 		margin-bottom: 0rem;
-		color: white;
-		font-size: 2.5rem;
-		font-family: var(--bebas);
-		line-height: 50px;
+		color: var(--white);
+		font-size: 2.2rem;
+		font-family: var(--font-heading);
+		line-height: 1.1;
 		text-align: center;
-	
+		text-transform: uppercase;
 	}
 	.wrapper__service-txt h4 {
-		color: rgba(255, 255, 255, 0.884);
-		font-size: 1rem;
-		font-family: var(--bebas);
+		color: var(--grey-light);
+		font-size: 0.9rem;
+		font-family: var(--font-main);
 		text-align: center;
-		line-height: 30px;
+		line-height: 1.4;
+		font-weight: 500;
 	}
 	.wrapper__p-cta {
 		display: flex;
@@ -265,16 +318,21 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 	}
 	.wrapper__p-cta p {
 		color: var(--ardoise);
-		font-weight: 500;
-		font-size: 1rem;
-		line-height: 2.5;
-		max-width: 800px;
-		padding: 2rem;
+		font-family: var(--font-main);
+		font-weight: 400;
+		font-size: 1.05rem;
+		line-height: 1.7;
+		max-width: 900px;
+		padding: var(--space-lg);
 		border-radius: 10px;
-		transition: 0.3s ease-in-out;
-	
 	}
-	.wrapper__services-cards a {
+	.wrapper-btn {
+		margin-bottom: var(--space-lg);
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+	/* .wrapper__services-cards a {
 		font-family: var(--bebas);
 		text-decoration: none;
 		color: white;
@@ -293,7 +351,7 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 		background-color: black;
 		box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.412);
 		transform: scale(1.2);
-	}
+	} */
 
 	
 	
@@ -304,23 +362,26 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			padding: 10px;
+			padding: 2rem 0; /* On gère les marges sur les cartes directement */
 			color: var(--black);
 			min-height: 100vh;
 			margin-bottom: 2rem;
+			width: 100%;
 		}
 		.wrapper__services-cards {
-			padding: 10px;
+			padding: 0;
+			width: 100%;
 		}
-		section h2 {
-			font-family: var(--bebas);
-			font-size: 3rem;
-			margin-bottom: 3rem;
-			margin-top: 50px;
-			font-weight: var(--bold);
-			letter-spacing: -1.7px;
-			line-height: 50px;
+		section h1 {
+			font-family: var(--font-heading);
+			font-size: 2.4rem;
+			margin-bottom: 2.5rem;
+			margin-top: 40px;
+			font-weight: 800;
+			letter-spacing: -1px;
+			line-height: 1.2;
 			text-align: center;
+			padding-bottom: 1.5rem; /* Harmonisé */
 		}
 		.wrapper__img-title {
 		display: grid;
@@ -337,6 +398,12 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 		object-position: center;
 		border-radius: 18px 18px 0px 0px;
 	}
+
+	.wrapper__img-title.reverse .img,
+	.wrapper__img-title.reverse .wrapper__service-txt {
+		grid-column: auto;
+		grid-row: auto;
+	}
 		.service-card {
 			display: flex;
 			flex-direction: column;
@@ -349,7 +416,8 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 			box-shadow: 0 0px 20px rgba(50, 50, 50, 0.573);
 			padding: 0px;
 			height: auto;
-			max-width: auto;
+			width: 92%; /* Forcé pour Mobile S */
+			max-width: 500px;
 			position: relative;
 			z-index: 0;
 			margin: 0 auto;
@@ -370,10 +438,10 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 		.wrapper__service-txt h3 {
 			margin-bottom: 10px;
 			color: white;
-			font-size: 2.2rem;
+			font-size: 1.7rem;
 			font-family: var(--bebas);
-			line-height: 40px;
-			margin-top: 30px;
+			line-height: 1.1;
+			margin-top: 20px;
 		}
 		.wrapper__p-cta p {
 		color: var(--ardoise);
@@ -386,8 +454,8 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 		transition: 0.3s ease-in-out;
 	}
 		
-		.wrapper__services-cards a {
+		/* .wrapper__services-cards a {
 			font-size: 1rem;
-		}
+		} */
 	}
 </style>

@@ -1,37 +1,50 @@
 <script>
+	import { onMount } from 'svelte';
 	import Button from '$lib/component/btn-black.svelte';
 	import ButtonWhite from '$lib/component/btn-white.svelte';
 	import Test from '$lib/component/Test.svelte';
+
+	let videoRef;
+
+	onMount(() => {
+		if (videoRef) {
+			videoRef.play().catch(error => {
+				console.log("Autoplay prevented by browser, waiting for interaction", error);
+			});
+		}
+	});
 </script>
 
 <section class="section">
 	<video
+		bind:this={videoRef}
 		autoplay
 		muted
 		loop
 		playsinline
-		preload="metadata"
+		preload="auto"
 		class="hero-video"
 		aria-hidden="true"
-		poster="https://res.cloudinary.com/dkw5bl7fx/video/upload/v1763025454/FOND_AP_2025_Boucle_MOV_hkwxu1.mov"
+		poster="https://res.cloudinary.com/dkw5bl7fx/video/upload/v1763025454/FOND_AP_2025_Boucle_MOV_hkwxu1.jpg"
 	>
 		<source
-			src="https://res.cloudinary.com/dkw5bl7fx/video/upload/v1763025454/FOND_AP_2025_Boucle_MOV_hkwxu1.mov"
+			src="https://res.cloudinary.com/dkw5bl7fx/video/upload/v1763025454/FOND_AP_2025_Boucle_MOV_hkwxu1.mp4"
 			type="video/mp4"
+		/>
+		<source
+			src="https://res.cloudinary.com/dkw5bl7fx/video/upload/v1763025454/FOND_AP_2025_Boucle_MOV_hkwxu1.mov"
+			type="video/quicktime"
 		/>
 	</video>
 
 	<div class="wrapper__txt">
-		<h1>French voice over, dubbing &amp; audio post-production studio</h1>
+		<h1>French voice over, dubbing & audio post-production studio</h1>
 		<h2>
-			Specializing in multilingual voice-over &amp; dubbing, sonic branding, music composition, and mixing
+			Specializing in multilingual voice-over & dubbing, sonic branding, music composition, and mixing
 		</h2>
-		<!-- <div class="wrapper__component">
-			<ThreeComponent />
-		</div> -->
 		<div class="wrapper__buttons">
-			<Button txt="Get in touch" href="/fr/contact" />
-			<ButtonWhite txt="Hear our work" href="/fr/realisations" />
+			<Button txt="Get in touch" href="/en/contact" />
+			<ButtonWhite txt="Hear our work" href="/en/realisations" />
 		</div>
 	</div>
 </section>
@@ -41,125 +54,98 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background-image: url('/BG-hero.png');
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-		z-index: 0;
-		height: 60rem;
+		/* background-image supprimée pour ne pas masquer la vidéo */
+		background-color: var(--ardoise); 
+		min-height: 100vh;
+		min-height: 100svh;
 		position: relative;
+		overflow: hidden;
+		padding: 0;
 	}
-	.section::after {
+
+	section::after {
 		content: '';
 		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: rgba(255, 255, 255, 0.202);
+		inset: 0;
+		background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.2) 100%);
 		z-index: 1;
 	}
 
 	.hero-video {
 		position: absolute;
-		top: 0;
-		left: 0;
+		inset: 0;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		z-index: -1;
+		z-index: 0; /* Passé à 0 pour être devant le background du parent mais derrière le ::after */
 	}
 
 	.wrapper__txt {
-		text-align: center;
-		font-family: var(--raleway);
-		color: rgb(14, 14, 14);
+		position: relative;
 		z-index: 4;
 		width: 100%;
+		max-width: 1000px;
+		padding: var(--space-md);
+		text-align: center;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
-		gap: 0px;
-		background: linear-gradient(
-			rgba(255, 255, 255, 0.006) 0%,
-			#c0c0c057 40%,
-			rgba(255, 255, 255, 0)
+		gap: var(--space-sm);
+		
+		background: radial-gradient(
+			circle at center,
+			rgba(255, 255, 255, 0.4) 0%,
+			rgba(255, 255, 255, 0) 70%
 		);
-		margin-top: -100px;
-	}
-	.wrapper__buttons {
-		display: flex;
-		margin-top: 50px;
-		gap: 20px;
+		backdrop-filter: blur(2px);
+		-webkit-backdrop-filter: blur(2px);
+		border-radius: var(--radius-lg);
 	}
 
 	h1 {
-		font-family: var(--bebas);
-		font-size: 4rem;
+		font-family: var(--font-heading);
+		font-size: var(--fs-h1);
 		color: var(--ardoise);
-		width: 90%;
-		margin: 0 auto;
-		font-weight: var(--black);
-		letter-spacing: -3.8px;
-		/* text-transform: uppercase; */
+		font-weight: 800;
+		letter-spacing: -0.04em;
+		line-height: 1;
+		margin-bottom: var(--space-xs);
+		text-wrap: balance;
 	}
 
 	h2 {
-		color: var(--ardoise);
-		font-size: 1.3rem;
-		font-weight: var(--medium);
-		width: 90%;
-		letter-spacing: -1px;
+		font-family: var(--font-main);
+		font-size: var(--fs-h3);
+		color: var(--ardoise-light);
+		font-weight: 500;
+		max-width: 700px;
 		margin: 0 auto;
+		line-height: 1.4;
+		text-wrap: balance;
+	}
+
+	.wrapper__buttons {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-top: var(--space-md);
+		gap: var(--space-sm);
 	}
 
 	@media screen and (max-width: 768px) {
 		section {
-			height: 55rem;
+			padding: var(--space-xl) 0;
 		}
-		.section::after {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: rgba(255, 255, 255, 0);
-			z-index: 1;
-		}
+
 		.wrapper__txt {
-			position: absolute;
-			top: 45%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			gap: 30px;
-			margin-top: 20px;
+			background: none;
+			backdrop-filter: none;
 		}
+
 		.wrapper__buttons {
-			display: flex;
 			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			margin: 10px auto;
-			gap: 0px;
-			/* width: 100%; */
-		}
-
-		h1 {
-			font-size: 3rem;
-			line-height: 1.2;
-			letter-spacing: -2.6px;
-			padding: 20px;
 			width: 100%;
-			margin: 0 auto;
-			hyphens: auto;
-			-webkit-hyphens: auto;
-
-			overflow-wrap: normal;
-		}
-		h2 {
-			font-size: 1.2rem;
+			max-width: 300px;
 		}
 	}
 </style>

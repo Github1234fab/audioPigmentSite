@@ -9,68 +9,47 @@
 </section>
 
 <style>
-	.wrapper__slider-logos {
-		width: 100%;
-		min-height: 200px;
-	
-	}
 	section {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		display: block; /* Passage en mode bloc */
 		text-align: center;
-		height: 900px;
-		z-index: 0;
-		gap: 0px;
+		padding: var(--space-xl) 0;
+		position: relative;
 		overflow: hidden;
 		background-image: url(../assets/bg-Actu.webp);
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+		min-height: 600px;
 	}
-	section h2 {
-		font-family: var(--bebas);
-		font-size: 3.7rem;
-		color: rgb(48, 46, 46);
-		margin-top: 50px;
-		font-weight: var(--bold);
-		letter-spacing: -1.5px;
+
+	/* Overlay pour la lisibilité */
+	section::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: rgba(255, 255, 255, 0.4);
+		z-index: 1;
+	}
+
+	h2 {
+		position: relative;
+		z-index: 2;
+		font-size: var(--fs-h2);
+		color: var(--ardoise);
+	}
+
+	.wrapper__slider-logos {
+		position: relative;
+		z-index: 2;
+		width: 100%;
+		margin: 0;
+		padding: 0;
 	}
 
 	@media (max-width: 768px) {
 		section {
-			height: 70vh;
-		}
-		section h2 {
-			font-size: 3rem;
-		}
-	}
-	.wrapper__slider-logos {
-		width: auto;
-		height: 500px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	@media screen and (max-width: 768px) {
-		section {
-			gap: 50px;
-		}
-		.wrapper__slider-logos {
-			width: 600px;
-			height: 300px;
-		}
-	}
-
-	@media screen and (max-width: 480px) {
-		section {
-			gap: 50px;
-		}
-		.wrapper__slider-logos {
-			width: 300px;
-			height: 300px;
+			padding: var(--space-lg) 0;
+			min-height: 500px;
 		}
 	}
 </style>
