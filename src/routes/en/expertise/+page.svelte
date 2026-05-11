@@ -287,7 +287,7 @@
 	.wrapper__advantages {
 		display: flex;
 		justify-content: center;
-		gap: var(--space-md);
+		gap: 2rem;
 		width: 100%;
 		max-width: 1200px;
 		padding: var(--space-xl) var(--space-md);
@@ -302,7 +302,8 @@
 		background: linear-gradient(135deg, var(--accent) 0%, #c02d24 100%);
 		padding: var(--space-lg);
 		border-radius: var(--radius-lg);
-		width: 33%;
+		flex: 1;
+		max-width: 400px;
 		text-align: left;
 		box-shadow: var(--shadow-lg);
 		transition: var(--transition);
