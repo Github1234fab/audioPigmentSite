@@ -1,12 +1,38 @@
-# Redirection de la racine vers la version française par défaut
+# Redirection de la racine
 /  /fr  301
 
-# Redirections des anciennes pages (à adapter selon l'ancien site)
-/expertise    /fr/expertise    301
-/services     /fr/services     301
-/realisations /fr/realisations 301
-/contact      /fr/contact      301
+# --- PAGES DE SERVICES & EXPERTISE (Mapping précis) ---
+/mixage-des-productions-sonores/                        /fr/services    301
+/habillage-sonore-films-danimation/                    /fr/services    301
+/doublage-dubbing-voice-over/                          /fr/services    301
+/voix/                                                 /fr/services    301
+/enregistrement-sonore-en-museographie-scenographie/   /fr/services    301
+/spot-publicitaire-radio/                              /fr/services    301
+/creation-musicale-originale/                          /fr/services    301
+/spot-tv-spot-cinema/                                  /fr/services    301
+/localisation-sonore-doublage-et-sous-titrage/         /fr/services    301
+/e-learning-serious-game/                              /fr/services    301
+/traitement-post-production-sonore/                     /fr/services    301
+/creation-sonore-originale/                             /fr/services    301
+/creation-sonore-*                                      /fr/services    301
 
-# Si l'ancien site utilisait des extensions .php ou .html
-#/index.php    /fr              301
-#/expertise.php /fr/expertise   301
+# --- PORTFOLIO & REALISATIONS (Catch-all) ---
+/realisations                                          /fr/realisations 301
+/references/                                           /fr/realisations 301
+/portfolio-filter/*                                    /fr/realisations 301
+/portfolio/*                                           /fr/realisations 301
+
+# --- PAGES INSTITUTIONNELLES ---
+/about/                                                /fr/about       301
+/les-studios/                                          /fr/studios     301
+/contact_studio_audio_pigment/                         /fr/contact     301
+/mentions-legales/                                     /fr/legal       301
+/politique-de-confidentialite/                         /fr/legal       301
+
+# --- ACTUALITES / BLOG (Catch-all) ---
+/actu/                                                 /fr             301
+/actu/*                                                /fr             301
+/actu_tags/*                                           /fr             301
+
+# --- FICHIERS DIVERS ---
+/wp-content/*                                          /fr             301
