@@ -3,7 +3,7 @@
 	export let href = "";
 </script>
 
-<a href={href} target="_blank"><div class="card"><img class="img" src={image} alt="" loading="lazy" decoding="async" /></div></a>
+<a href={href} target="_blank"><div class="card"><img class="img" src={image} alt="" decoding="async" /></div></a>
 
 <style>
 	.card {

@@ -22,8 +22,8 @@
 		muted
 		loop
 		playsinline
-		preload="none"
-		class="hero-video desktop-only"
+		preload="metadata"
+		class="hero-video"
 		aria-hidden="true"
 		poster="https://res.cloudinary.com/dkw5bl7fx/video/upload/f_auto,q_auto/v1763025454/FOND_AP_2025_Boucle_MOV_hkwxu1.jpg"
 	>
@@ -77,17 +77,6 @@
 		z-index: 0;
 	}
 
-	@media (max-width: 768px) {
-		.hero-video.desktop-only {
-			display: none;
-		}
-		section {
-			background-image: url('https://res.cloudinary.com/dkw5bl7fx/video/upload/f_auto,q_auto/v1763025454/FOND_AP_2025_Boucle_MOV_hkwxu1.jpg');
-			background-size: cover;
-			background-position: center;
-		}
-	}
-
 	.wrapper__txt {
 		position: relative;
 		z-index: 4;
@@ -109,7 +98,6 @@
 		-webkit-backdrop-filter: blur(2px);
 		border-radius: var(--radius-lg);
 	}
-/* ... reste du style identique ... */
 
 	h1 {
 		font-family: var(--font-heading);

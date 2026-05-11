@@ -50,9 +50,6 @@
 </script>
 
 <section>
-	<video autoplay muted loop playsinline preload="none" class="background-video desktop-only">
-		<source src="https://www.pexels.com/fr-fr/download/video/27660115/" type="video/mp4" />
-	</video>
 	<h2>Nos Atouts</h2>
 	<p class="section-intro">Ce qui fait la force d'Audio Pigment</p>
 	<div class="features-grid">
@@ -82,12 +79,13 @@
 	}
 
 	.background-video {
-		position: absolute;
-		inset: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		z-index: -1;
+		display: none; /* Désactivé pour la performance */
+	}
+
+	section {
+		background-image: url(../assets/Mixage2.webp);
+		background-size: cover;
+		background-position: center;
 	}
 
 	section::after {
