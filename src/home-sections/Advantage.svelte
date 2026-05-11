@@ -50,7 +50,7 @@
 </script>
 
 <section>
-	<video autoplay muted loop playsinline class="background-video">
+	<video autoplay muted loop playsinline preload="none" class="background-video">
 		<source src="https://www.pexels.com/fr-fr/download/video/27660115/" type="video/mp4" />
 	</video>
 	<h2>Nos Atouts</h2>

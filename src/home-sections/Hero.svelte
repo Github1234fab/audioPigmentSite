@@ -22,17 +22,17 @@
 		muted
 		loop
 		playsinline
-		preload="auto"
+		preload="metadata"
 		class="hero-video"
 		aria-hidden="true"
-		poster="https://res.cloudinary.com/dkw5bl7fx/video/upload/v1763025454/FOND_AP_2025_Boucle_MOV_hkwxu1.jpg"
+		poster="https://res.cloudinary.com/dkw5bl7fx/video/upload/f_auto,q_auto/v1763025454/FOND_AP_2025_Boucle_MOV_hkwxu1.jpg"
 	>
 		<source
-			src="https://res.cloudinary.com/dkw5bl7fx/video/upload/v1763025454/FOND_AP_2025_Boucle_MOV_hkwxu1.mp4"
+			src="https://res.cloudinary.com/dkw5bl7fx/video/upload/f_auto,q_auto/v1763025454/FOND_AP_2025_Boucle_MOV_hkwxu1.mp4"
 			type="video/mp4"
 		/>
 		<source
-			src="https://res.cloudinary.com/dkw5bl7fx/video/upload/v1763025454/FOND_AP_2025_Boucle_MOV_hkwxu1.mov"
+			src="https://res.cloudinary.com/dkw5bl7fx/video/upload/f_auto,q_auto/v1763025454/FOND_AP_2025_Boucle_MOV_hkwxu1.mov"
 			type="video/quicktime"
 		/>
 	</video>

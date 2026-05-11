@@ -307,6 +307,7 @@ function switchLanguage(newLang) {
           transform: translateY(-100%);
           opacity: 0;
           visibility: hidden;
+          pointer-events: none;
           transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s, visibility 0.4s;
           z-index: 90;
           border-bottom: 1px solid var(--glass-border);
@@ -316,6 +317,7 @@ function switchLanguage(newLang) {
           transform: translateY(0);
           opacity: 1;
           visibility: visible;
+          pointer-events: auto;
       }
 
       .burger {

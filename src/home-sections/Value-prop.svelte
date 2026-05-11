@@ -242,6 +242,7 @@
 	@media (max-width: 768px) {
 		section {
 			padding: var(--space-lg) var(--space-sm);
+			background-attachment: scroll;
 		}
 
 		.wrapper__title-icon {

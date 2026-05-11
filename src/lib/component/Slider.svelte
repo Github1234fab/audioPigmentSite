@@ -40,32 +40,17 @@
     selectedVideo = null;
   }
 
-  onMount(async () => {
-    for (const video of videos) {
-      const urls = getThumbnailUrls(video.url);
-      
-      for (const url of urls) {
-        try {
-          const response = await fetch(url, { method: 'HEAD' });
-          if (response.ok) {
-            thumbnailUrls[video.url] = url;
-            break;
-          }
-        } catch (e) {
-          continue;
-        }
-      }
-      
-      if (!thumbnailUrls[video.url]) {
-        const id = getYoutubeId(video.url);
-        thumbnailUrls[video.url] = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
-      }
-    }
+  onMount(() => {
+    // On ne fait plus de fetch bloquant. On utilise directement hqdefault qui est garanti.
+    videos.forEach(video => {
+      const id = getYoutubeId(video.url);
+      thumbnailUrls[video.url] = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+    });
     thumbnailUrls = { ...thumbnailUrls };
   });
 
   function getThumbnail(url) {
-    return thumbnailUrls[url] || getThumbnailUrls(url)[2];
+    return thumbnailUrls[url] || `https://img.youtube.com/vi/${getYoutubeId(url)}/hqdefault.jpg`;
   }
 
   function handleImageError(event, video) {
