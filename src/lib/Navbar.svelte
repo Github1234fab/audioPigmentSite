@@ -295,9 +295,9 @@ function switchLanguage(newLang) {
           left: 0;
           right: 0;
           height: auto;
-          background: rgba(255, 255, 255, 0.98);
-          backdrop-filter: blur(20px);
-          -webkit-backdrop-filter: blur(20px);
+          background: rgba(255, 255, 255, 1); /* Opaque sur mobile pour la performance */
+          backdrop-filter: none;
+          -webkit-backdrop-filter: none;
           flex-direction: column;
           align-items: center;
           justify-content: flex-start;

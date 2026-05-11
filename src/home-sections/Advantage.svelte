@@ -50,7 +50,7 @@
 </script>
 
 <section>
-	<video autoplay muted loop playsinline preload="none" class="background-video">
+	<video autoplay muted loop playsinline preload="none" class="background-video desktop-only">
 		<source src="https://www.pexels.com/fr-fr/download/video/27660115/" type="video/mp4" />
 	</video>
 	<h2>Nos Atouts</h2>
@@ -186,7 +186,11 @@
 	}
 
 	@media (max-width: 768px) {
+		.background-video.desktop-only {
+			display: none;
+		}
 		section {
+			background: var(--ardoise);
 			padding: var(--space-lg) var(--space-sm);
 		}
 
