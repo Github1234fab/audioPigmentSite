@@ -70,7 +70,7 @@ mesure </strong>	dans laquelle nous <strong>	accompagnons nos clients </strong>	
 sélection et direction des voix, création musicale et/ou sound design, habillage sonore, et
 mixage final adapté aux normes de diffusion radio, web ou événementielle. <br> <br>
 Nous portons une attention particulière à la cohérence entre la voix, le ton et l’univers
-sonore pour garantir <strong>	l’impact, la pertinence et l’émotion</strong>	, pour transformer chaque diffusion
+sonore pour garantir <strong>	l’impact, la pertinence et l’émotion</strong>, pour transformer chaque diffusion
 en une expérience d’écoute identifiable et marquante.`,
 			link: '/fr/contact',
 
@@ -87,12 +87,12 @@ projet plus immersif. <br><br>
 Chez Audio Pigment, nous concevons et produisons l’ensemble de la création sonore : <strong>	sound
 design, habillage musical, composition originale, casting, enregistrement et direction de
 voix.</strong>	<br>
-Notre travail s’étend des <strong>	 publicités TV ou cinéma,</strong>	 aux <strong>	 films corporate et contenus digitaux </strong>	,
+Notre travail s’étend des <strong>	 publicités TV ou cinéma,</strong>	 aux <strong>	 films corporate et contenus digitaux</strong>,
 jusqu’aux <strong>	films d’animation et productions immersives </strong>	(planétariums, expositions, ou
 créations artistiques).<br><br>
 Dans le domaine de la communication, nous mettons notre exigence artistique au service de
-l’efficacité : une <strong>	voix juste et incarnée</strong>	, une <strong>	musique originale</strong>	 ou un <strong>	habillage sonore sur
-mesure </strong>, une <strong>cohérence globale entre image, rythme et intention </strong>, pour que chaque spot,
+l’efficacité : une <strong>	voix juste et incarnée</strong>, une <strong>musique originale</strong>	ou un <strong>	habillage sonore sur
+mesure</strong>, une <strong>cohérence globale entre image, rythme et intention</strong>, pour que chaque spot,
 chaque film, trouve son ton et son impact propre.<br><br>
 Dans l’animation, où tout est créé de toutes pièces, le son devient un élément essentiel de
 crédibilité et d’émotion : il façonne les espaces, donne vie aux personnages et crée le lien
@@ -101,7 +101,7 @@ Nos <strong>comédiens professionnels</strong>, dirigés en studio par nos équi
 justesse et sensibilité pour incarner les personnages et donner corps à la narration.<br><br>
 Qu’il s’agisse d’un film publicitaire, d’une production corporate ou d’un univers narratif
 immersif, notre approche reste la même : <strong>construire un paysage sonore cohérent, expressif
-et identitaire </strong>, où chaque son, chaque voix, chaque silence participe à raconter l’histoire et
+et identitaire</strong>, où chaque son, chaque voix, chaque silence participe à raconter l’histoire et
 servir l’image.`,
 			link: '/fr/contact',
 			image:  "https://images.pexels.com/photos/4941721/pexels-photo-4941721.jpeg?_gl=1*sihbeq*_ga*NjY3ODMwNzE5LjE3MjQ4Nzc0OTQ.*_ga_8JE65Q40S6*czE3NjMwMTU5NTEkbzM2JGcwJHQxNzYzMDE1OTUxJGo2MCRsMCRoMA."
@@ -122,10 +122,10 @@ avec des comédiens professionnels du doublage, puis mixage précis pour réint�
 dans la bande-son originale et recréer l’univers sonore.<br><br>
 Chez Audio Pigment, nous maîtrisons l’ensemble de cette chaîne technique et artistique (de
 la traduction à la livraison des masters) pour garantir des versions crédibles, fidèles à l’esprit
-de l’œuvre et <strong>	adaptées à chaque culture</strong>	.<br><br>
+de l’œuvre et <strong>	adaptées à chaque culture</strong>.<br><br>
 Qu’il s’agisse d’un film, d’une vidéo de marque, d’un contenu institutionnel ou digital, nous
 considérons la localisation et le doublage comme un art d’équilibre entre <strong>	technique,
-interprétation et fidélité à l’œuvre </strong>	, pour que la langue change, mais pas l’émotion.`,
+interprétation et fidélité à l’œuvre</strong>, pour que la langue change, mais pas l’émotion.`,
 			link: '/fr/contact',
 			image: "https://images.pexels.com/photos/8001238/pexels-photo-8001238.jpeg?_gl=1*1t4lt56*_ga*NjY3ODMwNzE5LjE3MjQ4Nzc0OTQ.*_ga_8JE65Q40S6*czE3NjMwMTU5NTEkbzM2JGcxJHQxNzYzMDE2MDU2JGo1NSRsMCRoMA."
 
@@ -136,19 +136,19 @@ interprétation et fidélité à l’œuvre </strong>	, pour que la langue chang
 			subLabel: `Mix stéréo, multicanal 5.1 / 7.1, mix VR Binaural / Ambisonique, Normalisation broadcast
 PAD « Prêt A Diffuser »`,
 			desc: `Le mixage est l’étape finale où tous les éléments sonores prennent leur équilibre.
-C’est à la fois un travail <strong> technique de précision</strong>  et un <strong> acte artistique</strong> , visant à créer une
+C’est à la fois un travail <strong> technique de précision</strong>  et un <strong> acte artistique</strong>, visant à créer une
 cohérence entre les voix, la musique, le sound design et l’ensemble de l’univers sonore. <br><br>
 Chez Audio Pigment, chaque projet est traité dans un environnement acoustique calibré,
 avec des outils numériques de haute précision et surtout, une <strong> écoute experte</strong>  capable de
 prendre les bonnes décisions artistiques et techniques. <br><br>
 Le mixage consiste à trouver l’équilibre parfait entre les différentes sources : réglage des
 niveaux, traitement fréquentiel, gestion de la dynamique, spatialisation stéréo ou
-multicanale <strong> (5.1, 7.1, ou formats immersifs)</strong> , et respect des normes de diffusion <strong> (EBU R128,
-ITU BS.1770, ou spécifications cinéma et web)</strong> .
+multicanale <strong> (5.1, 7.1, ou formats immersifs)</strong> et respect des normes de diffusion <strong> (EBU R128,
+ITU BS.1770, ou spécifications cinéma et web)</strong>.
 Mais au-delà des outils, c’est avant tout <strong> le jugement de l’oreille humaine</strong>  qui fait la
 différence : hiérarchiser les plans sonores, donner de la clarté au message, préserver
 l’intention émotionnelle et assurer une diffusion fidèle à la vision du réalisateur ou du client. <br><br>
-Nous assurons également la <strong> conformation technique et la normalisation broadcast</strong> ,
+Nous assurons également la <strong> conformation technique et la normalisation broadcast</strong>,
 garantissant que les masters livrés respectent toutes les contraintes de diffusion et soient
 immédiatement exploitables, sans compromis sur la qualité.`,
 			link: '/fr/contact',

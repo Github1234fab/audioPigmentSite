@@ -23,7 +23,7 @@
 
 		Nous conjuguons <span>exigence technique, sens du détail</span> et
 		<span>approche artistique</span>
-		pour offrir des productions haut de gamme,<span> pensées sur mesure.</span> <br /><br />
+		pour offrir des productions haut de gamme, <span> pensées sur mesure.</span> <br /><br />
 
 		Spécialistes de la voix off, du doublage, du sound design, de la création musicale, de la post
 		production et du mixage, nous accompagnons nos clients dans la réalisation de spots radio et
@@ -31,11 +31,10 @@
 		podcasts, e-learnings, installations muséographiques et projets immersifs, etc...
 	</p>
 
-	<h2>Créer des émotions… Marquer les esprits…</h2>
+	<h2>Créer des émotions… Marquer les esprits… </h2>
 
 	<p>
-		Créer des émotions… Marquer les esprits… Chez Audio Pigment, l’<span>authenticité</span> et l’
-		<span>émotion </span> restent au cœur de chaque projet. <br /><br />
+		Créer des émotions… Marquer les esprits… Chez Audio Pigment, l’<span>authenticité</span> et l’<span>émotion </span> restent au cœur de chaque projet. <br /><br />
 		Issus du milieu de la musique et du marketing, nous allions
 		<span>sens créatif et réflexion stratégique</span>, au service des
 		<span>objectifs de communication, d’impact et de lisibilité.</span> <br /><br />
@@ -43,10 +42,6 @@
 		Dans une époque où la technologie évolue, nos outils se diversifient, mais notre valeur ajoutée
 		reste profondément humaine... <br /><br />
 
-		De la voix, à la composition musicale et au design audio, chaque projet est pensé comme une
-		<span>œuvre singulière</span>, où la créativité est au service de l’<span
-			>impact stratégique
-		</span>, de l’<span>image</span>, du <span>récit</span> et de l’<span>identité</span> .
 	</p>
 
 	<div class="wrapper__fondators">

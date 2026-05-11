@@ -9,8 +9,7 @@
 		<div class="container">
 			<h2>Post-production audio</h2>
 			<p>
-				La post-production audio est l’étape où chaque élément sonore <strong
-					>s’ajuste avec précision</strong
+				La post-production audio est l’étape où chaque élément sonore <strong>s’ajuste avec précision</strong
 				>
 				dans une <strong>création audiovisuelle ou musicale</strong>, qu’elle soit narrative,
 				publicitaire ou immersive. <br /><br />
@@ -23,7 +22,7 @@
 				Habillage, sound design, editing et optimisation des sources, doublage / voiceover, mixage (stéréo,
 				multicanal ou ambisonic VR), mastering et normalisation broadcast : notre
 				<strong>exigence technique</strong>
-				et notre <strong>collaboration étroite avec les équipes créatives </strong>garantissent un
+				et notre <strong>collaboration étroite avec les équipes créatives </strong> garantissent un
 				rendu à la fois précis, inspiré et fidèle à la vision de nos clients.<br /><br />
 				Notre objectif : <strong>renforcer l’impact </strong> et
 				<strong>la portée émotionnelle</strong>
@@ -81,26 +80,24 @@
 				: signature sonore, habillage sonore, composition musicale, sound design ou événementiel…<br
 				/><br />
 				Notre rôle :
-				<strong>transformer une idée ou une intention, en matière sonore et en émotion</strong>
-				.
-				<br /><br />Qu’il s’agisse de donner une identité sonore à une marque, d’accompagner un
+				<strong>transformer une idée ou une intention, en matière sonore et en émotion</strong>.
+				<br />	<br />
+				Qu’il s’agisse de donner une identité sonore à une marque, d’accompagner un
 				film, une publicité, un podcast, ou de concevoir une expérience immersive, nous nous
 				approprions les <strong>enjeux</strong>, nous adaptons notre approche au
 				<strong>contexte</strong>
 				et aux <strong>contraintes de diffusion</strong> , et nous cherchons la
-				<strong>justesse émotionnelle</strong>
-				, celle qui permet au son de porter la narration, l’image ou le message
-				<strong>auprès du public</strong>
-				. <br /><br />Pour les compositions musicales, nous proposons également des licences à
+				<strong>justesse émotionnelle</strong>, celle qui permet au son de porter la narration, l’image ou le message
+				<strong>auprès du public</strong>.
+				<br /><br />Pour les compositions musicales, nous proposons également des licences à
 				partir de notre catalogue, et
-				<strong>accompagnons nos clients </strong>dans leur sélection. Ces musiques sont
-				personnalisables, mais lorsqu’un projet exige une identité unique, la
-				<strong>création originale</strong>
-				reste la plus adaptée : elle assure une adéquation complète entre musique, intention et émotion,
-				ainsi qu’une
-				<strong>exclusivité totale</strong> de diffusion.
-				<br /><br /> Notre objectif : donner à chaque projet sa propre identité, son rythme et sa signature
-				émotionnelle.
+				<strong>accompagnons nos clients </strong> dans leur sélection. 
+				<br />
+				Ces musiques sont personnalisables, mais lorsqu’un
+projet exige une identité unique, la création originale reste la plus adaptée : elle assure une
+adéquation complète entre musique, intention et émotion, ainsi qu’une exclusivité totale de
+diffusion.
+				
 			</p>
 
 			<video
@@ -153,13 +150,12 @@
 			<p>
 				La voix <strong>capte naturellement l’attention </strong>: elle parle à l’inconscient, crée
 				des émotions, donne du sens et relie le message à la mémoire. <br /><br />Qu’il s’agisse de
-				<strong>supports sonores </strong>s(radio, podcasts, audioguides) ou de
-				<strong>productions audiovisuelles </strong>(films, publicités, e-learning, jeux vidéo,
-				installations), la voix <strong>incarne </strong>un message, un récit, elle
+				<strong>supports sonores </strong> (radio, podcasts, audioguides) ou de
+				<strong>productions audiovisuelles </strong> (films, publicités, e-learning, jeux vidéo,
+				installations), la voix <strong>incarne </strong> un message, un récit, elle
 				<strong>explique, personnifie, renforce la portée émotionnelle.</strong> <br /><br />Mais
 				face à la profusion de contenus auxquels nous sommes exposés,
-				<strong>se faire entendre ne suffit plus</strong>
-				:se faire entendre ne suffit plus : il faut
+				<strong>se faire entendre ne suffit plus</strong>: il faut
 				<strong>se démarquer et retenir l’attention</strong>. Cela passe par le choix d’une voix
 				juste, une direction d'acteur impliquée, et une qualité d'enregistrement irréprochable.
 				<br /><br />Voix off, doublage / dubbing / ADR, voice-over, adaptation multilingue :
@@ -231,11 +227,11 @@
 				impact optimal. Une <strong>écoute exigeante</strong>, un
 				<strong>savoir-faire affûté</strong>, et le <strong>soin du sur-mesure</strong>.
 				<br /><br />
-				<strong>Comprendre, ressentir, transmettre </strong>: c’est notre métier.
+				<strong>Comprendre, ressentir, transmettre: c’est notre métier.</strong>
 			</p>
 			<!-- <div class="wrapper__buttons">
 			<BtnBlack txt="Contactez-nous" />
-			<BtnWhite txt="Découvrez nos services" />
+			<BtnWhite txt="Découvrez nos services" />	
 		</div> -->
 		</div>
 	</div>
