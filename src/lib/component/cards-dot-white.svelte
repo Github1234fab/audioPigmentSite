@@ -23,7 +23,7 @@
 		<Btn {txt} {href} />
 	</div>
 
-	{#if isDesktop && videoSrc}
+	{#if videoSrc}
 		<video
 			class="video-background"
 			src={videoSrc}
@@ -32,12 +32,13 @@
 			loop
 			playsinline
 			preload="auto"
+			poster={imgSrc}
 		>
 			<track kind="captions" />
 			Votre navigateur ne supporte pas la vidéo HTML5.
 		</video>
 	{:else}
-		<img src={imgSrc} alt={title} class="video-background" />
+		<img src={imgSrc} alt={title} class="video-background" loading="lazy" />
 	{/if}
 </div>
 
