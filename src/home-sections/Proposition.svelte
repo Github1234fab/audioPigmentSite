@@ -1,34 +1,36 @@
 <script>
 	import CardDotWhite from '$lib/component/cards-dot-white.svelte';
-	import TitleDot from '$lib/component/Title-dot.svelte';
 	import Btn from '$lib/component/btn-black-shadow.svelte';
+
+	// On utilise des versions moins lourdes (HD au lieu de UHD quand c'est possible)
+	const v1 = "https://videos.pexels.com/video-files/7087632/7087632-uhd_2732_1440_25fps.mp4";
+	// Remplacement du lien UHD (3840px) par une version plus légère si Pexels l'accepte ou un lien plus direct
+	const v2 = "https://videos.pexels.com/video-files/19277040/19277040-hd_1920_1080_24fps.mp4"; 
+	const v3 = "https://videos.pexels.com/video-files/7586638/7586638-hd_1920_1080_24fps.mp4";
 </script>
 
 <section>
-	<!-- <TitleDot title="Notre savoir faire" /> -->
-	<!-- <h2>Notre savoir <span>faire</span></h2> -->
-
 	<div class="wrapper__card">
 		<CardDotWhite
 			title="Post-production audio"
 			subtitle={`Sound Design
 	Mixage (broadcast, 5.1)
-	 Mastering`}
+	Mastering`}
 			txt="Découvrir"
 			href="/fr/expertise/#post-production-audio"
-			videoSrc="https://videos.pexels.com/video-files/7087632/7087632-uhd_2732_1440_25fps.mp4"
-			imgSrc="../assets/AudioVisuel.webp"
+			videoSrc={v1}
+			imgSrc="/assets/AudioVisuel.webp"
 		/>
 
 		<CardDotWhite
 			title="Création originale"
 			subtitle={`Identité sonore
-		 Habillage sonore 
+		Habillage sonore
 		Composition musicale`}
 			txt="Explorer"
 			href="/fr/expertise/#creation-originale"
-			videoSrc="https://www.pexels.com/fr-fr/download/video/19277040-uhd_3840_2160_24fps.mp4"
-			imgSrc="../assets/MarkSonore.webp"
+			videoSrc={v2}
+			imgSrc="/assets/MarkSonore.webp"
 		/>
 		<CardDotWhite
 			title="Voix"
@@ -37,15 +39,15 @@
 	Voice over`}
 			txt="Écouter"
 			href="/fr/expertise/#Voix"
-			videoSrc="https://www.pexels.com/fr-fr/download/video/7586638-hd_1920_1080_24fps.mp4"
-			imgSrc="../assets/Voix.webp"
+			videoSrc={v3}
+			imgSrc="/assets/Voix.webp"
 		/>
 	</div>
 </section>
 
 <style>
 	section {
-		padding: var(--space-md) 0; /* Marges réduites pour un enchaînement plus compact */
+		padding: var(--space-md) 0;
 		background-color: var(--white-off);
 	}
 

@@ -248,6 +248,9 @@
 		.wrapper__title-icon {
 			width: auto;
 			padding: 10px 20px;
+			backdrop-filter: none;
+			-webkit-backdrop-filter: none;
+			background: rgba(0, 0, 0, 0.8);
 		}
 
 		.wrapper__section-txt {
@@ -258,6 +261,9 @@
 		.wrapper__p {
 			text-align: center;
 			padding: var(--space-sm);
+			backdrop-filter: none;
+			-webkit-backdrop-filter: none;
+			background: rgba(0, 0, 0, 0.5);
 		}
 	}
 

@@ -1,157 +1,3 @@
-<!-- <script>
-	export let title;
-	export let subtitle;
-	import Btn from '$lib/component/btn-white.svelte';
-	export let txt;
-	export let href = ''; // destination du lien
-	export let videoSrc;
-	export let imgSrc;
-</script>
-
-<div class="card">
-	<div class="dot"></div>
-	<div class="wrapper__txt">
-		<div class="title">{title}</div>
-		<div class="subtitle">{subtitle}</div>
-		<Btn {txt} {href} />
-			<video
-			class="video-background"
-			src={videoSrc}
-			width="500"
-			autoplay
-			muted
-			loop
-		>
-			<track kind="captions" />
-			Votre navigateur ne supporte pas la vidéo HTML5.
-		</video> 
-		<img src={imgSrc} alt="blabla">
-	</div>
-</div>
-
-<style>
-	.card {
-		aspect-ratio: 1.6;
-		height: 350px;
-		border-radius: 0px;
-		padding: 1rem;
-		position: relative;
-		background-color: var(--red);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		color: black;
-		font-family: var(--raleway);
-		z-index: 0;
-		box-shadow: 0px 0px 20px rgb(150, 150, 150);
-	}
-	.video-background{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		object-fit: cover;
-		filter: brightness(0.);
-	}
-	.wrapper__txt {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		gap: 10px;
-		/* background-color: rgb(255, 255, 255); */
-		height: 320px;
-		aspect-ratio: 1.3;
-	}
-	/* .card:hover .dot {
-		width: 10px;
-		aspect-ratio: 1;
-		animation: moveDot 10s linear infinite;
-	} */
-
-	/* .dot {
-		width: 0px;
-		aspect-ratio: 1;
-		background-color: rgba(255, 0, 0, 1);
-		border-radius: 50%;
-		position: absolute;
-		transform: translate(-50%, -50%);
-		z-index: 2;
-		box-shadow: 0px 0px 5px rgb(20, 20, 20);
-	} */
-
-	.title {
-		font-size: 2rem;
-		font-weight: var(--bold);
-		margin-bottom: 10px;
-		font-family: var(--raleway);
-		text-align: center;
-		color: white;
-		letter-spacing: -0.8px;
-		width: 100%;
-	}
-
-	.subtitle {
-		font-size: 1rem;
-		font-weight: var(--bold);
-		margin-bottom: 0px;
-		white-space: pre-line;
-		text-align: center;
-		color: white;
-	}
-	img{
-		height: 300px;
-		width: 300px;
-	}
-
-	@keyframes moveDot {
-		0% {
-			top: 0%;
-			left: 0%;
-		}
-		25% {
-			top: 0%;
-			left: 100%;
-		}
-		50% {
-			top: 100%;
-			left: 100%;
-		}
-		75% {
-			top: 100%;
-			left: 0%;
-		}
-		100% {
-			top: 0%;
-			left: 0%;
-		}
-	}
-
-	@media screen and (max-width: 490px) {
-		.card {
-			height: 300px;
-			width: 300px;
-			aspect-ratio: 0;
-		}
-		.wrapper__txt {
-			height: 300px;
-			width: 100%;
-			aspect-ratio: 0;
-		}
-		.title {
-			font-size: 1.5rem;
-		}
-		.subtitle {
-			font-size: 0.9rem;
-		}
-	}
-</style> -->
-
 <script>
 	import { onMount } from 'svelte';
 	import Btn from '$lib/component/btn-white.svelte';
@@ -160,20 +6,13 @@
 	export let subtitle;
 	export let txt;
 	export let href = '';
-	export let videoSrc; // prop pour la vidéo externe
-	export let imgSrc; // prop pour fallback image
+	export let videoSrc; 
+	export let imgSrc; 
 
-	let videoEl;
 	let isDesktop = false;
 
 	onMount(() => {
-		// On ne charge la vidéo que si l'écran est large (> 1024px)
-		isDesktop = window.innerWidth > 1024;
-
-		if (isDesktop && videoEl && videoSrc) {
-			videoEl.src = videoSrc;
-			videoEl.play().catch(() => {});
-		}
+		isDesktop = window.innerWidth > 1023;
 	});
 </script>
 
@@ -182,74 +21,67 @@
 		<div class="title">{title}</div>
 		<div class="subtitle">{subtitle}</div>
 		<Btn {txt} {href} />
-
-		{#if videoSrc && isDesktop}
-			<video
-				bind:this={videoEl}
-				class="video-background"
-				autoplay
-				muted
-				loop
-				playsinline
-				preload="none"
-			>
-				<track kind="captions" />
-				Votre navigateur ne supporte pas la vidéo HTML5.
-			</video>
-		{:else if imgSrc}
-			<img src={imgSrc} alt={title} class="video-background" />
-		{/if}
 	</div>
+
+	{#if isDesktop && videoSrc}
+		<video
+			class="video-background"
+			src={videoSrc}
+			autoplay
+			muted
+			loop
+			playsinline
+			preload="auto"
+		>
+			<track kind="captions" />
+			Votre navigateur ne supporte pas la vidéo HTML5.
+		</video>
+	{:else}
+		<img src={imgSrc} alt={title} class="video-background" />
+	{/if}
 </div>
 
 <style>
 	.card {
-		/* aspect-ratio: 1.8; */
 		width: 100%;
 		height: 550px;
-		border-radius: 0px;
-		padding: 1rem;
 		position: relative;
-		background-color: transparent;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		color: black;
-		font-family: var(--font-main);
-		/* box-shadow: 0px 0px 20px rgb(150, 150, 150); */
 		overflow: hidden;
+		background-color: #1a1a1a; /* Fond de secours très sombre */
 	}
 
 	.video-background {
 		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		top: 0;
+		left: 0;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		z-index: -1;
-		filter: brightness(0.8);
+		z-index: 1; /* On le met en positif mais derrière le texte */
+		filter: brightness(0.6);
 	}
 
 	.wrapper__txt {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		gap: 10px;
-		z-index: 1;
+		gap: 15px;
+		z-index: 10; /* Toujours au-dessus de tout */
+		width: 100%;
+		padding: 20px;
 	}
 
 	.title {
-		font-family: var(--font-heading); /* Inter (moins large) */
+		font-family: var(--font-heading);
 		font-size: 2.6rem;
 		font-weight: 300;
-		margin-bottom: 10px;
 		color: white;
-		width: 100%;
-		text-align: center;
 		border: 1px solid rgba(255, 255, 255, 0.4);
 		padding: 25px 20px;
 		border-radius: 2px;
@@ -262,60 +94,23 @@
 		font-size: 1.3rem;
 		font-weight: 700;
 		white-space: pre-line;
-		text-align: center;
-		color: rgb(255, 255, 255);
+		color: white;
 	}
 
-	/* ==== Optimisation mobile ==== */
 	@media screen and (max-width: 768px) {
 		.card {
-			aspect-ratio: none;
-			padding: 10px 10px;
-			width: 100%;
 			height: 600px;
-			border-radius: 0px;
-			position: relative;
-			background-color: var(--accent);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			color: black;
-			font-family: var(--font-main);
-			box-shadow: 0px 0px 20px rgb(150, 150, 150);
-			overflow: hidden;
 		}
 		.title {
-		font-family: var(--font-heading);
-		font-size: 1.8rem;
-		font-weight: 300;
-		margin-bottom: 10px;
-		color: white;
-		width: 100%;
-		text-align: center;
-		border: 1px solid rgba(255, 255, 255, 0.4);
-		padding: 15px 10px;
-		border-radius: 2px;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
-	}
-	.subtitle {
-		font-family: var(--font-main);
-		font-size: 1.3rem;
-		white-space: pre-line;
-		text-align: center;
-		color: rgb(255, 255, 255);
-		font-weight: 500;
-	}
-	.wrapper__txt {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		gap: 60px;
-		z-index: 1;
-	}
-
-
+			font-size: 1.8rem;
+			padding: 15px 10px;
+		}
+		.subtitle {
+			font-size: 1.1rem;
+			font-weight: 500;
+		}
+		.wrapper__txt {
+			gap: 40px;
+		}
 	}
 </style>

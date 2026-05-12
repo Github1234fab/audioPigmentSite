@@ -33,7 +33,7 @@
 <main>
 	<section class="hero-contact">
 		<h1>Contactez-nous</h1>
-		<p class="subtitle">Une idée, un projet, une question ?<br>Notre équipe est à votre écoute.</p>
+		<p class="subtitle">Une idée, un projet, une question ?<br>Notre équipe est à <strong>votre écoute.</strong></p>
 	</section>
 
 	<section class="content-contact">
@@ -71,43 +71,60 @@
 	}
 
 	.hero-contact {
+		position: relative;
 		text-align: center;
-		padding: var(--space-xl) var(--space-md);
-		background-color: var(--white);
+		padding: 140px var(--space-md);
+		/* Dégradé multicouche : Lumière rouge + Dégradé sombre */
+		background: radial-gradient(circle at 15% 15%, rgba(220, 38, 38, 0.4) 0%, transparent 45%),
+		            linear-gradient(135deg, var(--ardoise) 0%, #0a0a0a 100%);
+		overflow: hidden;
+	}
+
+	/* Texture studio */
+	.hero-contact::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+		background-size: 30px 30px;
+		opacity: 0.15;
+		pointer-events: none;
+		z-index: 1;
 	}
 
 	h1 {
 		font-family: var(--font-heading);
-		font-size: var(--fs-h1);
-		color: var(--ardoise);
+		font-size: clamp(3rem, 10vw, 5rem);
+		color: var(--white);
 		font-weight: 800;
-		letter-spacing: -0.04em;
+		letter-spacing: -0.05em;
 		text-transform: uppercase;
 		position: relative;
 		width: fit-content;
 		margin: 0 auto 1.5rem;
-		padding-bottom: 1rem;
-	}
-
-	h1::after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 60px;
-		height: 4px;
-		background: var(--accent);
-		border-radius: 4px;
+		line-height: 0.9;
+		z-index: 2;
 	}
 
 	.subtitle {
 		font-family: var(--font-main);
-		font-size: 1.2rem;
-		color: var(--accent);
+		font-size: 1.3rem;
+		color: var(--white-off);
 		max-width: 600px;
 		margin: 0 auto;
-		font-weight: 600;
+		font-weight: 300;
+		line-height: 1.6;
+		letter-spacing: 0.05em;
+		position: relative;
+		z-index: 2;
+	}
+
+	.subtitle strong {
+		color: var(--accent);
+		font-weight: 700;
 	}
 
 	.content-contact {

@@ -1,59 +1,33 @@
 <script>
 	import CardRealisation from '$lib/component/Card-logo.svelte';
-	import BP from '../../assets/LogosV2/Banque_de_France_DEF.png';
-	import Barilla from '../../assets/LogosV2/barilla-DEF.png';
-	import BioMerieux from '../../assets/LogosV2/BioMerieux DEF.png';
-	import BlablaCar from '../../assets/LogosV2/BlaBlaCar NEW DEF.png';
-	import BMW from '../../assets/LogosV2/BMW_DEF.png';
-	import burgerKing from '../../assets/LogosV2/burger king DEF.png';
-	import CiteEspace from '../../assets/LogosV2/CiteEspace Toulouse  DEF.png';
-	import Costa from '../../assets/LogosV2/Costa DEF.png';
-	import Decathlon from '../../assets/LogosV2/Decathlon DEF.png';
-	import Delacre from '../../assets/LogosV2/Delacre DEF.png';
-	import Disneyland from '../../assets/LogosV2/Disneyland_Paris_2 DEF.png';
-	import Evian from '../../assets/LogosV2/Evian DEF.png';
-	import FDJ from '../../assets/LogosV2/FDJ DEF.png';
-	import Fnac from '../../assets/LogosV2/fnac-2 DEF.png';
-	import LEGO from '../../assets/LogosV2/LEGO_1 DEF.png';
-	import loreal from '../../assets/LogosV2/loreal-logo-2 DEF.png';
-	import Peugeot from '../../assets/LogosV2/Peugeot 1 DEF.png';
-	import PointS from '../../assets/LogosV2/Point S 1 DEF.png';
-	import PuyDuFou from '../../assets/logos/Puy-du-fou_2.png';
-	import Region from '../../assets/LogosV2/Region_Auvergne-Rhone-Alpes GROS DEF.png';
-	import Renault from '../../assets/LogosV2/Renault GROS DEF.png';
-	import SanPe from '../../assets/logos/San-Pellegrino-Logo 1.png';
-	import Saupiquet from '../../assets/LogosV2/SAUPIQUET DEF.png';
-	import SNCF from '../../assets/LogosV2/SNCF DEF.png';
-	import TotalEnergie from '../../assets/LogosV2/TotalEnergies DEF.png';
-	import Vulcania from '../../assets/LogosV2/VULCANIA DEF.png';
 
 	const cards = [
-		{ image: BP, href: 'https://www.banque-france.fr/' },
-		{ image: Barilla, href: 'https://www.barilla.com/fr-fr' },
-		{ image: BioMerieux, href: 'https://www.biomerieux.com/fr/' },
-		{ image: BlablaCar, href: 'https://www.blablacar.fr/' },
-		{ image: BMW, href: 'https://www.bmw.fr/' },
-		{ image: burgerKing, href: 'https://www.burgerking.fr/' },
-		{ image: CiteEspace, href: 'https://cite-espace.com/' },
-		{ image: Costa, href: 'https://www.costa.co.uk/' },
-		{ image: Decathlon, href: 'https://www.decathlon.fr/' },
-		{ image: Delacre, href: 'https://www.delacre.com/fr-fr' },
-		{ image: Disneyland, href: 'https://www.disneylandparis.fr/' },
-		{ image: Evian, href: 'https://www.evian.com/fr-fr/' },
-		{ image: FDJ, href: 'https://www.fdj.fr/' },
-		{ image: Fnac, href: 'https://www.fnac.com/' },
-		{ image: LEGO, href: 'https://www.lego.com/fr-fr' },
-		{ image: loreal, href: 'https://www.loreal.com/fr/' },
-		{ image: Peugeot, href: 'https://www.peugeot.fr/' },
-		{ image: PointS, href: 'https://www.points.fr/' },
-		{ image: PuyDuFou, href: 'https://www.puydufou.com/fr' },
-		{ image: Region, href: 'https://www.laregion.fr/' },
-		{ image: Renault, href: 'https://www.renault.fr/' },
-		{ image: SanPe, href: 'https://www.sanpellegrino.fr/' },
-		{ image: Saupiquet, href: 'https://www.saupiquet.fr/' },
-		{ image: SNCF, href: 'https://www.sncf.com/fr' },
-		{ image: TotalEnergie, href: 'https://totalenergies.com/fr' },
-		{ image: Vulcania, href: 'https://www.vulcania.fr/' }
+		{ image: '/assets/logos/Banque_de_France_DEF.png', href: 'https://www.banque-france.fr/' },
+		{ image: '/assets/logos/barilla-DEF.png', href: 'https://www.barilla.com/fr-fr' },
+		{ image: '/assets/logos/BioMerieux DEF.png', href: 'https://www.biomerieux.com/fr/' },
+		{ image: '/assets/logos/BlaBlaCar NEW DEF.png', href: 'https://www.blablacar.fr/' },
+		{ image: '/assets/logos/BMW_DEF.png', href: 'https://www.bmw.fr/' },
+		{ image: '/assets/logos/burger king DEF.png', href: 'https://www.burgerking.fr/' },
+		{ image: '/assets/logos/CiteEspace Toulouse  DEF.png', href: 'https://cite-espace.com/' },
+		{ image: '/assets/logos/Costa DEF.png', href: 'https://www.costa.co.uk/' },
+		{ image: '/assets/logos/Decathlon DEF.png', href: 'https://www.decathlon.fr/' },
+		{ image: '/assets/logos/Delacre DEF.png', href: 'https://www.delacre.com/fr-fr' },
+		{ image: '/assets/logos/Disneyland_Paris_2 DEF.png', href: 'https://www.disneylandparis.fr/' },
+		{ image: '/assets/logos/Evian DEF.png', href: 'https://www.evian.com/fr-fr/' },
+		{ image: '/assets/logos/FDJ DEF.png', href: 'https://www.fdj.fr/' },
+		{ image: '/assets/logos/fnac-2 DEF.png', href: 'https://www.fnac.com/' },
+		{ image: '/assets/logos/LEGO_1 DEF.png', href: 'https://www.lego.com/fr-fr' },
+		{ image: '/assets/logos/loreal-logo-2 DEF.png', href: 'https://www.loreal.com/fr/' },
+		{ image: '/assets/logos/Peugeot 1 DEF.png', href: 'https://www.peugeot.fr/' },
+		{ image: '/assets/logos/Point S 1 DEF.png', href: 'https://www.points.fr/' },
+		{ image: '/assets/logos/Puy-du-fou_2.png', href: 'https://www.puydufou.com/fr' },
+		{ image: '/assets/logos/Region_Auvergne-Rhone-Alpes GROS DEF.png', href: 'https://www.laregion.fr/' },
+		{ image: '/assets/logos/Renault GROS DEF.png', href: 'https://www.renault.fr/' },
+		{ image: '/assets/logos/San-Pellegrino-Logo 1.png', href: 'https://www.sanpellegrino.fr/' },
+		{ image: '/assets/logos/SAUPIQUET DEF.png', href: 'https://www.saupiquet.fr/' },
+		{ image: '/assets/logos/SNCF DEF.png', href: 'https://www.sncf.com/fr' },
+		{ image: '/assets/logos/TotalEnergies DEF.png', href: 'https://totalenergies.com/fr' },
+		{ image: '/assets/logos/VULCANIA DEF.png', href: 'https://www.vulcania.fr/' }
 	];
 </script>
 
@@ -85,34 +59,33 @@
 .marquee-wrapper {
 	overflow: hidden;
 	width: 100%;
-	padding: 0px 0;
-		
+	padding: 20px 0;
+	background: transparent;
 }
 
 .marquee {
 	display: flex;
 	overflow: hidden;
 	user-select: none;
-	gap: 20px; /* Même gap que les items */
+	gap: 20px;
 }
 
 .marquee__group {
 	flex-shrink: 0;
 	display: flex;
 	align-items: center;
-	justify-content: flex-start; /* Aligné au début pour le bord à bord */
-	gap: 20px; /* Espace constant entre les logos */
+	justify-content: space-around;
+	gap: 20px;
 	min-width: 100%;
-	animation: scroll-x 40s linear infinite;
-
+	animation: scroll-x 50s linear infinite; /* Un peu plus lent pour la fluidité */
+	will-change: transform;
 }
 
 .marquee__item {
 	flex: 0 0 auto;
-	width: 200px; /* Plus large */
-	padding: 15px;
+	width: 180px;
+	padding: 10px;
 	box-sizing: border-box;
-
 }
 
 .logo-box {
@@ -120,50 +93,53 @@
 	align-items: center; 
 	justify-content: center;
 	width: 100%; 
-	height: 200px;
-	background-color: none;
+	height: 120px; /* Plus petit pour économiser la RAM mobile */
 }
 
-.logo-box :global(img),
-.logo-box :global(svg),
-.logo-box :global(picture) {
-	max-height: 110px; /* Plus haut */
+.logo-box :global(img) {
+	max-height: 80px;
 	width: auto; 
 	max-width: 100%; 
 	object-fit: contain; 
 	display: block;
+	/* On évite les filtres complexes en mouvement */
+	filter: none !important;
 }
 
-/* L'animation déplace de 100% = la largeur d'un groupe complet */
 @keyframes scroll-x {
 	from {
-		transform: translateX(0);
+		transform: translate3d(0, 0, 0);
 	}
 	to {
-		transform: translateX(-100%);
-	}
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-	.marquee__item { 
-		width: 160px;
-	}
-	.logo-box :global(img), 
-	.logo-box :global(svg), 
-	.logo-box :global(picture) { 
-		max-height: 90px;
+		transform: translate3d(-100%, 0, 0);
 	}
 }
 
 @media (max-width: 768px) {
-	.marquee__item { 
-		width: 140px;
+	.marquee {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 10px;
 	}
-	.logo-box :global(img), 
-	.logo-box :global(svg), 
-	.logo-box :global(picture) { 
-		max-height: 80px;
+	.marquee__group {
+		animation: none; /* Arrêt de l'animation pour économiser le processeur */
+		flex-wrap: wrap;
+		justify-content: center;
+		min-width: 100%;
+		transform: none !important;
+	}
+	.marquee__group[aria-hidden="true"] {
+		display: none; /* On cache les doublons */
+	}
+	.marquee__item { 
+		width: 100px;
+		padding: 5px;
+	}
+	.logo-box {
+		height: 60px;
+	}
+	.logo-box :global(img) { 
+		max-height: 40px;
 	}
 }
 </style>

@@ -20,7 +20,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.239);
+		box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Ombre plus légère par défaut */
+		will-change: transform;
+		backface-visibility: hidden;
 	}
 	.img {
 		min-width: 100%;
@@ -29,6 +31,13 @@
 	}
 
 	.card:hover {
-		transform: scale(0.9);
+		transform: scale(0.95);
+	}
+
+	@media (max-width: 768px) {
+		.card {
+			box-shadow: none; /* Crucial pour la fluidité sur mobile */
+			border: 1px solid rgba(0,0,0,0.05); /* Remplacement par une bordure fine */
+		}
 	}
 </style>

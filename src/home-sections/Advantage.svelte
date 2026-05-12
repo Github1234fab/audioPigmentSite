@@ -50,7 +50,7 @@
 	import { onMount } from 'svelte';
 	let isDesktop = false;
 	onMount(() => {
-		isDesktop = window.innerWidth > 1024;
+		isDesktop = window.innerWidth > 1023;
 	});
 </script>
 
@@ -94,11 +94,11 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		z-index: -1;
+		z-index: 0;
 	}
 
 	section {
-		background-image: url(../assets/Mixage2.webp);
+		background-image: url(/assets/Mixage2.webp);
 		background-size: cover;
 		background-position: center;
 	}
@@ -203,7 +203,7 @@
 			display: none;
 		}
 		section {
-			background: var(--ardoise);
+			background-color: var(--ardoise);
 			padding: var(--space-lg) var(--space-sm);
 		}
 

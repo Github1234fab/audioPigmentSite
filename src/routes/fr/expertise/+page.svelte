@@ -34,10 +34,11 @@
 				muted
 				loop
 				playsinline
-				poster="https://res.cloudinary.com/dkw5bl7fx/video/upload/v1763023556/console_BELLE_et_COLOREES_2_mains_vcf02k.mp4"
+				preload="auto"
+				poster="https://res.cloudinary.com/dkw5bl7fx/video/upload/f_auto,q_auto,w_1080,so_0/v1763023556/console_BELLE_et_COLOREES_2_mains_vcf02k.jpg"
 			>
 				<source
-					src="https://res.cloudinary.com/dkw5bl7fx/video/upload/v1763023556/console_BELLE_et_COLOREES_2_mains_vcf02k.mp4"
+					src="https://res.cloudinary.com/dkw5bl7fx/video/upload/f_auto,q_auto,w_1080/v1763023556/console_BELLE_et_COLOREES_2_mains_vcf02k.mp4"
 					type="video/mp4"
 				/>
 			</video>
@@ -94,10 +95,9 @@
 				<strong>accompagnons nos clients </strong> dans leur sélection. 
 				<br />
 				Ces musiques sont personnalisables, mais lorsqu’un
-projet exige une identité unique, la création originale reste la plus adaptée : elle assure une
-adéquation complète entre musique, intention et émotion, ainsi qu’une exclusivité totale de
-diffusion.
-				
+				projet exige une identité unique, la création originale reste la plus adaptée : elle assure une
+				adéquation complète entre musique, intention et émotion, ainsi qu’une exclusivité totale de
+				diffusion.
 			</p>
 
 			<video
@@ -106,10 +106,11 @@ diffusion.
 				muted
 				loop
 				playsinline
-				poster="https://res.cloudinary.com/dkw5bl7fx/video/upload/v1763023587/PIANO_Couleurs_3_er2jzz.mp4"
+				preload="auto"
+				poster="https://res.cloudinary.com/dkw5bl7fx/video/upload/f_auto,q_auto,w_1080,so_0/v1763023587/PIANO_Couleurs_3_er2jzz.jpg"
 			>
 				<source
-					src="https://res.cloudinary.com/dkw5bl7fx/video/upload/v1763023587/PIANO_Couleurs_3_er2jzz.mp4"
+					src="https://res.cloudinary.com/dkw5bl7fx/video/upload/f_auto,q_auto,w_1080/v1763023587/PIANO_Couleurs_3_er2jzz.mp4"
 					type="video/mp4"
 				/>
 			</video>
@@ -172,10 +173,11 @@ diffusion.
 				muted
 				loop
 				playsinline
-				poster="https://res.cloudinary.com/dkw5bl7fx/video/upload/v1763023614/enregistrement_VOIX_en_studio_ofxow4.mp4"
+				preload="auto"
+				poster="https://res.cloudinary.com/dkw5bl7fx/video/upload/f_auto,q_auto,w_1080,so_0/v1763023614/enregistrement_VOIX_en_studio_ofxow4.jpg"
 			>
 				<source
-					src="https://res.cloudinary.com/dkw5bl7fx/video/upload/v1763023614/enregistrement_VOIX_en_studio_ofxow4.mp4"
+					src="https://res.cloudinary.com/dkw5bl7fx/video/upload/f_auto,q_auto,w_1080/v1763023614/enregistrement_VOIX_en_studio_ofxow4.mp4"
 					type="video/mp4"
 				/>
 			</video>
@@ -183,12 +185,10 @@ diffusion.
 		<div class="wrapper__advantages">
 			<h2>Nos atouts</h2>
 			<div class="advantage">
-				<h3>Un casting de 800 voix, plus de 50 nationalités</h3>
+				<h3>Un son maîtrisé, au service du sens et de l’émotion</h3>
 				<p>
-					Un réseau international de comédien.nes professionnels natifs, en français et langues
-					étrangères, pour des projets variés et multiculturels. Adaptation, traduction, voix off,
-					doublage multilingue : nous accompagnons nos clients pour toucher chaque publics avec
-					justesse et pertinence culturelle.
+					Chaque décision de traitement, chaque plan sonore est pensé pour servir le récit ou
+					l’image. Nous privilégions la lisibilité, la cohérence et la justesse du ressenti.
 				</p>
 			</div>
 			<div class="advantage">
@@ -212,9 +212,16 @@ diffusion.
 	</section>
 
 	<div class="bg-black section-video-banner">
-		<video autoplay muted loop playsinline class="background-video-banner">
+		<video 
+			autoplay 
+			muted 
+			loop 
+			playsinline 
+			class="background-video-banner"
+			preload="auto"
+		>
 			<source
-				src=" https://videos.pexels.com/video-files/8319438/8319438-uhd_2560_1440_25fps.mp4"
+				src="https://videos.pexels.com/video-files/8319438/8319438-hd_1920_1080_25fps.mp4"
 				type="video/mp4"
 			/>
 		</video>
@@ -229,10 +236,6 @@ diffusion.
 				<br /><br />
 				<strong>Comprendre, ressentir, transmettre: c’est notre métier.</strong>
 			</p>
-			<!-- <div class="wrapper__buttons">
-			<BtnBlack txt="Contactez-nous" />
-			<BtnWhite txt="Découvrez nos services" />	
-		</div> -->
 		</div>
 	</div>
 </main>
