@@ -25,7 +25,6 @@
 		position: relative;
 		aspect-ratio: 16/9;
 		width: 100%;
-		max-width: 450px;
 		background-size: cover;
 		background-position: center;
 		border-radius: var(--radius-lg);

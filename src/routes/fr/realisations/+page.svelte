@@ -270,10 +270,10 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 2rem;
+      padding: 4rem 2rem;
       background-color: white;
       color: var(--black);
-      height: 100%;
+      min-height: 100vh;
     }
     section h1 {
       font-family: var(--font-heading);
@@ -329,14 +329,15 @@
       border-color: var(--accent);
       box-shadow: var(--shadow-md);
     }
-    .cards-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        justify-content: center;
-        margin-top: 50px;
-        max-width: 1400px;
-    }
+	.cards-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 450px));
+		gap: 2.5rem;
+		width: 100%;
+		max-width: 1400px;
+		margin-top: 50px;
+		justify-content: center;
+	}
 
 @media (max-width: 768px) {
 
@@ -352,6 +353,7 @@
       margin-top: 40px;
     }
     .cards-grid {
+  grid-template-columns: 1fr;
   gap: 1rem;
   margin-top: 0px;
 }
