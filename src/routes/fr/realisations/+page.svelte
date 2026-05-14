@@ -1,20 +1,19 @@
 <script>
     import Card from '$lib/component/Card-realisation.svelte';
   
-  
     const allRealisations = [
   {
     title: "Série Mystère",
     type: "Séries audio",
     technique: "Réalisation sonore 3D",
-    link: "/realisations/serie-mystere",
+    link: "https://youtube.com/watch?v=Fu-aEj_Q8ig",
     image: "https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg"
   },
   {
     title: "Entreprise X",
     type: "Corporate",
     technique: "Design sonore & mixage",
-    link: "/realisations/entreprise-x",
+    link: "https://youtube.com/watch?v=FJhtKdsnsN0",
     image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg"
   },
   {
@@ -130,11 +129,11 @@
     image: "https://i.ytimg.com/vi/KvOP_tbju3A/mqdefault.jpg"
   },
   {
-    title: "LENOR Belle au bois dormant",
-    type: "SPOT TV - FR",
-    technique: "Enregistrement voix",
-    link: "https://youtube.com/watch?v=pz2xpVFJ-nU",
-    image: "https://i.ytimg.com/vi/pz2xpVFJ-nU/mqdefault.jpg"
+    title: "SAN PELLEGRINO Manifesto",
+    type: "SPOT WEB - FR",
+    technique: "Post production voix",
+    link: "https://youtube.com/watch?v=KEJoZxzM0FI",
+    image: "https://i.ytimg.com/vi/KEJoZxzM0FI/mqdefault.jpg"
   },
   {
     title: "SAN PELLEGRINO Manifesto",
@@ -172,7 +171,7 @@
     image: "https://i.ytimg.com/vi/1wQ-J_sZ3jg/mqdefault.jpg"
   },
   {
-    title: "\"Piscines Magiline - 30s\". Enregistrement et mixage",
+    title: "Piscines Magiline - 30s",
     type: "SPOT TV - FR",
     technique: "Enregistrement et mixage",
     link: "https://youtube.com/watch?v=yRuTtiiPKhU",
@@ -231,6 +230,7 @@
 
 
     let selectedType = "Tous";
+
     $: productionTypes = Array.from(new Set(allRealisations.map(r => r.type)));
   
     $: filteredRealisations = selectedType === "Tous"
@@ -257,10 +257,8 @@
       {#each filteredRealisations as realisation}
         <Card
           title={realisation.title}
-          type={realisation.type}
-          technique={realisation.technique}
-          link={realisation.link}
           image={realisation.image}
+          link={realisation.link}
         />
       {/each}
     </div>
@@ -332,12 +330,13 @@
       box-shadow: var(--shadow-md);
     }
     .cards-grid {
-  display: flex;
-  flex-wrap: wrap;         /* Retour à la ligne si besoin */
-  gap: 2rem;               /* Espace entre les cartes */
-  justify-content: center; /* Centrage horizontal */
-  margin-top: 50px;
-}
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        margin-top: 50px;
+        max-width: 1400px;
+    }
 
 @media (max-width: 768px) {
 
@@ -353,10 +352,7 @@
       margin-top: 40px;
     }
     .cards-grid {
-  display: flex;
-  flex-wrap: wrap;         /* Retour à la ligne si besoin */
-  gap: 1rem;               /* Espace entre les cartes */
-  justify-content: center; /* Centrage horizontal */
+  gap: 1rem;
   margin-top: 0px;
 }
 section {

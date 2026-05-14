@@ -153,10 +153,10 @@ function switchLanguage(newLang) {
       align-items: center;
       text-decoration: none;
       color: inherit;
-      font-weight: 700;
-      font-size: 0.9rem;
-      gap: 5px;
+      gap: 10px;
       font-family: var(--font-main);
+      font-weight: 600;
+      font-size: 0.95rem;
   }
 
   .logo {
@@ -286,7 +286,7 @@ function switchLanguage(newLang) {
 
       .home-link span {
           display: inline-block;
-          font-size: 0.7rem;
+          font-size: 0.95rem;
       }
 
       .main-menu {

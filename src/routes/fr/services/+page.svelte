@@ -140,7 +140,7 @@ interprétation et fidélité à l’œuvre</strong>, pour que la langue change,
 C’est à la fois un travail <strong> technique de précision</strong>  et un <strong> acte artistique</strong>, visant à créer une
 cohérence entre les voix, la musique, le sound design et l’ensemble de l’univers sonore. <br><br>
 Chez Audio Pigment, chaque projet est traité dans un environnement acoustique calibré,
-avec des outils numériques de haute précision et surtout, une <strong> écoute experte</strong>  capable de
+with des outils numériques de haute précision et surtout, une <strong> écoute experte</strong>  capable de
 prendre les bonnes décisions artistiques et techniques. <br><br>
 Le mixage consiste à trouver l’équilibre parfait entre les différentes sources : réglage des
 niveaux, traitement fréquentiel, gestion de la dynamique, spatialisation stéréo ou
@@ -153,7 +153,8 @@ Nous assurons également la <strong> conformation technique et la normalisation 
 garantissant que les masters livrés respectent toutes les contraintes de diffusion et soient
 immédiatement exploitables, sans compromis sur la qualité.`,
 			link: '/fr/contact',
-			image: Mixage
+			image: Mixage,
+			alt: 'Mixage Audio Pigment'
 		}
 	];
 </script>
@@ -169,8 +170,6 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 						src={service.image}
 						alt={service.alt}
 						loading={i < 2 ? 'eager' : 'lazy'}
-						fetchpriority={i < 2 ? 'high' : 'low'}
-						decoding="async"
 						width="800"
 						height="500"
 					/>
@@ -270,7 +269,6 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 		height: 400px;
 		object-fit: cover;
 		display: block;
-		will-change: transform;
 	}
 
 	.wrapper__service-txt {
@@ -279,7 +277,7 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 		align-items: center;
 		justify-content: center;
 		z-index: 2;
-		gap: var(--space-md); /* Plus d'espace entre titre et sous-titre */
+		gap: var(--space-md);
 		padding: var(--space-lg);
 		height: 400px;
 		background-color: #2c2c2c;
@@ -289,7 +287,7 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 		color: var(--white-pure);
 		font-size: 2.2rem;
 		font-family: var(--font-heading);
-		font-weight: var(--black); /* Graisse maximum */
+		font-weight: var(--black);
 		line-height: 1.1;
 		text-align: center;
 	}

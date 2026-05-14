@@ -96,7 +96,7 @@
 		font-size: var(--fs-h2);
 		line-height: 1.2;
 		color: var(--white);
-		font-weight: 300; /* Plus fin et premium */
+		font-weight: 400; /* Plus léger */
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		margin: 0;

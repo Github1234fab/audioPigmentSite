@@ -44,7 +44,7 @@
             In a world saturated with sound, we help brands <strong>stand out, be heard, and be remembered</strong> with accuracy and emotion.`,
 			link: '/en/contact',
 			image: ComSonore,
-			alt: "Person using a microphone in a recording studio"
+			alt: "Sonic branding Audio Pigment"
 		},
 		{
 			id: '2',
@@ -70,7 +70,7 @@
             <br/><br/>In animation, sound becomes an essential element of credibility and emotion: it shapes spaces, gives life to characters, and creates the link between the viewer and the story. 
             Our <strong>professional actors</strong>, directed in studio by our teams, lend their voices with accuracy and sensitivity.`,
 			link: '/en/contact',
-			image: "https://images.pexels.com/photos/4941721/pexels-photo-4941721.jpeg",
+			image: AudioVisuel,
 			alt: "Audiovisual production"
 		},
 		{
@@ -82,7 +82,7 @@
             <br/><br/>At Audio Pigment, we master this entire technical and artistic chain (from translation to master delivery) to guarantee credible versions, faithful to the spirit of the work and <strong>adapted to each culture.</strong>
             <br/><br/>Whether it’s a film, brand video, institutional or digital content, we consider localization and dubbing as a balancing art between <strong>technique, interpretation, and fidelity</strong>, so that the language changes, but not the emotion.`,
 			link: '/en/contact',
-			image: "https://images.pexels.com/photos/8001238/pexels-photo-8001238.jpeg",
+			image: Voix,
 			alt: "Dubbing session"
 		},
 		{
@@ -290,17 +290,11 @@
 			line-height: 1.2;
 			margin-bottom: 2.5rem;
 			margin-top: 40px;
-			padding-bottom: 1.5rem; /* Harmonisé */
+			padding-bottom: 1.5rem;
 		}
 
 		.wrapper__img-title {
 			grid-template-columns: 1fr;
-		}
-
-		.wrapper__img-title.reverse .img,
-		.wrapper__img-title.reverse .wrapper__service-txt {
-			grid-column: auto;
-			grid-row: auto;
 		}
 
 		.img {
