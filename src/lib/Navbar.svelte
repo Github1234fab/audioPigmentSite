@@ -1,7 +1,7 @@
 <script>
   import { page } from '$app/stores';
   import Logo from '../assets/logos/PIGMENT.jpg';
-  import French from '../assets/pimsFrenchFlag.png';
+  import French from '../assets/Hero-image/frencFlag.png';
   import English from '../assets/pimsEnglishFlag.png';
   import { fade } from 'svelte/transition';
   import { locale } from 'svelte-i18n';
@@ -154,7 +154,7 @@ function switchLanguage(newLang) {
       text-decoration: none;
       color: inherit;
       font-weight: 700;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       gap: 5px;
       font-family: var(--font-main);
   }
@@ -182,7 +182,7 @@ function switchLanguage(newLang) {
       color: var(--ardoise-light);
       font-family: var(--font-main);
       font-weight: 600;
-      font-size: 0.85rem;
+      font-size: 0.95rem;
       padding: 0.4rem;
       position: relative;
       transition: var(--transition);
@@ -238,8 +238,8 @@ function switchLanguage(newLang) {
   }
 
   .flag, .Enflag {
-      width: 24px;
-      height: 18px;
+      width: 32px;
+      height: 22px;
       object-fit: cover;
       border-radius: 2px;
       box-shadow: var(--shadow-sm);

@@ -52,11 +52,10 @@
 
 	section h1 {
 		font-family: var(--font-heading);
-		font-size: var(--fs-h1);
+		font-size: 2.8rem;
 		color: var(--ardoise);
 		font-weight: 800;
 		letter-spacing: -0.04em;
-		text-transform: uppercase;
 		position: relative;
 		width: fit-content;
 		margin-top: var(--space-xl);

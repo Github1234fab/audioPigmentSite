@@ -103,12 +103,12 @@
 	}
 
 	h1 {
-		font-family: var(--font-heading);
-		font-size: var(--fs-h1);
+		font-family: var(--bebas);
+		font-size: 2.8rem;
 		color: var(--ardoise);
 		font-weight: 800;
 		letter-spacing: -0.04em;
-		line-height: 1;
+		line-height: 1.1;
 		margin-bottom: var(--space-xs);
 		text-wrap: balance;
 	}

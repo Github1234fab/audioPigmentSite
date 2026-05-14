@@ -112,11 +112,10 @@
 
 	section h1 {
 		font-family: var(--font-heading);
-		font-size: var(--fs-h1);
+		font-size: 2.8rem;
 		color: var(--white);
 		font-weight: 800;
 		letter-spacing: -0.04em;
-		text-transform: uppercase;
 		position: relative;
 		width: fit-content;
 		padding-bottom: 1.5rem;
@@ -182,7 +181,7 @@
 	.wrapper__fondators-img-container {
 		background: rgba(255, 255, 255, 0.05);
 		padding: var(--space-sm);
-		border-radius: var(--radius-lg);
+		border-radius: 0;
 		border: 1px solid rgba(255, 255, 255, 0.1);
 		backdrop-filter: blur(10px);
 		transition: var(--transition);
@@ -196,7 +195,7 @@
 	.wrapper__fondators-img img {
 		width: 280px;
 		height: 350px;
-		border-radius: var(--radius-md);
+		border-radius: 0;
 		object-fit: cover;
 	}
 

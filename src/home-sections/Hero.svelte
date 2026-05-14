@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import Button from '$lib/component/btn-black.svelte';
 	import ButtonWhite from '$lib/component/btn-white.svelte';
-	import Test from '$lib/component/Test.svelte';
+	import Logo from '../assets/logos/PIGMENT.jpg';
 
 	let videoRef;
 
@@ -34,6 +34,7 @@
 	</video>
 
 	<div class="wrapper__txt">
+		<img src={Logo} class="hero-logo" alt="Logo Audio Pigment" />
 		<h1>Agence de communication sonore</h1>
 		<h2>
 			Studio post production son, voix off, doublage, identité sonore, sound design, composition
@@ -51,7 +52,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		/* background-image supprimée pour ne pas masquer la vidéo */
 		background-color: var(--ardoise); 
 		min-height: 100vh;
 		min-height: 100svh;
@@ -64,7 +64,7 @@
 		content: '';
 		position: absolute;
 		inset: 0;
-		background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.2) 100%);
+		background: radial-gradient(circle at center, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%);
 		z-index: 1;
 	}
 
@@ -77,48 +77,51 @@
 		z-index: 0;
 	}
 
+	.hero-logo {
+		width: 120px;
+		height: auto;
+		margin-bottom: var(--space-md);
+		border-radius: var(--radius-sm);
+		box-shadow: var(--shadow-md);
+	}
+
 	.wrapper__txt {
 		position: relative;
 		z-index: 4;
 		width: 100%;
-		max-width: 1000px;
+
 		padding: var(--space-md);
 		text-align: center;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: var(--space-sm);
-		
-		background: radial-gradient(
-			circle at center,
-			rgba(255, 255, 255, 0.4) 0%,
-			rgba(255, 255, 255, 0) 70%
-		);
-		backdrop-filter: blur(2px);
-		-webkit-backdrop-filter: blur(2px);
-		border-radius: var(--radius-lg);
+		gap: var(--space-xs);
+		background: none;
+		backdrop-filter: none;
+		-webkit-backdrop-filter: none;
 	}
 
-	h1 {
-		font-family: var(--font-heading);
-		font-size: var(--fs-h1);
+h1 {
+		font-family: var(--bebas);
+		font-size: 2.8rem;
 		color: var(--ardoise);
+		width: 90%;
+		margin: 0 auto;
 		font-weight: 800;
 		letter-spacing: -0.04em;
-		line-height: 1;
-		margin-bottom: var(--space-xs);
-		text-wrap: balance;
+		line-height: 1.1;
 	}
 
 	h2 {
 		font-family: var(--font-main);
-		font-size: var(--fs-h3);
+		font-size: 1.3rem;
 		color: var(--ardoise-light);
 		font-weight: 500;
-		max-width: 700px;
+		/* max-width: 700px; */
 		margin: 0 auto;
 		line-height: 1.4;
-		text-wrap: balance;
+		text-shadow: none;
+		text-transform: none;
 	}
 
 	.wrapper__buttons {

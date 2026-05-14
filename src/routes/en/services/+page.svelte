@@ -138,12 +138,11 @@
 
 	section h1 {
 		font-family: var(--font-heading);
-		font-size: var(--fs-h1);
+		font-size: 2.8rem;
 		margin-bottom: var(--space-xl);
 		margin-top: var(--space-xl);
 		font-weight: 800;
 		letter-spacing: -0.04em;
-		text-transform: uppercase;
 		position: relative;
 		width: fit-content;
 		padding-bottom: 1.5rem;

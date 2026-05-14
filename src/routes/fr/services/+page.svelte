@@ -36,8 +36,8 @@
 	});
 
 	onDestroy(() => {
-		triggers.forEach(t => t.kill());
-		if (ScrollTrigger) ScrollTrigger.getAll().forEach(t => t.kill());
+		triggers.forEach((t) => t.kill());
+		if (ScrollTrigger) ScrollTrigger.getAll().forEach((t) => t.kill());
 	});
 
 	const services = [
@@ -61,7 +61,7 @@ Dans un monde saturé de sons, nous aidons les marques à se <strong>distinguer,
 mémorisées</strong>, avec justesse et émotion.`,
 			link: '/fr/contact',
 			image: ComSonore,
-			alt: "Communication sonore Audio Pigment"
+			alt: 'Communication sonore Audio Pigment'
 		},
 		{
 			id: '2',
@@ -85,7 +85,7 @@ en une expérience d’écoute identifiable et marquante.`,
 		{
 			id: '3',
 			label: 'Audiovisuel & digital ',
-			subLabel: `Habillage sonore, création musicale &amp; voix off (pub TV, pub cinéma, film corporate, film d’animation, motion design, e-learning…)`,
+			subLabel: `Habillage sonore, création musicale & voix off (pub TV, pub cinéma, film corporate, film d’animation, motion design, e-learning…)`,
 			desc: `Dans l’audiovisuel comme dans le digital, <strong>	le son et la voix </strong>	donnent vie à l’image.
 Ils captent l’attention, soulignent les émotions, rythment la mise en scène et rendent chaque
 projet plus immersif. <br><br>
@@ -134,7 +134,7 @@ interprétation et fidélité à l’œuvre</strong>, pour que la langue change,
 		},
 		{
 			id: '5',
-			label: 'Mixage & Post pro broadcast',
+			label: 'Mixage & Post prod broadcast',
 			subLabel: `Mix stéréo, multicanal 5.1 / 7.1, mix VR Binaural / Ambisonique, Normalisation broadcast PAD « Prêt A Diffuser »`,
 			desc: `Le mixage est l’étape finale où tous les éléments sonores prennent leur équilibre.
 C’est à la fois un travail <strong> technique de précision</strong>  et un <strong> acte artistique</strong>, visant à créer une
@@ -150,7 +150,7 @@ Mais au-delà des outils, c’est avant tout <strong> le jugement de l’oreille
 différence : hiérarchiser les plans sonores, donner de la clarté au message, préserver
 l’intention émotionnelle et assurer une diffusion fidèle à la vision du réalisateur ou du client. <br><br>
 Nous assurons également la <strong> conformation technique et la normalisation broadcast</strong>,
-garissant que les masters livrés respectent toutes les contraintes de diffusion et soient
+garantissant que les masters livrés respectent toutes les contraintes de diffusion et soient
 immédiatement exploitables, sans compromis sur la qualité.`,
 			link: '/fr/contact',
 			image: Mixage
@@ -164,12 +164,12 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 		{#each services as service, i}
 			<div class="service-card" id={service.id}>
 				<div class="wrapper__img-title {i % 2 !== 0 ? 'reverse' : ''}">
-					<img 
-						class="img" 
-						src={service.image} 
-						alt={service.alt} 
-						loading={i < 2 ? "eager" : "lazy"}
-						fetchpriority={i < 2 ? "high" : "low"}
+					<img
+						class="img"
+						src={service.image}
+						alt={service.alt}
+						loading={i < 2 ? 'eager' : 'lazy'}
+						fetchpriority={i < 2 ? 'high' : 'low'}
 						decoding="async"
 						width="800"
 						height="500"
@@ -185,7 +185,6 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 						<BtnBlack txt="Nous contacter" href={service.link} />
 					</div>
 				</div>
-			
 			</div>
 		{/each}
 	</div>
@@ -204,12 +203,11 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 	}
 	section h1 {
 		font-family: var(--font-heading);
-		font-size: var(--fs-h1);
+		font-size: 2.8rem;
 		margin-bottom: var(--space-xl);
 		margin-top: var(--space-xl);
 		font-weight: 800;
 		letter-spacing: -0.04em;
-		text-transform: uppercase;
 		position: relative;
 		width: fit-content;
 		padding-bottom: 1.5rem;
@@ -242,14 +240,14 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 		align-items: center;
 		justify-content: center;
 		border-radius: 18px;
-		box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 		height: 100%;
 		max-width: 1200px;
 		position: relative;
 		z-index: 0;
 		overflow: hidden;
 	}
-	
+
 	.wrapper__img-title {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -281,27 +279,29 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 		align-items: center;
 		justify-content: center;
 		z-index: 2;
-		gap: var(--space-sm);
+		gap: var(--space-md); /* Plus d'espace entre titre et sous-titre */
 		padding: var(--space-lg);
 		height: 400px;
 		background-color: #2c2c2c;
 	}
 	.wrapper__service-txt h3 {
 		margin: 0;
-		color: var(--white);
+		color: var(--white-pure);
 		font-size: 2.2rem;
 		font-family: var(--font-heading);
+		font-weight: var(--black); /* Graisse maximum */
 		line-height: 1.1;
 		text-align: center;
-		text-transform: uppercase;
 	}
 	.wrapper__service-txt h4 {
-		color: var(--grey-light);
-		font-size: 0.9rem;
+		color: white;
+		font-size: 1.1rem;
 		font-family: var(--font-main);
 		text-align: center;
 		line-height: 1.4;
-		font-weight: 500;
+		font-weight: var(--bold);
+		letter-spacing: 0.02em;
+		opacity: 0.9;
 	}
 	.wrapper__p-cta {
 		display: flex;

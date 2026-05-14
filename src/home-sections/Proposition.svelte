@@ -3,7 +3,7 @@
 	import Btn from '$lib/component/btn-black-shadow.svelte';
 
 	// On utilise des versions moins lourdes (HD au lieu de UHD quand c'est possible)
-	const v1 = "https://videos.pexels.com/video-files/7087632/7087632-hd_1920_1080_25fps.mp4";
+	const v1 = "https://videos.pexels.com/video-files/7087632/7087632-uhd_2732_1440_25fps.mp4";
 	const i1 = "https://images.pexels.com/videos/7087632/pictures/6.jpg";
 	
 	const v2 = "https://videos.pexels.com/video-files/19277040/19277040-hd_1920_1080_24fps.mp4"; 

@@ -1,46 +1,17 @@
 <script>
-	import { onMount } from 'svelte';
-	import Form from '$lib/component/Form.svelte';
-	
-	let mapContainer;
-	const center = { lat: 45.7380, lng: 4.8455 };
-	const zoom = 15;
-	let map;
-
-	onMount(() => {
-		window.initMap = () => {
-			map = new google.maps.Map(mapContainer, {
-				center,
-				zoom,
-				styles: [
-					{ "featureType": "all", "elementType": "labels.text.fill", "stylers": [{ "color": "#ffffff" }] },
-					{ "featureType": "all", "elementType": "labels.text.stroke", "stylers": [{ "color": "#000000" }, { "lightness": 13 }] }
-				]
-			});
-			new google.maps.Marker({ position: center, map });
-		};
-	});
 </script>
-
-<svelte:head>
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEwpAek6JuWKBWxCZRWHIpJpFtLmngzLE&callback=initMap"
-		async
-		defer
-	></script>
-</svelte:head>
 
 <main>
 	<section class="hero-contact">
-		<h1>Contact us</h1>
-		<p class="subtitle">Have an idea, a project, or a question?<br>Our team is here to help.</p>
+		<h1>CONTACT US</h1>
+		<p class="subtitle">Have an idea, a project, or a question?<br>Our team is here to <strong>help you.</strong></p>
 	</section>
 
 	<section class="content-contact">
 		<div class="container-grid">
 			<div class="info-side">
 				<div class="info-block">
-					<h3>Lyon Studio</h3>
+					<h3>Audio Pigment</h3>
 					<p>10 Rue Nicolaï<br>69007 Lyon, France</p>
 				</div>
 				<div class="info-block">
@@ -53,61 +24,83 @@
 				</div>
 			</div>
 			
-			<div class="form-side">
-				<Form />
+			<div class="map-side">
+				<div class="map-container">
+					<iframe 
+						src="https://maps.google.com/maps?q=10%20Rue%20Nicola%C3%AF%2C%2069007%20Lyon%2C%20France&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+						width="100%" 
+						height="100%" 
+						style="border:0;" 
+						allowfullscreen="" 
+						loading="lazy" 
+						referrerpolicy="no-referrer-when-downgrade"
+						title="Audio Pigment Map"
+					></iframe>
+				</div>
 			</div>
 		</div>
-	</section>
-
-	<section class="map-section">
-		<div bind:this={mapContainer} class="map-container"></div>
 	</section>
 </main>
 
 <style>
 	main {
 		background-color: var(--white-off);
-		padding-top: 100px;
+		padding-top: 100px; /* Space for header */
 	}
 
 	.hero-contact {
+		position: relative;
 		text-align: center;
-		padding: var(--space-xl) var(--space-md);
-		background-color: var(--white);
+		padding: 140px var(--space-md);
+		background: radial-gradient(circle at 15% 15%, rgba(220, 38, 38, 0.4) 0%, transparent 45%),
+		            linear-gradient(135deg, var(--ardoise) 0%, #0a0a0a 100%);
+		overflow: hidden;
+	}
+
+	.hero-contact::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+		background-size: 30px 30px;
+		opacity: 0.15;
+		pointer-events: none;
+		z-index: 1;
 	}
 
 	h1 {
 		font-family: var(--font-heading);
-		font-size: var(--fs-h1);
-		color: var(--ardoise);
+		font-size: 2.8rem;
+		color: var(--white);
 		font-weight: 800;
-		letter-spacing: -0.04em;
+		letter-spacing: -0.05em;
 		text-transform: uppercase;
 		position: relative;
 		width: fit-content;
 		margin: 0 auto 1.5rem;
-		padding-bottom: 1rem;
-	}
-
-	h1::after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 60px;
-		height: 4px;
-		background: var(--accent);
-		border-radius: 4px;
+		line-height: 0.9;
+		z-index: 2;
 	}
 
 	.subtitle {
 		font-family: var(--font-main);
-		font-size: 1.2rem;
-		color: var(--accent);
+		font-size: 1.3rem;
+		color: var(--white-off);
 		max-width: 600px;
 		margin: 0 auto;
-		font-weight: 600;
+		font-weight: var(--bold);
+		line-height: 1.6;
+		letter-spacing: 0.05em;
+		position: relative;
+		z-index: 2;
+	}
+
+	.subtitle strong {
+		color: var(--accent);
+		font-weight: 700;
 	}
 
 	.content-contact {
@@ -155,16 +148,18 @@
 		color: var(--ardoise);
 	}
 
-	.map-section {
-		padding: 0 var(--space-md) var(--space-xl);
+	.map-side {
+		width: 100%;
+		height: 450px;
 	}
 
 	.map-container {
 		width: 100%;
-		height: 500px;
+		height: 100%;
 		border-radius: var(--radius-lg);
 		box-shadow: var(--shadow-lg);
 		overflow: hidden;
+		border: 1px solid var(--grey-light);
 	}
 
 	@media (max-width: 968px) {
@@ -179,6 +174,10 @@
 
 		.hero-contact {
 			padding: var(--space-lg) var(--space-md);
+		}
+		
+		.map-side {
+			height: 350px;
 		}
 	}
 </style>

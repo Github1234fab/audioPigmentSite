@@ -1,38 +1,9 @@
 <script>
-	import { onMount } from 'svelte';
-	import Form from '$lib/component/Form.svelte';
-	
-	let mapContainer;
-	const center = { lat: 45.7380, lng: 4.8455 };
-	const zoom = 15;
-	let map;
-
-	onMount(() => {
-		window.initMap = () => {
-			map = new google.maps.Map(mapContainer, {
-				center,
-				zoom,
-				styles: [
-					{ "featureType": "all", "elementType": "labels.text.fill", "stylers": [{ "color": "#ffffff" }] },
-					{ "featureType": "all", "elementType": "labels.text.stroke", "stylers": [{ "color": "#000000" }, { "lightness": 13 }] }
-				]
-			});
-			new google.maps.Marker({ position: center, map });
-		};
-	});
 </script>
-
-<svelte:head>
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEwpAek6JuWKBWxCZRWHIpJpFtLmngzLE&callback=initMap"
-		async
-		defer
-	></script>
-</svelte:head>
 
 <main>
 	<section class="hero-contact">
-		<h1>Contactez-nous</h1>
+		<h1>CONTACTEZ-NOUS</h1>
 		<p class="subtitle">Une idée, un projet, une question ?<br>Notre équipe est à <strong>votre écoute.</strong></p>
 	</section>
 
@@ -40,7 +11,7 @@
 		<div class="container-grid">
 			<div class="info-side">
 				<div class="info-block">
-					<h3>Studio Lyon</h3>
+					<h3>Audio Pigment</h3>
 					<p>10 Rue Nicolaï<br>69007 Lyon, France</p>
 				</div>
 				<div class="info-block">
@@ -53,14 +24,21 @@
 				</div>
 			</div>
 			
-			<div class="form-side">
-				<Form />
+			<div class="map-side">
+				<div class="map-container">
+					<iframe 
+						src="https://maps.google.com/maps?q=10%20Rue%20Nicola%C3%AF%2C%2069007%20Lyon%2C%20France&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+						width="100%" 
+						height="100%" 
+						style="border:0;" 
+						allowfullscreen="" 
+						loading="lazy" 
+						referrerpolicy="no-referrer-when-downgrade"
+						title="Carte Audio Pigment"
+					></iframe>
+				</div>
 			</div>
 		</div>
-	</section>
-
-	<section class="map-section">
-		<div bind:this={mapContainer} class="map-container"></div>
 	</section>
 </main>
 
@@ -74,13 +52,11 @@
 		position: relative;
 		text-align: center;
 		padding: 140px var(--space-md);
-		/* Dégradé multicouche : Lumière rouge + Dégradé sombre */
 		background: radial-gradient(circle at 15% 15%, rgba(220, 38, 38, 0.4) 0%, transparent 45%),
 		            linear-gradient(135deg, var(--ardoise) 0%, #0a0a0a 100%);
 		overflow: hidden;
 	}
 
-	/* Texture studio */
 	.hero-contact::before {
 		content: '';
 		position: absolute;
@@ -97,7 +73,7 @@
 
 	h1 {
 		font-family: var(--font-heading);
-		font-size: clamp(3rem, 10vw, 5rem);
+		font-size: 2.8rem;
 		color: var(--white);
 		font-weight: 800;
 		letter-spacing: -0.05em;
@@ -115,7 +91,7 @@
 		color: var(--white-off);
 		max-width: 600px;
 		margin: 0 auto;
-		font-weight: 300;
+		font-weight: var(--bold);
 		line-height: 1.6;
 		letter-spacing: 0.05em;
 		position: relative;
@@ -172,16 +148,18 @@
 		color: var(--ardoise);
 	}
 
-	.map-section {
-		padding: 0 var(--space-md) var(--space-xl);
+	.map-side {
+		width: 100%;
+		height: 450px;
 	}
 
 	.map-container {
 		width: 100%;
-		height: 500px;
+		height: 100%;
 		border-radius: var(--radius-lg);
 		box-shadow: var(--shadow-lg);
 		overflow: hidden;
+		border: 1px solid var(--grey-light);
 	}
 
 	@media (max-width: 968px) {
@@ -196,6 +174,10 @@
 
 		.hero-contact {
 			padding: var(--space-lg) var(--space-md);
+		}
+		
+		.map-side {
+			height: 350px;
 		}
 	}
 </style>

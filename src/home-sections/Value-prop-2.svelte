@@ -80,7 +80,15 @@
 		flex-direction: column;
 		align-items: center;
 		gap: var(--space-lg);
-		max-width: 900px;
+		max-width: 1000px;
+		padding: 4rem; /* Espace interne pour l'effet de cadre */
+		background: rgba(0, 0, 0, 0.3); /* Verre sombre translucide */
+		backdrop-filter: blur(20px); /* Flou puissant pour l'effet poli */
+		-webkit-backdrop-filter: blur(20px);
+		border: 1px solid rgba(255, 255, 255, 0.1); /* Bordure fine de "tranche" */
+		border-radius: var(--radius-lg);
+		box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+		text-align: center;
 	}
 
 	.wrapper__section-txt h2 {
@@ -144,6 +152,10 @@
 	@media screen and (max-width: 768px) {
 		section {
 			padding: var(--space-lg) var(--space-sm);
+		}
+
+		.wrapper__section-txt {
+			padding: 2rem 1.5rem;
 		}
 
 		.wrapper__section-txt h2 {

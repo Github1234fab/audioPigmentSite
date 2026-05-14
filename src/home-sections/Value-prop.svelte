@@ -66,7 +66,7 @@
 				Ferrero, bioMérieux, Caisse d’Epargne, Puy du Fou, Point S, Orange, EDF, Région
 				Auvergne-Rhône-Alpes et beaucoup d’autres…
 
-				<br /><br />Et nous sommes fiers de la confiance qu’ils continuent de nous accorder
+				<br /><br />Et nous sommes fiers de la <strong>confiance</strong> qu’ils continuent de nous accorder
 				aujourd’hui…
 			</p>
 			
@@ -122,20 +122,20 @@
 	}
 
 	.wrapper__section-txt h2 {
-		font-family: var(--font-main);
+		font-family: var(--raleway);
 		font-size: var(--fs-h3);
-		color: var(--white);
-		font-weight: 400;
+		color: white; /* Plus punchy */
+		font-weight: var(--medium);
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
 		margin: 0;
 	}
 
 	.wrapper__section-txt h3 {
-		font-family: var(--font-heading);
+		font-family: var(--bebas);
 		font-size: var(--fs-h2);
-		color: var(--white);
-		font-weight: 400; /* Plus fin */
+		color: white;
+		font-weight: var(--medium);
 		letter-spacing: 0.02em;
 		margin: 0;
 		text-wrap: balance;
@@ -181,9 +181,9 @@
 	}
 
 	h4 {
-		font-family: var(--font-main);
+		font-family: var(--raleway);
 		font-size: 0.95rem;
-		font-weight: 700; /* Plus épais pour la lisibilité */
+		font-weight: var(--bold);
 		color: var(--white);
 		margin: 0;
 		white-space: nowrap;
@@ -200,7 +200,7 @@
 	}
 
 	p {
-		font-family: var(--font-main);
+		font-family: var(--raleway);
 		font-size: var(--fs-body);
 		line-height: 1.6;
 		color: var(--white-off);
@@ -209,7 +209,7 @@
 
 	strong {
 		color: var(--white);
-		font-weight: 700;
+		font-weight: var(--extra-bold);
 	}
 
 	.wrapper-button {
@@ -227,16 +227,16 @@
 	}
 
 	.wrapper__slider-logos h4 {
-		font-family: var(--font-heading);
+		font-family: var(--bebas);
 		font-size: var(--fs-h3);
-		font-weight: 500;
+		font-weight: var(--medium);
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
-		margin-bottom: var(--space-sm);
+		margin-bottom: var(--sm);
 		text-align: center;
 		color: var(--white);
 		white-space: normal;
-		padding: 0 var(--space-sm);
+		padding: 0 var(--sm);
 	}
 
 	@media (max-width: 768px) {

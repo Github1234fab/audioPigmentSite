@@ -1,48 +1,64 @@
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-
-
-
 :root {
-	/* --- Couleurs Premium --- */
+	/* --- Tes Couleurs --- */
 	--ardoise: #1f1c1c;
 	--ardoise-light: #2d2a2a;
-	--grey-dark: #7a7a7a;
 	--grey: #d9d9d9;
-	--grey-light: #f5f5f5;
-	--white: #ffffff;
-	--white-off: #ececec;
+	--btn-sdw: rgba(0, 0, 0, 0.315);
+	--red: #e74c3c;
+	--white: #ececec;
+	--white-pure: #ffffff;
 	
-	--accent: #e74c3c; /* Ton rouge actuel */
+	/* --- Synchronisation des Couleurs Sémantiques --- */
+	--accent: var(--red);
 	--accent-hover: #c0392b;
+	--white-off: var(--white);
+
+	/* --- Tes Polices --- */
+	--bebas: 'Vend Sans', sans-serif;
+	--raleway: 'Quicksand', sans-serif;
+	--raleway-dot: 'Raleway Dots', sans-serif;
+	--Quicksand: 'Quicksand', sans-serif;
+
+	/* --- Synchronisation des Polices Sémantiques --- */
+	--font-main: var(--Quicksand);
+	--font-heading: var(--bebas);
+
+	/* --- Tes Espacements --- */
+	--xl: 6rem;
+	--lg: 3rem;
+	--md: 1.5rem;
+	--sm: 1rem;
+
+	/* --- Synchronisation des Espacements Sémantiques --- */
+	--space-xs: 0.5rem;
+	--space-sm: var(--sm);
+	--space-md: var(--md);
+	--space-lg: var(--lg);
+	--space-xl: var(--xl);
+
+	/* --- Tes Graisses (Weights) --- */
+	--thin: 50;
+	--light: 100;
+	--regular: 400;
+	--medium: 500;
+	--bold: 600;
+	--extra-bold: 800;
+	--black: 900;
 
 	/* --- Glassmorphism & Shadows --- */
 	--glass-bg: rgba(255, 255, 255, 0.05);
 	--glass-border: rgba(255, 255, 255, 0.1);
 	--shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
-	--shadow-md: 0 4px 12px rgba(0,0,0,0.15);
-	--shadow-lg: 0 10px 30px rgba(0,0,0,0.2);
+	--shadow-md: 0 4px 12px var(--btn-sdw);
+	--shadow-lg: 0 12px 35px rgba(0,0,0,0.3);
+	--shadow-relief: 2px 2px 4px rgba(0, 0, 0, 0.3);
 
-	/* --- Typography --- */
-	--font-main: 'Quicksand', sans-serif;
-	--font-heading: 'Inter', sans-serif; /* Plus compacte et premium */
-	
-	/* Font Sizes (Responsive via clamp) */
+	/* --- Font Sizes (Responsive via clamp) --- */
 	--fs-h1: clamp(2.5rem, 8vw, 5rem);
 	--fs-h2: clamp(1.5rem, 4vw, 2.5rem);
 	--fs-h3: clamp(1.25rem, 3vw, 1.75rem);
 	--fs-body: clamp(1rem, 1vw + 0.5rem, 1.125rem);
 	--fs-small: 0.875rem;
-
-	/* --- Spacing System (Proportionnel) --- */
-	--space-xs: 0.5rem;
-	--space-sm: 1rem;
-	--space-md: 2rem;
-	--space-lg: 4rem;
-	--space-xl: 8rem;
 	
 	/* --- Utils --- */
 	--radius-sm: 4px;
@@ -52,19 +68,17 @@
 }
 
 /* --- Base Reset & Defaults --- */
-html,
-body {
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html, body {
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
 	width: 100%;
-}
-
-* {
-	box-sizing: border-box;
-}
-
-html {
 	scroll-behavior: smooth;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -72,10 +86,9 @@ html {
 
 body {
 	font-family: var(--font-main);
-	background-color: var(--white);
+	background-color: var(--white-pure);
 	color: var(--ardoise);
 	line-height: 1.6;
-	overflow-x: hidden;
 }
 
 h1, h2, h3, h4, .font-heading {
@@ -89,7 +102,6 @@ h2 {
 	margin-bottom: var(--space-lg);
 	padding-bottom: 1rem;
 	letter-spacing: -0.02em;
-	text-transform: uppercase;
 }
 
 h2::after {
@@ -104,7 +116,6 @@ h2::after {
 	border-radius: 4px;
 }
 
-/* On s'assure que le h2 est bien considéré comme un bloc centré si besoin */
 .text-center h2, section h2 {
 	display: block;
 	width: fit-content;

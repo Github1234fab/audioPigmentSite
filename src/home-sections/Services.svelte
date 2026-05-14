@@ -162,16 +162,21 @@
 	}
 
 	h3 {
-		font-size: var(--fs-h3);
+		font-family: var(--bebas);
+		font-size: 2.2rem;
+		font-weight: var(--black);
 		color: var(--white);
 		margin: 0;
+		line-height: 1.1;
 	}
 
 	p {
-		font-size: var(--fs-body);
+		font-family: var(--raleway);
+		font-size: 1.15rem;
 		line-height: 1.6;
-		color: var(--grey);
-		max-width: 90%;
+		color: var(--white);
+		font-weight: var(--bold);
+		max-width: 95%;
 		margin: 0;
 	}
 

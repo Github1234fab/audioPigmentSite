@@ -59,6 +59,7 @@ afterNavigate(() => {
 	import '$lib/i18n';
 	import { locale } from 'svelte-i18n';
 	import Footer from '../home-sections/Footer.svelte';
+	import CookieBanner from '$lib/component/CookieBanner.svelte';
 
 	import { afterNavigate } from '$app/navigation';
 	import { browser } from '$app/environment';
@@ -82,3 +83,4 @@ afterNavigate(() => {
 <Navbar />
 <slot />
 <Footer />
+<CookieBanner />

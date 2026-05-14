@@ -188,11 +188,10 @@
 
 	main h1 {
 		font-family: var(--font-heading);
-		font-size: var(--fs-h1);
+		font-size: 2.8rem;
 		color: var(--ardoise);
 		font-weight: 800;
 		letter-spacing: -0.04em;
-		text-transform: uppercase;
 		position: relative;
 		width: fit-content;
 		margin: var(--space-xl) auto;
@@ -259,12 +258,11 @@
 	}
 
 	.container h2 {
-		font-family: var(--font-heading);
-		font-size: var(--fs-h2);
+		font-family: var(--bebas);
+		font-size: 1.8rem;
 		color: var(--white);
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
+		font-weight: 800;
+		letter-spacing: -0.02em;
 		z-index: 4;
 		margin-bottom: var(--space-md);
 	}
@@ -326,6 +324,7 @@
 	.advantage p {
 		font-family: var(--font-main);
 		font-size: 0.95rem;
+		font-weight: var(--bold);
 		line-height: 1.5;
 		color: rgba(255, 255, 255, 0.9);
 	}

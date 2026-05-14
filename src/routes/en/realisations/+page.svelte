@@ -100,6 +100,8 @@
 				title={realisation.title}
 				image={realisation.image}
 			/>
+		{:else}
+			<p class="empty-state">No achievements in this category for now.</p>
 		{/each}
 	</div>
 </section>
@@ -118,12 +120,11 @@
 
 	section h1 {
 		font-family: var(--font-heading);
-		font-size: var(--fs-h1);
+		font-size: 2.8rem;
 		margin-bottom: var(--space-xl);
 		margin-top: var(--space-xl);
 		font-weight: 800;
 		letter-spacing: -0.04em;
-		text-transform: uppercase;
 		position: relative;
 		width: fit-content;
 		padding-bottom: 1.5rem;
@@ -183,6 +184,18 @@
 		width: 100%;
 		max-width: 1200px;
 		margin-top: 50px;
+	}
+
+	.empty-state {
+		grid-column: 1 / -1;
+		text-align: center;
+		padding: 3rem;
+		font-family: var(--font-main);
+		font-size: 1.2rem;
+		color: var(--ardoise-light);
+		background: var(--white-off);
+		border-radius: var(--radius-md);
+		border: 1px dashed var(--grey-light);
 	}
 
 	@media (max-width: 768px) {

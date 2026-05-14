@@ -25,7 +25,7 @@
 		position: relative;
 		overflow: hidden;
 		transition: var(--transition);
-		box-shadow: var(--shadow-md);
+		box-shadow: var(--shadow-lg);
 		border-radius: var(--radius-sm);
 		text-decoration: none;
 	}

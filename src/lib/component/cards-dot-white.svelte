@@ -10,9 +10,15 @@
 	export let imgSrc; 
 
 	let isDesktop = false;
+	let videoRef;
 
 	onMount(() => {
 		isDesktop = window.innerWidth > 1023;
+		if (videoRef) {
+			videoRef.play().catch(error => {
+				console.log("Autoplay prevented, waiting for interaction", error);
+			});
+		}
 	});
 </script>
 
@@ -25,8 +31,8 @@
 
 	{#if videoSrc}
 		<video
+			bind:this={videoRef}
 			class="video-background"
-			src={videoSrc}
 			autoplay
 			muted
 			loop
@@ -34,8 +40,8 @@
 			preload="auto"
 			poster={imgSrc}
 		>
+			<source src={videoSrc} type="video/mp4" />
 			<track kind="captions" />
-			Votre navigateur ne supporte pas la vidéo HTML5.
 		</video>
 	{:else}
 		<img src={imgSrc} alt={title} class="video-background" loading="lazy" />
@@ -73,29 +79,39 @@
 		justify-content: center;
 		text-align: center;
 		gap: 15px;
-		z-index: 10; /* Toujours au-dessus de tout */
-		width: 100%;
-		padding: 20px;
+		z-index: 10;
+		width: 90%; /* Un peu de marge sur les côtés */
+		max-width: 500px;
+		padding: 35px 25px;
+		background: rgba(0, 0, 0, 0.25); /* Verre sombre */
+		backdrop-filter: blur(15px); /* Effet poli */
+		-webkit-backdrop-filter: blur(15px);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: var(--radius-md);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 	}
 
 	.title {
-		font-family: var(--font-heading);
-		font-size: 2.6rem;
-		font-weight: 300;
+		font-family: var(--bebas);
+		font-size: 2.8rem;
+		font-weight: var(--black);
+		margin-bottom: 20px;
 		color: white;
-		border: 1px solid rgba(255, 255, 255, 0.4);
-		padding: 25px 20px;
-		border-radius: 2px;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
+		width: fit-content; /* Épouse la longueur du texte */
+		margin: 0 auto 15px; /* Centrage et espace sous le titre */
+		text-align: center;
+		border: 2.5px solid rgba(255, 255, 255, 0.425);
+		padding: 15px 30px; /* Moins de padding vertical pour un look plus serré */
+		border-radius: 5px;
 	}
 
 	.subtitle {
-		font-family: var(--font-main);
+		font-family: var(--raleway);
 		font-size: 1.3rem;
-		font-weight: 700;
+		font-weight: var(--extra-bold);
 		white-space: pre-line;
-		color: white;
+		text-align: center;
+		color: rgb(255, 255, 255);
 	}
 
 	@media screen and (max-width: 768px) {
@@ -103,15 +119,20 @@
 			height: 600px;
 		}
 		.title {
+			font-family: var(--bebas);
 			font-size: 1.8rem;
-			padding: 15px 10px;
+			font-weight: var(--black);
+			padding: 10px 20px;
+			width: fit-content;
+			margin: 0 auto 10px;
 		}
 		.subtitle {
 			font-size: 1.1rem;
 			font-weight: 500;
 		}
 		.wrapper__txt {
-			gap: 40px;
+			gap: 30px;
+			padding: 20px 15px;
 		}
 	}
 </style>
