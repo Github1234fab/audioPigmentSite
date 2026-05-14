@@ -53,8 +53,8 @@
 		align-items: center;
 		justify-content: center;
 		background-color: var(--ardoise); 
-		min-height: 100vh;
-		min-height: 100svh;
+		min-height: 85vh;
+		max-height: 900px;
 		position: relative;
 		overflow: hidden;
 		padding: 0;
@@ -70,9 +70,10 @@
 
 	.hero-video {
 		position: absolute;
-		inset: 0;
+		top: 0;
+		left: 0;
 		width: 100%;
-		height: 100%;
+		height: calc(100% + 2px); /* On dépasse légèrement pour éviter la ligne noire */
 		object-fit: cover;
 		z-index: 0;
 	}
@@ -134,6 +135,8 @@ h1 {
 
 	@media screen and (max-width: 768px) {
 		section {
+			min-height: 100svh;
+			max-height: none;
 			padding: var(--space-xl) 0;
 		}
 
