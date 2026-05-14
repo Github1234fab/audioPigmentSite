@@ -38,8 +38,8 @@
 		<h2>Together, let’s shape emotion and make it memorable !</h2>
 
 		<p>
-			At <strong>AUDIO PIGMENT</strong>, every project is listened to, crafted, and refined with <strong>care, expertise and
-			creativity.</strong> <strong>By your side.</strong>
+			At AUDIO PIGMENT, every project is listened to, thought through and crafted with <strong>care, expertise and
+			inventiveness.</strong> By <strong>your side.</strong>
 		</p>
 		
 		<p>
@@ -53,8 +53,8 @@
 		</p>
 
 		<div class="wrapper__buttons">
-			<BtnBlack txt="Get in touch" href="/fr/contact" />
-			<BtnWhite txt="Discover more" href="/fr/services" />
+			<BtnBlack txt="Get in touch" href="/en/contact" />
+			<BtnWhite txt="Discover our services" href="/en/services" />
 		</div>
 	</div>
 </section>
@@ -80,7 +80,15 @@
 		flex-direction: column;
 		align-items: center;
 		gap: var(--space-lg);
-		max-width: 900px;
+		max-width: 1000px;
+		padding: 4rem;
+		background: rgba(0, 0, 0, 0.3);
+		backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(20px);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: var(--radius-lg);
+		box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+		text-align: center;
 	}
 
 	.wrapper__section-txt h2 {
@@ -143,6 +151,10 @@
 	@media screen and (max-width: 768px) {
 		section {
 			padding: var(--space-lg) var(--space-sm);
+		}
+
+		.wrapper__section-txt {
+			padding: 2rem 1.5rem;
 		}
 
 		.wrapper__section-txt h2 {

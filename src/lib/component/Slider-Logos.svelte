@@ -67,7 +67,8 @@
 	display: flex;
 	overflow: hidden;
 	user-select: none;
-	gap: 20px;
+	gap: 0;
+	touch-action: pan-y; /* Permet le scroll vertical fluide sans conflit */
 }
 
 .marquee__group {
@@ -77,8 +78,11 @@
 	justify-content: space-around;
 	gap: 20px;
 	min-width: 100%;
-	animation: scroll-x 50s linear infinite; /* Un peu plus lent pour la fluidité */
+	padding-right: 20px;
+	animation: scroll-x 50s linear infinite;
 	will-change: transform;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
 }
 
 .marquee__item {

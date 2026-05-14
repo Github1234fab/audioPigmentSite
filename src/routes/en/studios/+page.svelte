@@ -45,7 +45,7 @@
 		<h1>Our Studios</h1>
 		<div class="container__info-desc">
 			<div class="wrapper__info-studio">
-				<strong>3 state-of-the-art studios, equipped with:</strong>
+				<strong>3 sound studios equipped with:</strong>
 
 				<ul>
 					<li>Pro Tools Ultimate + HDX</li>
@@ -72,6 +72,7 @@
 				<button class="nav prev" on:click={prev} aria-label="Previous slide">‹</button>
 				<button class="nav next" on:click={next} aria-label="Next slide">›</button>
 
+				<!-- dots (optional) -->
 				<div class="dots" role="tablist" aria-label="Slide navigation">
 					{#each slides as _, i}
 						<button
@@ -92,10 +93,9 @@
 </section>
 
 <section class="nous-ecouter">
-	<h2>CRAFTED SOUND. MADE TO MOVE.</h2>
+	<h2>Together, let’s shape emotion and make it memorable !</h2>
 	<p>
-		Based in France, Audio Pigment provides high-end voice-over, dubbing, sound design, and audio
-		post-production services — where technical precision meets artistic creativity.
+		Audio Pigment is a communication agency specialized in high-end sound design and production for the communication, culture, and media sectors.
 	</p>
 	<div class="wrapper__btn">
 		<Btn txt="Hear our work" href="/en/realisations" />
@@ -118,7 +118,6 @@
 		background-position: center;
 		background-repeat: no-repeat;
 	}
-
 	.container__info-desc {
 		display: grid;
 		grid-template-columns: minmax(350px, 1fr) 2fr;
@@ -164,7 +163,6 @@
 		object-fit: cover;
 		margin-top: 20px;
 	}
-
 	.wrapper__studios {
 		display: flex;
 		align-items: center;
@@ -175,7 +173,6 @@
 		z-index: 4;
 		width: 100%;
 	}
-
 	.wrapper__info-studio {
 		display: flex;
 		flex-direction: column;
@@ -191,17 +188,14 @@
 		box-shadow: var(--shadow-lg);
 		border: 1px solid rgba(255, 255, 255, 0.1);
 	}
-
 	.wrapper__info-studio ul {
 		margin-top: 10px;
 		color: white;
 	}
-
 	.wrapper__info-studio li {
 		margin-top: 10px;
 		font-weight: 600;
 	}
-
 	.wrapper__info-studio strong {
 		font-size: 1.2rem;
 		margin-bottom: 10px;
@@ -226,7 +220,6 @@
 		z-index: -2;
 		position: relative;
 	}
-
 	.nous-ecouter::after {
 		position: absolute;
 		content: '';
@@ -236,10 +229,12 @@
 		height: 100%;
 		background: rgba(18, 18, 19, 0.699);
 		z-index: -1;
+		border-radius: 10px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 		backdrop-filter: blur(5px);
 		-webkit-backdrop-filter: blur(5px);
+		-webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 	}
-
 	.nous-ecouter h2 {
 		font-family: var(--font-heading);
 		font-size: 3rem;
@@ -248,7 +243,6 @@
 		z-index: 3;
 		text-transform: uppercase;
 	}
-
 	.nous-ecouter p {
 		font-family: var(--font-main);
 		font-size: var(--fs-body);
@@ -258,7 +252,6 @@
 		line-height: 1.6;
 		z-index: 3;
 	}
-
 	.wrapper__btn {
 		display: flex;
 		justify-content: center;
@@ -267,6 +260,7 @@
 	}
 
 	/*******SLIDER**************/
+
 	.slider {
 		position: relative;
 		width: 100%;
@@ -309,12 +303,13 @@
 		display: block;
 	}
 
+	/* buttons */
 	.nav {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		width: 42px;
-		height: 42px;
+		inline-size: 42px;
+		block-size: 42px;
 		border-radius: 50%;
 		border: 0;
 		background: rgb(247, 245, 245);
@@ -324,22 +319,24 @@
 		text-align: center;
 		cursor: pointer;
 	}
-
 	.nav:hover {
 		background: rgba(0, 0, 0, 0.65);
 		color: var(--red);
 	}
+	.nav.prev {
+		left: 28px;
+	}
+	.nav.next {
+		right: 28px;
+	}
 
-	.nav.prev { left: 28px; }
-	.nav.next { right: 28px; }
-
+	/* dots */
 	.dots {
 		display: flex;
 		gap: 6px;
 		justify-content: center;
 		margin-top: 10px;
 	}
-
 	.dot {
 		width: 8px;
 		height: 8px;
@@ -348,17 +345,32 @@
 		background: #c9c9c9;
 		cursor: pointer;
 	}
+	.dot.active {
+		background: #333;
+	}
 
-	.dot.active { background: #333; }
+	/* accessibility */
+	.slider :focus-visible {
+		outline: 2px solid #0070f3;
+		outline-offset: 2px;
+	}
 
 	@media (max-width: 768px) {
+		.wrapper__studios {
+			flex-direction: column;
+			gap: 20px;
+			padding: 0px;
+		}
 		.container__info-desc {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
+			gap: 20px;
+			z-index: 4;
 			padding: 20px 10px;
 			width: 100%;
+			max-width: 100%;
 		}
 		.wrapper__info-studio {
 			width: 92%;
@@ -371,16 +383,20 @@
 			text-align: left;
 		}
 		.slider {
+			position: relative;
 			width: 92%;
 			max-width: 500px;
 			margin: 20px auto 0;
+			user-select: none;
+			-webkit-tap-highlight-color: transparent;
 		}
 		.wrapper__studios h1 {
 			font-family: var(--font-heading);
 			font-size: 2.4rem;
+			color: var(--ardoise);
 			font-weight: 800;
-			line-height: 1.2;
 			letter-spacing: -1px;
+			line-height: 1.2;
 			padding-bottom: 1.5rem;
 			margin-top: 40px;
 			margin-bottom: 2.5rem;

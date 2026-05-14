@@ -46,13 +46,20 @@
 			p: 'Access to our trusted <strong>artistic, technical, and translation</strong> network'
 		}
 	];
+	import { onMount } from 'svelte';
+	let isDesktop = false;
+	onMount(() => {
+		isDesktop = window.innerWidth > 1023;
+	});
 </script>
 
 <section>
-	<video autoplay muted loop playsinline class="background-video">
-		<source src="https://www.pexels.com/fr-fr/download/video/27660115/" type="video/mp4" />
-	</video>
-	<h2>Our Strenghts</h2>
+	{#if isDesktop}
+		<video autoplay muted loop playsinline preload="none" class="background-video">
+			<source src="https://www.pexels.com/fr-fr/download/video/27660115/" type="video/mp4" />
+		</video>
+	{/if}
+	<h2>Our Strengths</h2>
 	<p class="section-intro">What makes us different</p>
 	<div class="features-grid">
 		{#each features as feature}
@@ -85,7 +92,13 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		z-index: -1;
+		z-index: 0;
+	}
+
+	section {
+		background-image: url(/assets/Mixage2.webp);
+		background-size: cover;
+		background-position: center;
 	}
 
 	section::after {
@@ -185,6 +198,7 @@
 
 	@media (max-width: 768px) {
 		section {
+			background-color: var(--ardoise);
 			padding: var(--space-lg) var(--space-sm);
 		}
 

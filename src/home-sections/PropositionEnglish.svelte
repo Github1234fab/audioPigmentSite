@@ -1,7 +1,15 @@
 <script>
 	import CardDotWhite from '$lib/component/cards-dot-white.svelte';
-	import TitleDot from '$lib/component/Title-dot.svelte';
-	import Btn from '$lib/component/btn-black-shadow.svelte';
+
+	// On utilise des versions moins lourdes (HD au lieu de UHD quand c'est possible)
+	const v1 = "https://videos.pexels.com/video-files/7087632/7087632-uhd_2732_1440_25fps.mp4";
+	const i1 = "https://images.pexels.com/videos/7087632/pictures/6.jpg";
+	
+	const v2 = "https://videos.pexels.com/video-files/19277040/19277040-hd_1920_1080_24fps.mp4"; 
+	const i2 = "https://images.pexels.com/videos/19277040/pictures/6.jpg";
+
+	const v3 = "https://videos.pexels.com/video-files/7586638/7586638-hd_1920_1080_24fps.mp4";
+	const i3 = "https://images.pexels.com/videos/7586638/pictures/6.jpg";
 </script>
 
 <section>
@@ -9,38 +17,40 @@
 		<CardDotWhite
 			title="Audio Post-production"
 			subtitle={`Sound Design
-Mixing (broadcast, 5.1)
-Localization`}
+	Mixing (broadcast, 5.1)
+	Mastering`}
 			txt="Experience"
 			href="/en/expertise/#post-production-audio"
-			videoSrc="https://videos.pexels.com/video-files/7087632/7087632-uhd_2732_1440_25fps.mp4"
-			imgSrc="../assets/heroBanner-A.jpeg"
+			videoSrc={v1}
+			imgSrc={i1}
 		/>
 
 		<CardDotWhite
-			title="Sound Creation"
+			title="Original Creation"
 			subtitle={`Sonic Branding
-Original Music
-Soundscaping & Design`}
+		Audio Identity
+		Musical Composition`}
 			txt="Explore"
 			href="/en/expertise/#creation-originale"
-			videoSrc="https://www.pexels.com/fr-fr/download/video/19277040-uhd_3840_2160_24fps.mp4"
+			videoSrc={v2}
+			imgSrc={i2}
 		/>
 		<CardDotWhite
 			title="Voices"
 			subtitle={`Voice over
-Dubbing & ADR
-Voice Acting`}
+	Dubbing / ADR
+	Localization`}
 			txt="Listen"
 			href="/en/expertise/#Voix"
-			videoSrc="https://www.pexels.com/fr-fr/download/video/7586638-hd_1920_1080_24fps.mp4"
+			videoSrc={v3}
+			imgSrc={i3}
 		/>
 	</div>
 </section>
 
 <style>
 	section {
-		padding: var(--space-md) 0; /* Marges réduites pour un enchaînement plus compact */
+		padding: var(--space-md) 0;
 		background-color: var(--white-off);
 	}
 

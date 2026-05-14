@@ -162,6 +162,7 @@
       margin-top: 40px;
     }
     .cards-grid {
+  grid-template-columns: 1fr;
   gap: 1rem;
   margin-top: 0px;
 }

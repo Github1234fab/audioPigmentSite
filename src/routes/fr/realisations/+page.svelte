@@ -260,6 +260,8 @@
           image={realisation.image}
           link={realisation.link}
         />
+      {:else}
+        <p class="empty-state">Aucune réalisation dans cette catégorie pour le moment.</p>
       {/each}
     </div>
   </section>
@@ -337,6 +339,17 @@
 		max-width: 1400px;
 		margin-top: 50px;
 		justify-content: center;
+	}
+    .empty-state {
+		grid-column: 1 / -1;
+		text-align: center;
+		padding: 3rem;
+		font-family: var(--font-main);
+		font-size: 1.2rem;
+		color: var(--ardoise-light);
+		background: var(--white-off);
+		border-radius: var(--radius-md);
+		border: 1px dashed var(--grey-light);
 	}
 
 @media (max-width: 768px) {

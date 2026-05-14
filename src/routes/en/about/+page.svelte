@@ -4,39 +4,67 @@
 </script>
 
 <section>
-	<h1>Audio Pigment</h1>
-	<h2>Creative Sound Studio since 1999</h2>
+	<!-- Optimized background image in HTML for high priority -->
+	<img 
+		src="/bg-apropos.webp" 
+		alt="" 
+		class="bg-img" 
+		fetchpriority="high" 
+		decoding="async"
+	/>
 
-	<p>
-		Founded in 1999, Audio Pigment is a <strong>voice recording studio</strong> and
-		<strong>sound communication agency</strong>, recognized for its work creating and producing
-		sound for communication, audiovisual, and media projects. We combine
-		<strong>technical precision, creative sensibility</strong>, and <strong>attention to detail</strong> to deliver <strong>premium, tailor-made</strong> productions. 
-        <br/><br/>
-        Specializing in <strong>voice-over, dubbing, lip sync, sound design, original music, post-production, and mixing</strong>, we support our clients in producing radio spots, TV commercials, corporate and animated films, sonic branding, motion design, podcasts, e-learning content, museum installations, immersive projects, and more.
-	</p>
+	<div class="content-wrapper">
+		<h1>Audio Pigment <br /> – <br /></h1>
+		<h2>Creative Sound Studio since 1999</h2>
 
-	<h2>Shaping Emotions… Creating Meaningful Impact…</h2>
+		<p>
+			Founded in 1999, Audio Pigment is a communication agency specialized in <span>sound design and production</span>
+			for the communication, audiovisual, and media sectors. <br /><br />
 
-	<p>
-		At <strong>Audio Pigment</strong>, authenticity and emotion remain at the heart of every project. With
-		backgrounds in music and marketing, we bring together <strong>creative vision and strategic thinking</strong>,
-		serving <strong>communication goals, impact, and clarity</strong>. In an ever-evolving technological landscape,
-		our tools keep advancing — yet our true value <strong>remains deeply human</strong>. 
-        <br/><br/>
-		From <strong>voice production and mixing</strong> to <strong>strategic audio design and musical composition</strong>, every project is crafted as <strong>a unique piece</strong>, where creativity serves impact, image, storytelling, and identity.
-	</p>
+			We combine <span>technical precision, attention to detail</span> and
+			<span>artistic approach</span>
+			to offer high-end productions, <span>tailor-made.</span> <br /><br />
 
-	<div class="wrapper__fondators">
-		<h4>THE FOUNDERS:</h4>
-		<div class="wrapper__fondators-img">
-			<div class="wrapper__fondators-img-container">
-				<img src={Lolo} alt="Laurent Guillot - Founder of Audio Pigment" />
-				<p>Laurent Guillot</p>
-			</div>
-			<div class="wrapper__fondators-img-container">
-				<img src={Rom} alt="Romain Noiret - Founder of Audio Pigment" />
-				<p>Romain Noiret</p>
+			Specialists in voice-over, dubbing, sound design, musical creation, post-production, and mixing, we support our clients in producing radio spots and TV commercials, corporate films, animated films, sound identity creation, motion design, podcasts, e-learnings, museum installations, and immersive projects, etc...
+		</p>
+
+		<h2>Shaping Emotions… Creating Meaningful Impact…</h2>
+
+		<p>
+			Shaping Emotions… Creating Meaningful Impact… At Audio Pigment, <span>authenticity</span> and <span>emotion</span> remain at the heart of every project. <br /><br />
+			Coming from the music and marketing worlds, we combine
+			<span>creative sense and strategic thinking</span>, at the service of
+			<span>communication objectives, impact, and clarity.</span> <br /><br />
+
+			In an era where technology evolves and our tools diversify, our added value
+			remains deeply human... <br /><br />
+		</p>
+
+		<div class="wrapper__fondators">
+			<h4>The founders</h4>
+			<div class="wrapper__fondators-img">
+				<div class="wrapper__fondators-img-container">
+					<img 
+						src={Lolo} 
+						alt="Laurent Guillot" 
+						loading="lazy" 
+						decoding="async"
+						width="280"
+						height="350"
+					/>
+					<p>Laurent Guillot</p>
+				</div>
+				<div class="wrapper__fondators-img-container">
+					<img 
+						src={Rom} 
+						alt="Romain Noiret" 
+						loading="lazy" 
+						decoding="async"
+						width="280"
+						height="350"
+					/>
+					<p>Romain Noiret</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -44,30 +72,37 @@
 
 <style>
 	section {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		background-image: url('/bg-apropos.webp');
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-		color: var(--white);
+		color: white;
 		min-height: 100vh;
-		gap: 20px;
-		z-index: 0;
-		position: relative;
-		padding: var(--space-xl) var(--space-md);
+		overflow: hidden;
+		width: 100%;
 	}
 
-	section::after {
-		content: '';
+	.bg-img {
 		position: absolute;
 		inset: 0;
-		background-color: rgba(23, 23, 23, 0.7);
-		backdrop-filter: blur(5px);
-		z-index: 1;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
+		filter: brightness(0.4);
+	}
+
+	.content-wrapper {
+		position: relative;
+		z-index: 2;
+		padding: var(--space-xl) var(--space-md);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 1000px;
+		margin: 0 auto;
 	}
 
 	section h1 {
@@ -79,7 +114,7 @@
 		position: relative;
 		width: fit-content;
 		padding-bottom: 1.5rem;
-		z-index: 2;
+		margin-bottom: var(--space-md);
 	}
 
 	section h1::after {
@@ -101,23 +136,19 @@
 		font-size: 1.8rem;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
-		z-index: 2;
-		margin-top: 0;
+		margin-bottom: var(--space-md);
 	}
 
 	section p {
 		font-family: var(--font-main);
 		font-size: 1.1rem;
 		line-height: 1.8;
-		margin-top: var(--space-md);
 		margin-bottom: var(--space-xl);
-		max-width: 850px;
 		font-weight: 400;
-		z-index: 2;
 		color: var(--white-off);
 	}
 
-	section p strong {
+	section p span {
 		font-weight: 700;
 		color: var(--white);
 	}
@@ -125,10 +156,8 @@
 	.wrapper__fondators {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
 		gap: 20px;
-		z-index: 2;
+		margin-top: var(--space-lg);
 	}
 
 	.wrapper__fondators h4 {
@@ -136,15 +165,12 @@
 		color: var(--white);
 		font-size: 1.5rem;
 		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		margin-bottom: var(--space-md);
 	}
 
 	.wrapper__fondators-img {
 		display: flex;
 		justify-content: center;
 		gap: var(--space-lg);
-		margin-bottom: var(--space-xl);
 	}
 
 	.wrapper__fondators-img-container {
@@ -158,7 +184,6 @@
 
 	.wrapper__fondators-img-container:hover {
 		transform: translateY(-10px);
-		background: rgba(255, 255, 255, 0.1);
 		border-color: var(--accent);
 	}
 
@@ -167,7 +192,6 @@
 		height: 350px;
 		border-radius: 0;
 		object-fit: cover;
-		margin-bottom: var(--space-sm);
 	}
 
 	.wrapper__fondators-img-container p {
@@ -179,29 +203,21 @@
 	}
 
 	@media (max-width: 768px) {
-		section h1 { 
-			font-size: 2.4rem; 
+		section h1 {
+			font-size: 2.4rem;
 			letter-spacing: -1px;
 			line-height: 1.2;
 			padding-bottom: 1.5rem;
 			margin-top: 40px;
 			margin-bottom: 2.5rem;
 		}
-		section h2 { font-size: 1.3rem; }
 		.wrapper__fondators-img {
 			flex-direction: column;
-			gap: 20px;
 			align-items: center;
-			width: 100%;
 		}
 		.wrapper__fondators-img-container {
-			width: 90%;
-			max-width: 300px;
-		}
-		.wrapper__fondators-img img {
-			width: 100%;
-			height: auto;
-			aspect-ratio: 4/5;
+			backdrop-filter: none;
+			background: rgba(0, 0, 0, 0.5);
 		}
 	}
 </style>

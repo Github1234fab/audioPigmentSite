@@ -107,7 +107,8 @@
     display: flex;
     overflow: hidden;
     user-select: none;
-    gap: 40px;
+    gap: 0;
+    touch-action: pan-y;
   }
   
   .marquee__group {
@@ -117,7 +118,11 @@
     justify-content: flex-start;
     gap: 40px;
     min-width: 100%;
+    padding-right: 40px;
     animation: scroll-video 40s linear infinite;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
   
   .marquee__item {

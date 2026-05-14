@@ -1,6 +1,6 @@
 <script>
 	import Button from '$lib/component/btn-white.svelte';
-	import SliderLogos from '$lib/component/Slider-Logos.svelte';
+	import SliderLogos from '$lib/component/Slider-Logos-English.svelte';
 	import { onMount } from 'svelte';
 
 	let wrapperh4;
@@ -107,20 +107,20 @@
 	}
 
 	.wrapper__section-txt h2 {
-		font-family: var(--font-main);
+		font-family: var(--raleway);
 		font-size: var(--fs-h3);
-		color: var(--white);
-		font-weight: 400;
+		color: white;
+		font-weight: var(--medium);
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
 		margin: 0;
 	}
 
 	.wrapper__section-txt h3 {
-		font-family: var(--font-heading);
+		font-family: var(--bebas);
 		font-size: var(--fs-h2);
-		color: var(--white);
-		font-weight: 400;
+		color: white;
+		font-weight: var(--medium);
 		letter-spacing: 0.02em;
 		margin: 0;
 		text-wrap: balance;
@@ -142,13 +142,16 @@
 		padding: 10px 28px;
 		border-radius: 50px;
 		border: 1px solid rgba(255, 255, 255, 0.2);
-		display: inline-flex;
+		display: flex;
 		align-items: center;
 		justify-content: center;
 		gap: var(--space-sm);
 		transition: var(--transition);
 		cursor: default;
 		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+		width: 100%;
+		max-width: 400px;
+		margin: 0 auto;
 	}
 
 	.wrapper__title-icon:hover {
@@ -163,9 +166,9 @@
 	}
 
 	h4 {
-		font-family: var(--font-main);
+		font-family: var(--raleway);
 		font-size: 0.95rem;
-		font-weight: 700;
+		font-weight: var(--bold);
 		color: var(--white);
 		margin: 0;
 		white-space: nowrap;
@@ -182,7 +185,7 @@
 	}
 
 	p {
-		font-family: var(--font-main);
+		font-family: var(--raleway);
 		font-size: var(--fs-body);
 		line-height: 1.6;
 		color: var(--white-off);
@@ -191,7 +194,7 @@
 
 	strong {
 		color: var(--white);
-		font-weight: 700;
+		font-weight: var(--extra-bold);
 	}
 
 	.wrapper-button {
@@ -208,26 +211,30 @@
 	}
 
 	.wrapper__slider-logos h4 {
-		font-family: var(--font-heading);
+		font-family: var(--bebas);
 		font-size: var(--fs-h3);
-		font-weight: 500;
+		font-weight: var(--medium);
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
-		margin-bottom: var(--space-sm);
+		margin-bottom: var(--sm);
 		text-align: center;
 		color: var(--white);
 		white-space: normal;
-		padding: 0 var(--space-sm);
+		padding: 0 var(--sm);
 	}
 
 	@media (max-width: 768px) {
 		section {
 			padding: var(--space-lg) var(--space-sm);
+			background-attachment: scroll;
 		}
 
 		.wrapper__title-icon {
 			width: auto;
 			padding: 10px 20px;
+			backdrop-filter: none;
+			-webkit-backdrop-filter: none;
+			background: rgba(0, 0, 0, 0.8);
 		}
 
 		.wrapper__section-txt {
@@ -238,6 +245,9 @@
 		.wrapper__p {
 			text-align: center;
 			padding: var(--space-sm);
+			backdrop-filter: none;
+			-webkit-backdrop-filter: none;
+			background: rgba(0, 0, 0, 0.5);
 		}
 	}
 
