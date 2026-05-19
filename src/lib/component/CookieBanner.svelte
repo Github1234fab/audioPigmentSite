@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
-	import { fade, slide } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
+	import { locale } from 'svelte-i18n';
 
 	let visible = false;
 
@@ -27,14 +28,23 @@
 		<div class="content">
 			<div class="text">
 				<p>
-					Nous utilisons des cookies pour améliorer votre expérience et analyser le trafic sur notre site. 
-					En continuant votre visite, vous acceptez leur utilisation.
-					<a href="/fr/cgu" class="link">En savoir plus</a>
+					{#if $locale === 'en'}
+						We use cookies to improve your experience and analyze our website traffic. By continuing to browse, you accept their use.
+						<a href="/en/Mentions#politique" class="link">Learn more</a>
+					{:else}
+						Nous utilisons des cookies pour améliorer votre expérience et analyser le trafic sur notre site. 
+						En continuant votre visite, vous acceptez leur utilisation.
+						<a href="/fr/Mentions#politique" class="link">En savoir plus</a>
+					{/if}
 				</p>
 			</div>
 			<div class="buttons">
-				<button on:click={refuse} class="btn btn-refuse">Refuser</button>
-				<button on:click={accept} class="btn btn-accept">Accepter</button>
+				<button on:click={refuse} class="btn btn-refuse">
+					{$locale === 'en' ? 'Refuse' : 'Refuser'}
+				</button>
+				<button on:click={accept} class="btn btn-accept">
+					{$locale === 'en' ? 'Accept' : 'Accepter'}
+				</button>
 			</div>
 		</div>
 	</div>

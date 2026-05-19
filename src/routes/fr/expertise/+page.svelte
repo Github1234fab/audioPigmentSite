@@ -4,8 +4,14 @@
 	let videos = [];
 
 	onMount(() => {
-		videos.forEach((v) => {
-			if (v) v.playbackRate = 0.6; // Ralenti pour confort de lecture
+		videos.forEach((v, index) => {
+			if (v) {
+				if (index === 1) {
+					v.playbackRate = 0.4; // Ralenti encore plus pour Création originale (0.4)
+				} else {
+					v.playbackRate = 0.6; // Vitesse de lecture confortable pour le reste
+				}
+			}
 		});
 	});
 </script>
@@ -18,23 +24,10 @@
 			<div class="glass-panel">
 				<h2>Post-production audio</h2>
 				<p>
-					La post-production audio est l’étape où chaque élément sonore <strong
-						>s’ajuste avec précision</strong
-					>
-					dans une <strong>création audiovisuelle ou musicale</strong>, qu’elle soit narrative,
-					publicitaire ou immersive. <br /><br />
-					Chez Audio Pigment, nous considérons cette phase comme un
-					<strong>travail d’équilibre</strong> entre <strong>technique</strong> et
-					<strong>création</strong>, alliant <strong>exigence</strong> et
-					<strong>sens artistique.</strong><br /><br />
-					Habillage, sound design, editing et optimisation des sources, doublage / voiceover, mixage
-					(stéréo, multicanal ou ambisonic VR), mastering et normalisation broadcast : notre
-					<strong>exigence technique</strong> et notre
-					<strong>collaboration étroite avec les équipes créatives </strong>
-					garantissent un rendu à la fois précis, inspiré et fidèle à la vision de nos clients.<br
-					/><br />
-					Notre objectif : <strong>renforcer l’impact </strong> et
-					<strong>la portée émotionnelle</strong> de chaque projet.
+					La post-production audio est l’étape où chaque élément sonore <strong>s’ajuste avec précision</strong> dans une <strong>création audiovisuelle ou musicale</strong>, qu’elle soit narrative, publicitaire ou immersive. <br /><br />
+					Chez Audio Pigment, nous considérons cette phase comme un <strong>travail d’équilibre</strong> entre <strong>technique</strong> et <strong>création</strong>, alliant <strong>exigence</strong> et <strong>sens artistique.</strong><br /><br />
+					Habillage, sound design, editing et optimisation des sources, doublage / voiceover, mixage (stéréo, multicanal ou ambisonic VR), mastering et normalisation broadcast : notre <strong>exigence technique</strong> et notre <strong>collaboration étroite avec les équipes créatives </strong> garantissent un rendu à la fois précis, inspiré et fidèle à la vision de nos clients.<br /><br />
+					Notre objectif : <strong>renforcer l’impact </strong> et <strong>la portée émotionnelle</strong> de chaque projet.
 				</p>
 			</div>
 			<video
@@ -59,8 +52,7 @@
 				<div class="advantage-content">
 					<h3>Un son maîtrisé, au service du sens et de l’émotion</h3>
 					<p>
-						Chaque décision de traitement, chaque plan sonore est pensé pour servir le récit ou
-						l’image. Nous privilégions la lisibilité, la cohérence et la justesse du ressenti.
+						Chaque décision de traitement, chaque plan sonore est pensé pour servir le récit ou l’image. Nous privilégions la lisibilité, la cohérence et la justesse du ressenti.
 					</p>
 				</div>
 			</div>
@@ -68,10 +60,7 @@
 				<div class="advantage-content">
 					<h3>Une collaboration sur-mesure et exigeante</h3>
 					<p>
-						Nous entretenons un dialogue permanent avec nos clients et les équipes créatives, pour
-						assurer une continuité naturelle entre les intentions artistiques et le rendu final.
-						Cette proximité, forgée par l’expérience, garantit une post-production sur-mesure,
-						efficace, sans compromis sur la qualité.
+						Nous entretenons un dialogue permanent avec nos clients et les équipes créatives, pour assurer une continuité naturelle entre les intentions artistiques et le rendu final. Cette proximité, forgée par l’expérience, garantit une post-production sur-mesure, efficace, sans compromis sur la qualité.
 					</p>
 				</div>
 			</div>
@@ -79,8 +68,7 @@
 				<div class="advantage-content">
 					<h3>Une expertise tous formats</h3>
 					<p>
-						Cinéma, télévision, digital, radio, VR : nous maîtrisons les codes esthétiques et normes
-						techniques de chaque support pour que chaque projet sonne juste, partout.
+						Cinéma, télévision, digital, radio, VR : nous maîtrisons les codes esthétiques et normes techniques de chaque support pour que chaque projet sonne juste, partout.
 					</p>
 				</div>
 			</div>
@@ -92,26 +80,11 @@
 			<div class="glass-panel">
 				<h2>Création originale</h2>
 				<p>
-					Chez Audio Pigment, nous imaginons et produisons des <strong
-						>univers sonores sur mesure</strong
-					>
-					: signature sonore, habillage sonore, composition musicale, sound design ou événementiel…<br
-					/><br />
-					Notre rôle :
-					<strong>transformer une idée ou une intention, en matière sonore et en émotion</strong
-					>.<br /><br />
-					Qu’il s’agisse de donner une identité sonore à une marque, d’accompagner un film, une publicité,
-					un podcast, ou de concevoir une expérience immersive, nous nous approprions les
-					<strong>enjeux</strong>, nous adaptons notre approche au <strong>contexte</strong> et aux
-					<strong>contraintes de diffusion</strong>, et nous cherchons la
-					<strong>justesse émotionnelle</strong>, celle qui permet au son de porter la narration,
-					l’image ou le message <strong>auprès du public</strong>.
-					<br /><br />Pour les compositions musicales, nous proposons également des licences à
-					partir de notre catalogue, et <strong>accompagnons nos clients </strong> dans leur
-					sélection.
-					<br />Ces musiques sont personnalisables, mais lorsqu’un projet exige une identité unique,
-					la création originale reste la plus adaptée : elle assure une adéquation complète entre
-					musique, intention et émotion, ainsi qu’une exclusivité totale de diffusion.
+					Chez Audio Pigment, nous imaginons et produisons des <strong>univers sonores sur mesure</strong> : signature sonore, habillage sonore, composition musicale, sound design ou événementiel…<br /><br />
+					Notre rôle : <strong>transformateur une idée ou une intention, en matière sonore et en émotion</strong>.<br /><br />
+					Qu’il s’agisse de donner une identité sonore à une marque, d’accompagner un film, une publicité, un podcast, ou de concevoir une expérience immersive, nous nous approprions les <strong>enjeux</strong>, nous adaptons notre approche au <strong>contexte</strong> et aux <strong>contraintes de diffusion</strong>, et nous cherchons la <strong>justesse émotionnelle</strong>, celle qui permet au son de porter la narration, l’image ou le message <strong>auprès du public</strong>.
+					<br /><br />Pour les compositions musicales, nous proposons également des licences à partir de notre catalogue, et <strong>accompagnons nos clients </strong> dans leur sélection.
+					<br />Ces musiques sont personnalisables, mais lorsqu’un projet exige une identité unique, la création originale reste la plus adaptée : elle assure une adéquation complète entre musique, intention et émotion, ainsi qu’une exclusivité totale de diffusion.
 				</p>
 			</div>
 
@@ -137,10 +110,7 @@
 				<div class="advantage-content">
 					<h3>Une démarche ancrée dans le dialogue</h3>
 					<p>
-						Chaque création naît d’un échange approfondi avec nos clients, pour comprendre les
-						enjeux, les contraintes, les intentions et les émotions à transmettre. Cette
-						collaboration rapprochée permet aux équipes créatives d’aboutir à des compositions
-						parfaitement ajustées, sans compromis.
+						Chaque création naît d’un échange approfondi avec nos clients, pour comprendre les enjeux, les contraintes, les intentions et les émotions à transmettre. Cette collaboration rapprochée permet aux équipes créatives d’aboutir à des compositions parfaitement ajustées, sans compromis.
 					</p>
 				</div>
 			</div>
@@ -148,9 +118,7 @@
 				<div class="advantage-content">
 					<h3>Une large palette musicale</h3>
 					<p>
-						Notre équipe de compositeurs maîtrise des registres variés : du minimalisme électronique
-						à l’orchestration symphonique classique, en passant par le sound design abstrait ou
-						narratif.
+						Notre équipe de compositeurs maîtrise des registres variés : du minimalisme électronique à l’orchestration symphonique classique, en passant par le sound design abstrait ou narratif.
 					</p>
 				</div>
 			</div>
@@ -158,9 +126,7 @@
 				<div class="advantage-content">
 					<h3>Une production complète, de l'écriture au mastering</h3>
 					<p>
-						Nous gérons l'intégralité de la chaîne : composition, arrangements, enregistrements si
-						nécessaire, mixage, mastering. Nos clients bénéficient d’un interlocuteur unique du
-						début à la fin, et d’une totale sérénité sur la gestion des droits et des licences.
+						Nous gérons l'intégralité de la chaîne : composition, arrangements, enregistrements si nécessaire, mixage, mastering. Nos clients bénéficient d’un interlocuteur unique du début à la fin, et d’une totale sérénité sur la gestion des droits et des licences.
 					</p>
 				</div>
 			</div>
@@ -169,26 +135,14 @@
 
 	<section id="Voix">
 		<div class="container">
-			<div class="glass-panel">
+			<div class="glass-panel glass-panel--voix">
 				<h2>Voix</h2>
 				<p>
-					La voix <strong>capte naturellement l’attention</strong>: elle parle à l’inconscient,
-					crée des émotions, donne du sens et relie le message à la mémoire. <br /><br />
-					Qu’il s’agisse de <strong>supports sonores</strong> (radio, podcasts, audioguides) ou de
-					<strong>productions audiovisuelles</strong> (films, publicités, e-learning, jeux vidéo,
-					installations), la voix <strong>incarne</strong> un message, un récit, elle
-					<strong>explique, personnifie, renforce la portée émotionnelle.</strong> <br /><br />
-					Mais face à la profusion de contenus auxquels nous sommes exposés,
-					<strong>se faire entendre ne suffit plus</strong>: il faut <strong>se démarquer et retenir l’attention</strong>. Cela passe par le choix
-					d’une voix juste, une direction d'acteur impliquée, et une qualité d'enregistrement
-					irréprochable.
+					La voix <strong>capte naturellement l’attention</strong>: elle parle à l’inconscient, crée des émotions, donne du sens et relie le message à la mémoire. <br /><br />
+					Qu’il s’agisse de <strong>supports sonores</strong> (radio, podcasts, audioguides) ou de <strong>productions audiovisuelles</strong> (films, publicités, e-learning, jeux vidéo, installations), la voix <strong>incarne</strong> un message, un récit, elle <strong>explique, personnifie, renforce la portée émotionnelle.</strong> <br /><br />
+					Mais face à la profusion de contenus auxquels nous sommes exposés, <strong>se faire entendre ne suffit plus</strong>: il faut <strong>se démarquer et retenir l’attention</strong>. Cela passe par le choix d’une voix juste, une direction d'acteur impliquée, et une qualité d'enregistrement irréprochable.
 					<br /><br />
-					Voix off, doublage / dubbing / ADR, voice-over, adaptation multilingue :
-					<strong>nous ne nous contentons pas d'enregistrer</strong>. Chaque projet bénéficie d’un
-					<strong>accompagnement complet</strong>, du choix du comédien à la finalisation audio.
-					Nous assurons le casting, la direction artistique, l’enregistrement, ajustons
-					l'interprétation en temps réel avec nos clients, et veillons attentivement à ce que
-					<strong>la voix serve le sens, l’intention, et l'impact émotionnel</strong> recherchés.
+					Voix off, doublage / dubbing / ADR, voice-over, adaptation multilingue : <strong>nous ne nous contentons pas d'enregistrer</strong>. Chaque projet bénéficie d’un <strong>accompagnement complet</strong>, du choix du comédien à la finalisation audio. Nous assurons le casting, la direction artistique, l’enregistrement, ajustons l'interprétation en temps réel avec nos clients, et veillons attentivement à ce que <strong>la voix serve le sens, l’intention, et l'impact émotionnel</strong> recherchés.
 				</p>
 			</div>
 			<video
@@ -213,8 +167,7 @@
 				<div class="advantage-content">
 					<h3>Un son maîtrisé, au service du sens et de l’émotion</h3>
 					<p>
-						Chaque décision de traitement, chaque plan sonore est pensé pour servir le récit ou
-						l’image. Nous privilégions la lisibilité, la cohérence et la justesse du ressenti.
+						Chaque décision de traitement, chaque plan sonore est pensé pour servir le récit ou l’image. Nous privilégions la lisibilité, la coherence et la justesse du ressenti.
 					</p>
 				</div>
 			</div>
@@ -222,9 +175,7 @@
 				<div class="advantage-content">
 					<h3>Une direction artistique impliquée</h3>
 					<p>
-						Nous assurons l'intégralité du processus : sélection des voix, organisation des
-						sessions, enregistrement, montage, traitement, mixage et intégration finale. Un
-						interlocuteur unique, un suivi rigoureux, et une exigence constante de qualité.
+						Nous assurons l'intégralité du processus : sélection des voix, organisation des sessions, enregistrement, montage, traitement, mixage et intégration finale. Un interlocuteur unique, un suivi rigoureux, et une exigence constante de qualité.
 					</p>
 				</div>
 			</div>
@@ -232,10 +183,7 @@
 				<div class="advantage-content">
 					<h3>Un réseau international et un suivi dans la durée</h3>
 					<p>
-						En lien avec nos studios partenaires dans le monde entier, nous enregistrons à distance
-						en temps réel, avec supervision client en direct. Nous assurons aussi le suivi des
-						projets dans la durée (mises à jour, adaptations, séries sur plusieurs saisons) avec une
-						gestion fluide des urgences et des évolutions.
+						En lien avec nos studios partenaires dans le monde entier, nous enregistrons à distance en temps réel, avec supervision client en direct. Nous assurons aussi le suivi des projets dans la durée (mises à jour, adaptations, séries sur plusieurs saisons) avec une gestion fluide des urgences et des évolutions.
 					</p>
 				</div>
 			</div>
@@ -262,9 +210,7 @@
 			<h3>Chaque projet mérite son histoire sonore unique</h3>
 
 			<p>
-				Chez AUDIO PIGMENT, chaque projet est pensé, écouté, façonné avec précision, pour créer un
-				impact optimal. Une <strong>écoute exigeante</strong>, un
-				<strong>savoir-faire affûté</strong>, et le <strong>soin du sur-mesure</strong>.
+				Chez AUDIO PIGMENT, chaque projet est pensé, écouté, façonné avec précision, pour créer un impact optimal. Une <strong>écoute exigeante</strong>, un <strong>savoir-faire affûté</strong>, et le <strong>soin du sur-mesure</strong>.
 				<br /><br />
 				<strong>Comprendre, ressentir, transmettre: c’est notre métier. </strong>
 			</p>
@@ -302,6 +248,21 @@
 		width: 90%;
 		z-index: 5;
 		box-shadow: var(--shadow-lg);
+	}
+
+	.glass-panel h2 {
+		font-family: var(--bebas);
+		font-size: 2.8rem; /* Titres grossis */
+		color: var(--white);
+		font-weight: 800;
+		letter-spacing: -0.02em;
+		margin-top: 0 !important; /* Parfaitement centré verticalement */
+		margin-bottom: 1.5rem;
+		z-index: 4;
+	}
+
+	.glass-panel--voix {
+		max-width: 650px; /* Plus étroit pour révéler l'image de fond */
 	}
 
 	.section-video-banner {
@@ -364,25 +325,17 @@
 		z-index: -1;
 	}
 
-	.container h2 {
-		font-family: var(--bebas);
-		font-size: 1.8rem;
-		color: var(--white);
-		font-weight: 800;
-		letter-spacing: -0.02em;
-		z-index: 4;
-	}
 	.container p {
 		font-family: var(--font-main);
 		font-size: 1.15rem;
 		line-height: 1.7;
-		margin-top: var(--space-md);
 		color: var(--white-off);
 		font-weight: 400;
 		max-width: 850px;
 		z-index: 4;
 		padding: 10px;
 		text-wrap: balance;
+		margin: 0; /* Enlève la marge haute excessive pour équilibrer le centrage */
 	}
 
 	.background-video-banner {
@@ -432,34 +385,29 @@
 		font-weight: var(--bold);
 		z-index: 4;
 	}
-	section h2 {
-		font-family: var(--bebas);
-		font-size: 1.8rem;
-		color: var(--white-pure);
-		margin-top: 80px;
-		font-weight: 700;
-		letter-spacing: normal;
-		z-index: 4;
-	}
 
 	.wrapper__advantages {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 2rem;
-		width: 100%;
-		padding: 5rem 2rem;
-		max-width: 1200px;
+		gap: 1.5rem; /* Gap réduit */
+		width: 90%;
+		padding: 4rem 2rem; /* padding vertical réduit */
+		max-width: 850px; /* Largeur d'atouts plus ciblée pour ne pas envahir l'écran */
 		margin: 0 auto;
 	}
 	.wrapper__advantages h2 {
 		font-size: 2rem;
-		margin-top: 30px;
+		margin-top: 20px;
 		color: var(--ardoise);
+		font-family: var(--bebas);
+		font-weight: 700;
+		letter-spacing: normal;
+		z-index: 4;
 	}
 	.advantage {
 		background: linear-gradient(135deg, var(--accent) 0%, #c02d24 100%);
-		padding: 3rem;
+		padding: 1.5rem 2.2rem; /* Padding réduit autour du texte */
 		border-radius: var(--radius-md);
 		width: 100%;
 		box-shadow: var(--shadow-md);
@@ -472,8 +420,8 @@
 	}
 	.advantage h3 {
 		font-family: var(--font-heading);
-		font-size: 1.8rem;
-		margin-bottom: 1rem;
+		font-size: 1.5rem; /* Taille harmonieuse */
+		margin: 0 0 0.5rem 0;
 		color: var(--white);
 		text-transform: uppercase;
 		line-height: 1.2;
@@ -485,6 +433,7 @@
 		font-weight: var(--bold);
 		line-height: 1.6;
 		color: var(--white-off);
+		margin: 0;
 	}
 
 	.bg-black {

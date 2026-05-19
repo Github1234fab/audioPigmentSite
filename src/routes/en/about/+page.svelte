@@ -131,7 +131,7 @@
 
 	section h2 {
 		font-family: var(--font-heading);
-		font-weight: 300;
+		font-weight: 700; /* Bold to create a balanced reading pace */
 		color: var(--white-off);
 		font-size: 1.8rem;
 		text-transform: uppercase;

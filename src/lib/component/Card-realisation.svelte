@@ -8,9 +8,8 @@
 	href={link} 
 	class="card" 
 	style="background-image: url({image})" 
-	target="_blank" 
-	rel="noopener noreferrer" 
 	aria-label="Watch {title} on YouTube"
+	on:click
 >
 	<div class="overlay">
 		<div class="play-icon">

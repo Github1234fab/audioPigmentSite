@@ -49,14 +49,19 @@
 	];
 	import { onMount } from 'svelte';
 	let isDesktop = false;
+	let videoRef;
+
 	onMount(() => {
 		isDesktop = window.innerWidth > 1023;
+		if (videoRef) {
+			videoRef.playbackRate = 0.5;
+		}
 	});
 </script>
 
 <section>
 	{#if isDesktop}
-		<video autoplay muted loop playsinline preload="none" class="background-video">
+		<video bind:this={videoRef} autoplay muted loop playsinline preload="none" class="background-video">
 			<source src="https://www.pexels.com/fr-fr/download/video/27660115/" type="video/mp4" />
 		</video>
 	{/if}

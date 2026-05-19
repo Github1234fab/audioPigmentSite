@@ -2,10 +2,10 @@
 </script>
 
 <main>
-	<section class="hero-contact">
+	<a href="#contact-form" class="hero-contact" title="Faites défiler jusqu'au formulaire de contact">
 		<h1>CONTACTEZ-NOUS</h1>
 		<p class="subtitle">Une idée, un projet, une question ?<br>Notre équipe est à <strong>votre écoute.</strong></p>
-	</section>
+	</a>
 
 	<section class="content-contact">
 		<div class="container-grid">
@@ -51,10 +51,22 @@
 	.hero-contact {
 		position: relative;
 		text-align: center;
-		padding: 140px var(--space-md);
+		padding: 85px var(--space-md); /* Hauteur réduite pour aérer le plan en dessous */
 		background: radial-gradient(circle at 15% 15%, rgba(220, 38, 38, 0.4) 0%, transparent 45%),
 		            linear-gradient(135deg, var(--ardoise) 0%, #0a0a0a 100%);
 		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		cursor: pointer;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		width: 100%;
+	}
+
+	.hero-contact:hover {
+		filter: brightness(1.08);
 	}
 
 	.hero-contact::before {

@@ -11,8 +11,8 @@ addMessages('fr', {
     email: "contact@audiopigment.com",
     mentions: [
       { label: "STUDIO AUDIO PIGMENT", url: "/" },
-      { label: "MENTIONS LÉGALES", url: "/fr/cgu" },
-      { label: "POLITIQUES DE CONFIDENTIALITÉ", url: "/fr/cgu" },
+      { label: "MENTIONS LÉGALES", url: "/fr/Mentions#mentions" },
+      { label: "POLITIQUES DE CONFIDENTIALITÉ", url: "/fr/Mentions#politique" },
       { label: "SITE RÉALISÉ PAR GRALYPHO", url: "https://www.gralypho.com" },
       { label: "©AUDIO PIGMENT", url: "/" }
     ]
@@ -39,8 +39,8 @@ addMessages('en', {
     email: "contact@audiopigment.com",
     mentions: [
       { label: "STUDIO AUDIO PIGMENT", url: "/" },
-      { label: "LEGAL NOTICE", url: "/en/cgu" },
-      { label: "PRIVACY POLICY", url: "/en/cgu" },
+      { label: "LEGAL NOTICE", url: "/en/Mentions#mentions" },
+      { label: "PRIVACY POLICY", url: "/en/Mentions#politique" },
       { label: "WEBSITE BY GRALYPHO", url: "https://www.gralypho.com" },
       { label: "©AUDIO PIGMENT", url: "/" }
     ]

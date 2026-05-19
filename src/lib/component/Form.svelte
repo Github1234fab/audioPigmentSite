@@ -1,41 +1,51 @@
-<!-- <form
-	name="contact-form-AudioPigment"
-	method="POST"
-	netlify-honeypot="bot-field"
-	data-netlify="true"
-	class="form"
->
-	<input type="hidden" name="form-name" value="contact-form-AudioPigment" />
-
-	<div class="wrapper-inputs">
-		<input name="nom" type="text" id="nom" required placeholder="Nom" />
-
-		<input name="prenom" type="text" id="prenom" required placeholder="Prénom" />
-		<input name="company" type="text" id="company" required placeholder="Société" />
-	</div>
-
-	<div class="wrapper-inputs">
-		<input name="email" type="email" id="email" required placeholder="Adresse mail" />
-
-		<input name="telephone" type="tel" id="telephone" required placeholder="Téléphone" />
-	</div>
-
-	<textarea name="demande" id="demande" class="demande" placeholder="Votre demande"></textarea>
-
-	<button class="btn" type="submit"><span>Envoyez </span></button>
-</form> -->
-
 <script>
 	import { _ } from 'svelte-i18n';
+
+	let isSubmitting = false;
+	let submitStatus = null; // 'success' | 'error' | null
+
+	const handleSubmit = async (event) => {
+		event.preventDefault();
+		isSubmitting = true;
+		submitStatus = null;
+
+		const form = event.target;
+		const formData = new FormData(form);
+		
+		// Netlify requiert que le corps soit formaté en URLSearchParams
+		const body = new URLSearchParams(formData).toString();
+
+		try {
+			const response = await fetch("/", {
+				method: "POST",
+				headers: { "Content-Type": "application/x-www-form-urlencoded" },
+				body: body
+			});
+
+			if (response.ok) {
+				submitStatus = 'success';
+				form.reset();
+			} else {
+				submitStatus = 'error';
+			}
+		} catch (error) {
+			console.error("Erreur d'envoi du formulaire :", error);
+			submitStatus = 'error';
+		} finally {
+			isSubmitting = false;
+		}
+	};
 </script>
 
 <form
+	id="contact-form"
 	name="contact-form-AudioPigment"
 	method="POST"
 	netlify-honeypot="bot-field"
 	data-netlify="true"
 	class="form"
 	netlify
+	on:submit={handleSubmit}
 >
 	<input type="hidden" name="form-name" value="contact-form-AudioPigment" />
 	<p class="hidden">
@@ -80,7 +90,23 @@
 	<textarea name="demande" id="demande" class="demande" placeholder={$_('form.placeholder_demande')}
 	></textarea>
 
-	<button class="btn" type="submit"><span>{$_('form.send')}</span></button>
+	<div class="wrapper-action">
+		{#if submitStatus === 'success'}
+			<div class="status-msg success-msg">
+				<i class="fa-solid fa-circle-check"></i> {$_('form.success_msg', { default: 'Merci ! Votre message a bien été envoyé avec succès.' })}
+			</div>
+		{:else}
+			<button class="btn" type="submit" disabled={isSubmitting}>
+				<span>{isSubmitting ? $_('form.sending', { default: 'Envoi en cours...' }) : $_('form.send')}</span>
+			</button>
+		{/if}
+
+		{#if submitStatus === 'error'}
+			<div class="status-msg error-msg">
+				<i class="fa-solid fa-circle-exclamation"></i> {$_('form.error_msg', { default: 'Une erreur est survenue lors de l\'envoi. Veuillez réessayer ou nous écrire directement.' })}
+			</div>
+		{/if}
+	</div>
 </form>
 
 <style>
@@ -136,6 +162,15 @@
 		opacity: 0.7;
 	}
 
+	.wrapper-action {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 12px;
+		margin-top: var(--space-sm);
+	}
+
 	.btn {
 		display: inline-flex;
 		align-items: center;
@@ -154,7 +189,6 @@
 		transition: var(--transition);
 		border-radius: 50px;
 		border: none;
-		margin-top: var(--space-sm);
 		box-shadow: var(--shadow-md);
 	}
 
@@ -163,6 +197,39 @@
 		color: var(--ardoise);
 		transform: translateY(-2px);
 		box-shadow: var(--shadow-lg);
+	}
+
+	.btn:disabled {
+		opacity: 0.6;
+		cursor: not-allowed;
+		transform: none;
+	}
+
+	.status-msg {
+		font-family: var(--font-main);
+		font-size: 0.95rem;
+		font-weight: 600;
+		padding: 14px 28px;
+		border-radius: var(--radius-md);
+		width: 100%;
+		max-width: 600px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		box-shadow: var(--shadow-sm);
+	}
+
+	.success-msg {
+		background-color: rgba(34, 197, 94, 0.15);
+		color: #4ade80;
+		border: 1px solid rgba(74, 222, 128, 0.3);
+	}
+
+	.error-msg {
+		background-color: rgba(239, 68, 68, 0.15);
+		color: #f87171;
+		border: 1px solid rgba(248, 113, 113, 0.3);
 	}
 
 	@media screen and (max-width: 768px) {
@@ -175,8 +242,12 @@
 			width: 100%;
 			font-size: 0.9rem;
 		}
+		.wrapper-inputs {
+			flex-direction: column;
+			gap: var(--space-sm);
+		}
 		.btn {
-			padding: 10px 20px;
+			padding: 12px 30px;
 			font-size: 0.9rem;
 		}
 	}

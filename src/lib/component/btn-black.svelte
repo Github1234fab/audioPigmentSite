@@ -5,8 +5,7 @@
 
 <a href={href} class="btn">
 	<span>{txt}</span>
-  </a>
-
+</a>
 
 <style>
 	.btn {
@@ -22,10 +21,15 @@
 		cursor: pointer;
 		position: relative;
 		overflow: hidden;
-		transition: var(--transition);
-		box-shadow: var(--shadow-lg);
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 		border-radius: var(--radius-sm);
 		text-decoration: none;
+	}
+
+	.btn:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
 	}
 
 	.btn::after {

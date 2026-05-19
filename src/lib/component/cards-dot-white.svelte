@@ -9,12 +9,15 @@
 	export let videoSrc; 
 	export let imgSrc; 
 
+	export let playbackRate = 1.0;
+
 	let isDesktop = false;
 	let videoRef;
 
 	onMount(() => {
 		isDesktop = window.innerWidth > 1023;
 		if (videoRef) {
+			videoRef.playbackRate = playbackRate;
 			videoRef.play().catch(error => {
 				console.log("Autoplay prevented, waiting for interaction", error);
 			});
@@ -112,6 +115,8 @@
 		white-space: pre-line;
 		text-align: center;
 		color: rgb(255, 255, 255);
+		line-height: 1.8; /* Saut de ligne élégant entre les 3 rubriques */
+		margin-bottom: 20px; /* Équilibre parfait de l'espace avec le bouton rouge dessous */
 	}
 
 	@media screen and (max-width: 768px) {
@@ -129,6 +134,8 @@
 		.subtitle {
 			font-size: 1.1rem;
 			font-weight: 500;
+			line-height: 1.8;
+			margin-bottom: 15px;
 		}
 		.wrapper__txt {
 			gap: 30px;

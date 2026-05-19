@@ -4,8 +4,14 @@
 	let videos = [];
 
 	onMount(() => {
-		videos.forEach((v) => {
-			if (v) v.playbackRate = 0.6; // Ralenti pour confort de lecture
+		videos.forEach((v, index) => {
+			if (v) {
+				if (index === 1) {
+					v.playbackRate = 0.4; // Slow down original creation video even more (0.4)
+				} else {
+					v.playbackRate = 0.6; // Comfortable playback rate for others
+				}
+			}
 		});
 	});
 </script>
@@ -18,11 +24,9 @@
 			<div class="glass-panel">
 				<h2>Audio Post-Production</h2>
 				<p>
-					Audio post-production is the stage where every sound element is <strong>precisely adjusted</strong> within an
-					<strong>audiovisual or musical creation</strong>, whether narrative, commercial, or immersive.
+					Audio post-production is the stage where every sound element is <strong>precisely adjusted</strong> within an <strong>audiovisual or musical creation</strong>, whether narrative, commercial, or immersive.
 					<br/><br/>
-					At Audio Pigment, we approach this phase as a true <strong>balance between technology and artistry</strong>, combining
-					<strong>technical</strong> accuracy, <strong>creative</strong> sensitivity, and a deep understanding of <strong>storytelling</strong>.
+					At Audio Pigment, we approach this phase as a true <strong>balance between technology and artistry</strong>, combining <strong>technical</strong> accuracy, <strong>creative</strong> sensitivity, and a deep understanding of <strong>storytelling</strong>.
 					<br/><br/>
 					Sound design, editing and source optimization, dubbing and voice-over, mixing (stereo, multichannel or ambisonic VR), mastering and broadcast normalization: our <strong>technical expertise</strong> and <strong>close collaboration with creative teams</strong> ensure results that are both precise and inspired, perfectly aligned with our clients’ vision.
 					<br/><br/>
@@ -51,8 +55,7 @@
 				<div class="advantage-content">
 					<h3>A finely tuned sound, serving meaning and emotion</h3>
 					<p>
-						Every processing choice and sound layer is shaped to serve the narrative and the image. We
-						value readability, coherence, and the accuracy of emotional expression.
+						Every processing choice and sound layer is shaped to serve the narrative and the image. We value readability, coherence, and the accuracy of emotional expression.
 					</p>
 				</div>
 			</div>
@@ -60,8 +63,7 @@
 				<div class="advantage-content">
 					<h3>Tailor-made, demanding collaboration</h3>
 					<p>
-						We maintain a close dialogue with our clients and creative teams to ensure a seamless link
-						between artistic intention and final rendering.
+						We maintain a close dialogue with our clients and creative teams to ensure a seamless link between artistic intention and final rendering.
 					</p>
 				</div>
 			</div>
@@ -69,8 +71,7 @@
 				<div class="advantage-content">
 					<h3>Expertise across all formats</h3>
 					<p>
-						Cinema, television, digital, radio or VR: we master the aesthetic codes and technical
-						standards of every medium so that each project delivers a sound faithful to its context.
+						Cinema, television, digital, radio or VR: we master the aesthetic codes and technical standards of every medium so that each project delivers a sound faithful to its context.
 					</p>
 				</div>
 			</div>
@@ -141,7 +142,7 @@
 
 	<section id="Voix">
 		<div class="container">
-			<div class="glass-panel">
+			<div class="glass-panel glass-panel--voix">
 				<h2>Voices</h2>
 				<p>
 					The human voice <strong>naturally draws attention</strong>: it speaks to the subconscious, evokes emotion, gives meaning, and anchors a message in memory.
@@ -259,6 +260,21 @@
 		box-shadow: var(--shadow-lg);
 	}
 
+	.glass-panel h2 {
+		font-family: var(--bebas);
+		font-size: 2.8rem; /* Enlarged titles */
+		color: var(--white);
+		font-weight: 800;
+		letter-spacing: -0.02em;
+		margin-top: 0 !important; /* Perfectly vertically centered */
+		margin-bottom: 1.5rem;
+		z-index: 4;
+	}
+
+	.glass-panel--voix {
+		max-width: 650px; /* Narrower to show more background video */
+	}
+
 	.section-video-banner {
 		position: relative;
 		display: flex;
@@ -319,25 +335,17 @@
 		z-index: -1;
 	}
 
-	.container h2 {
-		font-family: var(--bebas);
-		font-size: 1.8rem;
-		color: var(--white);
-		font-weight: 800;
-		letter-spacing: -0.02em;
-		z-index: 4;
-	}
 	.container p {
 		font-family: var(--font-main);
 		font-size: 1.15rem;
 		line-height: 1.7;
-		margin-top: var(--space-md);
 		color: var(--white-off);
 		font-weight: 400;
 		max-width: 850px;
 		z-index: 4;
 		padding: 10px;
 		text-wrap: balance;
+		margin: 0; /* Remove top margin leak for perfect centering */
 	}
 
 	.background-video-banner {
@@ -387,34 +395,29 @@
 		font-weight: var(--bold);
 		z-index: 4;
 	}
-	section h2 {
-		font-family: var(--bebas);
-		font-size: 1.8rem;
-		color: var(--white-pure);
-		margin-top: 80px;
-		font-weight: 700;
-		letter-spacing: normal;
-		z-index: 4;
-	}
 
 	.wrapper__advantages {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 2rem;
-		width: 100%;
-		padding: 5rem 2rem;
-		max-width: 1200px;
+		gap: 1.5rem; /* Reduced gap */
+		width: 90%;
+		padding: 4rem 2rem; /* Reduced padding */
+		max-width: 850px; /* Thinner columns to keep it clean and premium */
 		margin: 0 auto;
 	}
 	.wrapper__advantages h2 {
 		font-size: 2rem;
-		margin-top: 30px;
+		margin-top: 20px;
 		color: var(--ardoise);
+		font-family: var(--bebas);
+		font-weight: 700;
+		letter-spacing: normal;
+		z-index: 4;
 	}
 	.advantage {
 		background: linear-gradient(135deg, var(--accent) 0%, #c02d24 100%);
-		padding: 3rem;
+		padding: 1.5rem 2.2rem; /* Compact layout */
 		border-radius: var(--radius-md);
 		width: 100%;
 		box-shadow: var(--shadow-md);
@@ -427,8 +430,8 @@
 	}
 	.advantage h3 {
 		font-family: var(--font-heading);
-		font-size: 1.8rem;
-		margin-bottom: 1rem;
+		font-size: 1.5rem;
+		margin: 0 0 0.5rem 0;
 		color: var(--white);
 		text-transform: uppercase;
 		line-height: 1.2;
@@ -440,6 +443,7 @@
 		font-weight: var(--bold);
 		line-height: 1.6;
 		color: var(--white-off);
+		margin: 0;
 	}
 
 	.bg-black {

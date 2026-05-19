@@ -9,8 +9,13 @@
 
 	let sectionRef;
 	let contentRef;
+	let videoRef;
 
 	onMount(() => {
+		if (videoRef) {
+			videoRef.playbackRate = 0.5;
+		}
+
 		gsap.from(contentRef.children, {
 			y: 50,
 			opacity: 0,
@@ -27,7 +32,7 @@
 </script>
 
 <section bind:this={sectionRef}>
-	<video autoplay muted loop playsinline preload="none" class="background-video">
+	<video bind:this={videoRef} autoplay muted loop playsinline preload="none" class="background-video">
 		<source
 			src="https://videos.pexels.com/video-files/7087627/7087627-uhd_2732_1440_25fps.mp4"
 			type="video/mp4"

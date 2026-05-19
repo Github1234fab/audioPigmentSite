@@ -24,6 +24,7 @@
 			href="/fr/expertise/#post-production-audio"
 			videoSrc={v1}
 			imgSrc={i1}
+			playbackRate={0.5}
 		/>
 
 		<CardDotWhite
@@ -35,6 +36,7 @@
 			href="/fr/expertise/#creation-originale"
 			videoSrc={v2}
 			imgSrc={i2}
+			playbackRate={0.5}
 		/>
 		<CardDotWhite
 			title="Voix"
