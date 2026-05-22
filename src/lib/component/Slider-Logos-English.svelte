@@ -138,31 +138,15 @@
 }
 
 @media (max-width: 768px) {
-	.marquee {
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: 10px;
-	}
-	.marquee__group {
-		animation: none;
-		flex-wrap: wrap;
-		justify-content: center;
-		min-width: 100%;
-		transform: none !important;
-		padding-right: 0;
-	}
-	.marquee__group[aria-hidden="true"] {
-		display: none;
-	}
 	.marquee__item { 
-		width: 100px;
+		width: 120px;
 		padding: 5px;
 	}
 	.logo-box {
-		height: 60px;
+		height: 70px;
 	}
 	.logo-box :global(img) { 
-		max-height: 40px;
+		max-height: 45px;
 	}
 }
 </style>

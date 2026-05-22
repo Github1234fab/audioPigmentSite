@@ -3,6 +3,7 @@
     import { fade } from 'svelte/transition';
     import Card from '$lib/component/Card-realisation.svelte';
     import allRealisations from '$lib/realisations.json';
+    import UnderConstructionOverlay from '$lib/component/UnderConstructionOverlay.svelte';
   
     let selectedType = "Tous";
     let shuffledRealisations = [];
@@ -101,6 +102,8 @@
     {/each}
   </div>
 </section>
+
+<UnderConstructionOverlay lang="fr" />
 
 {#if activeVideo}
   <div class="modal-backdrop" on:click={closeVideo} transition:fade={{ duration: 200 }}>
