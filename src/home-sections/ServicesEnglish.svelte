@@ -44,27 +44,30 @@
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-	gsap.registerPlugin(ScrollTrigger);
 	let triggers = [];
 
 	onMount(() => {
-		// Animation du texte uniquement (l'image reste fixe) avec alternance de direction
-		gsap.utils.toArray('.cardo').forEach((el, i) => {
-			const txt = el.querySelector('.wrapper__service-txt');
-			const isEven = i % 2 !== 0; 
+		if (typeof window !== 'undefined') {
+			gsap.registerPlugin(ScrollTrigger);
+			// Animation du texte uniquement (l'image reste fixe) avec alternance de direction
+			gsap.utils.toArray('.cardo').forEach((el, i) => {
+				const txt = el.querySelector('.wrapper__service-txt');
+				const isEven = i % 2 !== 0; 
 
-			gsap.from(txt, {
-				x: isEven ? -80 : 80, 
-				opacity: 0,
-				duration: 1,
-				ease: 'power2.out',
-				scrollTrigger: {
-					trigger: el,
-					start: 'top 85%',
-					toggleActions: 'play none none none'
-				}
+				const anim = gsap.from(txt, {
+					x: isEven ? -80 : 80, 
+					opacity: 0,
+					duration: 1,
+					ease: 'power2.out',
+					scrollTrigger: {
+						trigger: el,
+						start: 'top 85%',
+						toggleActions: 'play none none none'
+					}
+				});
+				triggers.push(anim);
 			});
-		});
+		}
 
 		const onLoad = () => ScrollTrigger.refresh();
 		window.addEventListener('load', onLoad);
@@ -150,7 +153,7 @@
 		flex-direction: column;
 		justify-content: center;
 		padding: var(--space-lg);
-		background-color: #2c2c2c;
+		background-color: var(--ardoise);
 		color: var(--white);
 		gap: var(--space-md);
 	}
@@ -160,23 +163,29 @@
 	}
 
 	h3 {
-		font-size: var(--fs-h3);
+		font-family: var(--bebas);
+		font-size: 2.2rem;
+		font-weight: var(--black);
 		color: var(--white);
 		margin: 0;
+		line-height: 1.1;
 	}
 
 	p {
-		font-size: var(--fs-body);
+		font-family: var(--raleway);
+		font-size: 1.15rem;
 		line-height: 1.6;
-		color: var(--grey);
-		max-width: 90%;
+		color: var(--white);
+		font-weight: var(--bold);
+		max-width: 95%;
+		margin: 0;
 	}
 
 	.wrapper-button {
-		margin-top: var(--space-sm);
+		margin-top: 1.8rem;
 	}
 
-	@media screen and (max-width: 968px) {
+	@media screen and (max-width: 1024px) {
 		.cardo {
 			grid-template-columns: 1fr;
 			min-height: auto;

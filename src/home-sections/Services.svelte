@@ -4,7 +4,6 @@
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-	gsap.registerPlugin(ScrollTrigger);
 	let triggers = [];
 
 	const services = [
@@ -41,25 +40,28 @@
 	];
 
 	onMount(() => {
-		if (window.innerWidth > 1023) {
-			gsap.utils.toArray('.cardo').forEach((el, i) => {
-				const contentElements = el.querySelectorAll('.wrapper__service-txt > *');
-				const isEven = i % 2 !== 0;
+		if (typeof window !== 'undefined') {
+			gsap.registerPlugin(ScrollTrigger);
+			if (window.innerWidth > 1023) {
+				gsap.utils.toArray('.cardo').forEach((el, i) => {
+					const contentElements = el.querySelectorAll('.wrapper__service-txt > *');
+					const isEven = i % 2 !== 0;
 
-				const anim = gsap.from(contentElements, {
-					x: isEven ? -40 : 40,
-					opacity: 0,
-					duration: 0.8,
-					stagger: 0.1, // Les éléments apparaissent les uns après les autres
-					ease: 'power2.out',
-					scrollTrigger: {
-						trigger: el,
-						start: 'top 80%',
-						toggleActions: 'play none none none'
-					}
+					const anim = gsap.from(contentElements, {
+						x: isEven ? -40 : 40,
+						opacity: 0,
+						duration: 0.8,
+						stagger: 0.1, // Les éléments apparaissent les uns après les autres
+						ease: 'power2.out',
+						scrollTrigger: {
+							trigger: el,
+							start: 'top 80%',
+							toggleActions: 'play none none none'
+						}
+					});
+					triggers.push(anim);
 				});
-				triggers.push(anim);
-			});
+			}
 		}
 	});
 
@@ -180,7 +182,11 @@
 		margin: 0;
 	}
 
-	@media screen and (max-width: 968px) {
+	.wrapper-button {
+		margin-top: 1.8rem;
+	}
+
+	@media screen and (max-width: 1024px) {
 		section {
 			padding: var(--space-lg) 0;
 		}
@@ -191,8 +197,16 @@
 			border: 1px solid #eee;
 		}
 
+		.cardo:nth-child(even) .cardo-img {
+			order: 0;
+		}
+
+		.cardo:nth-child(even) .wrapper__service-txt {
+			order: 1;
+		}
+
 		.cardo img {
-			height: 250px;
+			height: 300px;
 		}
 
 		.wrapper__service-txt {

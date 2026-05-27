@@ -1,5 +1,6 @@
 <script>
 	import { onMount, onDestroy } from 'svelte';
+	import { slide } from 'svelte/transition';
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import ComSonore from '../../../assets/ComSonore.webp';
@@ -10,34 +11,85 @@
 
 	import BtnBlack from '$lib/component/btn-black-shadow.svelte';
 
-	gsap.registerPlugin(ScrollTrigger);
 	let triggers = [];
+	let activeServiceId = null;
+
+	function toggleService(id) {
+		if (activeServiceId === id) {
+			activeServiceId = null;
+		} else {
+			activeServiceId = id;
+			// Scroll smoothly to the service card
+			setTimeout(() => {
+				const el = document.getElementById(id);
+				if (el) {
+					el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				}
+			}, 150);
+		}
+	}
+
+	function handleHashChange() {
+		if (typeof window !== 'undefined') {
+			const hash = window.location.hash;
+			if (hash) {
+				activeServiceId = hash.replace('#', '');
+				setTimeout(() => {
+					const el = document.getElementById(activeServiceId);
+					if (el) {
+						el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+					}
+				}, 150);
+			}
+		}
+	}
 
 	onMount(() => {
-		if (window.innerWidth > 1023) {
-			const cards = gsap.utils.toArray('.service-card');
-			cards.forEach((card, i) => {
-				const contentElements = card.querySelectorAll('.wrapper__service-txt > *');
-				const anim = gsap.from(contentElements, {
-					x: i % 2 === 0 ? 40 : -40,
-					opacity: 0,
-					duration: 0.8,
-					stagger: 0.1,
-					ease: 'power2.out',
-					scrollTrigger: {
-						trigger: card,
-						start: 'top 80%',
-						toggleActions: 'play none none none'
+		if (typeof window !== 'undefined') {
+			gsap.registerPlugin(ScrollTrigger);
+
+			// Init active service from hash
+			const hash = window.location.hash;
+			if (hash) {
+				activeServiceId = hash.replace('#', '');
+				setTimeout(() => {
+					const el = document.getElementById(activeServiceId);
+					if (el) {
+						el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 					}
+				}, 150);
+			}
+
+			window.addEventListener('hashchange', handleHashChange);
+
+			if (window.innerWidth > 1023) {
+				const cards = gsap.utils.toArray('.service-card');
+				cards.forEach((card, i) => {
+					const contentElements = card.querySelectorAll('.wrapper__service-txt > *');
+					const anim = gsap.from(contentElements, {
+						x: i % 2 === 0 ? 40 : -40,
+						opacity: 0,
+						duration: 0.8,
+						stagger: 0.1,
+						ease: 'power2.out',
+						scrollTrigger: {
+							trigger: card,
+							start: 'top 80%',
+							toggleActions: 'play none none none'
+						}
+					});
+					triggers.push(anim);
 				});
-				triggers.push(anim);
-			});
+			}
 		}
 	});
 
 	onDestroy(() => {
 		triggers.forEach((t) => t.kill());
-		if (ScrollTrigger) ScrollTrigger.getAll().forEach((t) => t.kill());
+		if (typeof window !== 'undefined') {
+			if (ScrollTrigger) ScrollTrigger.getAll().forEach((t) => t.kill());
+			window.removeEventListener('hashchange', handleHashChange);
+		}
 	});
 
 	const services = [
@@ -155,7 +207,15 @@ immediately exploitable, without compromise on quality.`,
 	<div class="wrapper__services-cards">
 		{#each services as service, i}
 			<div class="service-card" id={service.id}>
-				<div class="wrapper__img-title {i % 2 !== 0 ? 'reverse' : ''}">
+				<div 
+					class="wrapper__img-title {i % 2 !== 0 ? 'reverse' : ''}"
+					on:click={() => toggleService(service.id)}
+					on:keydown={(e) => { if (e.key === 'Enter' || e.key === ' ') toggleService(service.id); }}
+					role="button"
+					tabindex="0"
+					aria-expanded={activeServiceId === service.id}
+					style="cursor: pointer; user-select: none;"
+				>
 					<img
 						class="img"
 						src={service.image}
@@ -167,14 +227,22 @@ immediately exploitable, without compromise on quality.`,
 					<div class="wrapper__service-txt">
 						<h3>{service.label}</h3>
 						<h4>{service.subLabel}</h4>
+						<div class="expand-indicator">
+							<span>{activeServiceId === service.id ? 'Close -' : 'Learn more +'}</span>
+						</div>
 					</div>
 				</div>
-				<div class="wrapper__p-cta">
-					<p>{@html service.desc}</p>
-					<div class="wrapper-btn">
-						<BtnBlack txt="Get in touch" href={service.link} />
+				{#if activeServiceId === service.id}
+					<div class="wrapper__p-cta" transition:slide={{ duration: 400 }}>
+						<p>{@html service.desc}</p>
+						<div class="wrapper-btn">
+							<BtnBlack txt="Get in touch" href={service.link} />
+							<button class="btn-reduce" on:click|stopPropagation={() => toggleService(service.id)}>
+								Collapse
+							</button>
+						</div>
 					</div>
-				</div>
+				{/if}
 			</div>
 		{/each}
 	</div>
@@ -244,6 +312,7 @@ immediately exploitable, without compromise on quality.`,
 		width: 100%;
 		gap: 0;
 		background-color: #2c2c2c;
+		overflow: hidden;
 	}
 
 	.wrapper__img-title.reverse .img {
@@ -260,6 +329,11 @@ immediately exploitable, without compromise on quality.`,
 		height: 400px;
 		object-fit: cover;
 		display: block;
+		transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.wrapper__img-title:hover .img {
+		transform: scale(1.04);
 	}
 
 	.wrapper__service-txt {
@@ -272,6 +346,32 @@ immediately exploitable, without compromise on quality.`,
 		padding: var(--space-lg);
 		height: 400px;
 		background-color: #2c2c2c;
+		position: relative;
+	}
+
+	.expand-indicator {
+		margin-top: 1rem;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--accent);
+		color: var(--white);
+		padding: 8px 24px;
+		font-family: var(--font-main);
+		font-size: 0.9rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		border-radius: 30px;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+	}
+
+	.wrapper__img-title:hover .expand-indicator {
+		background-color: var(--white-pure);
+		color: var(--accent);
+		transform: translateY(-2px);
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 	}
 	.wrapper__service-txt h3 {
 		margin: 0;
@@ -319,9 +419,34 @@ immediately exploitable, without compromise on quality.`,
 		display: flex;
 		justify-content: center;
 		width: 100%;
+		gap: 1.5rem;
 	}
 
-	@media screen and (max-width: 768px) {
+	.btn-reduce {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		background-color: transparent;
+		border: 1px solid var(--ardoise);
+		font-family: var(--font-main);
+		font-weight: 700;
+		color: var(--ardoise);
+		padding: 12px 32px;
+		font-size: 1rem;
+		cursor: pointer;
+		border-radius: var(--radius-sm);
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+	}
+
+	.btn-reduce:hover {
+		transform: translateY(-2px);
+		background-color: var(--ardoise);
+		color: var(--white-pure);
+		box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+	}
+
+	@media screen and (max-width: 1024px) {
 		section {
 			padding: 2rem 0.5rem;
 		}
@@ -329,10 +454,11 @@ immediately exploitable, without compromise on quality.`,
 			font-size: 2.4rem;
 		}
 		.wrapper__img-title {
-			grid-template-columns: 1fr;
+			display: flex;
+			flex-direction: column;
 		}
 		.img {
-			height: 250px;
+			height: 300px;
 		}
 		.wrapper__service-txt {
 			height: auto;
@@ -349,6 +475,15 @@ immediately exploitable, without compromise on quality.`,
 		.wrapper__p-cta p {
 			padding: 1.5rem;
 			font-size: 1rem;
+		}
+		.wrapper-btn {
+			flex-direction: column;
+			align-items: center;
+			gap: 1rem;
+		}
+		.btn-reduce {
+			width: auto;
+			min-width: 200px;
 		}
 	}
 </style>

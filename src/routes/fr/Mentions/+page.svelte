@@ -3,7 +3,7 @@
 		<h2>Mentions Légales</h2>
 		<p>
 			<strong>Éditeur du site :</strong> Audio Pigment<br>
-            32 Rue du Capitaine Robert Cluzan, 69007 Lyon, France<br>
+            10 Rue Nicolaï, 69007 Lyon, France<br>
             Téléphone : 04 78 58 00 00<br>
             Email : contact@audiopigment.com
 			<br><br>

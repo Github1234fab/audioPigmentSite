@@ -215,15 +215,18 @@
 			/>
 		</video>
 		<div class="wrapper__section-txt">
-			<h2>Our commitment to exceptional sound quality</h2>
-			<h3>Every project deserves its own sonic story</h3>
+			<div class="glass-panel">
+				<h2>Our Commitment: Tailored with Care</h2>
+				<h3>So that every project reveals its uniqueness</h3>
 
-			<p>
-				At Audio Pigment, every creation begins with attentive listening to a vision, a story, an emotion.
-				We craft sound with precision and intent, blending technical mastery with the sensitivity that turns listening into experience.
-				<br/><br/>
-				<strong>Understanding, feeling, transmitting: we do it for you.</strong>
-			</p>
+				<p>
+					At Audio Pigment, every creation begins with attentive listening to a vision, a story, an emotion.
+					<br /><br />
+					We craft sound with precision and intent, blending technical mastery with the sensitivity that turns listening into experience.
+					<br /><br />
+					<strong>Understanding, feeling, transmitting: we do it for you.</strong>
+				</p>
+			</div>
 		</div>
 	</div>
 </main>
@@ -249,15 +252,16 @@
 	}
 
 	.glass-panel {
-		background: rgba(0, 0, 0, 0.5);
+		background: radial-gradient(circle at center, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.4) 70%, rgba(0, 0, 0, 0.1) 100%);
 		backdrop-filter: blur(8px);
 		-webkit-backdrop-filter: blur(8px);
-		padding: 3rem;
-		border-radius: var(--radius-lg);
-		max-width: 900px;
+		padding: 2.5rem;
+		border-radius: 24px;
+		max-width: 620px;
 		width: 90%;
 		z-index: 5;
-		box-shadow: var(--shadow-lg);
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 	}
 
 	.glass-panel h2 {
@@ -272,7 +276,7 @@
 	}
 
 	.glass-panel--voix {
-		max-width: 650px; /* Narrower to show more background video */
+		max-width: 620px;
 	}
 
 	.section-video-banner {
@@ -432,10 +436,12 @@
 		font-family: var(--font-heading);
 		font-size: 1.5rem;
 		margin: 0 0 0.5rem 0;
-		color: var(--white);
+		color: var(--ardoise);
 		text-transform: uppercase;
 		line-height: 1.2;
 		text-shadow: none;
+		font-weight: 800;
+		letter-spacing: 0px;
 	}
 	.advantage p {
 		font-family: var(--font-main);
@@ -459,30 +465,47 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		gap: 40px;
+		gap: 20px;
 		color: white;
 		z-index: 2;
 		position: relative;
 		padding: 2rem;
-		z-index: 2;
 		font-family: var(--raleway);
 	}
 	.wrapper__section-txt p {
 		font-weight: var(--regular);
 		max-width: 800px;
 		line-height: 1.8;
+		font-size: 1.25rem;
+		color: var(--white-off);
+		margin: 0 auto;
+		text-align: center;
 	}
 	.wrapper__section-txt h3 {
-		font-weight: var(--medium);
-		font-size: 1.5rem;
+		font-family: var(--raleway);
+		font-size: 1.6rem;
+		font-weight: 600;
+		color: var(--white-pure);
+		margin-top: 0;
+		margin-bottom: 1.5rem;
+		text-align: center;
 	}
 	.wrapper__section-txt h2 {
-		font-weight: var(--bold);
+		font-weight: 800;
 		font-family: var(--bebas);
-		font-size: 2.3rem;
+		font-size: 2.8rem;
+		color: var(--white);
+		margin-top: 0;
+		margin-bottom: 1.5rem;
+		text-align: center;
 	}
 
 	@media screen and (max-width: 768px) {
+		.glass-panel {
+			padding: 1.5rem 1.25rem;
+			max-width: 95%;
+			border-radius: 16px;
+		}
 		.container {
 			position: relative;
 			width: 100%;

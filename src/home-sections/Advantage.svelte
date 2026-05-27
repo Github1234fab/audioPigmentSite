@@ -9,7 +9,7 @@
 		{
 			title: 'ARTISTIQUE',
 			iconClass: 'fa-solid fa-palette fa-2xl',
-			p: '<strong>Direction artistique soignée</strong> , relecture, réécoute, vérification systématique'
+			p: '<strong>Direction artistique soignée</strong>, relecture, réécoute, vérification systématique'
 		},
 		{
 			title: 'STUDIOS',
@@ -24,7 +24,7 @@
 		{
 			title: 'VOIX PRO',
 			iconClass: 'fa-solid fa-users fa-2xl',
-			p: '<strong>Comédiens voix professionnels natifs</strong> , couvrant plus de <strong>50 nationalités</strong> '
+			p: '<strong>Comédiens voix professionnels natifs</strong>, couvrant plus de <strong>50 nationalités</strong> '
 		},
 		{
 			title: 'INTERNATIONAL',

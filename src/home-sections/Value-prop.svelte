@@ -60,7 +60,7 @@
 				<strong>l’image</strong>
 				, du <strong>récit</strong> et de <strong>l’identité</strong>.
 
-				<br /><br /> <strong>Depuis 1999</strong> , nous accompagnons de
+				<br /><br /> <strong>Depuis 1999</strong>, nous accompagnons de
 				<strong>grandes marques</strong>
 				et <strong>institutions</strong> telles que : L’Oréal, Chanel, Air France, Disneyland Paris,
 				Ferrero, bioMérieux, Caisse d’Epargne, Puy du Fou, Point S, Orange, EDF, Région

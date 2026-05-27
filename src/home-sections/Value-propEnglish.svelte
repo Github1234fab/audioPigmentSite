@@ -35,7 +35,7 @@
 		<div class="container">
 			<div class="wrapper__p">
 				<p>
-					<strong>Recognized players</strong> in high-end audio production, both in <strong>France</strong> and <strong>internationally</strong> ,
+					<strong>Recognized players</strong> in high-end audio production, both in <strong>France</strong> and <strong>internationally</strong>,
 					we specialize in voice-over, dubbing, sound design, original music, post-production, and mixing. <br />
 
 					We combine <strong>technical precision</strong>, <strong>creative intuition</strong> and
