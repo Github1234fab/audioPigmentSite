@@ -27,6 +27,12 @@
 				}
 			}, 150);
 		}
+		// Refresh GSAP ScrollTrigger immediately after Svelte renders the expanded view
+		setTimeout(() => {
+			if (typeof window !== 'undefined' && ScrollTrigger) {
+				ScrollTrigger.refresh();
+			}
+		}, 200);
 	}
 
 	function handleHashChange() {
@@ -65,7 +71,7 @@
 			if (window.innerWidth > 1023) {
 				const cards = gsap.utils.toArray('.service-card');
 				cards.forEach((card, i) => {
-					const contentElements = card.querySelectorAll('.wrapper__service-txt > *');
+					const contentElements = card.querySelectorAll('.wrapper__service-txt h3, .wrapper__service-txt h4');
 					const anim = gsap.from(contentElements, {
 						x: i % 2 === 0 ? 40 : -40,
 						opacity: 0,
@@ -233,7 +239,7 @@ immediately exploitable, without compromise on quality.`,
 					</div>
 				</div>
 				{#if activeServiceId === service.id}
-					<div class="wrapper__p-cta" transition:slide={{ duration: 400 }}>
+					<div class="wrapper__p-cta">
 						<p>{@html service.desc}</p>
 						<div class="wrapper-btn">
 							<BtnBlack txt="Get in touch" href={service.link} />
@@ -299,7 +305,7 @@ immediately exploitable, without compromise on quality.`,
 		justify-content: center;
 		border-radius: 18px;
 		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-		height: 100%;
+		height: auto;
 		max-width: 1200px;
 		position: relative;
 		z-index: 0;
