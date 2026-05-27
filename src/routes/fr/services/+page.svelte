@@ -374,6 +374,7 @@ immédiatement exploitables, sans compromis sur la qualité.`,
 		border-radius: 30px;
 		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+		z-index: 5;
 	}
 
 	.wrapper__img-title:hover .expand-indicator {
