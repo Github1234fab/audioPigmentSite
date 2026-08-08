@@ -2,24 +2,8 @@
     import { fade } from 'svelte/transition';
     import Card from '$lib/component/Card-realisation.svelte';
     import UnderConstructionOverlay from '$lib/component/UnderConstructionOverlay.svelte';
+    import allRealisations from '$lib/realisations.json';
   
-    const allRealisations = [
-      {
-        title: "Mystery Series",
-        type: "SOUND DESIGN",
-        technique: "3D Sound Design",
-        link: "https://youtube.com/watch?v=Fu-aEj_Q8ig",
-        image: "https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg"
-      },
-      {
-        title: "Company X",
-        type: "FILM CORPORATE",
-        technique: "Sound Design & Mixing",
-        link: "https://youtube.com/watch?v=FJhtKdsnsN0",
-        image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg"
-      }
-    ];
-
     let selectedType = "All";
     let activeVideo = '';
 
@@ -36,10 +20,20 @@
       "MUSÉOGRAPHIE",
       "MIXAGE"
     ];
+
+    function normalize(str) {
+      if (!str) return '';
+      return str
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/['’]/g, "'")
+        .toUpperCase()
+        .trim();
+    }
   
     $: filteredRealisations = selectedType === "All"
       ? allRealisations
-      : allRealisations.filter(r => r.type === selectedType);
+      : allRealisations.filter(r => normalize(r.type) === normalize(selectedType));
 
     function getYouTubeEmbedUrl(url) {
       let videoId = '';
@@ -103,7 +97,7 @@
   </div>
 </section>
 
-<UnderConstructionOverlay lang="en" />
+<!-- <UnderConstructionOverlay lang="en" /> -->
 
 {#if activeVideo}
   <div
@@ -203,7 +197,7 @@
 
   .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 450px));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2.5rem;
     width: 100%;
     max-width: 1400px;
