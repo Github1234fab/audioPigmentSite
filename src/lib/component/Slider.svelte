@@ -2,40 +2,36 @@
   import { onMount } from 'svelte';
   import { fade } from 'svelte/transition';
 
-  const videos = [
-    { url: 'https://www.youtube.com/watch?v=Fu-aEj_Q8ig', title: 'Hazelnuts' },
-    { url: 'https://www.youtube.com/watch?v=FJhtKdsnsN0', title: 'Granpa & Zoe' },
-    { url: 'https://www.youtube.com/watch?v=uj19mlAZlUo', title: 'Hazelnuts 2' },
-    { url: 'https://www.youtube.com/watch?v=NtHwCg4i73c', title: 'Granpa & Zoe 2' },
-    { url: 'https://www.youtube.com/watch?v=Glq7QP-US-Y', title: 'Lucia' },
-    { url: 'https://www.youtube.com/watch?v=l8vJAkablNk', title: 'Emmentaler' },
-    { url: 'https://www.youtube.com/watch?v=LfNereR9MHI', title: 'Barilla' },
-    { url: 'https://www.youtube.com/watch?v=4H_sEETHmvs', title: 'Info Jeunes' },
-    { url: 'https://www.youtube.com/watch?v=gmcgXXlpras', title: 'Mix Buffet' },
-    { url: 'https://www.youtube.com/watch?v=9b-nxj_la6o', title: '3D Binaural' },
-  ];
+  import videos from '$lib/actu.json';
 
   let thumbnailUrls = {};
   let activeVideo = '';
 
   function getYoutubeId(url) {
+    if (!url) return '';
     return url.match(/[?&]v=([^&]+)/)?.[1] || url.split('/').pop() || '';
   }
 
   onMount(() => {
     videos.forEach(video => {
-      const id = getYoutubeId(video.url);
-      thumbnailUrls[video.url] = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+      const url = video.link || video.url;
+      if (url && !video.image) {
+        const id = getYoutubeId(url);
+        thumbnailUrls[url] = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+      }
     });
     thumbnailUrls = { ...thumbnailUrls };
   });
 
-  function getThumbnail(url) {
+  function getThumbnail(video) {
+    if (video.image) return video.image;
+    const url = video.link || video.url;
     return thumbnailUrls[url] || `https://img.youtube.com/vi/${getYoutubeId(url)}/hqdefault.jpg`;
   }
 
   function handleImageError(event, video) {
-    const id = getYoutubeId(video.url);
+    const url = video.link || video.url;
+    const id = getYoutubeId(url);
     event.target.src = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
   }
 
@@ -62,18 +58,18 @@
 <div class="marquee-wrapper">
   <div class="marquee">
     <div class="marquee__group">
-      {#each videos as video, index (video.url + '-group1-' + index)}
+      {#each videos as video, index ((video.link || video.url) + '-group1-' + index)}
         <div class="marquee__item">
           <a 
-            href={video.url} 
+            href={video.link || video.url} 
             class="video-thumbnail" 
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Regarder {video.title} sur YouTube"
-            on:click|preventDefault={() => openVideo(video.url)}
+            on:click|preventDefault={() => openVideo(video.link || video.url)}
           >
             <img 
-              src={getThumbnail(video.url)} 
+              src={getThumbnail(video)} 
               alt={video.title}
               loading="lazy"
               on:error={(e) => handleImageError(e, video)}
@@ -90,17 +86,17 @@
       {/each}
     </div>
     <div class="marquee__group" aria-hidden="true">
-      {#each videos as video, index (video.url + '-group2-' + index)}
+      {#each videos as video, index ((video.link || video.url) + '-group2-' + index)}
         <div class="marquee__item">
           <a 
-            href={video.url} 
+            href={video.link || video.url} 
             class="video-thumbnail" 
             target="_blank"
             rel="noopener noreferrer"
-            on:click|preventDefault={() => openVideo(video.url)}
+            on:click|preventDefault={() => openVideo(video.link || video.url)}
           >
             <img 
-              src={getThumbnail(video.url)} 
+              src={getThumbnail(video)} 
               alt={video.title}
               loading="lazy"
               on:error={(e) => handleImageError(e, video)}

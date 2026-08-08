@@ -6,9 +6,8 @@
     import UnderConstructionOverlay from '$lib/component/UnderConstructionOverlay.svelte';
   
     let selectedType = "Tous";
-    let shuffledRealisations = [];
     let activeVideo = '';
-
+  
     const productionTypes = [
       "FILM CORPORATE",
       "PUBLICITÉ",
@@ -23,20 +22,16 @@
       "MIXAGE"
     ];
 
-    // Algorithme de mélange Fisher-Yates
-    function shuffle(array) {
-      const arr = [...array];
-      for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-      }
-      return arr;
+    function normalize(str) {
+      if (!str) return '';
+      return str
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/['’]/g, "'")
+        .toUpperCase()
+        .trim();
     }
-
-    onMount(() => {
-      shuffledRealisations = shuffle(allRealisations);
-    });
-
+  
     function getYouTubeEmbedUrl(url) {
       let videoId = '';
       if (url.includes('youtube.com/watch')) {
@@ -49,24 +44,24 @@
       }
       return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1` : '';
     }
-
+  
     function openVideo(url) {
       activeVideo = getYouTubeEmbedUrl(url);
     }
-
+  
     function closeVideo() {
       activeVideo = '';
     }
-
+  
     function handleKeyDown(event) {
       if (event.key === 'Escape') {
         closeVideo();
       }
     }
-  
+    
     $: filteredRealisations = selectedType === "Tous"
-      ? (shuffledRealisations.length > 0 ? shuffledRealisations : allRealisations)
-      : allRealisations.filter(r => r.type === selectedType);
+      ? allRealisations
+      : allRealisations.filter(r => normalize(r.type) === normalize(selectedType));
 </script>
 
 <svelte:window on:keydown={handleKeyDown} />
@@ -103,7 +98,7 @@
   </div>
 </section>
 
-<UnderConstructionOverlay lang="fr" />
+<!-- <UnderConstructionOverlay lang="fr" /> -->
 
 {#if activeVideo}
   <div
@@ -198,7 +193,7 @@
   }
   .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 450px));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2.5rem;
     width: 100%;
     max-width: 1400px;
